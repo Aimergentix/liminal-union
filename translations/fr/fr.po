@@ -1,0 +1,2766 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wesnoth-liminal-union 0.2.4alpha\n"
+"Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
+"POT-Creation-Date: 2026-10-30 07:36 UTC\n"
+"PO-Revision-Date: 2026-10-30 08:36+0100\n"
+"Last-Translator: Liminal Union Team\n"
+"Language-Team: French <fr@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. [textdomain]
+#: liminal-union/_main.cfg:21
+msgid "LIUN"
+msgstr "LIUN"
+
+#. [about]
+#: liminal-union/about.cfg:4
+msgid "Design"
+msgstr "Conception"
+
+#. [about]
+#: liminal-union/about.cfg:8
+msgid "Maintenance"
+msgstr "Maintenance"
+
+#. [about]
+#: liminal-union/about.cfg:14
+msgid "Playtesting"
+msgstr "Tests de jeu"
+
+#. [about]
+#: liminal-union/about.cfg:26
+msgid "Sprite Design"
+msgstr "Création des sprites"
+
+#. [about]
+#: liminal-union/about.cfg:99
+msgid "Special Thanks"
+msgstr "Remerciements particuliers"
+
+#. [about]
+#: liminal-union/about.cfg:126
+msgid "Special Music & Sounds"
+msgstr "Musiques & sons spéciaux"
+
+#. [about]
+#: liminal-union/about.cfg:141
+msgid "Credits go to the creators of"
+msgstr "Crédits aux créateurs de"
+
+#. [about]
+#: liminal-union/about.cfg:162
+msgid "Respectful thanks"
+msgstr "Remerciements respectueux"
+
+#. [about]
+#: liminal-union/about.cfg:169
+msgid "License & Copyright"
+msgstr "Licence & droits d'auteur"
+
+#. [entry]
+#: liminal-union/about.cfg:171
+msgid "Code & Scripts: GNU GPL v3 (or later)"
+msgstr "Code & scripts : GNU GPL v3 (ou ultérieure)"
+
+#. [entry]
+#: liminal-union/about.cfg:174
+msgid "Video, Graphics, & Audio: CC BY-SA 4.0 (AI-Assisted)"
+msgstr "Vidéo, graphismes & audio : CC BY-SA 4.0 (assisté par IA)"
+
+#. [entry]
+#: liminal-union/about.cfg:177
+msgid "Copyright (c) 2026 Wesnoth-User-Pseudonym"
+msgstr "Copyright (c) 2026 Wesnoth-User-Pseudonym"
+
+#. [achievement_group]
+#. [multiplayer_side]: id=LIUN_braves, type=LIUN_Maiden_Captain
+#. [multiplayer_side]: id=LIUN_heroes, type=LIUN_Maiden_Colonel
+#: liminal-union/achievements.cfg:11
+#: liminal-union/factions/liminal-union-braves.cfg:7
+#: liminal-union/factions/liminal-union-heroes.cfg:7
+msgid "Liminal Union 🔰"
+msgstr "Union Liminale 🔰"
+
+#. [achievement]: id=LIUN_bronzeheart
+#: liminal-union/achievements.cfg:16
+#: liminal-union/achievements.cfg:17
+msgid "Bronze Heart Award 🎖️"
+msgstr "Cœur de Bronze 🎖️"
+
+#. [achievement]: id=LIUN_bronzeheart
+#: liminal-union/achievements.cfg:18
+#: liminal-union/achievements.cfg:19
+msgid "For meritorious conduct in the field."
+msgstr "Pour conduite méritoire sur le terrain."
+
+#. [achievement]: id=LIUN_silverheart
+#: liminal-union/achievements.cfg:26
+#: liminal-union/achievements.cfg:27
+msgid "Silver Heart Award 🎖️"
+msgstr "Cœur d'Argent 🎖️"
+
+#. [achievement]: id=LIUN_silverheart
+#: liminal-union/achievements.cfg:28
+#: liminal-union/achievements.cfg:29
+msgid "For bravery under enemy fire."
+msgstr "Pour bravoure sous le feu ennemi."
+
+#. [achievement]: id=LIUN_goldheart
+#: liminal-union/achievements.cfg:36
+#: liminal-union/achievements.cfg:37
+msgid "Gold Heart Award 🎖️"
+msgstr "Cœur d'Or 🎖️"
+
+#. [achievement]: id=LIUN_goldheart
+#: liminal-union/achievements.cfg:38
+#: liminal-union/achievements.cfg:39
+msgid "For heroic deeds in action."
+msgstr "Pour actes héroïques au combat."
+
+#. [achievement]: id=LIUN_valorheart
+#: liminal-union/achievements.cfg:46
+#: liminal-union/achievements.cfg:47
+msgid "Award of Valor 🎖️"
+msgstr "Médaille de la Valeur 🎖️"
+
+#. [achievement]: id=LIUN_valorheart
+#: liminal-union/achievements.cfg:48
+#: liminal-union/achievements.cfg:49
+msgid "For bravery above and beyond the call of duty."
+msgstr "Pour bravoure bien au-delà de l'appel du devoir."
+
+#. [achievement]: id=LIUN_pourlemerite
+#: liminal-union/achievements.cfg:56
+#: liminal-union/achievements.cfg:57
+msgid "Order Pour le Meritë 🏅"
+msgstr "Ordre Pour le Meritë 🏅"
+
+#. [achievement]: id=LIUN_pourlemerite
+#: liminal-union/achievements.cfg:58
+#: liminal-union/achievements.cfg:59
+msgid "In recognition of the highest levels of heroism demonstrated in a war zone."
+msgstr "En reconnaissance du plus haut degré d'héroïsme démontré en zone de guerre."
+
+#. [achievement]: id=LIUN_gallantry
+#: liminal-union/achievements.cfg:66
+#: liminal-union/achievements.cfg:67
+msgid "Citation of Gallantry 🎗"
+msgstr "Citation de Vaillance 🎗"
+
+#. [achievement]: id=LIUN_gallantry
+#: liminal-union/achievements.cfg:68
+#: liminal-union/achievements.cfg:69
+msgid "For exceptional fearlessness in the face of evil."
+msgstr "Pour intrépidité exceptionnelle face au mal."
+
+#. [achievement]: id=LIUN_simulacrum
+#: liminal-union/achievements.cfg:76
+#: liminal-union/achievements.cfg:77
+msgid "Simulacrum 🫥"
+msgstr "Simulacre 🫥"
+
+#. [achievement]: id=LIUN_simulacrum
+#: liminal-union/achievements.cfg:78
+#: liminal-union/achievements.cfg:79
+msgid "For enduring repeated trial and recalibration in service of the corps."
+msgstr "Pour avoir enduré maintes épreuves et recalibrations au service du corps."
+
+#. [achievement]: id=LIUN_golem
+#: liminal-union/achievements.cfg:86
+#: liminal-union/achievements.cfg:87
+msgid "Golem (max G9) 💀"
+msgstr "Golem (max G9) 💀"
+
+#. [achievement]: id=LIUN_golem
+#: liminal-union/achievements.cfg:88
+#: liminal-union/achievements.cfg:89
+msgid "In recognition of steadfast endurance demonstrated in the field by a G9 Warform."
+msgstr "En reconnaissance de l'endurance inébranlable démontrée sur le terrain par une Forme de guerre G9."
+
+#. [achievement]: id=LIUN_phoinix
+#: liminal-union/achievements.cfg:96
+#: liminal-union/achievements.cfg:97
+msgid "Cycle of the Phoinix 🔥"
+msgstr "Cycle du Phoinix 🔥"
+
+#. [achievement]: id=LIUN_phoinix
+#: liminal-union/achievements.cfg:98
+#: liminal-union/achievements.cfg:99
+msgid "For achieving the mystical state of metempsychosis in a reborn phoinix."
+msgstr "Pour avoir atteint l'état mystique de métempsycose en un phoinix renaissant."
+
+#. [era]: id=LIUN_era_courageous, type=hybrid
+#: liminal-union/era.cfg:5
+msgid "Liminal Union 🔰 Default ("
+msgstr "Union Liminale 🔰 Standard ("
+
+#. [era]: id=LIUN_era_courageous, type=hybrid
+#: liminal-union/era.cfg:6
+msgid "The extended standard era for Wesnoth multiplayer. Consists of eight factions and is generally balanced."
+msgstr "L'ère standard étendue pour le multijoueur de Wesnoth. Comprend huit factions et est généralement équilibrée."
+
+#. [era]: id=LIUN_era_heroes, type=mp
+#: liminal-union/era.cfg:42
+msgid "Liminal Union ⭐ Age of Heroes ("
+msgstr "Union Liminale ⭐ Âge des Héros ("
+
+#. [era]: id=LIUN_era_heroes, type=mp
+#: liminal-union/era.cfg:43
+msgid "An extended era with higher level units: level three leaders, with level one and two units available for recruit. Consists of eight factions. Not considered balanced."
+msgstr "Une ère étendue avec des unités de niveau supérieur : chefs de niveau 3 et recrues de niveaux 1 et 2. Comprend huit factions. Non considérée comme équilibrée."
+
+#. [set_menu_item]: id=LIUN_menu_g9_overclock
+#: liminal-union/faction.cfg:168
+msgid "Overclock Core (Emergency Protocol Bypass)"
+msgstr "Surcharger le cœur (Contournement d'urgence du protocole)"
+
+#. [set_menu_item]: id=LIUN_menu_marine_grounding
+#: liminal-union/faction.cfg:189
+msgid "⚡ Deploy Salt-Grounding Pylum (Root & Anti-Sorcery Ward)"
+msgstr "⚡ Déployer le Pylum de mise à la terre (Ancrage & Garde anti-sorcellerie)"
+
+#. [set_menu_item]: id=LIUN_menu_doctrine_codex
+#: liminal-union/faction.cfg:217
+msgid "📖 Liminal Union Doctrine Codex"
+msgstr "📖 Codex de doctrine de l'Union Liminale"
+
+#. [message]: speaker=narrator
+#: liminal-union/faction.cfg:228
+msgid "Liminal Union Field Codex"
+msgstr "Codex de campagne de l'Union Liminale"
+
+#. [message]: speaker=narrator
+#: liminal-union/faction.cfg:229
+msgid "Select a strategic doctrine to review:"
+msgstr "Sélectionnez une doctrine stratégique à consulter :"
+
+#. [option]
+#: liminal-union/faction.cfg:231
+msgid "⭐ Quick Start: The Three Golden Maxims"
+msgstr "⭐ Démarrage rapide : Les Trois Maximes d'Or"
+
+#. [message]: speaker=narrator
+#: liminal-union/faction.cfg:236
+msgid "Field Primer: Three Golden Maxims"
+msgstr "Précis de campagne : Trois Maximes d'Or"
+
+#. [message]: speaker=narrator
+#: liminal-union/faction.cfg:237
+msgid "To master the Liminal Union, keep three simple rules in mind:\\n\\n1. <b>March in Pairs:</b> Keep same-alloy troops adjacent to build Resonance. Its tier is based on the current formation and updates after movement. Poison disables Resonance; slow can reduce its tier.\\n\\n2. <b>Keep an Officer Close:</b> Conductors add 10 percentage points of damage for themselves and adjacent allied liminal units during Day or Night. This softens, but does not erase, their alignment penalties.\\n\\n3. <b>Strike at Twilight:</b> Liminal units deal 25% more damage at Dawn and Dusk.\\n\\n<b>Visual Feedback:</b>\\n• <i>Pulsing Halos:</i> Amber (Pyrite), Cyan (Kryonite), and Purple (Arcanite) halos and tier pips show Resonance status.\\n• <i>Battle Badges:</i> Floating notifications announce ZOC locks, Conductance, and Tier elevations without checking menus."
+msgstr "Pour maîtriser l'Union Liminale, gardez trois règles simples à l'esprit :\\n\\n1. <b>Marchez par paires :</b> Gardez les troupes de même alliage adjacentes pour bâtir la Résonance. Son palier dépend de la formation actuelle et se recalcule après le mouvement. Le poison désactive la Résonance ; le ralentissement peut réduire son palier.\\n\\n2. <b>Gardez un officier proche :</b> Les Conducteurs ajoutent 10 points de pourcentage de dégâts pour eux-mêmes et les unités liminales alliées adjacentes de Jour ou de Nuit. Cela atténue, sans l'effacer, leur pénalité d'alignement.\\n\\n3. <b>Frappez au crépuscule :</b> Les unités liminales infligent 25% de dégâts supplémentaires à l'Aube et au Crépuscule.\\n\\n<b>Retour visuel :</b>\\n• <i>Halos pulsants :</i> Les halos ambre (Pyrite), cyan (Kryonite) et violet (Arcanite) indiquent l'état de Résonance.\\n• <i>Insignes de combat :</i> Des notifications flottantes annoncent les verrouillages de ZOC, la Conductance et les paliers sans ouvrir de menu."
+
+#. [option]
+#: liminal-union/faction.cfg:242
+msgid "1. Formation Pods & Armor Alloys (Pyrite, Kryonite, Arcanite)"
+msgstr "1. Groupes de formation & Alliages d'armure (Pyrite, Kryonite, Arcanite)"
+
+#. [message]: speaker=narrator
+#: liminal-union/faction.cfg:247
+msgid "Resonance Pods & Armor Alloys"
+msgstr "Groupes de Résonance & Alliages d'armure"
+
+#. [message]: speaker=narrator
+#: liminal-union/faction.cfg:248
+msgid "Resonance activates immediately when standing adjacent to allies with matching armor alloys:\\n\\n• <b>Pyrite (Maidens):</b> Precision marksmanship & warding. Pod of 4+ units gains <b>Focus</b> (min 60% CTH at range) and +15% Fire/Arcane resistance.\\n• <b>Kryonite (Marines):</b> Cohesion & <b>Interlock</b>. 30% of incoming damage is absorbed across adjacent Kryonite allies (> 1 HP), preventing single-unit focus-fire assassinations.\\n• <b>Arcanite (G9 Warforms):</b> Heavy plating. Pod of 4+ units gains <b>Arcanite Warding</b> (+20% Fire/Cold resistance).\\n\\n<i>Note: Resonance activates immediately upon moving or recruiting adjacent to allies, providing instant defensive line bonuses!</i>"
+msgstr "La Résonance s'active immédiatement au contact d'alliés portant le même alliage d'armure :\\n\\n• <b>Pyrite (Maïden) :</b> Tir de précision & protection. Un groupe de 4+ unités gagne <b>Concentration</b> (min. 60% de toucher à distance) et +15% de résistance Feu/Arcane.\\n• <b>Kryonite (Marines) :</b> Cohésion & <b>Interverrouillage (Interlock)</b>. 30% des dégâts subis sont répartis entre les alliés Kryonite adjacents (> 1 PV), empêchant les éliminations ciblées.\\n• <b>Arcanite (Formes de guerre G9) :</b> Blindage lourd. Un groupe de 4+ unités gagne <b>Garde d'Arcanite</b> (+20% de résistance Feu/Froid).\\n\\n<i>Note : La Résonance s'active dès le déplacement ou le recrutement à côté d'alliés, offrant des bonus défensifs immédiats !</i>"
+
+#. [option]
+#: liminal-union/faction.cfg:253
+msgid "2. Formation Zone of Control (Level 0 Troops)"
+msgstr "2. Zone de Contrôle de formation (Troupes de niveau 0)"
+
+#. [message]: speaker=narrator
+#: liminal-union/faction.cfg:258
+msgid "Formation Zone of Control"
+msgstr "Zone de Contrôle de formation"
+
+#. [message]: speaker=narrator
+#: liminal-union/faction.cfg:259
+msgid "Standard level 0 troops in Wesnoth exert no Zone of Control (ZOC).\\n\\nHowever, Liminal Union level 0 troops (Marine/Maiden Privates, G9 AI, Ensigns) <b>exert full Zone of Control</b> whenever standing in a pod of 2 or more allied troops.\\n\\nUse tight formations to anchor chokepoints, protect wounded comrades, and deny enemy cavalry breakthroughs."
+msgstr "Les troupes standard de niveau 0 dans Wesnoth n'exercent aucune Zone de Contrôle (ZOC).\\n\\nCependant, les troupes de niveau 0 de l'Union Liminale (Soldats Marines/Maïden, G9 AI, Enseignes) <b>exercent une pleine Zone de Contrôle</b> dès qu'elles se tiennent en groupe d'au moins 2 troupes alliées.\\n\\nUtilisez des formations serrées pour tenir les goulets d'étranglement, protéger les blessés et briser les percées de cavalerie."
+
+#. [option]
+#: liminal-union/faction.cfg:264
+msgid "3. Conductance Auras & Liminal Timing"
+msgstr "3. Auras de Conductance & Rythme liminal"
+
+#. [message]: speaker=narrator
+#: liminal-union/faction.cfg:269
+msgid "Conductance & Alignment"
+msgstr "Conductance & Alignement"
+
+#. [message]: speaker=narrator
+#: liminal-union/faction.cfg:270
+msgid "Liminal Union units fight at peak strength during <b>Dawn and Dusk (+25% damage)</b>.\\n\\nAll Command units (Ensigns, Cornets, Captains, Colonels) radiate a <b>Conductance Aura</b> (pulsing ground halo). Adjacent liminal allies receive a +15% alignment offset:\\n• <b>Day:</b> Penalty softened from -25% to -10% net.\\n• <b>Night:</b> Penalty softened from -25% to -10% net.\\n• <b>Dawn/Dusk:</b> Full +25% net power maintained.\\n\\n<i>Officers do not give flat offensive leadership; their purpose is stabilizing the frontline through unfavorable daylight cycles.</i>"
+msgstr "Les unités de l'Union Liminale combattent à pleine puissance à <b>l'Aube et au Crépuscule (+25% de dégâts)</b>.\\n\\nToutes les unités de Commandement (Enseignes, Cornettes, Capitaines, Colonels) rayonnent une <b>Aura de Conductance</b>. Les alliés liminaux adjacents reçoivent une compensation d'alignement :\\n• <b>Jour :</b> Pénalité atténuée.\\n• <b>Nuit :</b> Pénalité atténuée.\\n• <b>Aube/Crépuscule :</b> Pleine puissance (+25%) maintenue.\\n\\n<i>Les officiers ne donnent pas un bonus offensif fixe ; leur rôle est de stabiliser la ligne de front durant les heures défavorables.</i>"
+
+#. [option]
+#: liminal-union/faction.cfg:275
+msgid "4. Special Tactical Actions (Pylum, Overclock, Wingsuit)"
+msgstr "4. Manœuvres tactiques spéciales (Pylum, Surcharge, Combinaison ailée)"
+
+#. [message]: speaker=narrator
+#: liminal-union/faction.cfg:280
+msgid "Tactical Maneuvers"
+msgstr "Manœuvres tactiques"
+
+#. [message]: speaker=narrator
+#: liminal-union/faction.cfg:281
+msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability for that turn.\\n• <b>G9 Overclock (Right-Click):</b> Right-click any undamaged G9 Warform to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers 4 HP core thermal stress.\\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!\\n• <b>Phoinix Signal Relay:</b> Phoinixes within 3 hexes of a Conductor extend the Conductance aura to adjacent troops, acting as aerial signal beacons."
+msgstr "• <b>Pylum de mise à la terre des Marines (Clic droit) :</b> Clic droit sur un Marine non ancré pour planter son pieu conducteur. Confère aux alliés adjacents +20% de protection élémentaire, met à la terre la précision magique ennemie (max 50% de toucher) et réduit les dégâts élémentaires ennemis de 20%. Coût : 0 PM et +20% de vulnérabilité Tranchant/Impact en mêlée pour ce tour.\\n• <b>Surcharge G9 (Clic droit) :</b> Clic droit sur une Forme de guerre G9 intacte pour déclencher le contournement d'urgence (+1 attaque en mêlée, +2 dégâts et <b>Étourdissement</b> pour le tour). En fin de tour, le golem subit 4 PV de contrainte thermique.\\n• <b>Vol plané Maïden (Passif) :</b> Toute unité Maïden commençant son tour sur terrain élevé (Collines ou Montagnes) déploie sa combinaison ailée et gagne <b>+1 PM et Tirailleur</b> pour ce tour !\\n• <b>Relais de signal Phoinix :</b> Les Phoinix à 3 hexagones ou moins d'un Conducteur relaient l'aura de Conductance aux troupes adjacentes."
+
+#. [option]
+#: liminal-union/faction.cfg:286
+msgid "Close Codex"
+msgstr "Fermer le Codex"
+
+#. [multiplayer_side]: id=LIUN_braves, type=LIUN_Maiden_Captain
+#: liminal-union/factions/liminal-union-braves.cfg:21
+msgid ""
+"The <bold>text='Liminal Union: Braves'</bold> era features ♙lvl1 recruits and ♕lvl2 leaders.\n"
+""
+msgstr "L'ère <bold>text='Union Liminale : Braves'</bold> propose des recrues ♙niv.1 et des chefs ♕niv.2.\n"
+
+#. [multiplayer_side]: id=LIUN_braves, type=LIUN_Maiden_Captain
+#. [multiplayer_side]: id=LIUN_heroes, type=LIUN_Maiden_Colonel
+#: liminal-union/factions/liminal-union-braves.cfg:22
+#: liminal-union/factions/liminal-union-heroes.cfg:22
+msgid ""
+"<bold><ref>text='The Liminal Union' dst='..race_maidencommand'</ref></bold> is a disciplined commonwealth fighting under an interlocking military doctrine. Strike at peak power with <bold>text='Three Golden Maxims'</bold>:\n"
+"\n"
+"1. <bold>text='March in Pairs'</bold>: Keep units adjacent to activate armor alloy traits automatically (Pyrite ranged focus, Kryonite damage Interlock, Arcanite warding). Resonance activates immediately upon stepping into formation.\n"
+"2. <bold>text='Keep an Officer Close'</bold>: Officers and adjacent allied liminal units gain +10 percentage points of damage during Day or Night. Their alignment remains unchanged.\n"
+"3. <bold>text='Strike at Twilight'</bold>: Retreat or consolidate during deep day and pitch-black night; attack fiercely at Dawn and Dusk (+25% power).\n"
+"\n"
+"• <bold>text='Visual & Audio Feedback'</bold>: Color-coded breathing halos (Amber Pyrite, Cyan Kryonite, Purple Arcanite) and floating battle badges display tier status immediately without checking menus.\n"
+"• <bold>text='Tactical Maneuvers'</bold>: Level 0 troops exert Formation ZOC in pairs; Maidens glide from hills (+1 MP, Skirmisher); G9 Warforms overclock for emergency burst strikes and Stun.\n"
+"• <bold>text='Field Codex'</bold>: Right-click any allied unit anytime on the map to review the automated Doctrine Codex without pausing the match."
+msgstr "<bold><ref>text='L’Union Liminale' dst='..race_maidencommand'</ref></bold> est une république disciplinée combattant selon une doctrine militaire solidaire. Frappez à pleine puissance grâce aux <bold>text='Trois Maximes d’Or'</bold> :\n\n1. <bold>text='Marchez par paires'</bold> : Gardez vos unités adjacentes pour activer automatiquement les alliages d'armure (Concentration Pyrite, Interverrouillage Kryonite, Garde Arcanite). La Résonance s'active immédiatement en formation.\n2. <bold>text='Gardez un officier proche'</bold> : Les officiers et les unités liminales alliées adjacentes gagnent +10 points de pourcentage de dégâts de Jour ou de Nuit.\n3. <bold>text='Frappez au crépuscule'</bold> : Consolidez vos lignes en plein jour et au cœur de la nuit ; attaquez avec vigueur à l'Aube et au Crépuscule (+25% de puissance).\n\n• <bold>text='Retour visuel & sonore'</bold> : Des halos pulsants (Pyrite ambre, Kryonite cyan, Arcanite violet) et des insignes flottants affichent le palier sans ouvrir de menu.\n• <bold>text='Manœuvres tactiques'</bold> : Les troupes niv.0 exercent une ZOC en paire ; les Maïden planent depuis les collines (+1 PM, Tirailleur) ; les G9 se surchargent pour étourdir.\n• <bold>text='Codex de campagne'</bold> : Faites un clic droit sur n'importe quelle unité alliée pour consulter le Codex de doctrine à tout moment."
+
+#. [multiplayer_side]: id=LIUN_heroes, type=LIUN_Maiden_Colonel
+#: liminal-union/factions/liminal-union-heroes.cfg:21
+msgid ""
+"The <bold>text='Liminal Union: Heroes'</bold> (AoH) era features ♙lvl1 and ♙lvl2 recruits and ♕lvl3 leaders.\n"
+""
+msgstr "L'ère <bold>text='Union Liminale : Héros'</bold> (ÂdH) propose des recrues ♙niv.1 et ♙niv.2 ainsi que des chefs ♕niv.3.\n"
+
+#. [lua]: g9_overclock.activate
+#: liminal-union/lua/g9_overclock.lua:24
+msgid "<span color='#ff5555'>[CRITICAL: CORE INTEGRITY ≤4 HP]</span>"
+msgstr "<span color='#ff5555'>[CRITIQUE : INTÉGRITÉ DU CŒUR ≤4 PV]</span>"
+
+#. [lua]: g9_overclock.activate
+#: liminal-union/lua/g9_overclock.lua:26
+msgid "<span color='#ffaa33'>[CORE ALREADY OVERCLOCKED]</span>"
+msgstr "<span color='#ffaa33'>[CŒUR DÉJÀ SURCHARGÉ]</span>"
+
+#. [lua]: g9_overclock.activate
+#: liminal-union/lua/g9_overclock.lua:28
+msgid "<span color='#ffaa33'>[NO ATTACKS REMAINING]</span>"
+msgstr "<span color='#ffaa33'>[AUCUNE ATTAQUE RESTANTE]</span>"
+
+#. [lua]: g9_overclock.activate
+#: liminal-union/lua/g9_overclock.lua:49
+msgid "stun"
+msgstr "étourdir"
+
+#. [lua]: g9_overclock.activate
+#: liminal-union/lua/g9_overclock.lua:50
+msgid "This attack hits so hard that the opponent is dazed and can no longer enforce a zone of control. The effect wears off on the opponent’s next turn."
+msgstr "Cette attaque frappe si fort que l'adversaire est hébété et ne peut plus exercer de zone de contrôle. L'effet se dissipe au prochain tour de l'adversaire."
+
+#. [lua]: g9_overclock.activate
+#: liminal-union/lua/g9_overclock.lua:63
+msgid "<span color='#ff3333'>[PROTOCOL BYPASS: OVERCLOCK + STUN ACTIVE]</span>"
+msgstr "<span color='#ff3333'>[CONTOURNEMENT DU PROTOCOLE : SURCHARGE + ÉTOURDISSEMENT ACTIFS]</span>"
+
+#. [lua]: g9_overclock.on_side_turn_end
+#: liminal-union/lua/g9_overclock.lua:85
+msgid "<span color='#ff5555'>-%d HP [CORE THERMAL STRESS]</span>"
+msgstr "<span color='#ff5555'>-%d PV [CONTRAINTE THERMIQUE DU CŒUR]</span>"
+
+#. [lua]: maiden_wingsuit.on_side_turn
+#: liminal-union/lua/maiden_wingsuit.lua:46
+msgid "wingsuit glide"
+msgstr "vol plané"
+
+#. [lua]: maiden_wingsuit.on_side_turn
+#: liminal-union/lua/maiden_wingsuit.lua:47
+msgid "female^wingsuit glide"
+msgstr "vol plané"
+
+#. [lua]: maiden_wingsuit.on_side_turn
+#: liminal-union/lua/maiden_wingsuit.lua:48
+msgid "Gliding down from elevated hills or mountain ridges, this maiden gains +1 MP and ignores enemy Zones of Control for this turn."
+msgstr "En planant depuis des collines ou des crêtes montagneuses, cette maïden gagne +1 PM et ignore les Zones de Contrôle ennemies pour ce tour."
+
+#. [lua]: maiden_wingsuit.on_side_turn
+#: liminal-union/lua/maiden_wingsuit.lua:56
+msgid "<span color='#ffdd55'>🪽 Wingsuit Glide (+1 MP, Skirmish)</span>"
+msgstr "<span color='#ffdd55'>🪽 Vol plané (+1 PM, Tirailleur)</span>"
+
+#. [lua]: marine_grounding.update_wards
+#: liminal-union/lua/marine_grounding.lua:82
+#: liminal-union/lua/marine_grounding.lua:88
+msgid "grounded"
+msgstr "mis à la terre"
+
+#. [lua]: marine_grounding.update_wards
+#: liminal-union/lua/marine_grounding.lua:83
+msgid "Magical currents are grounded into the earth: -20% damage on elemental attacks."
+msgstr "Les courants magiques sont dissipés dans la terre : -20% de dégâts sur les attaques élémentaires."
+
+#. [lua]: marine_grounding.update_wards
+#: liminal-union/lua/marine_grounding.lua:89
+msgid "Magical accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit."
+msgstr "La précision magique est dissipée par le Pylum de mise à la terre : 50% de chances de toucher au maximum."
+
+#. [lua]: marine_grounding.activate
+#: liminal-union/lua/marine_grounding.lua:111
+msgid "<span color='#55ffff'>[PYLUM ALREADY DEPLOYED]</span>"
+msgstr "<span color='#55ffff'>[PYLUM DÉJÀ DÉPLOYÉ]</span>"
+
+#. [lua]: marine_grounding.activate
+#: liminal-union/lua/marine_grounding.lua:113
+msgid "<span color='#ffaa33'>[GROUNDING UNAVAILABLE]</span>"
+msgstr "<span color='#ffaa33'>[MISE À LA TERRE INDISPONIBLE]</span>"
+
+#. [lua]: marine_grounding.activate
+#: liminal-union/lua/marine_grounding.lua:143
+msgid "<span color='#55ffff'>⚡ Salt-Grounding Pylum [0 MP, Ward Active]</span>"
+msgstr "<span color='#55ffff'>⚡ Pylum de mise à la terre [0 PM, Garde active]</span>"
+
+#. [lua]: phoinix_courier.on_phoinix_died
+#: liminal-union/lua/phoinix_courier.lua:69
+msgid "<span color='#ffaa33'>\"Registry Archive Preserved\"</span>"
+msgstr "<span color='#ffaa33'>\"Archive du registre préservée\"</span>"
+
+#. [lua]: phoinix_courier.on_unit_moved
+#: liminal-union/lua/phoinix_courier.lua:94
+msgid "<span color='#ffd700'>+3 XP [CIVIC ARCHIVE RECOVERED]</span>"
+msgstr "<span color='#ffd700'>+3 XP [ARCHIVE CIVIQUE RÉCUPÉRÉE]</span>"
+
+#: liminal-union/lua/promotion-handler.lua:9
+msgid "🎖️ Citation: Strict Protocol Adherence"
+msgstr "🎖️ Citation : Respect strict du protocole"
+
+#: liminal-union/lua/promotion-handler.lua:10
+msgid "🎖️ Award: Unsolicited Tenacity"
+msgstr "🎖️ Distinction : Ténacité non sollicitée"
+
+#: liminal-union/lua/promotion-handler.lua:11
+msgid "🎖️ Notice: Hazard Pay Approved"
+msgstr "🎖️ Avis : Prime de risque approuvée"
+
+#: liminal-union/lua/promotion-handler.lua:12
+msgid "🎖️ Commendation: Orderly Retaliation"
+msgstr "🎖️ Éloge : Riposte réglementaire"
+
+#: liminal-union/lua/promotion-handler.lua:13
+msgid "🎖️ Certified: Surviving the Draft"
+msgstr "🎖️ Certifié : A survécu à la conscription"
+
+#: liminal-union/lua/promotion-handler.lua:14
+msgid "🎖️ Field Bandage: Civic Issue (+2 HP)"
+msgstr "🎖️ Pansement de campagne : Dotation civique (+2 PV)"
+
+#: liminal-union/lua/promotion-handler.lua:18
+msgid "🎖️ Bronze Star: Merit under Hostile Audit"
+msgstr "🎖️ Étoile de bronze : Mérite sous audit hostile"
+
+#: liminal-union/lua/promotion-handler.lua:19
+msgid "🎖️ Commendation: Rational Composure"
+msgstr "🎖️ Éloge : Sang-froid rationnel"
+
+#: liminal-union/lua/promotion-handler.lua:20
+msgid "🎖️ Certified: Senior Dispute Arbitrator"
+msgstr "🎖️ Certifié : Arbitre principal des litiges"
+
+#: liminal-union/lua/promotion-handler.lua:21
+msgid "🎖️ Citation: Excessive Civic Zeal"
+msgstr "🎖️ Citation : Zèle civique excessif"
+
+#: liminal-union/lua/promotion-handler.lua:25
+msgid "⭐ Promotion: Authorized to Question Orders"
+msgstr "⭐ Promotion : Autorisé à questionner les ordres"
+
+#: liminal-union/lua/promotion-handler.lua:26
+msgid "⭐ Promoted: Certified Line Overseer"
+msgstr "⭐ Promu : Surveillant de ligne certifié"
+
+#: liminal-union/lua/promotion-handler.lua:27
+msgid "⭐ Grade Advance: Seniority Validated"
+msgstr "⭐ Avancement de grade : Ancienneté validée"
+
+#: liminal-union/lua/promotion-handler.lua:28
+msgid "⭐ Promoted: Field Tribunal Delegate"
+msgstr "⭐ Promu : Délégué du tribunal de campagne"
+
+#: liminal-union/lua/promotion-handler.lua:32
+msgid "🤖 [WEAR CYCLE LOGGED: TOLERANCE -10%]"
+msgstr "🤖 [CYCLE D'USURE ENREGISTRÉ : TOLÉRANCE -10%]"
+
+#: liminal-union/lua/promotion-handler.lua:33
+msgid "🤖 [ASSERTION: FRAME INTEGRITY SUB-OPTIMAL]"
+msgstr "🤖 [ASSERTION : INTÉGRITÉ DU CHÂSSIS SOUS-OPTIMALE]"
+
+#: liminal-union/lua/promotion-handler.lua:34
+msgid "🤖 [CHASSIS WEAR: WITHIN MUNICIPAL CODE]"
+msgstr "🤖 [USURE DU CHÂSSIS : CONFORME AU CODE MUNICIPAL]"
+
+#: liminal-union/lua/promotion-handler.lua:35
+msgid "🤖 [PARCHMENT SCRIPT: SYNTAX AMBIGUOUS]"
+msgstr "🤖 [SCRIPT SUR PARCHEMIN : SYNTAXE AMBIGUË]"
+
+#: liminal-union/lua/promotion-handler.lua:39
+msgid "🤖 [NEURAL CURIE PROMOTION: LOGIC EXPANDED]"
+msgstr "🤖 [PROMOTION NEURAL CURIE : LOGIQUE ÉTENDUE]"
+
+#: liminal-union/lua/promotion-handler.lua:40
+msgid "🤖 [FRAME RE-INDEXED: MAINSERIES STATUS]"
+msgstr "🤖 [CHÂSSIS RÉINDEXÉ : STATUT SÉRIE PRINCIPALE]"
+
+#. [lua]: pick_synced
+#: liminal-union/lua/promotion-handler.lua:126
+msgid "<span color='#ffaa55'>\"Unlicensed Spellcraft Quashed.\"</span>"
+msgstr "<span color='#ffaa55'>\"Sorcellerie sans licence réprimée.\"</span>"
+
+#. [lua]: pick_synced
+#: liminal-union/lua/promotion-handler.lua:128
+msgid "<span color='#ffd700'>\"Field Audit: Sovereignty Revoked.\"</span>"
+msgstr "<span color='#ffd700'>\"Audit de terrain : Souveraineté révoquée.\"</span>"
+
+#. [lua]: resonance.update_unit_alignment
+#: liminal-union/lua/resonance.lua:273
+msgid "<span color='#00e5ff'>Conducted</span>"
+msgstr "<span color='#00e5ff'>Conduit</span>"
+
+#. [lua]: resonance.update_unit_state
+#. [dummy]: id=LIUN_formation_zoc_dummy
+#: liminal-union/lua/resonance.lua:320
+#: liminal-union/macros/abilities.cfg:103
+msgid "formation zoc"
+msgstr "ZOC de formation"
+
+#. [lua]: resonance.update_unit_state
+#: liminal-union/lua/resonance.lua:321
+msgid "Standing in formation with allied troops. Exerting Zone of Control."
+msgstr "Se tient en formation avec des troupes alliées. Exerce une Zone de Contrôle."
+
+#. [lua]: resonance.update_unit_state
+#: liminal-union/lua/resonance.lua:327
+msgid "<span color='#ffd700'>ZOC Lock</span>"
+msgstr "<span color='#ffd700'>Verrou ZOC</span>"
+
+#. [lua]: resonance.update_unit_state
+#: liminal-union/lua/resonance.lua:386
+msgid "focus"
+msgstr "concentration"
+
+#. [lua]: resonance.update_unit_state
+#: liminal-union/lua/resonance.lua:387
+msgid "Pyrite resonance sharpens aim: +%d%% chance to hit at range on offense."
+msgstr "La résonance de Pyrite aiguise la visée : +%d%% de chances de toucher à distance en attaque."
+
+#. [lua]: resonance.update_unit_state
+#: liminal-union/lua/resonance.lua:402
+msgid "bulwark"
+msgstr "rempart"
+
+#. [lua]: resonance.update_unit_state
+#: liminal-union/lua/resonance.lua:403
+msgid "Kryonite formation locks shields: enemies suffer -%d%% chance to hit in melee on offense."
+msgstr "La formation de Kryonite verrouille les boucliers : les ennemis subissent -%d%% de chances de toucher en mêlée en attaque."
+
+#. [lua]: resonance.update_unit_state
+#: liminal-union/lua/resonance.lua:413
+msgid "first strike"
+msgstr "initiative"
+
+#. [lua]: resonance.update_unit_state
+#: liminal-union/lua/resonance.lua:414
+msgid "Kryonite phalanx braces: strikes first when defending in melee."
+msgstr "La phalange de Kryonite s'arc-boute : frappe en premier en défense de mêlée."
+
+#. [lua]: resonance.update_unit_state
+#: liminal-union/lua/resonance.lua:440
+msgid "sunder"
+msgstr "fracas"
+
+#. [lua]: resonance.update_unit_state
+#: liminal-union/lua/resonance.lua:441
+msgid "Piston-driven hydraulic force increases melee strike damage by +%d on offense."
+msgstr "La force hydraulique à piston augmente les dégâts de mêlée de +%d en attaque."
+
+#. [lua]: resonance.update_unit_state
+#: liminal-union/lua/resonance.lua:473
+msgid "<span color='#ffd700'>✦ Tier 3 Lock ✦</span>"
+msgstr "<span color='#ffd700'>✦ Verrou Palier 3 ✦</span>"
+
+#. [lua]: resonance.handle_damage_redistribution
+#: liminal-union/lua/resonance.lua:646
+msgid "<span color='#4fc3f7'>-%d Interlock</span>"
+msgstr "<span color='#4fc3f7'>-%d Interlock</span>"
+
+#. [lua]: resonance.handle_damage_redistribution
+#: liminal-union/lua/resonance.lua:666
+msgid "<span color='#81d4fa'>Interlock (+%d)</span>"
+msgstr "<span color='#81d4fa'>Interlock (+%d)</span>"
+
+#. [dummy]: id=LIUN_resonance_pyrite
+#: liminal-union/macros/abilities.cfg:58
+msgid "Pyrite resonance"
+msgstr "Résonance de Pyrite"
+
+#. [dummy]: id=LIUN_resonance_pyrite
+#: liminal-union/macros/abilities.cfg:59
+msgid "female^Pyrite resonance"
+msgstr "Résonance de Pyrite"
+
+#. [dummy]: id=LIUN_resonance_pyrite
+#: liminal-union/macros/abilities.cfg:60
+msgid "This unit's Pyrite armor resonates with adjacent Pyrite-armored allies. Resonance tier depends on the current formation and is recalculated after movement. It grants physical resistance and improves ranged accuracy by 5 percentage points per tier. At Tier 3, it also grants +10% Fire and +10% Arcane resistance and Focus. Poison disables resonance; slow can reduce its tier."
+msgstr "L'armure de Pyrite de cette unité entre en résonance avec les alliés en armure de Pyrite adjacents. Le palier de résonance dépend de la formation actuelle et est recalculé après déplacement. Elle confère une résistance physique et améliore la précision à distance de 5 points de pourcentage par palier. Au Palier 3, elle confère aussi +10% de résistance au Feu et à l'Arcane ainsi que Concentration. Le poison désactive la résonance ; le ralentissement peut réduire son palier."
+
+#. [dummy]: id=LIUN_resonance_kryonite
+#: liminal-union/macros/abilities.cfg:67
+msgid "Kryonite resonance"
+msgstr "Résonance de Kryonite"
+
+#. [dummy]: id=LIUN_resonance_kryonite
+#: liminal-union/macros/abilities.cfg:68
+msgid "female^Kryonite resonance"
+msgstr "Résonance de Kryonite"
+
+#. [dummy]: id=LIUN_resonance_kryonite
+#: liminal-union/macros/abilities.cfg:69
+msgid "This unit's Kryonite armor resonates with adjacent Kryonite-armored allies. Resonance tier depends on the current formation and is recalculated after movement. It grants physical resistance and improves melee defense. At Tier 3, it grants firststrike on defense and +10% Cold and +10% Arcane resistance. Interlock can redistribute up to 30% of damage from a normal hit to eligible adjacent Kryonite allies; no recipient falls below 1 HP. Poison disables resonance; slow can reduce its tier."
+msgstr "L'armure de Kryonite de cette unité entre en résonance avec les alliés en armure de Kryonite adjacents. Le palier de résonance dépend de la formation actuelle et est recalculé après déplacement. Elle confère une résistance physique et améliore la défense en mêlée. Au Palier 3, elle confère l'initiative en défense ainsi que +10% de résistance au Froid et à l'Arcane. L'Interverrouillage (Interlock) peut redistribuer jusqu'à 30% des dégâts d'un coup normal aux alliés Kryonite éligibles adjacents ; aucun receveur ne tombe sous 1 PV. Le poison désactive la résonance ; le ralentissement peut réduire son palier."
+
+#. [dummy]: id=LIUN_resonance_arcanite
+#: liminal-union/macros/abilities.cfg:76
+msgid "Arcanite resonance"
+msgstr "Résonance d'Arcanite"
+
+#. [dummy]: id=LIUN_resonance_arcanite
+#: liminal-union/macros/abilities.cfg:77
+msgid "female^Arcanite resonance"
+msgstr "Résonance d'Arcanite"
+
+#. [dummy]: id=LIUN_resonance_arcanite
+#: liminal-union/macros/abilities.cfg:78
+msgid "This unit's Arcanite armor resonates with adjacent Arcanite-armored allies. Resonance tier depends on the current formation and is recalculated after movement. It grants physical resistance and increases melee damage by 1 per tier. At Tier 3, it also grants +20% Fire and +20% Cold resistance. Poison disables resonance; slow can reduce its tier."
+msgstr "L'armure d'Arcanite de cette unité entre en résonance avec les alliés en armure d'Arcanite adjacents. Le palier de résonance dépend de la formation actuelle et est recalculé après déplacement. Elle confère une résistance physique et augmente les dégâts de mêlée de 1 par palier. Au Palier 3, elle confère aussi +20% de résistance au Feu et au Froid. Le poison désactive la résonance ; le ralentissement peut réduire son palier."
+
+#. [dummy]: id=LIUN_squad_anchor_pyrite
+#. [dummy]: id=LIUN_squad_anchor_kryonite
+#: liminal-union/macros/abilities.cfg:85
+#: liminal-union/macros/abilities.cfg:94
+msgid "squad anchor"
+msgstr "ancre d'escouade"
+
+#. [dummy]: id=LIUN_squad_anchor_pyrite
+#. [dummy]: id=LIUN_squad_anchor_kryonite
+#: liminal-union/macros/abilities.cfg:86
+#: liminal-union/macros/abilities.cfg:95
+msgid "female^squad anchor"
+msgstr "ancre d'escouade"
+
+#. [dummy]: id=LIUN_squad_anchor_pyrite
+#: liminal-union/macros/abilities.cfg:87
+msgid "Doctrinaire Squad Anchor: This veteran anchors the firing line, granting adjacent Pyrite-armored allies an additional +10% ranged accuracy on offense."
+msgstr "Ancre d'escouade doctrinaire : Ce vétéran ancre la ligne de tir, accordant aux alliés en armure de Pyrite adjacents +10% supplémentaires de précision à distance en attaque."
+
+#. [dummy]: id=LIUN_squad_anchor_kryonite
+#: liminal-union/macros/abilities.cfg:96
+msgid "Doctrinaire Squad Anchor: This veteran anchors the shield wall. When adjacent Kryonite-armored allies take damage in formation, Interlock cushions an additional 2 points of damage."
+msgstr "Ancre d'escouade doctrinaire : Ce vétéran ancre le mur de boucliers. Lorsque des alliés en armure de Kryonite adjacents subissent des dégâts en formation, l'Interverrouillage absorbe 2 points de dégâts supplémentaires."
+
+#. [dummy]: id=LIUN_formation_zoc_dummy
+#: liminal-union/macros/abilities.cfg:104
+msgid "female^formation zoc"
+msgstr "ZOC de formation"
+
+#. [dummy]: id=LIUN_formation_zoc_dummy
+#: liminal-union/macros/abilities.cfg:105
+msgid "This level 0 unit exerts Zone of Control while adjacent to an eligible Liminal Union ally. The effect is recalculated when formation changes. Poison disables it; slow can disrupt it unless an unslowed eligible ally remains adjacent."
+msgstr "Cette unité de niveau 0 exerce une Zone de Contrôle tant qu'elle est adjacente à un allié éligible de l'Union Liminale. L'effet est recalculé lorsque la formation change. Le poison le désactive ; le ralentissement peut l'interrompre sauf si un allié éligible non ralenti reste adjacent."
+
+#. [dummy]: id=LIUN_conductor
+#: liminal-union/macros/abilities.cfg:121
+msgid "conductor"
+msgstr "conducteur"
+
+#. [dummy]: id=LIUN_conductor
+#: liminal-union/macros/abilities.cfg:122
+msgid "female^conductor"
+msgstr "conductrice"
+
+#. [dummy]: id=LIUN_conductor
+#: liminal-union/macros/abilities.cfg:123
+msgid "This officer and adjacent allied liminal units gain +10 percentage points of damage during lawful (Day) or chaotic (Night) times of day. Their alignment is not changed. The effect applies regardless of level."
+msgstr "Cet officier et les unités liminales alliées adjacentes gagnent +10 points de pourcentage de dégâts durant les heures loyales (Jour) ou chaotiques (Nuit). Leur alignement n'est pas modifié. L'effet s'applique quel que soit le niveau."
+
+#. [leadership]: id=LIUN_cadet_leadership
+#. [leadership]: id=LIUN_officer_leadership
+#: liminal-union/macros/abilities.cfg:177
+#: liminal-union/macros/abilities.cfg:199
+msgid "leadership"
+msgstr "commandement"
+
+#. [leadership]: id=LIUN_cadet_leadership
+#. [leadership]: id=LIUN_officer_leadership
+#: liminal-union/macros/abilities.cfg:178
+#: liminal-union/macros/abilities.cfg:200
+msgid "female^leadership"
+msgstr "commandement"
+
+#. [leadership]: id=LIUN_cadet_leadership
+#: liminal-union/macros/abilities.cfg:179
+msgid "This cadet unit can lead troops in battle. Adjacent lvl 0 units from the same side deal 25% more damage."
+msgstr "Ce cadet peut diriger des troupes au combat. Les unités alliées adjacentes de niveau 0 infligent 25% de dégâts supplémentaires."
+
+#. [leadership]: id=LIUN_officer_leadership
+#: liminal-union/macros/abilities.cfg:201
+msgid "This officer unit can lead other troops into battle. All adjacent lower-level units from the same side deal 25% more damage for each difference in level."
+msgstr "Cet officier peut mener d'autres troupes au combat. Toutes les unités alliées adjacentes de niveau inférieur infligent 25% de dégâts supplémentaires par niveau d'écart."
+
+#. [leadership]: id=LIUN_team_weaponbearer
+#. [resistance]: id=LIUN_team_shieldbearer
+#: liminal-union/macros/abilities.cfg:217
+#: liminal-union/macros/abilities.cfg:245
+msgid "team"
+msgstr "binôme"
+
+#. [leadership]: id=LIUN_team_weaponbearer
+#. [resistance]: id=LIUN_team_shieldbearer
+#: liminal-union/macros/abilities.cfg:218
+#: liminal-union/macros/abilities.cfg:246
+msgid "female^team"
+msgstr "binôme"
+
+#. [leadership]: id=LIUN_team_weaponbearer
+#: liminal-union/macros/abilities.cfg:219
+msgid "When paired with an adjacent Shieldguard, this unit and that Shieldguard deal 10% more damage per level."
+msgstr "Lorsqu'elle fait équipe avec un Garde-bouclier adjacent, cette unité et ce Garde-bouclier infligent 10% de dégâts supplémentaires par niveau."
+
+#. [leadership]: id=LIUN_team_weaponbearer
+#: liminal-union/macros/abilities.cfg:220
+msgid "Inactive unless adjacent to an allied Shieldguard."
+msgstr "Inactif sauf si adjacent à un Garde-bouclier allié."
+
+#. [resistance]: id=LIUN_team_shieldbearer
+#: liminal-union/macros/abilities.cfg:247
+msgid "When paired with an adjacent Weaponguard, this unit and that Weaponguard gain physical resistance."
+msgstr "Lorsqu'elle fait équipe avec un Garde-arme adjacent, cette unité et ce Garde-arme gagnent de la résistance physique."
+
+#. [resistance]: id=LIUN_team_shieldbearer
+#: liminal-union/macros/abilities.cfg:248
+msgid "Inactive unless adjacent to an allied Weaponguard."
+msgstr "Inactif sauf si adjacent à un Garde-arme allié."
+
+#. [heals]: id=LIUN_mobile_repair
+#: liminal-union/macros/abilities.cfg:275
+msgid "mobile repair"
+msgstr "réparation mobile"
+
+#. [heals]: id=LIUN_mobile_repair
+#: liminal-union/macros/abilities.cfg:276
+msgid "female^mobile repair"
+msgstr "réparation mobile"
+
+#. [heals]: id=LIUN_mobile_repair
+#: liminal-union/macros/abilities.cfg:277
+msgid "Quickbound golems and other warforms, such as war chariots, can be restored in repair shops in towns and cities or by mobile artificers, up to 6 HP per turn."
+msgstr "Les golems à liaison rapide et autres formes de guerre, telles que les chars de guerre, peuvent être remis en état dans les ateliers des villes ou par des artificiers mobiles, jusqu'à 6 PV par tour."
+
+#. [heals]: id=LIUN_mobile_repair
+#: liminal-union/macros/abilities.cfg:278
+msgid "This is inactive because no warform stands next to this artificer."
+msgstr "Inactif car aucune forme de guerre ne se tient à côté de cette artificière."
+
+#. [heals]: id=LIUN_first_aid
+#: liminal-union/macros/abilities.cfg:301
+msgid "first aid"
+msgstr "premiers soins"
+
+#. [heals]: id=LIUN_first_aid
+#: liminal-union/macros/abilities.cfg:302
+msgid "female^first aid"
+msgstr "premiers soins"
+
+#. [heals]: id=LIUN_first_aid
+#: liminal-union/macros/abilities.cfg:303
+msgid "This unit has basic field-medicine skill and equipment. It can heal and slow the effects of poison."
+msgstr "Cette unité possède des compétences et du matériel de médecine de campagne de base. Elle peut soigner et ralentir les effets du poison."
+
+#. [dummy]: id=LIUN_suicide_bomber
+#: liminal-union/macros/abilities.cfg:328
+msgid "suicide bomber"
+msgstr "kamikaze"
+
+#. [dummy]: id=LIUN_suicide_bomber
+#: liminal-union/macros/abilities.cfg:329
+msgid "female^suicide bomber"
+msgstr "kamikaze"
+
+#. [dummy]: id=LIUN_suicide_bomber
+#: liminal-union/macros/abilities.cfg:330
+msgid "The suicide bomber always hits a target when attacking, but dies instantly"
+msgstr "Le kamikaze touche toujours sa cible en attaquant, mais meurt instantanément."
+
+#. [advancement]: id=LIUN_valorheart_end
+#: liminal-union/macros/advancements.cfg:14
+msgid "Order of Remembrance 🎗 | Stiff-Necked. Defiant. Never Again."
+msgstr "Ordre du Souvenir 🎗 | Au cou raide. Indomptable. Plus jamais."
+
+#. [advancement]: id=LIUN_amla_simulacrum_end
+#: liminal-union/macros/advancements.cfg:50
+msgid "Inspection and reawakening | This G8 simulacrum undergoes mending, inspection, and ordered reawakening."
+msgstr "Inspection et réveil | Ce simulacre G8 subit réparation, inspection et réveil ordonné."
+
+#. [advancement]: id=LIUN_amla_golem_end
+#: liminal-union/macros/advancements.cfg:75
+msgid "Mending and recalibration | This G9 warform undergoes core inspection, structural mending, and lawful recalibration."
+msgstr "Remise en état et recalibration | Cette forme de guerre G9 subit une inspection du cœur, une réparation structurelle et une recalibration légale."
+
+#. [advancement]: id=LIUN_amla_phoinix_end
+#: liminal-union/macros/advancements.cfg:100
+msgid "Cycle of death and rebirth 🔥 | …when a phoinix nears the end of its life, its inner fire has consumed it. A mystically reborn phoinix instantly rises from the ashes…"
+msgstr "Cycle de mort et de renaissance 🔥 | …lorsqu'un phoinix approche de la fin de sa vie, son feu intérieur le consume. Un phoinix mystiquement régénéré renaît aussitôt de ses cendres…"
+
+#. [alignment]: id=LIUN_liminal
+#: liminal-union/macros/alignment.cfg:5
+msgid "liminal"
+msgstr "liminal"
+
+#. [alignment]: id=LIUN_liminal
+#: liminal-union/macros/alignment.cfg:6
+msgid "Liminal units are at their most effective during the transition turns of Dawn and Dusk (+25%). The Liminal Union's unique engineering reduces the midday penalty to -15%."
+msgstr "Les unités liminales sont au sommet de leur efficacité lors des tours de transition de l'Aube et du Crépuscule (+25%). L'artifice propre à l'Union Liminale réduit la pénalité de plein jour à -15%."
+
+#. [alignment]: id=LIUN_liminal_conducted
+#: liminal-union/macros/alignment.cfg:46
+msgid "liminal (conducted)"
+msgstr "liminal (conduit)"
+
+#. [alignment]: id=LIUN_liminal_conducted
+#: liminal-union/macros/alignment.cfg:47
+msgid "This unit's alignment is being stabilized by a nearby Conductor. Peak power is maintained, and Day and Night penalties are softened by +10%."
+msgstr "L'alignement de cette unité est stabilisé par un Conducteur proche. Sa puissance maximale est maintenue et les pénalités de Jour et de Nuit sont adoucies de +10%."
+
+#: liminal-union/macros/names.cfg:4
+msgid "Ammon,Aryeh,Asher,Avigdor,Alon,Amir,Amos,Arie,Avraham,Avram,Abrabanel,Absalom,Akabiah,Ayelet,Azariah,Barak,Barukh,Beshar,Berakhiah,Binyamin,Chalev,Chabner,Chaim,Chatan,Chayim,Chayyah,Dan,David,Dayan,Dror,Dar,Ehud,Eliezer,Eli,Erez,Ethan,Ezekiel,Elbaz,Eleazar,Elhanan,Elias,Eliyah,Elimelekh,Elisha,Ephraim,Eshkol,Eldad,Eliad,Elon,Gabriel,Gedaliah,Gamliel,Gedaliah,Gershom,Hananiah,Harel,Halevy,Hananel,Hanoch,Ilan,Isaac,Itzhak,Izak,Imanuel,Liron,Lior,Lamech,Levy,Lev,Malachi,Matityahu,Medan,Michael,Malech,Menuhah,Menahem,Menasche,Meir,Moshe,Manasses,Medad,Nun,Nephuneh,Naor,Naphtali,Natan,Neri,Nir,Nehemiah,Nehamah,Naim,Nehorai,Noah,Nosson,Oren,Or,Ovadia,Perah,Peled,Pinhas,Rae,Rafael,Reuven,Resh,Reuben,Shalev,Shiloh,Sason,Savit,Shazar,Shelomo,Shimon,Shmuel,Simeon,Solomon,Sofer,Simon,Saadia,Samuel,Saul,Shabtai,Shahaf,Shaul,Tabor,Tehiya,Toviah,Tuviah,Tzarfat,Tzur,Tzvi,Tamir,Uziel,Uzziah,Uma,Uri,Vered,Yra,Yossi,Yaakov,Yakir,Yechiel,Yedidyah,Yehezkel,Yesse,Yehoshua,Yishtabach,Yitzhak,Yaron,Yoram,Yuval,Yeremiah,Yonathan,Yoseph,Yosiah,Yehoshaphat,Yephthah,Yochanan,Zvi,Zakkai,Zeev,Zehavah"
+msgstr "Ammon,Aryeh,Asher,Avigdor,Alon,Amir,Amos,Arie,Avraham,Avram,Abrabanel,Absalom,Akabiah,Ayelet,Azariah,Barak,Barukh,Beshar,Berakhiah,Binyamin,Chalev,Chabner,Chaim,Chatan,Chayim,Chayyah,Dan,David,Dayan,Dror,Dar,Ehud,Eliezer,Eli,Erez,Ethan,Ezekiel,Elbaz,Eleazar,Elhanan,Elias,Eliyah,Elimelekh,Elisha,Ephraim,Eshkol,Eldad,Eliad,Elon,Gabriel,Gedaliah,Gamliel,Gedaliah,Gershom,Hananiah,Harel,Halevy,Hananel,Hanoch,Ilan,Isaac,Itzhak,Izak,Imanuel,Liron,Lior,Lamech,Levy,Lev,Malachi,Matityahu,Medan,Michael,Malech,Menuhah,Menahem,Menasche,Meir,Moshe,Manasses,Medad,Nun,Nephuneh,Naor,Naphtali,Natan,Neri,Nir,Nehemiah,Nehamah,Naim,Nehorai,Noah,Nosson,Oren,Or,Ovadia,Perah,Peled,Pinhas,Rae,Rafael,Reuven,Resh,Reuben,Shalev,Shiloh,Sason,Savit,Shazar,Shelomo,Shimon,Shmuel,Simeon,Solomon,Sofer,Simon,Saadia,Samuel,Saul,Shabtai,Shahaf,Shaul,Tabor,Tehiya,Toviah,Tuviah,Tzarfat,Tzur,Tzvi,Tamir,Uziel,Uzziah,Uma,Uri,Vered,Yra,Yossi,Yaakov,Yakir,Yechiel,Yedidyah,Yehezkel,Yesse,Yehoshua,Yishtabach,Yitzhak,Yaron,Yoram,Yuval,Yeremiah,Yonathan,Yoseph,Yosiah,Yehoshaphat,Yephthah,Yochanan,Zvi,Zakkai,Zeev,Zehavah"
+
+#: liminal-union/macros/names.cfg:5
+msgid "Abigail,Avigayl,Aila,Alona,Alya,Amira,Amita,Anita,Ardeth,Aviva,Aya,Ayala,Adira,Avital,Beulah,Bluma,Bathseba,Batel,Batya,Bruriah,Chaima,Chana,Channinah,Chava,Dafna,Dalia,Danielle,Daphne,Dayana,Deborah,Dina,Dar,Danita,Dalit,Devorah,Edna,Eimi,Ela,Eliana,Esther,Eve,Eva,Elisheva,Freida,Fruma,Galenka,Galit,Gilah,Gada,Golda,Gila,Hila,Hulda,Hadar,Ilana,Leah,Leila,Leora,Lilla,Levana,Liora,Mariamne,Merav,Mia,Mila,Mira,Miriam,Matan,Matnana,Miryam,Malka,Mayan,Meira,Michal,Milka,Natalie,Nava,Noa,Noya,Naylah,Naama,Naomi,Nurit,Orit,Ora,Orli,Orna,Penina,Qadidja,Rachel,Rae,Rael,Rebecca,Rina,Ruth,Rivka,Samina,Sarah,Sariya,Shira,Shoshana,Shiloh,Shlomit,Sachar,Sarai,Shifra,Shira,Shulamit,Tamar,Tamara,Talia,Tehilla,Tikva,Tirtzah,Tzipporah,Uriella,Vered,Yael,Yasmin,Yana,Yohana,Yudith,Yehudit,Yocheved,Yiskah,Yardena,Zakiah,Zehava,Zibiah,Zipi,Zivah,Zulma,Zissel"
+msgstr "Abigail,Avigayl,Aila,Alona,Alya,Amira,Amita,Anita,Ardeth,Aviva,Aya,Ayala,Adira,Avital,Beulah,Bluma,Bathseba,Batel,Batya,Bruriah,Chaima,Chana,Channinah,Chava,Dafna,Dalia,Danielle,Daphne,Dayana,Deborah,Dina,Dar,Danita,Dalit,Devorah,Edna,Eimi,Ela,Eliana,Esther,Eve,Eva,Elisheva,Freida,Fruma,Galenka,Galit,Gilah,Gada,Golda,Gila,Hila,Hulda,Hadar,Ilana,Leah,Leila,Leora,Lilla,Levana,Liora,Mariamne,Merav,Mia,Mila,Mira,Miriam,Matan,Matnana,Miryam,Malka,Mayan,Meira,Michal,Milka,Natalie,Nava,Noa,Noya,Naylah,Naama,Naomi,Nurit,Orit,Ora,Orli,Orna,Penina,Qadidja,Rachel,Rae,Rael,Rebecca,Rina,Ruth,Rivka,Samina,Sarah,Sariya,Shira,Shoshana,Shiloh,Shlomit,Sachar,Sarai,Shifra,Shira,Shulamit,Tamar,Tamara,Talia,Tehilla,Tikva,Tirtzah,Tzipporah,Uriella,Vered,Yael,Yasmin,Yana,Yohana,Yudith,Yehudit,Yocheved,Yiskah,Yardena,Zakiah,Zehava,Zibiah,Zipi,Zivah,Zulma,Zissel"
+
+#. Generator for male liminal_union names; see <https://wiki.wesnoth.org/Context-free_grammar> for syntax
+#: liminal-union/macros/names.cfg:7
+msgid ""
+"\n"
+"main={name}|{prefix}{name}|{name}{suffix}\n"
+"name=Ammon|Aryeh|Asher|Avigdor|Alon|Amir|Amos|Arie|Avraham|Avram|Abrabanel|Absalom|Akabiah|Ayelet|Azariah|Barak|Barukh|Beshar|Berakhiah|Binyamin|Chalev|Chabner|Chaim|Chatan|Chayim|Chayah|Dan|David|Dayag|Dror|Dar|Ehud|Eliezer|Eliphalet|Erez|Ethan|Ezekiel|Elbaz|Eleazar|Elhanan|Elias|Eliyah|Elimelekh|Elishaphat|Ephraim|Eshkol|Eldad|Eliad|Elon|Gabriel|Gedaliah|Gamliel|Gedaliah|Gershom|Hananiah|Harel|Halevy|Hananel|Hanoch|Hur|Ilan|Isaac|Itzhak|Izak|Imanuel|Liron|Lior|Lamech|Levy|Lev|Malachi|Matityahu|Medan|Michael|Malech|Menuhah|Menahem|Menasche|Meir|Moshe|Manasses|Medad|Nun|Nephuneh|Naor|Naphtali|Natan|Neri|Nir|Nehemiah|Nehamah|Naim|Nehorai|Noah|Nosson|Oren|Or|Ovadia|Perah|Peled|Pinhas|Rae|Rafael|Reuven|Resh|Reuben|Shalev|Shiloh|Sason|Savit|Shazar|Shelomo|Shimon|Shmuel|Simeon|Solomon|Sofer|Simon|Saadia|Samuel|Saul|Shabtai|Shahaf|Shaul|Tabor|Tehiya|Toviah|Tuviah|Tzarfat|Tzur|Tzvi|Tamir|Uziel|Uzziah|Uma|Uri|Vered|Yra|Yossi|Yaakov|Yakir|Yechiel|Yedidyah|Yehezkel|Yesse|Yehoshua|Yishtabach|Yitzhak|Yaron|Yoram|Yuval|Yeremiah|Yonathan|Yoseph|Yosiah|Yehoshaphat|Yephthah|Yochanan|Zvi|Zakkai|Zeev|Zehavah\n"
+"prefix=Ben-|Bar-\n"
+"suffix= Ben-Ami| Ben-El| Ben-Yah| Ben-Adam| Ben-Zion| Ben-Shalom| Bar-Ami| Bar-El| Bar-Yah| Bar-Adam| Bar-Sayyon| Bar-Shalom\n"
+""
+msgstr "\nmain={name}|{prefix}{name}|{name}{suffix}\nname=Ammon|Aryeh|Asher|Avigdor|Alon|Amir|Amos|Arie|Avraham|Avram|Abrabanel|Absalom|Akabiah|Ayelet|Azariah|Barak|Barukh|Beshar|Berakhiah|Binyamin|Chalev|Chabner|Chaim|Chatan|Chayim|Chayah|Dan|David|Dayag|Dror|Dar|Ehud|Eliezer|Eliphalet|Erez|Ethan|Ezekiel|Elbaz|Eleazar|Elhanan|Elias|Eliyah|Elimelekh|Elishaphat|Ephraim|Eshkol|Eldad|Eliad|Elon|Gabriel|Gedaliah|Gamliel|Gedaliah|Gershom|Hananiah|Harel|Halevy|Hananel|Hanoch|Hur|Ilan|Isaac|Itzhak|Izak|Imanuel|Liron|Lior|Lamech|Levy|Lev|Malachi|Matityahu|Medan|Michael|Malech|Menuhah|Menahem|Menasche|Meir|Moshe|Manasses|Medad|Nun|Nephuneh|Naor|Naphtali|Natan|Neri|Nir|Nehemiah|Nehamah|Naim|Nehorai|Noah|Nosson|Oren|Or|Ovadia|Perah|Peled|Pinhas|Rae|Rafael|Reuven|Resh|Reuben|Shalev|Shiloh|Sason|Savit|Shazar|Shelomo|Shimon|Shmuel|Simeon|Solomon|Sofer|Simon|Saadia|Samuel|Saul|Shabtai|Shahaf|Shaul|Tabor|Tehiya|Toviah|Tuviah|Tzarfat|Tzur|Tzvi|Tamir|Uziel|Uzziah|Uma|Uri|Vered|Yra|Yossi|Yaakov|Yakir|Yechiel|Yedidyah|Yehezkel|Yesse|Yehoshua|Yishtabach|Yitzhak|Yaron|Yoram|Yuval|Yeremiah|Yonathan|Yoseph|Yosiah|Yehoshaphat|Yephthah|Yochanan|Zvi|Zakkai|Zeev|Zehavah\nprefix=Ben-|Bar-\nsuffix= Ben-Ami| Ben-El| Ben-Yah| Ben-Adam| Ben-Zion| Ben-Shalom| Bar-Ami| Bar-El| Bar-Yah| Bar-Adam| Bar-Sayyon| Bar-Shalom\n"
+
+#. Generator for female liminal_union names
+#: liminal-union/macros/names.cfg:14
+msgid ""
+"\n"
+"main={name}|{prefix}{name}|{name}{suffix}\n"
+"name=Abigail|Avigayl|Aila|Alona|Alya|Amira|Amita|Anita|Ardeth|Aviva|Aya|Ayala|Adira|Avital|Beulah|Bluma|Bathseba|Batel|Batya|Bruriah|Chaima|Chana|Channinah|Chava|Dafna|Dalia|Danielle|Daphne|Dayana|Deborah|Dina|Dar|Danita|Dalit|Devorah|Edna|Eimi|Ela|Eliana|Esther|Eve|Eva|Elisheva|Freida|Fruma|Galenka|Galit|Gilah|Gada|Golda|Gila|Hila|Hulda|Hadar|Ilana|Leah|Leila|Leora|Lilla|Levana|Liora|Mariamne|Merav|Mia|Mila|Mira|Miriam|Matan|Matnana|Miryam|Malka|Mayan|Meira|Michal|Milka|Natalie|Nava|Noa|Noya|Naylah|Naama|Naomi|Nurit|Orit|Ora|Orli|Orna|Penina|Qadidja|Rachel|Rae|Rael|Rebecca|Rina|Ruth|Rivka|Samina|Sarah|Sariya|Shira|Shoshana|Shiloh|Shlomit|Sachar|Sarai|Shifra|Shira|Shulamit|Tamar|Tamara|Talia|Tehilla|Tikva|Tirtzah|Tzipporah|Uriella|Vered|Yael|Yasmin|Yana|Yohana|Yudith|Yehudit|Yocheved|Yiskah|Yardena|Zakiah|Zehava|Zibiah|Zipi|Zivah|Zulma|Zissel\n"
+"prefix=Bat-\n"
+"suffix= Bat-Ami| Bat-El| Bat-Yah| Bat-Hava| Bat-Sayyon| Bat-Shalom\n"
+""
+msgstr "\nmain={name}|{prefix}{name}|{name}{suffix}\nname=Abigail|Avigayl|Aila|Alona|Alya|Amira|Amita|Anita|Ardeth|Aviva|Aya|Ayala|Adira|Avital|Beulah|Bluma|Bathseba|Batel|Batya|Bruriah|Chaima|Chana|Channinah|Chava|Dafna|Dalia|Danielle|Daphne|Dayana|Deborah|Dina|Dar|Danita|Dalit|Devorah|Edna|Eimi|Ela|Eliana|Esther|Eve|Eva|Elisheva|Freida|Fruma|Galenka|Galit|Gilah|Gada|Golda|Gila|Hila|Hulda|Hadar|Ilana|Leah|Leila|Leora|Lilla|Levana|Liora|Mariamne|Merav|Mia|Mila|Mira|Miriam|Matan|Matnana|Miryam|Malka|Mayan|Meira|Michal|Milka|Natalie|Nava|Noa|Noya|Naylah|Naama|Naomi|Nurit|Orit|Ora|Orli|Orna|Penina|Qadidja|Rachel|Rae|Rael|Rebecca|Rina|Ruth|Rivka|Samina|Sarah|Sariya|Shira|Shoshana|Shiloh|Shlomit|Sachar|Sarai|Shifra|Shira|Shulamit|Tamar|Tamara|Talia|Tehilla|Tikva|Tirtzah|Tzipporah|Uriella|Vered|Yael|Yasmin|Yana|Yohana|Yudith|Yehudit|Yocheved|Yiskah|Yardena|Zakiah|Zehava|Zibiah|Zipi|Zivah|Zulma|Zissel\nprefix=Bat-\nsuffix= Bat-Ami| Bat-El| Bat-Yah| Bat-Hava| Bat-Sayyon| Bat-Shalom\n"
+
+#. [trait]: id=LIUN_arcanealloy
+#: liminal-union/macros/traits.cfg:38
+msgid "arcanealloy"
+msgstr "alliage arcanique"
+
+#. [trait]: id=LIUN_arcanealloy
+#: liminal-union/macros/traits.cfg:39
+msgid "female^arcanealloy"
+msgstr "alliage arcanique"
+
+#. [trait]: id=LIUN_arcanealloy
+#: liminal-union/macros/traits.cfg:40
+msgid "All weapons possess arcane alloy properties to some extent."
+msgstr "Toutes les armes possèdent dans une certaine mesure des propriétés d'alliage arcanique."
+
+#. [trait]: id=LIUN_arcanealloy
+#: liminal-union/macros/traits.cfg:41
+msgid "The Liminal Union tempers its weapons with mana-bearing arcanite alloys, allowing them to turn hostile sorcery aside and answer it in kind."
+msgstr "L'Union Liminale trempe ses armes avec des alliages d'arcanite porteurs de mana, leur permettant de détourner la sorcellerie ennemie et d'y répondre de même."
+
+#. [trait]: id=LIUN_immortal
+#: liminal-union/macros/traits.cfg:76
+msgid "immortal"
+msgstr "immortel"
+
+#. [trait]: id=LIUN_immortal
+#: liminal-union/macros/traits.cfg:77
+msgid "female^immortal"
+msgstr "immortelle"
+
+#. [trait]: id=LIUN_immortal
+#. [trait]: id=LIUN_cyborg
+#: liminal-union/macros/traits.cfg:78
+#: liminal-union/macros/traits.cfg:104
+msgid "Immune to drain, poison, and plague"
+msgstr "Immunisé contre le drain, le poison et la peste"
+
+#. [trait]: id=LIUN_immortal
+#: liminal-union/macros/traits.cfg:79
+msgid "<i>Immortal</i> units are immune to poison, drain, and plague. Phoinixes generally bear this trait. As creatures of renewal, they do not sicken as mortal beasts do, which makes them especially useful against foes who rely on poison or plague."
+msgstr "Les unités <i>immortelles</i> sont immunisées contre le poison, le drain et la peste. Les Phoinix portent généralement ce trait. Créatures de renouveau, ils ne tombent pas malades comme les bêtes mortelles, ce qui les rend particulièrement précieux contre les ennemis usant de poison ou de peste."
+
+#. [trait]: id=LIUN_cyborg
+#: liminal-union/macros/traits.cfg:102
+msgid "corebound"
+msgstr "lié au cœur"
+
+#. [trait]: id=LIUN_cyborg
+#: liminal-union/macros/traits.cfg:103
+msgid "female^corebound"
+msgstr "liée au cœur"
+
+#. [trait]: id=LIUN_cyborg
+#: liminal-union/macros/traits.cfg:105
+msgid "<i>Corebound</i> units are immune to poison, drain, and plague. G9 units generally bear this trait. Their lawful frames and sealed cores do not sicken as living flesh does, and the death-bound arts find little purchase in them. This makes them especially useful against foes who rely on poison or plague."
+msgstr "Les unités <i>liées au cœur</i> sont immunisées contre le poison, le drain et la peste. Les unités G9 portent généralement ce trait. Leurs châssis réguliers et leurs cœurs scellés ne dépérissent pas comme la chair vivante, et les arts nécromantiques n'ont guère de prise sur eux."
+
+#. [trait]: id=LIUN_healthy_musthave
+#: liminal-union/macros/traits.cfg:125
+msgid "healthy"
+msgstr "robuste"
+
+#. [trait]: id=LIUN_healthy_musthave
+#: liminal-union/macros/traits.cfg:126
+msgid "female^healthy"
+msgstr "robuste"
+
+#. [trait]: id=LIUN_healthy_musthave
+#: liminal-union/macros/traits.cfg:128
+msgid "This unit can tend its wounds while resting."
+msgstr "Cette unité peut panser ses blessures au repos."
+
+#. [trait]: id=LIUN_healthy_musthave
+#: liminal-union/macros/traits.cfg:129
+msgid "Healthy units regain 2 hit points when resting, and gain +1 maximum hit point upon leveling up."
+msgstr "Les unités robustes récupèrent 2 points de vie au repos et gagnent +1 point de vie maximum en montant de niveau."
+
+#. [chance_to_hit]: id=LIUN_suicide_bomb_explosion
+#: liminal-union/macros/weaponspecials.cfg:6
+msgid "bomb attack"
+msgstr "attaque à la bombe"
+
+#. [chance_to_hit]: id=LIUN_suicide_bomb_explosion
+#: liminal-union/macros/weaponspecials.cfg:7
+msgid "Since suicide attacks are set up close to the enemy, this bomb attack always has a 100% chance to hit."
+msgstr "Comme les attaques kamikazes sont déclenchées à bout portant, cette attaque à la bombe a toujours 100% de chances de toucher."
+
+#. [modification]: id=LIUN_Worker_Mod, type=hybrid
+#: liminal-union/modification/_main.cfg:14
+msgid "Liminal Union ⚒ Level 0 Worker Mod"
+msgstr "Union Liminale ⚒ Mod d'ouvriers de niveau 0"
+
+#. [modification]: id=LIUN_Worker_Mod, type=hybrid
+#: liminal-union/modification/_main.cfg:21
+msgid "A universal SP/MP modification that allows level 0 units to build castles, chop trees, and terraform via the in-game context menu."
+msgstr "Une modification solo/multijoueur universelle permettant aux unités de niveau 0 de bâtir des châteaux, d'abattre des arbres et de façonner le terrain via le menu contextuel."
+
+#. [modification]: id=LIUN_Faction_Worker_Mod, type=hybrid
+#: liminal-union/modification/_main.cfg:40
+msgid "Liminal Union 🏛 Faction Builders & Research Mod"
+msgstr "Union Liminale 🏛 Mod de bâtisseurs & recherche de faction"
+
+#. [modification]: id=LIUN_Faction_Worker_Mod, type=hybrid
+#: liminal-union/modification/_main.cfg:46
+msgid "Enables faction-specific building, terraforming, farming, mining, herding, fishing, and university research for Liminal Union and nation worker units."
+msgstr "Active la construction propre à chaque faction, le terrassement, l'agriculture, l'exploitation minière, l'élevage, la pêche et la recherche universitaire pour les ouvriers de l'Union Liminale et des nations."
+
+#: liminal-union/modification/buildings/buildings-drake.cfg:5
+#: liminal-union/modification/buildings/buildings-dwarves.cfg:5
+#: liminal-union/modification/buildings/buildings-elvish.cfg:5
+#: liminal-union/modification/buildings/buildings-elvish.cfg:10
+#: liminal-union/modification/buildings/buildings-humans.cfg:9
+#: liminal-union/modification/buildings/buildings-humans.cfg:14
+#: liminal-union/modification/buildings/buildings-humans.cfg:22
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:9
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:15
+#: liminal-union/modification/buildings/buildings-merfolk.cfg:59
+#: liminal-union/modification/buildings/buildings-merfolk.cfg:65
+#: liminal-union/modification/buildings/buildings-merfolk.cfg:87
+#: liminal-union/modification/buildings/buildings-orc.cfg:5
+#: liminal-union/modification/buildings/buildings-orc.cfg:10
+#: liminal-union/modification/buildings/buildings-undead.cfg:6
+#: liminal-union/modification/buildings/buildings-undead.cfg:11
+#: liminal-union/modification/buildings/buildings-undead.cfg:16
+#: liminal-union/modification/buildings/buildings-undead.cfg:21
+msgid "Build Village"
+msgstr "Bâtir un village"
+
+#: liminal-union/modification/buildings/buildings-dwarves.cfg:15
+#: liminal-union/modification/buildings/buildings-dwarves.cfg:23
+#: liminal-union/modification/buildings/buildings-elvish.cfg:20
+#: liminal-union/modification/buildings/buildings-elvish.cfg:28
+#: liminal-union/modification/buildings/buildings-humans.cfg:34
+#: liminal-union/modification/buildings/buildings-humans.cfg:40
+#: liminal-union/modification/buildings/buildings-merfolk.cfg:96
+#: liminal-union/modification/buildings/buildings-orc.cfg:19
+#: liminal-union/modification/buildings/buildings-orc.cfg:25
+#: liminal-union/modification/buildings/buildings-undead.cfg:34
+#: liminal-union/modification/buildings/buildings-undead.cfg:40
+#: liminal-union/modification/buildings/buildings-undead.cfg:46
+msgid "Build Castle"
+msgstr "Bâtir un château"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/buildings/buildings-dwarves.cfg:35
+#: liminal-union/modification/buildings/buildings-dwarves.cfg:43
+#: liminal-union/modification/buildings/buildings-dwarves.cfg:51
+#: liminal-union/modification/buildings/buildings-elvish.cfg:37
+#: liminal-union/modification/buildings/buildings-elvish.cfg:43
+#: liminal-union/modification/buildings/buildings-elvish.cfg:49
+#: liminal-union/modification/buildings/buildings-humans.cfg:49
+#: liminal-union/modification/buildings/buildings-humans.cfg:55
+#: liminal-union/modification/buildings/buildings-humans.cfg:61
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:52
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:58
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:64
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:71
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:77
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:83
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:90
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:96
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:102
+#: liminal-union/modification/buildings/buildings-merfolk.cfg:107
+#: liminal-union/modification/buildings/buildings-orc.cfg:35
+#: liminal-union/modification/buildings/buildings-orc.cfg:41
+#: liminal-union/modification/buildings/buildings-undead.cfg:56
+#: liminal-union/modification/buildings/buildings-undead.cfg:62
+#: liminal-union/modification/buildings/buildings-undead.cfg:68
+#: liminal-union/modification/buildings/buildings-undead.cfg:74
+#: liminal-union/modification/buildings/buildings-undead.cfg:80
+#: liminal-union/modification/buildings/buildings-undead.cfg:86
+#: liminal-union/modification/buildings/buildings-undead.cfg:92
+#: liminal-union/modification/buildings/buildings-undead.cfg:98
+#: liminal-union/modification/buildings/buildings-undead.cfg:104
+#: liminal-union/modification/buildings/buildings-undead.cfg:110
+#: liminal-union/modification/utils/worker-options-mp.cfg:116
+#: liminal-union/modification/utils/worker-options-sp.cfg:91
+#: liminal-union/modification/utils/worker-options-sp.cfg:97
+msgid "Build a Keep"
+msgstr "Bâtir un donjon"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/buildings/buildings-elvish.cfg:57
+#: liminal-union/modification/utils/worker-options-mp.cfg:131
+#: liminal-union/modification/utils/worker-options-mp.cfg:138
+#: liminal-union/modification/utils/worker-options-sp.cfg:152
+msgid "Plant Saplings"
+msgstr "Planter des jeunes arbres"
+
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:21
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:26
+msgid "Build Tent Camp"
+msgstr "Dresser un camp de tentes"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:35
+#: liminal-union/modification/buildings/buildings-liminal-union.cfg:41
+#: liminal-union/modification/utils/worker-options-sp.cfg:77
+#: liminal-union/modification/utils/worker-options-sp.cfg:83
+msgid "Build Encampment"
+msgstr "Ériger un campement"
+
+#: liminal-union/modification/buildings/buildings-merfolk.cfg:4
+msgid "race^Merfolk"
+msgstr "Ondins"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/buildings/buildings-merfolk.cfg:12
+#: liminal-union/modification/buildings/buildings-merfolk.cfg:24
+#: liminal-union/modification/buildings/buildings-merfolk.cfg:36
+#: liminal-union/modification/utils/worker-options-mp.cfg:230
+#: liminal-union/modification/utils/worker-options-mp.cfg:266
+#: liminal-union/modification/utils/worker-options-mp.cfg:279
+#: liminal-union/modification/utils/worker-options-sp.cfg:244
+#: liminal-union/modification/utils/worker-options-sp.cfg:278
+msgid "Landfill"
+msgstr "Remblayer"
+
+#: liminal-union/modification/buildings/buildings-merfolk.cfg:49
+msgid "Remove Water Lilies"
+msgstr "Retirer les nénuphars"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/buildings/buildings-merfolk.cfg:73
+#: liminal-union/modification/utils/worker-options-mp.cfg:124
+msgid "Establish University"
+msgstr "Fonder une université"
+
+#: liminal-union/modification/buildings/buildings-merfolk.cfg:80
+msgid "Build University"
+msgstr "Bâtir une université"
+
+#: liminal-union/modification/buildings/buildings-undead.cfg:26
+msgid "Standardize Village"
+msgstr "Standardiser le village"
+
+#: liminal-union/modification/buildings/buildings-undead.cfg:121
+#: liminal-union/modification/buildings/buildings-undead.cfg:127
+msgid "Plant Mushrooms"
+msgstr "Planter des champignons"
+
+#: liminal-union/modification/buildings/buildings-undead.cfg:133
+msgid "Putrefy the Land"
+msgstr "Putréfier la terre"
+
+#: liminal-union/modification/buildings/buildings-undead.cfg:138
+msgid "Corrupt the Ford"
+msgstr "Corrompre le gué"
+
+#: liminal-union/modification/buildings/buildings-undead.cfg:143
+msgid "Flood the Swamp"
+msgstr "Inonder le marais"
+
+#. [research]
+#: liminal-union/modification/utils/helper-macros.cfg:46
+msgid "agriculture"
+msgstr "agriculture"
+
+#. [option]: description=<span size='small'>
+#: liminal-union/modification/utils/syntactic-sugar.cfg:133
+msgid "Cost:"
+msgstr "Coût :"
+
+#. [option]: description=<span size='small'>
+#. "g" denotes the unit for Gold. Depending on your language's rules you may want to use a capital letter.
+#: liminal-union/modification/utils/syntactic-sugar.cfg:135
+#: liminal-union/modification/utils/syntactic-sugar.cfg:200
+msgid "g"
+msgstr "o"
+
+#. [option]: description=<span size='small'>
+#: liminal-union/modification/utils/syntactic-sugar.cfg:163
+msgid "No costs"
+msgstr "Aucun coût"
+
+#. [option]: description=<span size='small'>
+#: liminal-union/modification/utils/syntactic-sugar.cfg:200
+msgid "Earns:"
+msgstr "Rapporte :"
+
+#. [set_menu_item]: id=LIUN_get_to_work
+#. [set_menu_item]: id=LIUN_get_to_work_sp
+#: liminal-union/modification/utils/worker-options-mp.cfg:6
+#: liminal-union/modification/utils/worker-options-sp.cfg:21
+msgid "Get to Work!"
+msgstr "Au travail !"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:39
+msgid "construction"
+msgstr "construction"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:40
+msgid "What shall I do my liege?"
+msgstr "Que dois-je faire, mon seigneur ?"
+
+#. [option]
+#: liminal-union/modification/utils/worker-options-mp.cfg:44
+#: liminal-union/modification/utils/worker-options-sp.cfg:55
+msgid "Nothing"
+msgstr "Rien"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:59
+msgid "Demolish Farmland"
+msgstr "Démolir les terres cultivées"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:67
+#: liminal-union/modification/utils/worker-options-sp.cfg:120
+msgid "Convert to Grassland"
+msgstr "Convertir en prairie"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:77
+#: liminal-union/modification/utils/worker-options-sp.cfg:132
+msgid "Plant Farm"
+msgstr "Aménager une ferme"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:90
+#: liminal-union/modification/utils/worker-options-mp.cfg:97
+#: liminal-union/modification/utils/worker-options-sp.cfg:105
+#: liminal-union/modification/utils/worker-options-sp.cfg:112
+msgid "Build Mine"
+msgstr "Construire une mine"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:145
+#: liminal-union/modification/utils/worker-options-sp.cfg:142
+msgid "Flood the Field"
+msgstr "Inonder le champ"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:158
+#: liminal-union/modification/utils/worker-options-mp.cfg:181
+#: liminal-union/modification/utils/worker-options-mp.cfg:204
+#: liminal-union/modification/utils/worker-options-sp.cfg:160
+#: liminal-union/modification/utils/worker-options-sp.cfg:183
+#: liminal-union/modification/utils/worker-options-sp.cfg:206
+msgid "Chop Down Forest"
+msgstr "Abattre la forêt"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:247
+#: liminal-union/modification/utils/worker-options-sp.cfg:259
+msgid "Destroy the Ford"
+msgstr "Détruire le gué"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:295
+#: liminal-union/modification/utils/worker-options-mp.cfg:306
+#: liminal-union/modification/utils/worker-options-sp.cfg:293
+#: liminal-union/modification/utils/worker-options-sp.cfg:304
+msgid "Smash Cave Floor"
+msgstr "Briser le sol de la caverne"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:316
+#: liminal-union/modification/utils/worker-options-mp.cfg:331
+#: liminal-union/modification/utils/worker-options-sp.cfg:314
+#: liminal-union/modification/utils/worker-options-sp.cfg:329
+msgid "Harvest Mushrooms"
+msgstr "Récolter les champignons"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:351
+#: liminal-union/modification/utils/worker-options-mp.cfg:363
+#: liminal-union/modification/utils/worker-options-sp.cfg:347
+#: liminal-union/modification/utils/worker-options-sp.cfg:359
+msgid "Clear the Ground"
+msgstr "Dégager le terrain"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:376
+#: liminal-union/modification/utils/worker-options-sp.cfg:372
+msgid "Remove Fireplace"
+msgstr "Retirer le foyer"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:387
+#: liminal-union/modification/utils/worker-options-sp.cfg:384
+msgid "Light a Fire"
+msgstr "Allumer un feu"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:400
+msgid "Shorten Path"
+msgstr "Raccourcir le chemin"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:410
+#: liminal-union/modification/utils/worker-options-sp.cfg:396
+msgid "Remove Path"
+msgstr "Supprimer le chemin"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:420
+msgid "Destroy Bridge"
+msgstr "Détruire le pont"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:435
+#: liminal-union/modification/utils/worker-options-sp.cfg:405
+msgid "Melt Ice"
+msgstr "Faire fondre la glace"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:443
+msgid "Renovate Encampment"
+msgstr "Rénover le campement"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:453
+msgid "Demolish Castle"
+msgstr "Démolir le château"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-mp.cfg:461
+msgid "Demolish Keep"
+msgstr "Démolir le donjon"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-sp.cfg:52
+msgid "What shall I do?"
+msgstr "Que dois-je faire ?"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-sp.cfg:70
+msgid "Build Settlement"
+msgstr "Bâtir une colonie"
+
+#. [message]: speaker=unit
+#: liminal-union/modification/utils/worker-options-sp.cfg:231
+msgid "Make a Ford"
+msgstr "Aménager un gué"
+
+#. [race]: id=maidengolem
+#: liminal-union/units/golems.cfg:6
+msgid "race^Golem"
+msgstr "Golem"
+
+#. [race]: id=maidengolem
+#: liminal-union/units/golems.cfg:7
+msgid "race+female^Golem"
+msgstr "Golem"
+
+#. [race]: id=maidengolem
+#: liminal-union/units/golems.cfg:8
+msgid "race^Golems"
+msgstr "Golems"
+
+#. [race]: id=maidengolem
+#: liminal-union/units/golems.cfg:9
+msgid "A G9 Warform is an animated anthropomorphic construct fashioned from inanimate matter — wood, tempered bronze, leather, and sealed clay — by the Union's artificers. Many tales speak of how such a warform is brought to life by golem-script inscribed on parchment set within the frame. G9 Warforms cannot advance to more powerful forms; only recalibration by a skilled artificer extends their service. They wear down with time and must be maintained. When damaged, they may be restored in cities, castles, and keeps, or in the field by a war-artificer."
+msgstr "Une Forme de guerre G9 est un assemblage anthropomorphe animé, façonné à partir de matière inanimée — bois, bronze trempé, cuir et argile scellée — par les artificiers de l'Union. Maintes chroniques rapportent comment une telle forme de guerre est éveillée par une écriture golemique tracée sur un parchemin scellé dans sa structure. Les Formes de guerre G9 ne peuvent évoluer vers des formes plus puissantes ; seule une recalibration par une artificière qualifiée prolonge leur service. Elles s'usent avec le temps et doivent être entretenues dans les villes, châteaux et donjons, ou sur le terrain par une artificière de guerre."
+
+#. [race]: id=maidengolem
+#: liminal-union/units/golems.cfg:14
+msgid "X7 MarkI, X7 MarkII, X3, X1, 08.2, 2.01, 08, 4.0, 13.0, 5.2, 01-I, 01-II, 3-V"
+msgstr "X7 MarkI, X7 MarkII, X3, X1, 08.2, 2.01, 08, 4.0, 13.0, 5.2, 01-I, 01-II, 3-V"
+
+#. [unit_type]: id=LIUN_G8_Simulacrum_Base
+#: liminal-union/units/golems/a0-g8-simulacrum.cfg:6
+msgid "🤖 🟕 G8 Simulacrum"
+msgstr "🤖 🟕 Simulacre G8"
+
+#. [attack]: type=impact
+#: liminal-union/units/golems/a0-g8-simulacrum.cfg:18
+#: liminal-union/units/golems/b0-g9-ai.cfg:19
+#: liminal-union/units/golems/b0-g9-ai.cfg:144
+#: liminal-union/units/golems/b1-g9-ncm.cfg:21
+#: liminal-union/units/golems/b1-g9-ncm.cfg:142
+#: liminal-union/units/golems/b1-g9-ncm.cfg:187
+msgid "Fist [brawl]"
+msgstr "Poing [bagarre]"
+
+#. [attack]: type=impact
+#. [attack]: type=pierce
+#: liminal-union/units/golems/a0-g8-simulacrum.cfg:32
+#: liminal-union/units/golems/b0-g9-ai.cfg:33
+#: liminal-union/units/golems/b0-g9-ai.cfg:158
+#: liminal-union/units/golems/b1-g9-ncm.cfg:35
+#: liminal-union/units/golems/b1-g9-ncm.cfg:156
+#: liminal-union/units/golems/b1-g9-ncm.cfg:201
+msgid "Fist [double tap]"
+msgstr "Poing [double frappe]"
+
+#. [unit_type]: id=LIUN_G8_Simulacrum_Base
+#: liminal-union/units/golems/a0-g8-simulacrum.cfg:56
+msgid "G8 Simulacra are Quickbound Golems wrought for training and proving. Their frames are brought to life by golem-script inscribed on parchment set within the construct. Corps artificers test the bound intellects awakened in each frame: only those of sufficient quality are elevated to full G9 Warform service — the rest serve out their purpose as Simulacra. Though not swift, the Simulacrum is sturdy and endures sustained engagement well. They serve as training partners and trial opponents for the corps. They wear down with use and must be regularly inspected and maintained by artificers."
+msgstr "Les Simulacres G8 sont des Golems à liaison rapide façonnés pour l'entraînement et l'épreuve. Leurs châssis sont animés par une écriture golemique inscrite sur parchemin au cœur de l'assemblage. Les artificières du corps éprouvent chaque intellect lié ainsi éveillé : seuls ceux d'une qualité suffisante sont élevés au service complet des Formes de guerre G9 — les autres accomplissent leur office comme Simulacres. Bien que lent, le Simulacre est robuste et supporte les engagements prolongés."
+
+#. [unit_type]: id=LIUN_G8_Simulacrum_1_1
+#: liminal-union/units/golems/a0-g8-simulacrum.cfg:128
+msgid "🤖 🟕 G8 Simulacrum (1·1)"
+msgstr "🤖 🟕 Simulacre G8 (1·1)"
+
+#. [unit_type]: id=LIUN_G8_Simulacrum_1_1
+#: liminal-union/units/golems/a0-g8-simulacrum.cfg:133
+msgid "A G8 Simulacrum (1·1) – Core recalibration | Re-inscribed for drill and endurance trials, this training warform bears repeated strikes so that the corps may master formation and timing."
+msgstr "Simulacre G8 (1·1) – Recalibration du cœur | Réinscrit pour l'exercice et les épreuves d'endurance, ce golem d'entraînement encaisse les coups répétés afin que le corps maîtrise la formation et le rythme."
+
+#. [unit_type]: id=LIUN_G8_Simulacrum_1_2
+#: liminal-union/units/golems/a0-g8-simulacrum.cfg:142
+msgid "🤖 🟕 G8 Simulacrum (1·2)"
+msgstr "🤖 🟕 Simulacre G8 (1·2)"
+
+#. [unit_type]: id=LIUN_G9_AI_Base
+#: liminal-union/units/golems/b0-g9-ai.cfg:6
+msgid "🤖 🟕 G9 AI"
+msgstr "🤖 🟕 G9 AI"
+
+#. [unit_type]: id=LIUN_G9_AI_Base
+#: liminal-union/units/golems/b0-g9-ai.cfg:57
+msgid "G9 Warforms are Quickbound Golems bearing a bound intellect. Their frames are animated by golem-script set on small strips of parchment within the construct. Artificers of the corps carefully assess each awakened intellect: those of the highest order are elevated to the full Neural Curie Mainframe series. Though not swift, they are durable — able to hold a line, secure a retreat, or press through enemy ranks. They wear down with time and must be regularly maintained and inspected by skilled artificers."
+msgstr "Les Formes de guerre G9 sont des Golems à liaison rapide dotés d'un intellect lié. Leurs châssis sont animés par une écriture golemique tracée sur d'étroites bandes de parchemin à l'intérieur de la structure. Les artificières du corps évaluent avec soin chaque intellect éveillé : les plus accomplis sont élevés à la série complète Neural Curie Mainframe. Bien que lents, ils sont d'une grande endurance — capables de tenir une ligne, de couvrir une retraite ou de percer les rangs ennemis."
+
+#. [unit_type]: id=LIUN_G9_AI
+#: liminal-union/units/golems/b0-g9-ai.cfg:121
+msgid "🤖 🟕 G9 AI (0·0)"
+msgstr "🤖 🟕 G9 AI (0·0)"
+
+#. [unit_type]: id=LIUN_G9_AI_0_1  # _ one gets by [AltGr] + [,]
+#: liminal-union/units/golems/b0-g9-ai.cfg:134
+msgid "🤖 🟕 G9 AI (0·1)"
+msgstr "🤖 🟕 G9 AI (0·1)"
+
+#. [unit_type]: id=LIUN_G9_AI_0_1  # _ one gets by [AltGr] + [,]
+#: liminal-union/units/golems/b0-g9-ai.cfg:168
+msgid "Mainframe upgrade | This G9 unit gets the ability to stay submerged in water. Plus repair and error checks."
+msgstr "Amélioration du Mainframe | Cette unité G9 acquiert la capacité de rester submergée sous l'eau, ainsi que des vérifications d'erreur et de réparation."
+
+#. [unit_type]: id=LIUN_G9_NCM_Base
+#: liminal-union/units/golems/b1-g9-ncm.cfg:6
+msgid "🤖 🟗 G9 NCM"
+msgstr "🤖 🟗 G9 NCM"
+
+#. [unit_type]: id=LIUN_G9_NCM_Base
+#: liminal-union/units/golems/b1-g9-ncm.cfg:59
+msgid "The G9 Neural Curie Mainframe warform series stands among the most formidable ever wrought by the Union's artificers. Only the finest bound intellects are sealed within a Neural Curie Mainframe — the culmination of old golem-craft refined through generations of lawful inquiry. Their bound energy-core, the Curie radiant core, is an Arcanite-sealed vessel no larger than a watermelon, named for the first Union artificer to perfect its design. Though not swift, the sheer mass and energy density of a G9 NCM can endure grievous punishment in the field. These warforms wear down with time and must be maintained and recalibrated by artificers of the corps."
+msgstr "La série de formes de guerre G9 Neural Curie Mainframe figure parmi les plus redoutables jamais façonnées par les artificiers de l'Union. Seuls les intellects liés les plus subtils sont scellés au sein d'un Neural Curie Mainframe — l'aboutissement de l'antique art des golems affiné par des générations d'enquête légitime. Leur cœur énergétique lié, le cœur radiant Curie, est un vaisseau scellé d'Arcanite pas plus grand qu'une pastèque, nommé d'après la première artificière de l'Union à en avoir parfait le dessin. Malgré sa lenteur, la masse et la densité énergétique d'un G9 NCM lui permettent d'endurer les plus rudes assauts."
+
+#. [unit_type]: id=LIUN_G9_NCM
+#: liminal-union/units/golems/b1-g9-ncm.cfg:120
+msgid "🤖 🟗 G9 NCM (1·0)"
+msgstr "🤖 🟗 G9 NCM (1·0)"
+
+#. [unit_type]: id=LIUN_G9_NCM_1_1  # the '_' sign we get by [AltGr] + [,]
+#: liminal-union/units/golems/b1-g9-ncm.cfg:132
+msgid "🤖 🟗 G9 NCM (1·1)"
+msgstr "🤖 🟗 G9 NCM (1·1)"
+
+#. [unit_type]: id=LIUN_G9_NCM_1_1  # the '_' sign we get by [AltGr] + [,]
+#: liminal-union/units/golems/b1-g9-ncm.cfg:166
+msgid "Mainframe upgrade | This nightstalk upgrade reconfigures the G9 Warform, giving it the ability to move unrecognized in nighttime."
+msgstr "Amélioration du Mainframe | Cette reconfiguration nocturne permet à la Forme de guerre G9 de se déplacer sans être repérée durant la nuit."
+
+#. [unit_type]: id=LIUN_G9_NCM_1_2
+#: liminal-union/units/golems/b1-g9-ncm.cfg:175
+msgid "🤖 🟗 G9 NCM (1·2)"
+msgstr "🤖 🟗 G9 NCM (1·2)"
+
+#. [attack]: type=arcane
+#: liminal-union/units/golems/b1-g9-ncm.cfg:212
+msgid "[berserk mode]"
+msgstr "[mode furie]"
+
+#. [unit_type]: id=LIUN_G9_NCM_1_2
+#: liminal-union/units/golems/b1-g9-ncm.cfg:225
+msgid "Core directive: Relentless assault | Once unsealed, this combat stance presses the engagement without pause until one of the combatants falls."
+msgstr "Directive centrale : Assaut implacable | Une fois descellée, cette posture de combat poursuit l'engagement sans répit jusqu'à la chute de l'un des combattants."
+
+#. [race]: id=marinecommand
+#: liminal-union/units/halfelven.cfg:11
+msgid "race^Marine"
+msgstr "Marine"
+
+#. [race]: id=marinecommand
+#: liminal-union/units/halfelven.cfg:12
+msgid "race+female^Marine"
+msgstr "Marine"
+
+#. [race]: id=marinecommand
+#: liminal-union/units/halfelven.cfg:13
+msgid "race^Marines"
+msgstr "Marines"
+
+#. [race]: id=marinecommand
+#: liminal-union/units/halfelven.cfg:14
+msgid "Marines are the crossing-keepers of the Liminal Union's armed forces. They wear water-resistant Arcanite-composite armour, wrought to stand against sorcerous assault. Marines are trained to move with equal ease through woodland, sand, and shallow water, and are well-versed in riverine and coastal combat. Intelligent and disciplined, they advance swiftly through the corps by merit. To gather intelligence in the field, they train and tend Phoinix Messengers as swift scouts."
+msgstr "Les Marines sont les gardiens des passages au sein des forces armées de l'Union Liminale. Ils portent une armure composite d'Arcanite résistante à l'eau, forgée pour tenir face aux assauts de sorcellerie. Entraînés à progresser avec la même aisance à travers bois, sable et eaux peu profondes, ils excellent dans le combat fluvial et côtier. Intelligents et disciplinés, ils s'élèvent rapidement par le mérite. Pour recueillir du renseignement en campagne, ils dressent et soignent des Messagers Phoinix comme éclaireurs rapides."
+
+#. [race]: id=maidencommand
+#: liminal-union/units/halfelven.cfg:73
+msgid "race^Mäid"
+msgstr "Maïd"
+
+#. [race]: id=maidencommand
+#: liminal-union/units/halfelven.cfg:74
+msgid "race+female^Mäid"
+msgstr "Maïd"
+
+#. [race]: id=maidencommand
+#: liminal-union/units/halfelven.cfg:75
+msgid "race^Mäiden"
+msgstr "Maïden"
+
+#. [race]: id=maidencommand
+#: liminal-union/units/halfelven.cfg:76
+msgid "Maïden are the most honoured fighting arm of the Liminal Union's corps. The commonwealth reveres their threefold charge: bearing, rearing, and defending. They are therefore fitted with the finest Arcanite-composite armour the Union's artificers can fashion. Maiden units wear light armoured suits worked with Arcanite-braced wingfeathers, granting swift passage over all manner of terrain, though not true flight. Intelligent and disciplined, they advance swiftly through the corps by merit. They also oversee and maintain the G9 Warforms that hold the Union's iron line."
+msgstr "Les Maïden constituent le bras armé le plus honoré des corps de l'Union Liminale. La république révère leur triple charge : enfanter, élever et défendre. Elles sont donc équipées des plus fines armures composites d'Arcanite que les artificiers de l'Union puissent façonner. Les unités Maïden portent des combinaisons blindées légères ouvrées de pennes renforcées d'Arcanite, leur accordant un passage rapide sur tout terrain, sans toutefois permettre un vol véritable. Elles veillent également à l'entretien des Formes de guerre G9 qui tiennent la ligne de fer de l'Union."
+
+#. [unit_type]: id=LIUN_Maiden_Ensign_Base
+#: liminal-union/units/halfelven/command/a0-maiden-ensign.cfg:6
+msgid "🪽🟃 Ensign"
+msgstr "🪽🟃 Enseigne"
+
+#. [attack]: type=fire
+#: liminal-union/units/halfelven/command/a0-maiden-ensign.cfg:19
+#: liminal-union/units/halfelven/command/a1-maiden-cornet.cfg:413
+#: liminal-union/units/halfelven/command/a2-maiden-captain.cfg:17
+#: liminal-union/units/halfelven/command/a3-maiden-colonel.cfg:17
+msgid "Lance [pyronite]"
+msgstr "Lance [pyronite]"
+
+#. [attack]: type=pierce
+#: liminal-union/units/halfelven/command/a0-maiden-ensign.cfg:30
+#: liminal-union/units/halfelven/command/a2-maiden-captain.cfg:28
+#: liminal-union/units/halfelven/command/a3-maiden-colonel.cfg:28
+msgid "Lance [triple tap]"
+msgstr "Lance [triple frappe]"
+
+#. [unit_type]: id=LIUN_Maiden_Ensign_Base
+#: liminal-union/units/halfelven/command/a0-maiden-ensign.cfg:54
+msgid "A Maiden Ensign, or confidantë, is a young officer cadet schooled in civic law, battlefield triage, and the arts of alignment conduction. Projecting a steady bio-resonant field, she tempers the daytime and nighttime vulnerabilities of adjacent comrades. Trained as a first responder, she can render first aid to wounded comrades in the field."
+msgstr "Une Enseigne Maïden, ou confidantë, est une jeune élève-officier instruite dans le droit civique, le triage de campagne et l'art de la conduction d'alignement. Projetant un champ bio-résonant stable, elle tempère les vulnérabilités diurnes et nocturnes de ses camarades adjacents. Formée comme secouriste, elle peut prodiguer les premiers soins aux blessés sur le terrain."
+
+#. [unit_type]: id=LIUN_Maiden_Ensign
+#: liminal-union/units/halfelven/command/a0-maiden-ensign.cfg:128
+msgid "🪽🟃 Ensign (0·0)"
+msgstr "🪽🟃 Enseigne (0·0)"
+
+#. [unit_type]: id=LIUN_Maiden_Ensign_0_1
+#: liminal-union/units/halfelven/command/a0-maiden-ensign.cfg:143
+msgid "🪽🟃 Ensign (0·1)"
+msgstr "🪽🟃 Enseigne (0·1)"
+
+#. [unit_type]: id=LIUN_Maiden_Ensign_0_1
+#. [unit_type]: id=LIUN_Marine_Ensign_0_1
+#: liminal-union/units/halfelven/command/a0-maiden-ensign.cfg:151
+#: liminal-union/units/halfelven/command/b0-marine-ensign.cfg:166
+msgid "Promotion | Field Aid – Trained in the Halls of Inquiry to read the field with clear judgment, an Ensign provides field triage and assists the unit line."
+msgstr "Promotion | Secours de campagne – Formée dans les Salles d'Enquête à lire le champ de bataille avec un jugement clair, une Enseigne assure le triage et soutient la ligne."
+
+#. [unit_type]: id=LIUN_Maiden_Cornet_Base
+#: liminal-union/units/halfelven/command/a1-maiden-cornet.cfg:6
+msgid "🪽🟇 Cornet"
+msgstr "🪽🟇 Cornette"
+
+#. [attack]: type=pierce
+#: liminal-union/units/halfelven/command/a1-maiden-cornet.cfg:17
+#: liminal-union/units/halfelven/command/a1-maiden-cornet.cfg:402
+msgid "Lance [thrust]"
+msgstr "Lance [estoc]"
+
+#. [unit_type]: id=LIUN_Maiden_Cornet_Base
+#: liminal-union/units/halfelven/command/a1-maiden-cornet.cfg:42
+msgid "Maiden Cornets form the tactical officer foundation of the Maiden Corps. Equipped with wingsuits, MTAR arcane-hardened lances, and shields, they manoeuvre with exceptional speed and precision. Serving as Conductors, they project a stabilizing field that mitigates alignment penalties for adjacent troops during day and night, turning twilight skirmishers into a resolute all-hours fighting cadre. Trained as first responders, they can render first aid to wounded comrades in the field."
+msgstr "Les Cornettes Maïden forment l'assise tactique du corps des officiers Maïden. Équipées de combinaisons ailées, de lances MTAR trempées à l'arcanite et de boucliers, elles manœuvrent avec une vitesse et une précision remarquables. En tant que Conductrices, elles projettent un champ stabilisateur qui atténue les pénalités d'alignement des troupes adjacentes de jour comme de nuit. Formées comme secouristes, elles prodiguent les premiers soins aux blessés en campagne."
+
+#. [unit_type]: id=LIUN_Maiden_Cornet
+#: liminal-union/units/halfelven/command/a1-maiden-cornet.cfg:378
+msgid "🪽🟇 Cornet (1·0)"
+msgstr "🪽🟇 Cornette (1·0)"
+
+#. [unit_type]: id=LIUN_Maiden_Cornet_1_1
+#: liminal-union/units/halfelven/command/a1-maiden-cornet.cfg:393
+msgid "🪽🟇 Cornet (1·1)"
+msgstr "🪽🟇 Cornette (1·1)"
+
+#. [unit_type]: id=LIUN_Maiden_Cornet_1_1
+#: liminal-union/units/halfelven/command/a1-maiden-cornet.cfg:423
+msgid "First Aid Badge | Unlocks pyronite flame lance strike. You have passed the field training course on first responder techniques and paramedics."
+msgstr "Insigne de Premiers Soins | Débloque l'attaque de lance enflammée à la pyronite. Vous avez réussi le cours de secourisme de campagne."
+
+#. [unit_type]: id=LIUN_Maiden_Captain_Base
+#: liminal-union/units/halfelven/command/a2-maiden-captain.cfg:6
+msgid "🪽🟍 Captain"
+msgstr "🪽🟍 Capitaine"
+
+#. [unit_type]: id=LIUN_Maiden_Captain_Base
+#: liminal-union/units/halfelven/command/a2-maiden-captain.cfg:53
+msgid "With extensive study in aerial skirmishing and resonance warfare, a Maiden Captain commands the battlefield from above. Serving as an elite Conductor, her aura steadies the daylight and midnight effectiveness of all allied troops within her sphere of influence."
+msgstr "Forte d'études approfondies en escarmouche aérienne et en guerre de résonance, une Capitaine Maïden commande le champ de bataille depuis les hauteurs. En tant que Conductrice d'élite, son aura stabilise l'efficacité diurne et nocturne de toutes les troupes alliées dans sa sphère d'influence."
+
+#. [unit_type]: id=LIUN_Maiden_Captain
+#: liminal-union/units/halfelven/command/a2-maiden-captain.cfg:390
+msgid "🪽🟍 Captain (2·0)"
+msgstr "🪽🟍 Capitaine (2·0)"
+
+#. [unit_type]: id=LIUN_Maiden_Captain_2_1
+#: liminal-union/units/halfelven/command/a2-maiden-captain.cfg:405
+msgid "🪽🟍 Captain (2·1)"
+msgstr "🪽🟍 Capitaine (2·1)"
+
+#. [unit_type]: id=LIUN_Maiden_Captain_2_1
+#. [unit_type]: id=LIUN_Marine_Captain_2_1
+#: liminal-union/units/halfelven/command/a2-maiden-captain.cfg:413
+#: liminal-union/units/halfelven/command/b2-marine-captain.cfg:154
+msgid "Silver Heart Award 🎖️ | For bravery under enemy fire."
+msgstr "Cœur d'Argent 🎖️ | Pour bravoure sous le feu ennemi."
+
+#. [unit_type]: id=LIUN_Maiden_Captain_2_2
+#: liminal-union/units/halfelven/command/a2-maiden-captain.cfg:422
+msgid "🪽🟍 Captain (2·2)"
+msgstr "🪽🟍 Capitaine (2·2)"
+
+#. [unit_type]: id=LIUN_Maiden_Captain_2_2
+#. [unit_type]: id=LIUN_Marine_Captain_2_2
+#: liminal-union/units/halfelven/command/a2-maiden-captain.cfg:430
+#: liminal-union/units/halfelven/command/b2-marine-captain.cfg:171
+msgid "Gold Heart Award 🎖️ | For heroic deeds in action."
+msgstr "Cœur d'Or 🎖️ | Pour actes héroïques au combat."
+
+#. [unit_type]: id=LIUN_Maiden_Colonel_Base
+#: liminal-union/units/halfelven/command/a3-maiden-colonel.cfg:6
+msgid "🪽🟔 Colonel"
+msgstr "🪽🟔 Colonelle"
+
+#. [unit_type]: id=LIUN_Maiden_Colonel_Base
+#: liminal-union/units/halfelven/command/a3-maiden-colonel.cfg:53
+msgid "A Maiden Colonel is the most senior field rank of the Maiden Corps. Forged through many campaigns, she exercises excellent strategic judgment, and her overarching Conductance aura steadies the entire army line across every watch."
+msgstr "Une Colonelle Maïden détient le grade de campagne le plus élevé du Corps des Maïden. Aguerrie par maintes campagnes, elle exerce un jugement stratégique sûr, et sa vaste aura de Conductance affermit toute la ligne d'armée à chaque veille."
+
+#. [unit_type]: id=LIUN_Maiden_Colonel
+#: liminal-union/units/halfelven/command/a3-maiden-colonel.cfg:390
+msgid "🪽🟔 Colonel (3·0)"
+msgstr "🪽🟔 Colonelle (3·0)"
+
+#. [unit_type]: id=LIUN_Maiden_Colonel_3_1
+#: liminal-union/units/halfelven/command/a3-maiden-colonel.cfg:405
+msgid "🪽🟔 Colonel (3·1)"
+msgstr "🪽🟔 Colonelle (3·1)"
+
+#. [unit_type]: id=LIUN_Maiden_Colonel_3_1
+#. [unit_type]: id=LIUN_Marine_Colonel_3_1
+#: liminal-union/units/halfelven/command/a3-maiden-colonel.cfg:414
+#: liminal-union/units/halfelven/command/b3-marine-colonel.cfg:155
+msgid "Citation of Valor 🎖️ | For gallantry at the risk of life above and beyond the call of duty."
+msgstr "Citation de Valeur 🎖️ | Pour vaillance au péril de sa vie bien au-delà de l'appel du devoir."
+
+#. [unit_type]: id=LIUN_Maiden_Colonel_3_2
+#: liminal-union/units/halfelven/command/a3-maiden-colonel.cfg:422
+msgid "🪽🟔 Colonel (3·2)"
+msgstr "🪽🟔 Colonelle (3·2)"
+
+#. [unit_type]: id=LIUN_Maiden_Colonel_3_2
+#. [unit_type]: id=LIUN_Marine_Colonel_3_2
+#: liminal-union/units/halfelven/command/a3-maiden-colonel.cfg:431
+#: liminal-union/units/halfelven/command/b3-marine-colonel.cfg:172
+msgid "Award of Valor 🎖️ | For extraordinary bravery above and beyond the call of duty."
+msgstr "Médaille de la Valeur 🎖️ | Pour bravoure extraordinaire bien au-delà de l'appel du devoir."
+
+#. [unit_type]: id=LIUN_Maiden_Colonel_3_3
+#: liminal-union/units/halfelven/command/a3-maiden-colonel.cfg:439
+msgid "🪽🟔 Colonel (3·3)"
+msgstr "🪽🟔 Colonelle (3·3)"
+
+#. [unit_type]: id=LIUN_Maiden_Colonel_3_3
+#. [unit_type]: id=LIUN_Marine_Colonel_3_3
+#: liminal-union/units/halfelven/command/a3-maiden-colonel.cfg:449
+#: liminal-union/units/halfelven/command/b3-marine-colonel.cfg:190
+msgid "Order <i>Pour le Meritë</i> 🏅 | In recognition of the highest levels of heroism demonstrated in a war zone."
+msgstr "Ordre <i>Pour le Meritë</i> 🏅 | En reconnaissance du plus haut degré d'héroïsme démontré en zone de guerre."
+
+#. [unit_type]: id=LIUN_Marine_Ensign_Base
+#: liminal-union/units/halfelven/command/b0-marine-ensign.cfg:6
+msgid "🔱 🟃 Ensign"
+msgstr "🔱 🟃 Enseigne"
+
+#. [attack]: type=cold
+#: liminal-union/units/halfelven/command/b0-marine-ensign.cfg:19
+#: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:156
+#: liminal-union/units/halfelven/command/b2-marine-captain.cfg:17
+#: liminal-union/units/halfelven/command/b3-marine-colonel.cfg:17
+msgid "Sword [kryonite]"
+msgstr "Épée [kryonite]"
+
+#. [attack]: type=pierce
+#: liminal-union/units/halfelven/command/b0-marine-ensign.cfg:30
+#: liminal-union/units/halfelven/command/b2-marine-captain.cfg:28
+#: liminal-union/units/halfelven/command/b3-marine-colonel.cfg:28
+msgid "Sword [double tap]"
+msgstr "Épée [double frappe]"
+
+#. [unit_type]: id=LIUN_Marine_Ensign_Base
+#: liminal-union/units/halfelven/command/b0-marine-ensign.cfg:54
+msgid "A Marine Ensign is a promising cadet chosen for steady judgment and civic discipline. Entering the officer path as novice Conductors, Ensigns project an initial alignment aura that steadies the fighting rhythm of nearby soldiers during off-peak hours. Though young, their presence on the field anchors the formation."
+msgstr "Un Enseigne Marine est un cadet prometteur choisi pour la sûreté de son jugement et sa discipline civique. Entrant dans la voie des officiers comme Conducteurs novices, les Enseignes projettent une première aura d'alignement qui stabilise le rythme de combat des soldats proches durant les heures défavorables."
+
+#. [unit_type]: id=LIUN_Marine_Ensign
+#: liminal-union/units/halfelven/command/b0-marine-ensign.cfg:143
+msgid "🔱 🟃 Ensign (0·0)"
+msgstr "🔱 🟃 Enseigne (0·0)"
+
+#. [unit_type]: id=LIUN_Marine_Ensign_0_1
+#: liminal-union/units/halfelven/command/b0-marine-ensign.cfg:158
+msgid "🔱 🟃 Ensign (0·1)"
+msgstr "🔱 🟃 Enseigne (0·1)"
+
+#. [unit_type]: id=LIUN_Marine_Cornet_Base
+#: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:6
+msgid "🔱 🟇 Cornet"
+msgstr "🔱 🟇 Cornette"
+
+#. [attack]: type=blade
+#: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:17
+#: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:145
+msgid "Short sword"
+msgstr "Épée courte"
+
+#. [unit_type]: id=LIUN_Marine_Cornet_Base
+#: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:42
+msgid "A Marine Cornet is a junior officer equipped with an arcane-hardened MTAR alu-bronze short sword and a shield. Trained as bio-resonant Conductors, Cornets project an alignment-stabilizing field that bolsters adjacent liminal comrades through the heat of the day and darkness of night. Like all officers of the Union's corps, a Marine Cornet leads from the front — shouting 'after me!' when pressing the line rather than issuing orders from safety. Trained as first responders, they can render first aid to wounded comrades in the field."
+msgstr "Un Cornette Marine est un officier subalterne équipé d'une épée courte MTAR en alu-bronze trempé à l'arcanite et d'un bouclier. Formés comme Conducteurs bio-résonants, les Cornettes projettent un champ stabilisateur qui soutient les camarades liminaux adjacents sous la chaleur du jour et dans l'obscurité de la nuit. Comme tous les officiers de l'Union, il mène depuis la première ligne — criant « Suivez-moi ! » plutôt que de donner des ordres depuis l'arrière."
+
+#. [unit_type]: id=LIUN_Marine_Cornet
+#: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:121
+msgid "🔱 🟇 Cornet (1·0)"
+msgstr "🔱 🟇 Cornette (1·0)"
+
+#. [unit_type]: id=LIUN_Marine_Cornet_1_1
+#: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:136
+msgid "🔱 🟇 Cornet (1·1)"
+msgstr "🔱 🟇 Cornette (1·1)"
+
+#. [unit_type]: id=LIUN_Marine_Cornet_1_1
+#: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:166
+msgid "First Aid Badge | Unlocks kryonite cold blade strike. You have passed the field training course on first responder techniques and paramedics."
+msgstr "Insigne de Premiers Soins | Débloque la frappe glaciale à la kryonite. Vous avez réussi le cours de secourisme de campagne."
+
+#. [unit_type]: id=LIUN_Marine_Captain_Base
+#: liminal-union/units/halfelven/command/b2-marine-captain.cfg:6
+msgid "🔱 🟍 Captain"
+msgstr "🔱 🟍 Capitaine"
+
+#. [unit_type]: id=LIUN_Marine_Captain_Base
+#: liminal-union/units/halfelven/command/b2-marine-captain.cfg:53
+msgid "With extensive study in tactical operations and resonance warfare, a Marine Captain holds sound battlefield oversight. Serving as a senior Conductor, his presence projects an aura that stabilizes alignment for all nearby troops. A serious officer by merit and oath, he anchors the vanguard with unwavering resolve."
+msgstr "Fort d'une étude approfondie des opérations tactiques et de la guerre de résonance, un Capitaine Marine garde une vue d'ensemble sûre du champ de bataille. En tant que Conducteur supérieur, sa présence stabilise l'alignement de toutes les troupes proches. Officier établi par le mérite et le serment, il ancre l'avant-garde avec une résolution inébranlable."
+
+#. [unit_type]: id=LIUN_Marine_Captain
+#: liminal-union/units/halfelven/command/b2-marine-captain.cfg:131
+msgid "🔱 🟍 Captain (2·0)"
+msgstr "🔱 🟍 Capitaine (2·0)"
+
+#. [unit_type]: id=LIUN_Marine_Captain_2_1
+#: liminal-union/units/halfelven/command/b2-marine-captain.cfg:146
+msgid "🔱 🟍 Captain (2·1)"
+msgstr "🔱 🟍 Capitaine (2·1)"
+
+#. [unit_type]: id=LIUN_Marine_Captain_2_2
+#: liminal-union/units/halfelven/command/b2-marine-captain.cfg:163
+msgid "🔱 🟍 Captain (2·2)"
+msgstr "🔱 🟍 Capitaine (2·2)"
+
+#. [unit_type]: id=LIUN_Marine_Colonel_Base
+#: liminal-union/units/halfelven/command/b3-marine-colonel.cfg:6
+msgid "🔱 🟔 Colonel"
+msgstr "🔱 🟔 Colonel"
+
+#. [unit_type]: id=LIUN_Marine_Colonel_Base
+#: liminal-union/units/halfelven/command/b3-marine-colonel.cfg:53
+msgid "A Marine Colonel is the most senior field rank of the Marine Corps — an exemplary master of resonance warfare and a proved anchor of the line. Projecting a powerful Conductance aura, his presence on the field turns ordinary citizen-soldiers into an unshakeable fighting formation."
+msgstr "Un Colonel Marine détient le grade de campagne le plus élevé du Corps des Marines — maître accompli de la guerre de résonance et ancre éprouvée de la ligne de bataille. Projetant une puissante aura de Conductance, sa présence transforme de simples citoyens-soldats en une formation inébranlable."
+
+#. [unit_type]: id=LIUN_Marine_Colonel
+#: liminal-union/units/halfelven/command/b3-marine-colonel.cfg:131
+msgid "🔱 🟔 Colonel (3·0)"
+msgstr "🔱 🟔 Colonel (3·0)"
+
+#. [unit_type]: id=LIUN_Marine_Colonel_3_1
+#: liminal-union/units/halfelven/command/b3-marine-colonel.cfg:146
+msgid "🔱 🟔 Colonel (3·1)"
+msgstr "🔱 🟔 Colonel (3·1)"
+
+#. [unit_type]: id=LIUN_Marine_Colonel_3_2
+#: liminal-union/units/halfelven/command/b3-marine-colonel.cfg:163
+msgid "🔱 🟔 Colonel (3·2)"
+msgstr "🔱 🟔 Colonel (3·2)"
+
+#. [unit_type]: id=LIUN_Marine_Colonel_3_3
+#: liminal-union/units/halfelven/command/b3-marine-colonel.cfg:180
+msgid "🔱 🟔 Colonel (3·3)"
+msgstr "🔱 🟔 Colonel (3·3)"
+
+#. [unit_type]: id=LIUN_Maiden_Private_Base
+#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:6
+msgid "🪽⚬ Private"
+msgstr "🪽⚬ Soldate"
+
+#. [attack]: type=pierce
+#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:18
+#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:135
+msgid "Pitchfork [thrust]"
+msgstr "Fourche [estoc]"
+
+#. [attack]: type=pierce
+#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:29
+#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:146
+msgid "Pitchfork [throw]"
+msgstr "Fourche [jet]"
+
+#. [unit_type]: id=LIUN_Maiden_Private_Base
+#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:53
+msgid "Maiden are the backbone of the halfelven commonwealth. They are mothers, bearing and raising the generations to come. Though not warlike by nature, when the Union calls they have never failed to answer. In times of war there is never a shortage of maiden willing to take their place in the corps, alongside their mothers and grandmothers who proudly served before them. In battle they defend their homes and families with absolute devotion; in peace they strengthen the commonwealth through learning, teaching, care, and disciplined craft."
+msgstr "Les Maïden sont la colonne vertébrale de la république demi-elfe. Elles sont mères, portant et élevant les générations à venir. Bien qu'elles ne soient pas belliqueuses par nature, lorsque l'Union appelle, elles n'ont jamais manqué de répondre. Au combat, elles défendent leurs foyers et leurs familles avec un dévouement absolu ; en temps de paix, elles fortifient la république par l'étude, l'enseignement, le soin et l'artisanat discipliné."
+
+#. [unit_type]: id=LIUN_Maiden_Private
+#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:113
+msgid "🪽⚬ Private (0·0)"
+msgstr "🪽⚬ Soldate (0·0)"
+
+#. [unit_type]: id=LIUN_Maiden_Private_0_1
+#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:126
+msgid "🪽⚬ Private (0·1)"
+msgstr "🪽⚬ Soldate (0·1)"
+
+#. [attack]: type=impact
+#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:157
+msgid "Pitchfork [slam]"
+msgstr "Fourche [choc]"
+
+#. [unit_type]: id=LIUN_Maiden_Private_0_1
+#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:167
+msgid "CQC commando badge | Qualification for Close Quarters Combat. Unlocks impact melee strike. You can act unseen and unrecognized in urban combat zones."
+msgstr "Insigne commando CQC | Qualification au combat rapproché. Débloque la frappe d'impact en mêlée. Vous pouvez agir sans être vue ni reconnue dans les zones urbaines."
+
+#. [unit_type]: id=LIUN_Jaeger_Base
+#: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:6
+msgid "🪽⪦ Jaeger"
+msgstr "🪽⪦ Chasseresse"
+
+#. [attack]: type=impact
+#: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:18
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:17
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:215
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:279
+#: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:17
+#: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:206
+#: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:249
+msgid "Kick"
+msgstr "Coup de pied"
+
+#. [attack]: type=impact
+#: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:29
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:28
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:226
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:290
+msgid "Bow [blunts]"
+msgstr "Arc [flèches émoussées]"
+
+#. [attack]: type=arcane
+#: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:40
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:50
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:248
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:312
+msgid "Bow [arcanites]"
+msgstr "Arc [flèches d'arcanite]"
+
+#. [unit_type]: id=LIUN_Jaeger_Base
+#: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:64
+msgid "A Maiden Corps Jaeger is part of the ranged infantry reserve of the Maiden Corps, trained to make skilled use of her wingsuit. Many of them are young mothers: raising and teaching the next generation, they naturally keep to archery practice at home rather than in a camp. In times of need they are called to service; otherwise they defend their own communities. They are equipped with the finest Arcanite-composite light armour the corps can provide, for no unit is held more beloved or revered. They operate in squads, harassing enemy infantry with a sustained hail of arrows from their short bows. They avoid individual close combat, preferring always to fight in concert. They have learned hard lessons against drake raids on their homeland, and their Arcanite-cold sling-rounds carry a chill that unsettles even draconic flesh."
+msgstr "Une Chasseresse (Jaeger) du Corps des Maïden fait partie de la réserve d'infanterie à distance, entraînée au maniement habile de sa combinaison ailée. Beaucoup sont de jeunes mères : élevant et instruisant la génération suivante, elles s'exercent naturellement à l'arc chez elles plutôt qu'au camp. Équipées des meilleures armures légères composites d'Arcanite, elles opèrent en escouades et harcèlent l'infanterie ennemie d'une grêle de flèches. Leurs projectiles d'arcanite glaciale portent un froid qui trouble jusqu'à la chair des drakes."
+
+#. [unit_type]: id=LIUN_Jaeger
+#: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:191
+msgid "🪽⪦ Jaeger (1·0)"
+msgstr "🪽⪦ Chasseresse (1·0)"
+
+#. [unit_type]: id=LIUN_Jaeger_1_1
+#: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:207
+msgid "🪽⪦ Jaeger (1·1)"
+msgstr "🪽⪦ Chasseresse (1·1)"
+
+#. [unit_type]: id=LIUN_Jaeger_1_1
+#: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:217
+msgid "Command Upgrade | You have intensively trained in skirmish tactics."
+msgstr "Amélioration de commandement | Vous vous êtes intensivement entraînée aux tactiques de tirailleur."
+
+#. [unit_type]: id=LIUN_Hunterkiller_Base
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:6
+msgid "🪽⪨ Hunterkiller"
+msgstr "🪽⪨ Traqueuse"
+
+#. [attack]: type=pierce
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:39
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:237
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:301
+msgid "Bow [bodkin]"
+msgstr "Arc [pointe bodkin]"
+
+#. [unit_type]: id=LIUN_Hunterkiller_Base
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:74
+msgid "A Maiden Corps Hunterkiller belongs to the senior infantry reserve of the Maiden Corps. Almost all of them are mothers and grandmothers. They perfect their bowcraft at home — archery being more readily practiced without a partner than spear or blade — and in times of need may be called to serve, or step forward on their own to defend their communities. A Hunterkiller is a disciplined expert in ranged pursuit and encirclement. Those who take them for a minor nuisance seldom underestimate them a second time."
+msgstr "Une Traqueuse (Hunterkiller) appartient à la réserve supérieure d'infanterie du Corps des Maïden. Presque toutes sont mères et grands-mères. Elles perfectionnent leur tir à l'arc à domicile et, en cas de besoin, répondent à l'appel ou s'avancent d'elles-mêmes pour défendre leur communauté. Une Traqueuse est une experte disciplinée de la poursuite à distance et de l'encerclement."
+
+#. [unit_type]: id=LIUN_Hunterkiller
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:189
+msgid "🪽⪦ Hunterkiller (2·0)"
+msgstr "🪽⪦ Traqueuse (2·0)"
+
+#. [unit_type]: id=LIUN_Hunterkiller_2_1
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:205
+msgid "🪽⪦ Hunterkiller (2·1)"
+msgstr "🪽⪦ Traqueuse (2·1)"
+
+#. [unit_type]: id=LIUN_Hunterkiller_2_1
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:258
+msgid "Silver Heart Award 🎖️ | For bravery under enemy fire. (+4 HP, +2 Ranged Damage)"
+msgstr "Cœur d'Argent 🎖️ | Pour bravoure sous le feu ennemi. (+4 PV, +2 dégâts à distance)"
+
+#. [unit_type]: id=LIUN_Hunterkiller_2_2
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:267
+msgid "🪽⪦ Hunterkiller (2·2)"
+msgstr "🪽⪦ Traqueuse (2·2)"
+
+#. [unit_type]: id=LIUN_Hunterkiller_2_2
+#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:322
+msgid "Gold Heart Award / Squad Anchor 🏅 | Doctrinaire veteran anchoring the firing line (+4 HP, +10% ranged CTH to adjacent Pyrite allies)."
+msgstr "Cœur d'Or / Ancre d'escouade 🏅 | Vétérane doctrinaire ancrant la ligne de tir (+4 PV, +10% de toucher à distance pour les alliés Pyrite adjacents)."
+
+#. [unit_type]: id=LIUN_Techtronic_Base
+#: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:6
+msgid "🪽⪨ Techtronic"
+msgstr "🪽⪨ Techtronicienne"
+
+#. [attack]: type=pierce
+#: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:28
+#: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:217
+#: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:260
+msgid "Bow"
+msgstr "Arc"
+
+#. [unit_type]: id=LIUN_Techtronic_Base
+#: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:52
+msgid "Techtronics are trained senior war-artificers of the Maiden Corps. Skilled in Arcanite craft and the binding arts, they construct, maintain, and recalibrate the G9 Warforms under corps command. When called to service, they are most effective in squads alongside G9 golems, a maiden officer, and maiden infantry."
+msgstr "Les Techtroniciennes sont les artificières de guerre supérieures du Corps des Maïden. Expertes dans le travail de l'Arcanite et les arts de liaison, elles construisent, entretiennent et recalibrent les Formes de guerre G9 sous le commandement du corps."
+
+#. [unit_type]: id=LIUN_Techtronic
+#: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:180
+msgid "🪽⪦ Techtronic (2·0)"
+msgstr "🪽⪦ Techtronicienne (2·0)"
+
+#. [unit_type]: id=LIUN_Techtronic_2_1
+#: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:196
+msgid "🪽⪦ Techtronic (2·1)"
+msgstr "🪽⪦ Techtronicienne (2·1)"
+
+#. [unit_type]: id=LIUN_Techtronic_2_1
+#: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:227
+msgid "Silver Heart Award 🎖️ | For bravery under enemy fire. (+4 HP, +1 Melee Strike, +2 Ranged Damage)"
+msgstr "Cœur d'Argent 🎖️ | Pour bravoure sous le feu ennemi. (+4 PV, +1 attaque en mêlée, +2 dégâts à distance)"
+
+#. [unit_type]: id=LIUN_Techtronic_2_2
+#: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:236
+msgid "🪽⪦ Techtronic (2·2)"
+msgstr "🪽⪦ Techtronicienne (2·2)"
+
+#. [unit_type]: id=LIUN_Techtronic_2_2
+#: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:270
+msgid "Gold Heart Award / Squad Anchor 🏅 | Senior war-artificer anchoring the squad (+4 HP, +12 HP Golem Repair, +4 HP Field Aid, +10% ranged CTH to adjacent Pyrite allies)."
+msgstr "Cœur d'Or / Ancre d'escouade 🏅 | Artificière de guerre supérieure ancrant l'escouade (+4 PV, +12 PV réparation de Golem, +4 PV soins de campagne, +10% de toucher à distance pour les alliés Pyrite adjacents)."
+
+#. [unit_type]: id=LIUN_Marine_Private_Base
+#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:6
+msgid "🔱 ⚬ Private"
+msgstr "🔱 ⚬ Soldat"
+
+#. [attack]: type=pierce
+#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:18
+#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:187
+msgid "Sickle [double tap]"
+msgstr "Faucille [double frappe]"
+
+#. [attack]: type=impact
+#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:29
+#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:198
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:39
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:249
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:313
+msgid "Sling [bullets]"
+msgstr "Fronde [balles]"
+
+#. [unit_type]: id=LIUN_Marine_Private_Base
+#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:53
+msgid "Liminal Union Sabras are the backbone of the commonwealth, and in times of need the defenders of last resort. From childhood these free young men are trained to master the sling with precision. While not warlike by nature, they prove formidable when roused. There is never a shortage of Union youth willing to serve in the corps. They defend their homes and families with complete devotion, and in times of peace strengthen the commonwealth through hard work, lawful inquiry, arts, and disciplined craft."
+msgstr "Les Sabras de l'Union Liminale forment la colonne vertébrale de la république et, dans l'épreuve, ses défenseurs de dernier recours. Dès l'enfance, ces jeunes hommes libres s'entraînent à manier la fronde avec précision. Bien que pacifiques par nature, ils se révèlent redoutables lorsqu'on les provoque, défendant leurs foyers avec un dévouement total et fortifiant la cité en temps de paix par le travail, l'enquête légitime et l'artisanat discipliné."
+
+#. [unit_type]: id=LIUN_Marine_Private
+#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:165
+msgid "🔱 ⚬ Private (0·0)"
+msgstr "🔱 ⚬ Soldat (0·0)"
+
+#. [unit_type]: id=LIUN_Marine_Private_0_1
+#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:178
+msgid "🔱 ⚬ Private (0·1)"
+msgstr "🔱 ⚬ Soldat (0·1)"
+
+#. [attack]: type=impact
+#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:209
+msgid "Sickle [slam]"
+msgstr "Faucille [choc]"
+
+#. [unit_type]: id=LIUN_Marine_Private_0_1
+#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:219
+msgid "Ability upgrade | Unlocks impact melee strike. You can hide in woods and forests, and remain undetected by enemies."
+msgstr "Amélioration de capacité | Débloque la frappe d'impact en mêlée. Vous pouvez vous dissimuler dans les bois et forêts sans être repéré par l'ennemi."
+
+#. [unit_type]: id=LIUN_Sergeant_Base
+#: liminal-union/units/halfelven/marines/a1-sergeant.cfg:6
+msgid "🔱 ⪦ Sergeant"
+msgstr "🔱 ⪦ Sergent"
+
+#. [attack]: type=impact
+#: liminal-union/units/halfelven/marines/a1-sergeant.cfg:17
+msgid "Khopesh [smash]"
+msgstr "Khopesh [fracas]"
+
+#. [attack]: type=pierce
+#: liminal-union/units/halfelven/marines/a1-sergeant.cfg:28
+msgid "Khopesh [double tap]"
+msgstr "Khopesh [double frappe]"
+
+#. [attack]: type=pierce
+#: liminal-union/units/halfelven/marines/a1-sergeant.cfg:39
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:50
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:260
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:324
+msgid "Sling [glandes]"
+msgstr "Fronde [glandes]"
+
+#. [unit_type]: id=LIUN_Sergeant_Base
+#: liminal-union/units/halfelven/marines/a1-sergeant.cfg:63
+msgid "A Marine Sergeant is part of the infantry reserve of the Marine Corps. Many of them are young fathers, raising and teaching the next generation; they naturally keep to combat training at home rather than in a standing camp. In times of need they may be drafted, or step forward on their own to defend their communities. The Sergeant is a swift all-round defender, armed with Arcanite-composite light armour, a hardened alu-bronze sword, and a precision sling. He is trained in both land and naval combat. Against forces unshielded by sorcerous protection — such as human or dunefolk levies — he holds a clear advantage. His Arcanite-fire sling-rounds, however, find less purchase against the scaled hides of draken."
+msgstr "Un Sergent Marine fait partie de la réserve d'infanterie du Corps des Marines. Beaucoup sont de jeunes pères qui élèvent et instruisent la génération suivante, s'entraînant au combat chez eux plutôt que dans un camp permanent. Le Sergent est un défenseur polyvalent et véloce, équipé d'une armure légère composite d'Arcanite, d'une épée en alu-bronze trempé et d'une fronde de précision, rompu au combat terrestre comme naval."
+
+#. [unit_type]: id=LIUN_Sergeant
+#: liminal-union/units/halfelven/marines/a1-sergeant.cfg:190
+msgid "🔱 ⪦ Sergeant (1·0)"
+msgstr "🔱 ⪦ Sergent (1·0)"
+
+#. [unit_type]: id=LIUN_Sergeant_1_1
+#: liminal-union/units/halfelven/marines/a1-sergeant.cfg:205
+msgid "🔱 ⪦ Sergeant (1·1)"
+msgstr "🔱 ⪦ Sergent (1·1)"
+
+#. [unit_type]: id=LIUN_Sergeant_1_1
+#: liminal-union/units/halfelven/marines/a1-sergeant.cfg:214
+msgid "Diversion Badge | You mastered the diversion tactic in battle encounters."
+msgstr "Insigne de diversion | Vous avez maîtrisé la tactique de diversion au combat."
+
+#. [unit_type]: id=LIUN_Masterchief_Base
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:6
+msgid "🔱 ⪨ Masterchief"
+msgstr "🔱 ⪨ Premier-maître"
+
+#. [attack]: type=impact
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:17
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:227
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:291
+msgid "Khopesh [slash]"
+msgstr "Khopesh [taille]"
+
+#. [attack]: type=pierce
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:28
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:238
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:302
+msgid "Khopesh [stab]"
+msgstr "Khopesh [estoc]"
+
+#. [unit_type]: id=LIUN_Masterchief_Base
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:74
+msgid "A Masterchief is a trained field commander serving in heavy active duty. He is the swiftest and most capable of the Marine Corps field officers — quick enough to press every advantage and steady enough to hold when others waver. Armed with leather armour, a hardened alu-bronze sword, and a precision sling, he is a proved keeper of the line, and a cornerstone of one of the most disciplined corps in the southern lands."
+msgstr "Un Premier-maître (Masterchief) est un commandant de terrain aguerri en service actif lourd. C'est le plus rapide et le plus capable des officiers de terrain du Corps des Marines — assez prompt pour exploiter chaque avantage et assez ferme pour tenir quand d'autres vacillent."
+
+#. [unit_type]: id=LIUN_Masterchief
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:201
+msgid "🔱 ⪨ Masterchief (2·0)"
+msgstr "🔱 ⪨ Premier-maître (2·0)"
+
+#. [unit_type]: id=LIUN_Masterchief_2_1
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:217
+msgid "🔱 ⪨ Masterchief (2·1)"
+msgstr "🔱 ⪨ Premier-maître (2·1)"
+
+#. [unit_type]: id=LIUN_Masterchief_2_1
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:270
+msgid "Silver Heart Award 🎖️ | For bravery under enemy fire. (+4 HP, +1 Strike)"
+msgstr "Cœur d'Argent 🎖️ | Pour bravoure sous le feu ennemi. (+4 PV, +1 attaque)"
+
+#. [unit_type]: id=LIUN_Masterchief_2_2
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:279
+msgid "🔱 ⪨ Masterchief (2·2)"
+msgstr "🔱 ⪨ Premier-maître (2·2)"
+
+#. [unit_type]: id=LIUN_Masterchief_2_2
+#. [unit_type]: id=LIUN_Weaponguard_2_2
+#. [unit_type]: id=LIUN_Shieldguard_2_2
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:334
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:229
+#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:219
+msgid "Gold Heart Award / Squad Anchor 🏅 | Doctrinaire veteran anchoring the shield wall (+4 HP, +2 Interlock damage absorption for adjacent Kryonite allies)."
+msgstr "Cœur d'Or / Ancre d'escouade 🏅 | Vétéran doctrinaire ancrant le mur de boucliers (+4 PV, +2 d'absorption de dégâts Interlock pour les alliés Kryonite adjacents)."
+
+#. [unit_type]: id=LIUN_Weaponguard_Base
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:6
+msgid "🔱 ⪨ Weaponguard"
+msgstr "🔱 ⪨ Garde-arme"
+
+#. [attack]: type=cold
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:17
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:156
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:203
+msgid "Swords [kryonite]"
+msgstr "Épées [kryonite]"
+
+#. [attack]: type=fire
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:26
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:165
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:212
+msgid "Swords [pyronite]"
+msgstr "Épées [pyronite]"
+
+#. [attack]: type=blade
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:35
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:174
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:221
+msgid "Swords [double cut]"
+msgstr "Épées [double taille]"
+
+#. [unit_type]: id=LIUN_Weaponguard_Base
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:57
+msgid "The Weaponguard wields twin mithril blades. Speed and disciplined skill working in concert, he moves through enemy lines with a reaper's surety — reading every opening, turning movement, momentum, and cover to his advantage. Few who face a Weaponguard in full press survive to take his measure a second time."
+msgstr "Le Garde-arme manie deux lames de mithril. Alliant vitesse et maîtrise disciplinée, il fend les lignes ennemies avec l'assurance d'un faucheur — lisant chaque ouverture et tournant le mouvement, l'élan et le couvert à son avantage."
+
+#. [unit_type]: id=LIUN_Weaponguard
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:130
+msgid "🔱 ⪨ Weaponguard (2·0)"
+msgstr "🔱 ⪨ Garde-arme (2·0)"
+
+#. [unit_type]: id=LIUN_Weaponguard_2_1
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:146
+msgid "🔱 ⪨ Weaponguard (2·1)"
+msgstr "🔱 ⪨ Garde-arme (2·1)"
+
+#. [unit_type]: id=LIUN_Weaponguard_2_1
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:182
+msgid "Silver Heart Award 🎖️ | For bravery under enemy fire. (+4 HP, +1 Elemental Strike, +2 Blade Damage)"
+msgstr "Cœur d'Argent 🎖️ | Pour bravoure sous le feu ennemi. (+4 PV, +1 attaque élémentaire, +2 dégâts tranchants)"
+
+#. [unit_type]: id=LIUN_Weaponguard_2_2
+#: liminal-union/units/halfelven/marines/b2-weaponguard.cfg:191
+msgid "🔱 ⪨ Weaponguard (2·2)"
+msgstr "🔱 ⪨ Garde-arme (2·2)"
+
+#. [unit_type]: id=LIUN_Shieldguard_Base
+#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:6
+msgid "🔱 ⪨ Shieldguard"
+msgstr "🔱 ⪨ Garde-bouclier"
+
+#. [attack]: type=impact
+#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:17
+#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:156
+#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:198
+msgid "Shield [punch]"
+msgstr "Bouclier [coup]"
+
+#. [attack]: type=pierce
+#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:28
+#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:167
+#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:209
+msgid "Shield [stab]"
+msgstr "Bouclier [estoc]"
+
+#. [unit_type]: id=LIUN_Shieldguard_Base
+#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:52
+msgid "Shieldguards are masters of line warfare. Trained to fight in concert with Weaponguards, they cover every gap and hold every breach. Armed with a tower shield, a Shieldguard turns the tide of battle not through swiftness but through the disciplined art of denial."
+msgstr "Les Gardes-boucliers sont les maîtres de la guerre de ligne. Entraînés à combattre de concert avec les Gardes-armes, ils couvrent chaque brèche et tiennent chaque passage. Armé d'un pavois, un Garde-bouclier renverse le cours de la bataille non par la hâte, mais par l'art discipliné du refus."
+
+#. [unit_type]: id=LIUN_Shieldguard
+#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:130
+msgid "🔱 ⪨ Shieldguard (2·0)"
+msgstr "🔱 ⪨ Garde-bouclier (2·0)"
+
+#. [unit_type]: id=LIUN_Shieldguard_2_1
+#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:146
+msgid "🔱 ⪨ Shieldguard (2·1)"
+msgstr "🔱 ⪨ Garde-bouclier (2·1)"
+
+#. [unit_type]: id=LIUN_Shieldguard_2_1
+#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:177
+msgid "Silver Heart Award 🎖️ | For bravery under enemy fire. (+4 HP, +2 Melee Damage)"
+msgstr "Cœur d'Argent 🎖️ | Pour bravoure sous le feu ennemi. (+4 PV, +2 dégâts de mêlée)"
+
+#. [unit_type]: id=LIUN_Shieldguard_2_2
+#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:186
+msgid "🔱 ⪨ Shieldguard (2·2)"
+msgstr "🔱 ⪨ Garde-bouclier (2·2)"
+
+#. [unit_type]: id=LIUN_Drake_Brave, race=drake, gender=male
+#: liminal-union/units/nations/drake/p0-drake-brave.cfg:4
+msgid "Draken Brave"
+msgstr "Brave drake"
+
+#. [unit_type]: id=LIUN_Drake_Brave, race=drake, gender=male
+#. [unit_type]: id=LIUN_Minion, race=orc, gender=male
+#: liminal-union/units/nations/drake/p0-drake-brave.cfg:19
+#: liminal-union/units/nations/northerners/p0-minion.cfg:19
+msgid "Peasants are the backbone of the rural economy, and the soldiers of last resort. While not warlike by nature, they will stubbornly defend their homes. However, if you’re hurling peasants at your foes, you’re clearly out of superior forces."
+msgstr "Les paysans constituent l'épine dorsale de l'économie rurale et les soldats de dernier recours. Bien qu'ils ne soient pas belliqueux par nature, ils défendront opiniâtrement leurs foyers."
+
+#. [attack]: type=pierce
+#: liminal-union/units/nations/drake/p0-drake-brave.cfg:36
+#: liminal-union/units/nations/drake/p0-drake-brave.cfg:45
+#: liminal-union/units/nations/dunefolk/f0-fellah.cfg:44
+#: liminal-union/units/nations/dunefolk/f0-fellah.cfg:53
+#: liminal-union/units/nations/northerners/p0-minion.cfg:36
+#: liminal-union/units/nations/northerners/p0-minion.cfg:45
+msgid "pitchfork"
+msgstr "fourche"
+
+#. [unit_type]: id=LIUN_Saurian_Brave, race=lizard, gender=female
+#: liminal-union/units/nations/drake/p0-saurian-brave.cfg:4
+msgid "female^Saurian Brave"
+msgstr "Brave saurienne"
+
+#. [attack]: type=blade
+#: liminal-union/units/nations/drake/p0-saurian-brave.cfg:21
+#: liminal-union/units/nations/dunefolk/f0-muhandiz.cfg:51
+#: liminal-union/units/nations/dunefolk/f0-nagaling.cfg:16
+#: liminal-union/units/nations/knalgan/f0-dwarvish-pilferer.cfg:25
+#: liminal-union/units/nations/loyalist/f0-loyalist-nobleman.cfg:29
+#: liminal-union/units/nations/northerners/f0-naga-hooligan.cfg:16
+msgid "dagger"
+msgstr "dague"
+
+#. [attack]: type=blade
+#: liminal-union/units/nations/drake/p0-saurian-brave.cfg:30
+msgid "knives"
+msgstr "couteaux"
+
+#. [unit_type]: id=LIUN_Saurian_Brave, race=lizard, gender=female
+#: liminal-union/units/nations/drake/p0-saurian-brave.cfg:40
+msgid "Saurian braves are very small of frame, and though they are somewhat frail because of this, they are very, very agile. In combat, their size allows them to dart past defenses that would hold any grown man at bay, making them a tricky foe to deal with."
+msgstr "Les braves sauriens sont de très petite taille et, bien que cela les rende assez frêles, ils sont extrêmement agiles. Au combat, leur gabarit leur permet de se faufiler à travers des défenses qui arrêteraient tout homme adulte."
+
+#. [unit_type]: id=LIUN_Saurian_Elementalist, race=lizard, gender=male
+#: liminal-union/units/nations/drake/p0-saurian-elementalist.cfg:4
+msgid "Saurian Elementalist"
+msgstr "Élémentaliste saurien"
+
+#. [attack]: type=impact
+#: liminal-union/units/nations/drake/p0-saurian-elementalist.cfg:21
+#: liminal-union/units/nations/loyalist/mf0-initiate.cfg:24
+#: liminal-union/units/nations/rebels/h0-elvish-healer.cfg:27
+msgid "staff"
+msgstr "bâton"
+
+#. [attack]: type=cold
+#: liminal-union/units/nations/drake/p0-saurian-elementalist.cfg:30
+msgid "curse"
+msgstr "malédiction"
+
+#. [unit_type]: id=LIUN_Saurian_Elementalist, race=lizard, gender=male
+#: liminal-union/units/nations/drake/p0-saurian-elementalist.cfg:43
+msgid "Saurians have some knowledge of what men call sorcery, but their practice of it reeks of augury and black magic. It is little understood, but rightly regarded with fear by those against whom it is used."
+msgstr "Les sauriens possèdent quelque connaissance de ce que les hommes appellent la sorcellerie, mais leur pratique tient davantage de l'augure et de la magie noire. Elle est peu comprise, mais redoutée à juste titre."
+
+#. [unit_type]: id=LIUN_Fellah, race=dunefolk, gender=male
+#: liminal-union/units/nations/dunefolk/f0-fellah.cfg:12
+msgid "Dune Serf"
+msgstr "Serf des dunes"
+
+#. [unit_type]: id=LIUN_Fellah, race=dunefolk, gender=male
+#: liminal-union/units/nations/dunefolk/f0-fellah.cfg:27
+msgid "A serf, is the backbone of the dunefolk economy, and a soldiers of last resort. While not warlike by nature, they can be forced to stubbornly fight because they fear the subduer's whip. However, if you’re hurling serfs at your foes, you’re clearly out of superior forces."
+msgstr "Un serf est la cheville ouvrière de l'économie du peuple des dunes et un soldat de dernier recours. Bien que peu guerriers par nature, ils peuvent être contraints de se battre avec acharnement par crainte du fouet."
+
+#. [unit_type]: id=LIUN_Muhandiz, race=dunefolk, gender=male,female
+#: liminal-union/units/nations/dunefolk/f0-muhandiz.cfg:14
+msgid "💥 Dune Dropout"
+msgstr "💥 Défroqué des dunes"
+
+#. [unit_type]: id=LIUN_Muhandiz, race=dunefolk, gender=male,female
+#: liminal-union/units/nations/dunefolk/f0-muhandiz.cfg:41
+msgid "Unlike the learned herbalists, dunefolk dropouts have given up their life as undergraduates. These students develop an interest in alchemical substances and explosives in order to prove themselves useful in asymmetric war. That they will die in the process of obtaining 'victory' does not interest those who carry a suicide bomb into battle. The dunefolk officials promote self-sacrifice as an act of devotion and promise 'heavenly rewards' for killing 'infidels'. However, not few are forced into it by their clans as a repay of an honor debt, or by blackmail, because the demand for such bombers is always greater than the supply."
+msgstr "Contrairement aux herboristes érudits, ces étudiants déserteurs ont abandonné leurs études pour s'intéresser aux substances alchimiques et aux explosifs dans la guerre asymétrique, souvent poussés par l'endoctrinement, une dette d'honneur clanique ou le chantage."
+
+#. [attack]: type=fire
+#: liminal-union/units/nations/dunefolk/f0-muhandiz.cfg:60
+msgid "bomb"
+msgstr "bombe"
+
+#. [unit_type]: id=LIUN_Dune_Nagaling
+#: liminal-union/units/nations/dunefolk/f0-nagaling.cfg:7
+msgid "Nagaling"
+msgstr "Nagaling"
+
+#. [attack]: type=blade
+#: liminal-union/units/nations/dunefolk/f0-nagaling.cfg:25
+#: liminal-union/units/nations/northerners/f0-naga-hooligan.cfg:25
+msgid "chakri"
+msgstr "chakri"
+
+#. [unit_type]: id=LIUN_Dune_Nagaling
+#. [unit_type]: id=LIUN_Naga_Hooligan
+#: liminal-union/units/nations/dunefolk/f0-nagaling.cfg:34
+#: liminal-union/units/nations/northerners/f0-naga-hooligan.cfg:34
+msgid "A nagaling is a young Naga of the southern waters."
+msgstr "Un nagaling est un jeune naga des eaux méridionales."
+
+#. [unit_type]: id=LIUN_Dune_Horseman
+#: liminal-union/units/nations/dunefolk/sc0-dune-horseman.cfg:7
+msgid "Dune Horseman"
+msgstr "Cavalier des dunes"
+
+#. [attack]: type=impact
+#: liminal-union/units/nations/dunefolk/sc0-dune-horseman.cfg:16
+#: liminal-union/units/nations/dunefolk/sc1-herbalist.cfg:35
+msgid "mace"
+msgstr "masse"
+
+#. [attack]: type=pierce
+#: liminal-union/units/nations/dunefolk/sc0-dune-horseman.cfg:25
+msgid "composite bow"
+msgstr "arc composite"
+
+#. [unit_type]: id=LIUN_Dune_Horseman
+#: liminal-union/units/nations/dunefolk/sc0-dune-horseman.cfg:34
+msgid "Only the males of the dunefolk are allowed to ride horses on raids and in war. These young horsemen primarily function as scouts and messengers, or occasionally as supporting forces for weakened lines."
+msgstr "Seuls les hommes du peuple des dunes sont autorisés à monter à cheval lors des raids et à la guerre. Ces jeunes cavaliers servent principalement d'éclaireurs et de messagers, ou parfois de renfort pour les lignes affaiblies."
+
+#. [unit_type]: id=LIUN_Herbalist, race=dunefolk
+#: liminal-union/units/nations/dunefolk/sc1-herbalist.cfg:8
+msgid "Dune Herbalist"
+msgstr "Herboriste des dunes"
+
+#. [unit_type]: id=LIUN_Herbalist, race=dunefolk
+#: liminal-union/units/nations/dunefolk/sc1-herbalist.cfg:25
+msgid "As those responsible for caring for the ill and wounded among the Dunefolk, herbalists possess both the medicinal skills to heal a variety of afflictions and the skill to seek and gather restorative herbs. Their motivations are many; some look to it as an adventure or as a steady source of pay while others feel it to be a duty to their society. No matter the reason, these healers are an invaluable part of Dunefolk society and are especially useful for their ability to administer quick treatments in the midst of battle or while traveling in the desert. Even among the nomadic Dunefolk, herbalists journey a great deal in search of the various flora and fauna that supply their work. Hardened by their travels, many of these men are even able to heal themselves."
+msgstr "Chargés de soigner les malades et les blessés parmi le peuple des dunes, les herboristes possèdent à la fois le savoir médical pour traiter divers maux et l'art de récolter des herbes fortifiantes au fil de leurs longs voyages dans le désert."
+
+#. [unit_type]: id=LIUN_Hashishine, race=dunefolk, gender=male
+#: liminal-union/units/nations/dunefolk/sc2-hashishine.cfg:13
+msgid "Dune Hashishi"
+msgstr "Hashishi des dunes"
+
+#. [unit_type]: id=LIUN_Hashishine, race=dunefolk, gender=male
+#: liminal-union/units/nations/dunefolk/sc2-hashishine.cfg:43
+msgid "Amongst the dunefolk developed a special unit, the Hashishi, the best assassinator. The Hashishi assailants are trained in techniques of hand-to-hand combat. Their most preferred weapon for a kill from behind are multiple knives dipped in poison. However, the Hashishi became best known for their excessive psychoactive drug abuse: hashish. The only downside of this practice in an army is, that by altering the visual, auditory, and olfactory senses, the drugs lead Hashishi sometimes to poison the false person, even merry comrades."
+msgstr "Parmi le peuple des dunes s'est développée une unité spéciale d'assassins : les Hashishi, entraînés au combat rapproché et au maniement de couteaux empoisonnés, mais connus pour leur usage excessif du haschich qui trouble parfois leurs sens au point d'empoisonner leurs propres camarades."
+
+#. [attack]: type=blade
+#: liminal-union/units/nations/dunefolk/sc2-hashishine.cfg:50
+msgid "blade"
+msgstr "lame"
+
+#. [attack]: type=impact
+#: liminal-union/units/nations/dunefolk/sc2-hashishine.cfg:62
+msgid "kick & punch"
+msgstr "pied & poing"
+
+#. [attack]: type=blade
+#: liminal-union/units/nations/dunefolk/sc2-hashishine.cfg:71
+msgid "hashishi attack"
+msgstr "attaque hashishi"
+
+#. [unit_type]: id=LIUN_Dwarvish_Miner, race=dwarf
+#: liminal-union/units/nations/knalgan/f0-dwarvish-miner.cfg:4
+msgid "Dwarvish Miner"
+msgstr "Mineur nain"
+
+#. [unit_type]: id=LIUN_Dwarvish_Miner, race=dwarf
+#: liminal-union/units/nations/knalgan/f0-dwarvish-miner.cfg:18
+msgid "Dwarvish miners are the grunt workers of Dwarvish society. They take the precious ores out of the ground, but do not ever take part in the crafting of weapons or artifacts."
+msgstr "Les mineurs nains sont les travailleurs de peine de la société naine. Ils extraient les précieux minerais des profondeurs, mais ne prennent jamais part au façonnage des armes ou des artefacts."
+
+#. [attack]: type=blade # pierce
+#: liminal-union/units/nations/knalgan/f0-dwarvish-miner.cfg:37
+msgid "pick"
+msgstr "pioche"
+
+#. [unit_type]: id=LIUN_Dwarvish_Pilferer, race=human, gender=male,female
+#: liminal-union/units/nations/knalgan/f0-dwarvish-pilferer.cfg:4
+msgid "Dwarvish Pilferer"
+msgstr "Chapardeur nain"
+
+#. [unit_type]: id=LIUN_Dwarvish_Pilferer, race=human, gender=male,female
+#: liminal-union/units/nations/knalgan/f0-dwarvish-pilferer.cfg:19
+msgid "Pilferers are impoverished individuals who can be found in the back alleys of any town. They subsist by petty crime and day labor, and even rats are always a welcome meal in such conditions."
+msgstr "Les chapardeurs sont des indigents que l'on trouve dans les ruelles de toute ville. Ils survivent de menus larcins et de travaux journaliers."
+
+#. [female]: gender=female
+#: liminal-union/units/nations/knalgan/f0-dwarvish-pilferer.cfg:51
+msgid "female^Pilferer"
+msgstr "Chapardeuse"
+
+#. [unit_type]: id=LIUN_Dwarvish_Woodcutter, race=dwarf
+#: liminal-union/units/nations/knalgan/f0-dwarvish-woodcutter.cfg:4
+msgid "Dwarvish Woodcutter"
+msgstr "Bûcheron nain"
+
+#. [unit_type]: id=LIUN_Dwarvish_Woodcutter, race=dwarf
+#: liminal-union/units/nations/knalgan/f0-dwarvish-woodcutter.cfg:18
+msgid "For dwarves, lumber is irreplacable in its function as fuel and construction material. Woodcutters are responsible for retrieving it from the forests of the overworld."
+msgstr "Pour les nains, le bois d'œuvre est irremplaçable comme combustible et matériau de construction. Les bûcherons sont chargés de l'abattre dans les forêts de la surface."
+
+#. [attack]: type=blade
+#: liminal-union/units/nations/knalgan/f0-dwarvish-woodcutter.cfg:23
+msgid "axe"
+msgstr "hache"
+
+#. [unit_type]: id=LIUN_Gryphon
+#: liminal-union/units/nations/knalgan/f0-gryphon.cfg:7
+msgid "Gryphon Hatchling"
+msgstr "Jeune griffon"
+
+#. [attack]: type=blade
+#: liminal-union/units/nations/knalgan/f0-gryphon.cfg:16
+#: liminal-union/units/nations/undead/sc0-ghouling.cfg:19
+msgid "claws"
+msgstr "serres"
+
+#. [unit_type]: id=LIUN_Gryphon
+#: liminal-union/units/nations/knalgan/f0-gryphon.cfg:25
+msgid "Dwarves train young domesticated gryphon hatchlings. These majestic creatures will be masters of the sky. Gryphon hatchlings serve as scouts for their dwarvish owners."
+msgstr "Les nains dressent de jeunes griffons domestiqués. Ces créatures majestueuses deviendront les maîtres des cieux et servent d'éclaireurs à leurs maîtres nains."
+
+#. [unit_type]: id=LIUN_Nobleman, race=human
+#: liminal-union/units/nations/loyalist/f0-loyalist-nobleman.cfg:5
+msgid "Nobleman"
+msgstr "Gentilhomme"
+
+#. [unit_type]: id=LIUN_Nobleman, race=human
+#: liminal-union/units/nations/loyalist/f0-loyalist-nobleman.cfg:19
+msgid "Noblemen lead a life of relative luxury and do not shy away to show this to the world. The privilege to carry weapons and their choreographic movements have attracted quite a number of looks from court ladies."
+msgstr "Les gentilshommes mènent une vie de luxe relatif et ne manquent pas de l'afficher. Le privilège de porter les armes et leurs passes d'escrime chorégraphiées attirent bien des regards à la cour."
+
+#. [unit_type]: id=LIUN_Brawler, race=merman
+#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:4
+msgid "Merman Brawler"
+msgstr "Bagarreur ondin"
+
+#. [unit_type]: id=LIUN_Brawler, race=merman
+#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:18
+msgid "Exceptionally large and strong mermen are sometimes more comfortable with their own fists and tails than with other weapons."
+msgstr "Les ondins exceptionnellement grands et forts se sentent parfois plus à l'aise avec leurs propres poings et leur nageoire caudale qu'avec d'autres armes."
+
+#. [attack]: type=impact
+#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:23
+#: liminal-union/units/nations/northerners/p0-trolling.cfg:16
+#: liminal-union/units/nations/rebels/f0-merman-citizen.cfg:23
+#: liminal-union/units/nations/undead/f0-walking-skeleton.cfg:33
+msgid "fist"
+msgstr "poing"
+
+#. [attack]: type=impact
+#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:31
+msgid "tail"
+msgstr "queue"
+
+#. [unstore_unit]
+#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:91
+#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:138
+msgid "stunned"
+msgstr "étourdi"
+
+#. [unstore_unit]
+#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:92
+#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:139
+msgid "female^stunned"
+msgstr "étourdie"
+
+#. [unit_type]: id=LIUN_Initiate, gender=male,female, race=human
+#: liminal-union/units/nations/loyalist/mf0-initiate.cfg:4
+msgid "Initiate"
+msgstr "Initié"
+
+#. [unit_type]: id=LIUN_Initiate, gender=male,female, race=human
+#: liminal-union/units/nations/loyalist/mf0-initiate.cfg:19
+msgid "Only few individuals of the human race are capable of manipulating magic, and even fewer are recognized and trained as mages. Fresh initiates may feel intimidated by the studies still ahead of them, but these are unremarkable in comparison to what they already achieved. Physically frail, and lacking familiarity with combat, initiates do possess certain arts which are of great utility in battle."
+msgstr "Seuls quelques rares humains sont capables de manier la magie, et moins encore sont reconnus et formés comme mages. Physiquement frêles et peu familiers du combat, les nouveaux initiés maîtrisent néanmoins certains arts fort utiles dans la bataille."
+
+#. [attack]: type=fire
+#: liminal-union/units/nations/loyalist/mf0-initiate.cfg:33
+msgid "missile"
+msgstr "projectile"
+
+#. [female]: gender=female
+#: liminal-union/units/nations/loyalist/mf0-initiate.cfg:70
+msgid "female^Initiate"
+msgstr "Initiée"
+
+#. [unit_type]: id=LIUN_Squire, race=human
+#: liminal-union/units/nations/loyalist/sc0-horse-squire.cfg:4
+msgid "Squire"
+msgstr "Écuyer"
+
+#. [unit_type]: id=LIUN_Squire, race=human
+#: liminal-union/units/nations/loyalist/sc0-horse-squire.cfg:19
+msgid "Squires are apprentices to knights, who often hail from either wealthy families or the eastern horse clans. They practise fighting with a wooden lance, but have yet to master the fearsome charges of their mentors."
+msgstr "Les écuyers sont des apprentis chevaliers, souvent issus de familles aisées ou des clans équestres de l'est. Ils s'exercent à la lance de bois, mais n'ont pas encore maîtrisé les charges redoutables de leurs mentors."
+
+#. [attack]: type=pierce
+#: liminal-union/units/nations/loyalist/sc0-horse-squire.cfg:23
+msgid "spear"
+msgstr "lance"
+
+#. [unit_type]: id=LIUN_Naga_Hooligan
+#: liminal-union/units/nations/northerners/f0-naga-hooligan.cfg:7
+msgid "Naga Hooligan"
+msgstr "Voyou naga"
+
+#. [unit_type]: id=LIUN_Minion, race=orc, gender=male
+#: liminal-union/units/nations/northerners/p0-minion.cfg:4
+msgid "Orcish Minion"
+msgstr "Larbin orque"
+
+#. [unit_type]: id=LIUN_Trolling
+#: liminal-union/units/nations/northerners/p0-trolling.cfg:7
+msgid "Trolling"
+msgstr "Jeune troll"
+
+#. [unit_type]: id=LIUN_Trolling
+#: liminal-union/units/nations/northerners/p0-trolling.cfg:25
+msgid "A trolling is a very young Troll."
+msgstr "Un jeune troll est un troll encore tout jeune."
+
+#. [unit_type]: id=LIUN_Wolfling, race=wolf
+#: liminal-union/units/nations/northerners/p0-wolfling.cfg:4
+msgid "Wolfling"
+msgstr "Louveteau"
+
+#. [unit_type]: id=LIUN_Wolfling, race=wolf
+#: liminal-union/units/nations/northerners/p0-wolfling.cfg:33
+msgid "Wolfings are young wolves that are raised by goblins. Goblin even use them in fights."
+msgstr "Les louveteaux sont de jeunes loups élevés par les gobelins, qui les utilisent jusque dans les combats."
+
+#. [attack]: type=blade
+#: liminal-union/units/nations/northerners/p0-wolfling.cfg:47
+msgid "fangs"
+msgstr "crocs"
+
+#. [unit_type]: id=LIUN_Merman_Citizen, race=merman
+#: liminal-union/units/nations/rebels/f0-merman-citizen.cfg:4
+msgid "Merman Citizen"
+msgstr "Citoyen ondin"
+
+#. [unit_type]: id=LIUN_Merman_Citizen, race=merman
+#: liminal-union/units/nations/rebels/f0-merman-citizen.cfg:18
+msgid "Merfolk are mostly peaceful, but will fight to defend their homes. In this situation, even merfolk with no weapons or training can be dangerous."
+msgstr "Les ondins sont pour la plupart pacifiques, mais se battront pour défendre leurs foyers. Même sans armes ni entraînement, ils peuvent alors se montrer dangereux."
+
+#. [unit_type]: id=LIUN_Wose_Sapling, race=wose
+#: liminal-union/units/nations/rebels/f0-wose-sapling.cfg:4
+msgid "Wose Sapling"
+msgstr "Arbrisseau wose"
+
+#. [unit_type]: id=LIUN_Wose_Sapling, race=wose
+#: liminal-union/units/nations/rebels/f0-wose-sapling.cfg:18
+msgid "Rarely seen even by elves, the Wose is an order of creature about which little is known. The elves are the source of most of this knowledge; they know that these beings are not descended from trees, despite the similarity in form, and they know that a wose is more closely tied to the faerie world than the elves themselves, though in a different way. The motives and workings of their kind are unknown, though most subscribe to the obvious theory that woses are dedicated wardens of the natural world. Woses are utterly unwarlike, but possess a great strength. They are, however, neither used to, nor quick at moving around."
+msgstr "Rarement aperçu même par les elfes, le Wose est une créature dont on sait peu de chose. Les elfes savent que ces êtres ne descendent pas des arbres malgré leur ressemblance, et qu'ils sont plus étroitement liés au monde féerique que les elfes eux-mêmes. Pacifiques, les woses possèdent néanmoins une force prodigieuse."
+
+#. [attack]: type=impact
+#: liminal-union/units/nations/rebels/f0-wose-sapling.cfg:28
+msgid "crush"
+msgstr "écrasement"
+
+#. [unit_type]: id=LIUN_Elvish_Healer, race=elf, gender=female
+#: liminal-union/units/nations/rebels/h0-elvish-healer.cfg:4
+msgid "female^Elvish Healer"
+msgstr "Guérisseuse elfe"
+
+#. [unit_type]: id=LIUN_Elvish_Healer, race=elf, gender=female
+#: liminal-union/units/nations/rebels/h0-elvish-healer.cfg:19
+msgid "Some elves are unusually close to their faerie nature, which enables them to control magic consciously. On the battlefield, they use their skills to heal wounds and summon plants to their aid."
+msgstr "Certaines elfes sont particulièrement proches de leur nature féerique, ce qui leur permet de gouverner consciemment la magie. Sur le champ de bataille, elles emploient leurs dons à guérir les blessures et à appeler la végétation à leur aide."
+
+#. [attack]: type=impact
+#: liminal-union/units/nations/rebels/h0-elvish-healer.cfg:36
+msgid "entangle"
+msgstr "enchevêtrement"
+
+#. [unit_type]: id=LIUN_Elvish_Citizen, race=elf, gender=male,female
+#: liminal-union/units/nations/rebels/mf0-elvish-citizen.cfg:4
+msgid "Elvish Citizen"
+msgstr "Citoyen elfe"
+
+#. [unit_type]: id=LIUN_Elvish_Citizen, race=elf, gender=male,female
+#: liminal-union/units/nations/rebels/mf0-elvish-citizen.cfg:20
+msgid "Although elves are not warlike by nature their natural grace ensures that even untrained they have talent for swords and bows. However, if you are hurling citizens at your foes, you’re clearly out of superior forces."
+msgstr "Bien que les elfes ne soient pas belliqueux par nature, leur grâce naturelle leur assure un talent certain pour l'épée et l'arc, même sans entraînement."
+
+#. [attack]: type=blade
+#: liminal-union/units/nations/rebels/mf0-elvish-citizen.cfg:28
+#: liminal-union/units/nations/rebels/sc0-elvish-horseman.cfg:34
+msgid "sword"
+msgstr "épée"
+
+#. [attack]: type=pierce
+#: liminal-union/units/nations/rebels/mf0-elvish-citizen.cfg:38
+#: liminal-union/units/nations/rebels/sc0-elvish-horseman.cfg:43
+msgid "bow"
+msgstr "arc"
+
+#. [female]: gender=female
+#: liminal-union/units/nations/rebels/mf0-elvish-citizen.cfg:87
+msgid "female^Elvish Citizen"
+msgstr "Citoyenne elfe"
+
+#. [unit_type]: id=LIUN_Elvish_Horseman, race=elf
+#: liminal-union/units/nations/rebels/sc0-elvish-horseman.cfg:4
+msgid "Elvish Horseman"
+msgstr "Cavalier elfe"
+
+#. [unit_type]: id=LIUN_Elvish_Horseman, race=elf
+#: liminal-union/units/nations/rebels/sc0-elvish-horseman.cfg:22
+msgid "The true skill of elvish horsemen skill lies in their ability to dart through the thick of the forest with nary a scratch. Though only lightly armed, they are the only cavalry in existence that fares better in the woods than on open ground."
+msgstr "La véritable maîtrise des cavaliers elfes réside dans leur capacité à filer à travers le plus épais des bois sans une égratignure. Bien que légèrement armés, ils forment la seule cavalerie plus à l'aise sous les frondaisons qu'en rase campagne."
+
+#. [unit_type]: id=LIUN_Dark_Initiate, gender=male,female, race=human
+#: liminal-union/units/nations/undead/a0-dark-initiate.cfg:4
+msgid "Dark Initiate"
+msgstr "Initié sombre"
+
+#. [unit_type]: id=LIUN_Dark_Initiate, gender=male,female, race=human
+#: liminal-union/units/nations/undead/a0-dark-initiate.cfg:23
+msgid "Curiosity is the mother of scholarship and thus the highest virtue of the order of magi. However, not all students find the golden mean, and some succumb to the temptation of practising the dark arts at night. The resulting lack of sleep exhausts them so much, that they become even weaker than lawful initiates."
+msgstr "La curiosité est la mère de l'érudition, mais tous les étudiants ne gardent pas le juste milieu : certains cèdent à la tentation d'étudier les arts sombres la nuit, au point que le manque de sommeil les rend plus frêles encore que les initiés réguliers."
+
+#. [attack]: type=cold
+#: liminal-union/units/nations/undead/a0-dark-initiate.cfg:28
+msgid "chill wave"
+msgstr "vague glaciale"
+
+#. [attack]: type=arcane
+#: liminal-union/units/nations/undead/a0-dark-initiate.cfg:40
+msgid "shadow wave"
+msgstr "vague d'ombre"
+
+#. [female]: gender=female
+#: liminal-union/units/nations/undead/a0-dark-initiate.cfg:78
+msgid "female^Dark Initiate"
+msgstr "Initiée sombre"
+
+#. [unit_type]: id=LIUN_Walking_Skeleton, race=undead
+#: liminal-union/units/nations/undead/f0-walking-skeleton.cfg:4
+msgid "Walking Skeleton"
+msgstr "Squelette ambulant"
+
+#. [unit_type]: id=LIUN_Walking_Skeleton, race=undead
+#: liminal-union/units/nations/undead/f0-walking-skeleton.cfg:22
+msgid "With enough experience, a necromancer becomes independent from freshly killed corpses. Fully rotten skeletons are not only excellent war material, but are also far easier to attain."
+msgstr "Avec assez d'expérience, un nécromancien s'affranchit du besoin de cadavres fraîchement abattus. Des squelettes entièrement décharnés constituent un matériau de guerre tout aussi efficace et bien plus aisé à réunir."
+
+#. [unit_type]: id=LIUN_Ghouling
+#: liminal-union/units/nations/undead/sc0-ghouling.cfg:7
+msgid "Ghouling"
+msgstr "Jeune goule"
+
+#. [unit_type]: id=LIUN_Ghouling
+#: liminal-union/units/nations/undead/sc0-ghouling.cfg:16
+msgid "A ghouling is a small Ghoul."
+msgstr "Une jeune goule est une goule de petite taille."
+
+#. [unit_type]: id=LIUN_Soul, race=undead
+#: liminal-union/units/nations/undead/sc0-soul.cfg:4
+msgid "Soul"
+msgstr "Âme"
+
+#. [unit_type]: id=LIUN_Soul, race=undead
+#: liminal-union/units/nations/undead/sc0-soul.cfg:18
+msgid "Some souls cannot find rest and are damned to aimlessly wander this world for eternity. Often they belong to inexperienced Dark Adepts, who tried to cheat their premature death. And succeeded. Regrettably."
+msgstr "Certaines âmes ne trouvent jamais le repos et sont condamnées à errer sans but pour l'éternité. Souvent, elles appartenaient à d'inexpérimentés Adeptes Sombres qui tentèrent de tromper une mort prématurée — et y parvinrent, hélas."
+
+#. [attack]: type=arcane
+#: liminal-union/units/nations/undead/sc0-soul.cfg:64
+msgid "touch"
+msgstr "contact"
+
+#. [attack]: type=cold
+#: liminal-union/units/nations/undead/sc0-soul.cfg:77
+msgid "wail"
+msgstr "plainte"
+
+#. [race]: id=marinephoinix
+#: liminal-union/units/phoinixes.cfg:6
+msgid "race^Phoinix"
+msgstr "Phoinix"
+
+#. [race]: id=marinephoinix
+#: liminal-union/units/phoinixes.cfg:7
+msgid "race+female^Phoinix"
+msgstr "Phoinix"
+
+#. [race]: id=marinephoinix
+#: liminal-union/units/phoinixes.cfg:8
+msgid "race^Phoinixes"
+msgstr "Phoinix"
+
+#. [race]: id=marinephoinix
+#: liminal-union/units/phoinixes.cfg:9
+msgid "A Phoinix is an immortal avian — a living emblem of renewal. It passes through youth, fullness, and consuming flame, burning at last to ash; yet an ember of itself endures and takes form once more to live again."
+msgstr "Un Phoinix est un oiseau immortel — vivant emblème du renouveau. Il traverse la jeunesse, la plénitude et la flamme dévorante, brûlant enfin jusqu'à la cendre ; pourtant une braise de lui-même demeure et reprend forme pour vivre à nouveau."
+
+#. [race]: id=marinephoinix
+#: liminal-union/units/phoinixes.cfg:15
+msgid "Avarshina, Avarshin, Avaršine, Avaršina, Chol, Chul, Avorshina, Avorshin, Avorshine, Avarshine"
+msgstr "Avarshina, Avarshin, Avaršine, Avaršina, Chol, Chul, Avorshina, Avorshin, Avorshine, Avarshine"
+
+#. [unit_type]: id=LIUN_Phoinix_Base
+#: liminal-union/units/phoinixes/a0-phoinix.cfg:6
+msgid "🧿🟕 Phoinix"
+msgstr "🧿🟕 Phoinix"
+
+#. [attack]: type=arcane
+#: liminal-union/units/phoinixes/a0-phoinix.cfg:19
+#: liminal-union/units/phoinixes/a0-phoinix.cfg:33
+#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:21
+#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:35
+msgid "Claws"
+msgstr "Serres"
+
+#. [unit_type]: id=LIUN_Phoinix_Base
+#: liminal-union/units/phoinixes/a0-phoinix.cfg:60
+msgid "The Phoinix is a living emblem of renewal and passage, said never to have bowed to corruption. Its presence is an affront to the forces of darkness and an uncomfortable reminder to those who would enthrone arcane will above the common law. A sealed core of vital radiance burns within, and a Phoinix's touch may draw poison from the wounded. The Liminal Union trains Phoinix Messengers as swift mobile scouts. A discerning Phoinix may be called forth by the old kabbalistic recitation of the corps; some choose to bind themselves to a particular singer-keeper. The Phoinix flies very high, beyond the reach of most enemy weapons, and holds no fixed ground — nor does its passage impose constraint upon enemy lines."
+msgstr "Le Phoinix est un vivant emblème de renouveau et de passage, réputé ne s'être jamais plié à la corruption. Sa présence est un affront aux forces des ténèbres et un rappel salutaire à ceux qui voudraient introniser la volonté arcanique au-dessus de la loi commune. Un cœur scellé de radiance vitale brûle en lui, et son contact peut extraire le poison des blessés. L'Union Liminale dresse les Messagers Phoinix comme éclaireurs rapides. Le Phoinix vole à très haute altitude, hors de portée de la plupart des armes ennemies, et ne tient aucun terrain fixe."
+
+#. [unit_type]: id=LIUN_Phoinix_0_1
+#: liminal-union/units/phoinixes/a0-phoinix.cfg:177
+msgid "🧿🟕 Phoinix (0·1)"
+msgstr "🧿🟕 Phoinix (0·1)"
+
+#. [unit_type]: id=LIUN_Phoinix_0_1
+#: liminal-union/units/phoinixes/a0-phoinix.cfg:185
+msgid "Ability: skirmisher | The phoinix enters a new developmental stage which creates a <i>critical reality</i>: it is able to move past enemies quickly."
+msgstr "Capacité : tirailleur | Le phoinix entre dans un nouveau stade de développement qui crée une <i>réalité critique</i> : il peut désormais contourner rapidement les ennemis."
+
+#. [unit_type]: id=LIUN_Phoinix_Elder_Base
+#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:6
+msgid "🧿 🟗 Phoinix Elder"
+msgstr "🧿 🟗 Phoinix Ancien"
+
+#. [unit_type]: id=LIUN_Phoinix_Elder_Base
+#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:62
+msgid "The Elder Phoinix has grown into its full shimmering form — small, swift, and barely visible at high altitude. It flies far beyond the reach of most enemy weapons, a glimmering presence more often sensed than seen."
+msgstr "Le Phoinix Ancien a atteint sa pleine forme chatoyante — petit, véloce et à peine visible à haute altitude. Il vole bien au-delà de la portée de la plupart des armes ennemies, présence miroitante plus souvent pressentie qu'aperçue."
+
+#. [unit_type]: id=LIUN_Phoinix_Elder_1_1
+#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:179
+msgid "🧿 🟗 Phoinix Elder (1·1)"
+msgstr "🧿 🟗 Phoinix Ancien (1·1)"
+
+#. [unit_type]: id=LIUN_Phoinix_Elder_1_1
+#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:188
+msgid "Ability: unpoison | In its final developmental stage, the tears of a phoinix bird can detox units from poison."
+msgstr "Capacité : guérison du poison | Dans son ultime stade de développement, les larmes d'un oiseau phoinix peuvent purifier les unités du poison."
+
+#. [unit_type]: id=LIUN_Phoinix_Elder_1_2
+#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:197
+msgid "🧿 🟗 Phoinix Elder (1·2)"
+msgstr "🧿 🟗 Phoinix Ancien (1·2)"
+
+#. [unit_type]: id=LIUN_Phoinix_Elder_1_2
+#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:208
+msgid "Ability: teleport | Friendly villages maintain portals. This Phoinix unit can now teleport between them."
+msgstr "Capacité : téléportation | Les villages alliés entretiennent des portails. Cette unité Phoinix peut désormais se téléporter de l'un à l'autre."

@@ -16,7 +16,11 @@ Treat this changelog as the clearest human-readable record of documentation-leve
 - `docs/lore/LORE.md` — added *The Eighth-Day Severance*, expanded *Lawful artifice and the canonical alloys*, and added *The Treaty of the Living and the Bound* under *Foreign powers*.
 - `docs/lore/SUMMARY` — updated overview with the canonical alloys, the Eighth-Day Severance, and the Treaty of the Living and the Bound.
 - `docs/style/VISUAL_STYLE_GUIDE.md` — added `Uranite` and `Zoelite / Akosite` to the material palette table.
-- `_server.pbl` — replaced placeholder add-on `description` with the updated canonical Liminal Union faction and era description.
+- `_server.pbl` — replaced placeholder add-on `description` with the updated canonical Liminal Union faction and era description, and added `[translation]` blocks for `de`, `fr`, `es`, and `it`.
+- **Multi-language Localization (`de`, `fr`, `es`, `it`)**:
+  - Marked all remaining user-facing strings in `lua/*.lua` (`lua/promotion-handler.lua`, `lua/g9_overclock.lua`, `lua/phoinix_courier.lua`, `lua/maiden_wingsuit.lua`, `lua/marine_grounding.lua`, `lua/resonance.lua`) with `_ "..."` under textdomain `wesnoth-liminal-union`.
+  - Extracted `translations/template.pot` (501 `msgid`s) via `wmlxgettext` and added complete `.po` and compiled `.mo` translations for German (`translations/de/`), French (`translations/fr/`), Spanish (`translations/es/`), and Italian (`translations/it/`).
+
 
 ## ––––––––––––––––––––– ––––––––––––––––––––– ––––––––––––––––––––– ––––––––––––––––––––– 
 ## 2026-10-25 — Resonance Phase 5.1 Reform & Conductance Visual Overhaul

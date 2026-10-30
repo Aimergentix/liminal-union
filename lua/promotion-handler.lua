@@ -1,42 +1,43 @@
 -- #textdomain wesnoth-liminal-union
+local _ = wesnoth.textdomain 'wesnoth-liminal-union'
 -- promotion-handler.lua
 -- Sarcastic Medal Citations & Dynamic Floating Banter (Prototype Step 3)
 -- Wesnoth engine globals (not visible to static analysis)
 ---@diagnostic disable: undefined-global
 
 local CITATIONS_L0_MEDAL = {
-    "🎖️ Citation: Strict Protocol Adherence",
-    "🎖️ Award: Unsolicited Tenacity",
-    "🎖️ Notice: Hazard Pay Approved",
-    "🎖️ Commendation: Orderly Retaliation",
-    "🎖️ Certified: Surviving the Draft",
-    "🎖️ Field Bandage: Civic Issue (+2 HP)"
+    _ "🎖️ Citation: Strict Protocol Adherence",
+    _ "🎖️ Award: Unsolicited Tenacity",
+    _ "🎖️ Notice: Hazard Pay Approved",
+    _ "🎖️ Commendation: Orderly Retaliation",
+    _ "🎖️ Certified: Surviving the Draft",
+    _ "🎖️ Field Bandage: Civic Issue (+2 HP)"
 }
 
 local CITATIONS_L1_MEDAL = {
-    "🎖️ Bronze Star: Merit under Hostile Audit",
-    "🎖️ Commendation: Rational Composure",
-    "🎖️ Certified: Senior Dispute Arbitrator",
-    "🎖️ Citation: Excessive Civic Zeal"
+    _ "🎖️ Bronze Star: Merit under Hostile Audit",
+    _ "🎖️ Commendation: Rational Composure",
+    _ "🎖️ Certified: Senior Dispute Arbitrator",
+    _ "🎖️ Citation: Excessive Civic Zeal"
 }
 
 local CITATIONS_PROMOTION = {
-    "⭐ Promotion: Authorized to Question Orders",
-    "⭐ Promoted: Certified Line Overseer",
-    "⭐ Grade Advance: Seniority Validated",
-    "⭐ Promoted: Field Tribunal Delegate"
+    _ "⭐ Promotion: Authorized to Question Orders",
+    _ "⭐ Promoted: Certified Line Overseer",
+    _ "⭐ Grade Advance: Seniority Validated",
+    _ "⭐ Promoted: Field Tribunal Delegate"
 }
 
 local G9_MEDAL_NOTICES = {
-    "🤖 [WEAR CYCLE LOGGED: TOLERANCE -10%]",
-    "🤖 [ASSERTION: FRAME INTEGRITY SUB-OPTIMAL]",
-    "🤖 [CHASSIS WEAR: WITHIN MUNICIPAL CODE]",
-    "🤖 [PARCHMENT SCRIPT: SYNTAX AMBIGUOUS]"
+    _ "🤖 [WEAR CYCLE LOGGED: TOLERANCE -10%]",
+    _ "🤖 [ASSERTION: FRAME INTEGRITY SUB-OPTIMAL]",
+    _ "🤖 [CHASSIS WEAR: WITHIN MUNICIPAL CODE]",
+    _ "🤖 [PARCHMENT SCRIPT: SYNTAX AMBIGUOUS]"
 }
 
 local G9_PROMOTIONS = {
-    "🤖 [NEURAL CURIE PROMOTION: LOGIC EXPANDED]",
-    "🤖 [FRAME RE-INDEXED: MAINSERIES STATUS]"
+    _ "🤖 [NEURAL CURIE PROMOTION: LOGIC EXPANDED]",
+    _ "🤖 [FRAME RE-INDEXED: MAINSERIES STATUS]"
 }
 
 wesnoth.game_events.add_repeating("advance", function(context)
@@ -78,13 +79,13 @@ wesnoth.game_events.add_repeating("post_advance", function(context)
         if wesnoth.interface and wesnoth.interface.float_label then
             if is_golem then
                 local notice = pick_synced(G9_MEDAL_NOTICES, u)
-                wesnoth.interface.float_label(u.x, u.y, string.format("<span color='#b388ff'>%s</span>", notice))
+                wesnoth.interface.float_label(u.x, u.y, string.format("<span color='#b388ff'>%s</span>", tostring(notice)))
             elseif u.level == 0 then
                 local citation = pick_synced(CITATIONS_L0_MEDAL, u)
-                wesnoth.interface.float_label(u.x, u.y, string.format("<span color='#ffd700'>%s</span>", citation))
+                wesnoth.interface.float_label(u.x, u.y, string.format("<span color='#ffd700'>%s</span>", tostring(citation)))
             else
                 local citation = pick_synced(CITATIONS_L1_MEDAL, u)
-                wesnoth.interface.float_label(u.x, u.y, string.format("<span color='#ffd700'>%s</span>", citation))
+                wesnoth.interface.float_label(u.x, u.y, string.format("<span color='#ffd700'>%s</span>", tostring(citation)))
             end
         end
     elseif old_lvl and u.level > old_lvl then
@@ -92,10 +93,10 @@ wesnoth.game_events.add_repeating("post_advance", function(context)
         if wesnoth.interface and wesnoth.interface.float_label then
             if is_golem then
                 local notice = pick_synced(G9_PROMOTIONS, u)
-                wesnoth.interface.float_label(u.x, u.y, string.format("<span color='#00e5ff'>%s</span>", notice))
+                wesnoth.interface.float_label(u.x, u.y, string.format("<span color='#00e5ff'>%s</span>", tostring(notice)))
             else
                 local promo = pick_synced(CITATIONS_PROMOTION, u)
-                wesnoth.interface.float_label(u.x, u.y, string.format("<span color='#00e5ff'>%s</span>", promo))
+                wesnoth.interface.float_label(u.x, u.y, string.format("<span color='#00e5ff'>%s</span>", tostring(promo)))
             end
         end
     end
@@ -122,9 +123,9 @@ wesnoth.game_events.add_repeating("die", function(context)
     if wesnoth.interface and wesnoth.interface.float_label then
         local v_type = tostring(victim.type):lower()
         if v_type:find("mage") or v_type:find("adept") or v_type:find("lich") or v_type:find("necromancer") then
-            wesnoth.interface.float_label(killer.x, killer.y, "<span color='#ffaa55'>\"Unlicensed Spellcraft Quashed.\"</span>")
+            wesnoth.interface.float_label(killer.x, killer.y, _ "<span color='#ffaa55'>\"Unlicensed Spellcraft Quashed.\"</span>")
         elseif (victim.level or 0) >= 2 and (killer.level or 0) == 0 then
-            wesnoth.interface.float_label(killer.x, killer.y, "<span color='#ffd700'>\"Field Audit: Sovereignty Revoked.\"</span>")
+            wesnoth.interface.float_label(killer.x, killer.y, _ "<span color='#ffd700'>\"Field Audit: Sovereignty Revoked.\"</span>")
         end
     end
 end)

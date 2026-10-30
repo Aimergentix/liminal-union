@@ -66,7 +66,7 @@ function phoinix_courier.on_phoinix_died(ctx)
     })
 
     if wesnoth.interface and wesnoth.interface.float_label then
-        wesnoth.interface.float_label(ctx.x1, ctx.y1, "<span color='#ffaa33'>\"Registry Archive Preserved\"</span>")
+        wesnoth.interface.float_label(ctx.x1, ctx.y1, _ "<span color='#ffaa33'>\"Registry Archive Preserved\"</span>")
     end
 end
 
@@ -91,7 +91,7 @@ function phoinix_courier.on_unit_moved(ctx)
 
     u.experience = u.experience + 3
     if wesnoth.interface and wesnoth.interface.float_label then
-        wesnoth.interface.float_label(u.x, u.y, "<span color='#ffd700'>+3 XP [CIVIC ARCHIVE RECOVERED]</span>")
+        wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ffd700'>+3 XP [CIVIC ARCHIVE RECOVERED]</span>")
     end
 end
 

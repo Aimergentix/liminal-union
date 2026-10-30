@@ -108,9 +108,9 @@ function marine_grounding.activate(ctx)
     if not marine_grounding.can_ground(u) then
         if u and wesnoth.interface and wesnoth.interface.float_label then
             if u.variables.lu_grounded then
-                wesnoth.interface.float_label(u.x, u.y, "<span color='#55ffff'>[PYLUM ALREADY DEPLOYED]</span>")
+                wesnoth.interface.float_label(u.x, u.y, _ "<span color='#55ffff'>[PYLUM ALREADY DEPLOYED]</span>")
             else
-                wesnoth.interface.float_label(u.x, u.y, "<span color='#ffaa33'>[GROUNDING UNAVAILABLE]</span>")
+                wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ffaa33'>[GROUNDING UNAVAILABLE]</span>")
             end
         end
         return
@@ -140,7 +140,7 @@ function marine_grounding.activate(ctx)
     -- Sound effect and floating notification
     wesnoth.audio.play_sound("lightning.ogg")
     if wesnoth.interface and wesnoth.interface.float_label then
-        wesnoth.interface.float_label(u.x, u.y, "<span color='#55ffff'>⚡ Salt-Grounding Pylum [0 MP, Ward Active]</span>")
+        wesnoth.interface.float_label(u.x, u.y, _ "<span color='#55ffff'>⚡ Salt-Grounding Pylum [0 MP, Ward Active]</span>")
     end
 
     -- Update wards across adjacent hexes

@@ -21,11 +21,11 @@ function g9_overclock.activate(ctx)
     if not g9_overclock.can_overclock(u) then
         if u and wesnoth.interface and wesnoth.interface.float_label then
             if u.hitpoints <= 4 then
-                wesnoth.interface.float_label(u.x, u.y, "<span color='#ff5555'>[CRITICAL: CORE INTEGRITY ≤4 HP]</span>")
+                wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ff5555'>[CRITICAL: CORE INTEGRITY ≤4 HP]</span>")
             elseif u.variables.lu_overclocked then
-                wesnoth.interface.float_label(u.x, u.y, "<span color='#ffaa33'>[CORE ALREADY OVERCLOCKED]</span>")
+                wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ffaa33'>[CORE ALREADY OVERCLOCKED]</span>")
             elseif (u.attacks_left or 0) <= 0 then
-                wesnoth.interface.float_label(u.x, u.y, "<span color='#ffaa33'>[NO ATTACKS REMAINING]</span>")
+                wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ffaa33'>[NO ATTACKS REMAINING]</span>")
             end
         end
         return
@@ -60,7 +60,7 @@ function g9_overclock.activate(ctx)
     -- Play sound and display terminal notices
     wesnoth.audio.play_sound("lightning.ogg")
     if wesnoth.interface and wesnoth.interface.float_label then
-        wesnoth.interface.float_label(u.x, u.y, "<span color='#ff3333'>[PROTOCOL BYPASS: OVERCLOCK + STUN ACTIVE]</span>")
+        wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ff3333'>[PROTOCOL BYPASS: OVERCLOCK + STUN ACTIVE]</span>")
     end
 end
 
@@ -82,7 +82,7 @@ function g9_overclock.on_side_turn_end(side_num)
             if dmg > 0 then
                 u.hitpoints = u.hitpoints - dmg
                 if wesnoth.interface and wesnoth.interface.float_label then
-                    wesnoth.interface.float_label(u.x, u.y, string.format("<span color='#ff5555'>-%d HP [CORE THERMAL STRESS]</span>", dmg))
+                    wesnoth.interface.float_label(u.x, u.y, string.format(tostring(_ "<span color='#ff5555'>-%d HP [CORE THERMAL STRESS]</span>"), dmg))
                 end
             end
         end

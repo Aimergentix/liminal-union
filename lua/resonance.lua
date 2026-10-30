@@ -270,7 +270,7 @@ function resonance.update_unit_alignment(u)
             }}
         })
         if not was_conducted and wesnoth.interface and wesnoth.interface.float_label then
-            wesnoth.interface.float_label(u.x, u.y, "<span color='#00e5ff'>Conducted</span>")
+            wesnoth.interface.float_label(u.x, u.y, _ "<span color='#00e5ff'>Conducted</span>")
         end
     end
 end
@@ -324,7 +324,7 @@ function resonance.update_unit_state(u)
             }}
         })
         if not u.variables.lu_zoc_active and wesnoth.interface and wesnoth.interface.float_label then
-            wesnoth.interface.float_label(u.x, u.y, "<span color='#ffd700'>ZOC Lock</span>")
+            wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ffd700'>ZOC Lock</span>")
             u.variables.lu_zoc_active = true
         end
     else
@@ -367,7 +367,7 @@ function resonance.update_unit_state(u)
                 side = u.side,
                 { "filter_adjacent", { id = u.id } }
             })
-            for _, a in ipairs(adj_allies) do
+            for idx_a, a in ipairs(adj_allies) do
                 if a.hitpoints > 0 and not a.status.poisoned and resonance.has_dummy_ability(a, "LIUN_squad_anchor_pyrite") then
                     focus_add = focus_add + 10
                     break
@@ -470,7 +470,7 @@ function resonance.update_unit_state(u)
 
         -- Tier 3 lock-in visual notification
         if tier == 3 and prev_tier ~= 3 and wesnoth.interface and wesnoth.interface.float_label then
-            wesnoth.interface.float_label(u.x, u.y, "<span color='#ffd700'>✦ Tier 3 Lock ✦</span>")
+            wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ffd700'>✦ Tier 3 Lock ✦</span>")
         end
     else
         u.halo = ""
@@ -544,7 +544,7 @@ function resonance.is_berserk_combat(ctx)
     -- Check units involved in combat for berserk weapons
     local u1 = ctx.x1 and ctx.y1 and wesnoth.units.get(ctx.x1, ctx.y1)
     if u1 then
-        for _, atk in ipairs(u1.attacks or {}) do
+        for idx_atk, atk in ipairs(u1.attacks or {}) do
             local sp = atk.__cfg and wml.get_child(atk.__cfg, "specials")
             if sp and wml.get_child(sp, "berserk") then
                 return true
@@ -554,7 +554,7 @@ function resonance.is_berserk_combat(ctx)
 
     local u2 = ctx.x2 and ctx.y2 and wesnoth.units.get(ctx.x2, ctx.y2)
     if u2 then
-        for _, atk in ipairs(u2.attacks or {}) do
+        for idx_atk, atk in ipairs(u2.attacks or {}) do
             local sp = atk.__cfg and wml.get_child(atk.__cfg, "specials")
             if sp and wml.get_child(sp, "berserk") then
                 return true
@@ -643,7 +643,7 @@ function resonance.handle_damage_redistribution(target_x, target_y, damage_infli
                 wesnoth.interface.float_label(
                     ally.x,
                     ally.y,
-                    string.format("<span color='#4fc3f7'>-%d Interlock</span>", actual_share)
+                    string.format(tostring(_ "<span color='#4fc3f7'>-%d Interlock</span>"), actual_share)
                 )
             end
         end
@@ -663,7 +663,7 @@ function resonance.handle_damage_redistribution(target_x, target_y, damage_infli
             wesnoth.interface.float_label(
                 target.x,
                 target.y,
-                string.format("<span color='#81d4fa'>Interlock (+%d)</span>", total_absorbed)
+                string.format(tostring(_ "<span color='#81d4fa'>Interlock (+%d)</span>"), total_absorbed)
             )
         end
     end

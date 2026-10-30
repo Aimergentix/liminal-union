@@ -53,7 +53,7 @@ function maiden_wingsuit.on_side_turn(side_num)
                 u.moves = u.max_moves
 
                 if wesnoth.interface and wesnoth.interface.float_label then
-                    wesnoth.interface.float_label(u.x, u.y, "<span color='#ffdd55'>🪽 Wingsuit Glide (+1 MP, Skirmish)</span>")
+                    wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ffdd55'>🪽 Wingsuit Glide (+1 MP, Skirmish)</span>")
                 end
             end
         else
