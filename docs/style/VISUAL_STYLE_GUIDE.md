@@ -1,3 +1,8 @@
+---
+type: Reference
+title: "Visual Style Guide \u2014 Unit Categories"
+description: "Product visual guidance subordinate to canon and language style."
+---
 # Visual Style Guide — Unit Categories
 
 This document provides visual anchors for the four primary unit categories of the Liminal Union, intended for sprite artists and AI-assisted generation.
