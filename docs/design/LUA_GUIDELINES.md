@@ -1,6 +1,13 @@
+---
+type: Reference
+title: "Wesnoth Lua Coding Guidelines & Pitfalls"
+description: "Product Lua guidance with explicit limits on historical engine claims."
+---
 # Wesnoth Lua Coding Guidelines & Pitfalls
 
-This document records architectural conventions, engine constraints, and critical gotchas for developing Lua modules in **Liminal Union** under Battle for Wesnoth 1.19+.
+This document contains project conventions and historical technical notes for **Liminal Union**. It is not a verified engine specification for every Wesnoth 1.19+ release. Follow [AGENTS.md](../../AGENTS.md) for source and uncertainty rules.
+
+Verification status (31 October 2026): section 1 describes Lua lexical shadowing and the product's textdomain naming rule. Sections 2–4 retain historical guidance whose engine-specific basis has **not been verified in this documentation pass**. In particular, do not adopt the coordinate layout/formula in section 2 or the explanation of interface availability in section 4 as confirmed engine behavior. Check versioned engine sources or documentation before using those claims to change runtime code. Section 3's IDs and removal pattern are local conventions, not a demonstrated universal API requirement.
 
 ---
 
@@ -49,11 +56,11 @@ end
 
 ---
 
-## 2. Odd-r Hex Layout Distance Calculations
+## 2. Odd-r Hex Layout Distance Calculations (historical; unverified)
 
 Wesnoth uses an odd-r hexagonal coordinate system. Naive Euclidean or Manhattan distance formulas produce distorted distances and diagonal anomalies.
 
-### Canonical Axial Distance Formula
+### Historical distance formula (unverified for engine coordinates)
 ```lua
 local function hex_distance(x1, y1, x2, y2)
     if not x1 or not y1 or not x2 or not y2 then return 999 end
@@ -69,7 +76,7 @@ end
 
 ---
 
-## 3. Dynamic Unit Modifications and IDs
+## 3. Dynamic Unit Modifications and IDs (project convention; API basis unverified)
 
 - Always provide a unique `id` attribute when calling `unit:add_modification("object", { id = "...", ... })`.
 - Before adding a dynamic or transient modification (such as a turn-based ability, overlay, or resistance buff), remove any previous instance with:
@@ -80,7 +87,7 @@ end
 
 ---
 
-## 4. Floating Labels & Interface Safeguards
+## 4. Floating Labels & Interface Safeguards (historical; unverified)
 
 When triggering floating combat text or HUD indicators:
 ```lua
