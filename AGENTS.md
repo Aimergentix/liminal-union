@@ -11,13 +11,13 @@ Scope: Preserve mechanics, IDs, values, advancement, events, persistent variable
 
 Separate requirements, observations, proposals, historical evidence and open checks. Inspect current sources before relying on earlier reports. Never read or copy credentials.
 
-Sources: Read [canon](docs/canon/CANON_LOCK.md), [language style](docs/canon/STYLE_GUIDE.md) and relevant product sources first. Code describes implementation, not domain correctness. See [workspace rules](../AGENTS.md).
+Sources: Read [canon](docs/canon/CANON_LOCK.md), [language style](docs/canon/STYLE_GUIDE.md) and relevant product sources first. Derived summaries cannot override canon or language style. Do not invent unsupported lore, paths or engine guarantees; mark unverified claims explicitly. Code describes implementation, not domain correctness. See [workspace rules](../AGENTS.md) and [product knowledge](docs/index.md).
 
 ## Working method
 
 Use small, reviewable changes. Preserve unrelated work. Keep English documentation concise. Do not weaken checks to obtain a passing result. Git writes, publication and further deletion need their own authorization.
 
-Local workflow: Keep the game independent of development tools. Use the [shared method](../../umc-hace/generic/skills/development/SKILL.md). Keep generated work outside the product; add no test includes or tool dependencies. Do not read upload credentials.
+Local workflow: Keep the game independent of development tools. Use the [shared method](../../umc-hace/generic/skills/development/SKILL.md). Keep generated work outside the product; add no test includes or tool dependencies. Do not read upload credentials. Extend the existing instruction or reference instead of duplicating guidance. Apply the [AI-pair standard](../../umc-hace/generic/knowledge/ai-pair.md) progressively. This adoption is documentation-only; runtime naming and size cleanup is deferred.
 
 ## Verification and completion
 

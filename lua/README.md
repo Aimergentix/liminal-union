@@ -7,7 +7,7 @@ This directory contains the runtime logic, formation dynamics, and prototype mec
 - `formation.lua` — Formation coordinate helpers and adjacent ally queries.
 - `g9_overclock.lua` — Prototype 2: Emergency Overclock right-click context menu and thermal stress handler.
 - `promotion-handler.lua` — Prototype 3: Medal citation logging, civic floating banter, and intermediate HP replenishment.
-- `maiden_wingsuit.lua` — Prototype 4: High ground (Hills/Mountains) Wingsuit Glide detection (+2 MP, Skirmisher).
+- `maiden_wingsuit.lua` — Prototype 4: High ground (Hills/Mountains) Wingsuit Glide detection (+1 MP, Skirmisher; requires no poison or slow at side-turn start).
 - `phoinix_courier.lua` — Prototype 5: Airborne Conductor relaying and post-mortem Civic Memorial Archives (+3 XP on recovery).
 - `marine_grounding.lua` — Prototype 6: Salt-Grounding Pylum context menu, aetheric dispersal, and anti-sorcery ward handler.
 
@@ -15,5 +15,8 @@ This directory contains the runtime logic, formation dynamics, and prototype mec
 **Textdomain Shadowing:**
 Never use `_` as a throwaway loop variable (e.g. `for _, u in ipairs(...) do`) in files declaring `local _ = wesnoth.textdomain ...`. Loop variable `_` shadows the gettext lookup function with the numeric iteration index, crashing with `attempt to call a number value (local '_')` whenever translatable strings (`_ "..."`) are evaluated. Always use `idx`, `i`, or `k`.
 
-See `docs/design/LUA_GUIDELINES.md` for full details.
+See [Lua guidelines](../docs/design/LUA_GUIDELINES.md) for details and the verification status of historical engine notes.
 
+
+For current knowledge navigation, use the [product bundle](../docs/index.md).
+Runtime names and file structure are preserved; see [maintenance boundaries](../docs/maintenance.md).
