@@ -1,3 +1,8 @@
+---
+type: Reference
+title: "CANON_LOCK.md"
+description: "Binding product canon; overrides subordinate setting and design summaries."
+---
 # CANON_LOCK.md
 
 Binding file. If another `/docs` file conflicts with this file, this file wins.

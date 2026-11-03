@@ -1,3 +1,8 @@
+---
+type: Reference
+title: "HISTORY.md"
+description: "Product chronology subordinate to canon and language style."
+---
 # HISTORY.md
 
 Subordinate file. `docs/canon/CANON_LOCK.md` and `docs/canon/STYLE_GUIDE.md` govern this file.

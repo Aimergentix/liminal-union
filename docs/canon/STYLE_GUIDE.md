@@ -1,3 +1,8 @@
+---
+type: Reference
+title: "STYLE_GUIDE.md"
+description: "Binding product language, tone and terminology."
+---
 # STYLE_GUIDE.md
 
 Binding file for tone, diction, and terminology. If a lower file conflicts with this guide on wording or register, this file wins.

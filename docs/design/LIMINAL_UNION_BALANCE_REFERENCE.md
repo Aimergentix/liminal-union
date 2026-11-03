@@ -1,16 +1,27 @@
+---
+type: Reference
+title: "Liminal Union: aktuelle Balance- und Matchup-Referenz"
+description: "Separates current source findings, design intent and historical measurement provenance."
+---
 # Liminal Union: aktuelle Balance- und Matchup-Referenz
 
-> Diese Datei ersetzt die früheren Phasenpapiere, die Balance-Übergabe und die
-> separate Strategieübersicht. Sie beschreibt den geprüften Repository- und
-> Run-Stand vom 29. Oktober 2026. Codebefund, beabsichtigtes Design und
-> Testergebnis werden getrennt behandelt. Bei späteren Codeänderungen müssen
-> die Mechanikabschnitte erneut geprüft werden.
+> Codeabgleich für die unten genannten Produktpfade: 31. Oktober 2026.
+> Die Messungen aus Abschnitt 6 bleiben an ihre Runs vom 29. Oktober gebunden.
+> Implementierung, Designabsicht, historische Evidenz und offene Prüfung werden
+> getrennt behandelt. Dies ist eine Dokumentationsaktualisierung, kein neuer
+> Engine-, Gameplay- oder Balance-Nachweis.
 
 ## 1. Aussagekraft und Arbeitsregeln
 
 - **WML-/Lua-Code bestimmt das aktuelle Verhalten.** Unit-Tooltips und ältere
   Entwurfsdokumente können davon abweichen. Solche Abweichungen sind unten
   ausdrücklich aufgeführt.
+- Die folgenden Systembuchstaben bezeichnen das **historische Schema** der
+  Runs aus Abschnitt 6: A statisch, B Duelle, C Telemetrie, D KI-Partien.
+  Im neuen Mission-Schema `system_naming.version = 2` steht C für
+  `ai_matches` und D für `telemetry_analysis`; A/B behalten ihre Rollen.
+  [Vertrag und Zuordnung](../../../../umc-development/projects/liminal-union/MISSION-CONTROL-CONTRACT.md).
+  Historische Ergebnisse und Verzeichnisnamen werden nicht umbenannt.
 - **System A** ist ein statischer Vergleich und kein Kampf- oder Matchsimulator.
   Seine Kennzahlen hängen von vereinfachten Angriffen, Terrain- und
   Fraktionsprofilen ab.
@@ -46,6 +57,53 @@ Phoinix-Rollenpfad. Ob daraus im praktischen Spiel eine tragfähige
 Qualität-statt-Masse-Fraktion wird, ist eine Balance-Hypothese und muss an
 Spieldaten und menschlichen Partien geprüft werden.
 
+### Implementierte Aufstiege und verbleibende Designfrage
+
+Produktbefund vom 31. Oktober, anhand der Unit-Dateien unter
+`units/halfelven/` (Basis-XP vor Szenario-/MP-Modifikatoren):
+
+- [Maiden Private](../../units/halfelven/maiden/a0-maiden-private.cfg):
+  0·0 hat **13 XP**, Nahkampf Stich 4×2 und Fernkampf Stich 3×2.
+  0·1 hat 18 XP, schaltet Wucht-Nahkampf 4×2 und Concealment frei und
+  führt zu Jaeger. Die historischen 15 Ziel-XP sind kein aktueller Sollwert.
+- [Marine Private](../../units/halfelven/marines/a0-marine-private.cfg):
+  0·0 hat 15 XP, Nahkampf Stich 4×2 und Fernkampf Wucht 3×3.
+  0·1 hat 18 XP und Ambush; ein neuer Wucht-Nahkampf ist dort nicht
+  definiert. Der alte Stage-2-Vorschlag beschreibt diesen Pfad nicht exakt.
+- [Maiden Cornet](../../units/halfelven/command/a1-maiden-cornet.cfg) und
+  [Marine Cornet](../../units/halfelven/command/b1-marine-cornet.cfg):
+  1·0 → 1·1 → Captain ist implementiert (14/16 XP).
+  Feuer-Nahkampf 3×5 bzw. Kälte-Nahkampf 4×4 kommt erst bei 1·1 hinzu.
+- [Jaeger](../../units/halfelven/maiden/a1-jaeger.cfg) und
+  [Sergeant](../../units/halfelven/marines/a1-sergeant.cfg):
+  Die verkürzten Pfade 1·0 → 1·1 → L2 sind implementiert (14/16 XP).
+  Jaeger verzweigt zu Hunterkiller/Techtronic, Sergeant zu
+  Masterchief/Weaponguard/Shieldguard.
+- [Hunterkiller](../../units/halfelven/maiden/a2-hunterkiller.cfg),
+  [Techtronic](../../units/halfelven/maiden/b2-techtronic.cfg),
+  [Masterchief](../../units/halfelven/marines/a2-masterchief.cfg),
+  [Weaponguard](../../units/halfelven/marines/b2-weaponguard.cfg) und
+  [Shieldguard](../../units/halfelven/marines/c2-shieldguard.cfg):
+  2·0 → 2·1 → 2·2 ist implementiert; bei 2·2 kommt der jeweilige
+  Pyrite- bzw. Kryonite-Squad-Anchor hinzu, danach `advances_to=null`
+  mit den im jeweiligen File definierten AMLA-Regeln. Das ist kein Auftrag,
+  alle übrigen Command-, G9- oder Phoinix-Pfade zu vereinheitlichen.
+
+**Offene Designfrage:** Sind Fähigkeiten, Waffen-Specials und Zwischenaufstiege
+höherer Einheiten taktisch verständlich und sinnvoll verteilt? Zu prüfen sind
+Command, Maiden, Marine, G9 und Phoinix: erkennbare Hauptrolle, Überlagerung
+passiver Gruppeneffekte, Häufigkeit von Specials sowie ein spürbarer Gewinn
+an Waffenoption, Fähigkeit oder Rolle durch jeden Zwischenaufstieg.
+Die dokumentierte Implementierung beantwortet diese Qualitätsfrage nicht.
+
+Die Stage-2-Vorschläge „höchstens eine Hauptfähigkeit auf L1“, begrenzte
+Synergien auf L2 und „maximal zwei Zwischenstufen pro Level“ bleiben
+**historische Bewertungsvorschläge**, keine beschlossenen Grenzwerte.
+Auch alte XP-/Angriffsbeispiele sind keine neuen Änderungsaufträge.
+Quelle: `worktree/docs/genai/STAGE_2_FINETUNING_PROMPT.md` im Erhaltungspaket
+(Abschnitt 6). Änderungen an Fähigkeiten, Aufstiegen oder Werten benötigen
+einen eigenen fachlichen Auftrag.
+
 ## 3. Resonanz: Verhalten laut aktuellem Code
 
 Quelle: [`lua/resonance.lua`](../../lua/resonance.lua) und die Alloy-Makros in
@@ -64,26 +122,37 @@ Quelle: [`lua/resonance.lua`](../../lua/resonance.lua) und die Alloy-Makros in
   mitgezählt; existiert ein verlangsamter Pod-Partner, bleibt mindestens Tier 1.
 - Resonanz-Heilung oder passive HP-Regeneration ist in der aktuellen
   Tierberechnung nicht implementiert.
-- Die Grundverteidigung steigt pro Tier um 5 Prozentpunkte gegen Hieb, Stich
+- Die physischen Resistenzen steigen pro Tier um 5 Prozentpunkte gegen Hieb, Stich
   und Wucht (WML-Resistenzwerte werden dafür entsprechend gesenkt).
 
 ### Alloy-Effekte
 
 | Gruppe | Im Code zugewiesene Alloy | Effekt bei Resonanz | Tier-3-Zusatz |
 |---|---|---|---|
-| Maiden-Truppen einschließlich Techtronic | Pyrite | Fernkampf erhält auf Angriff +5, +10 oder +15 Prozentpunkte Trefferchance je Tier | +10% Feuer- und +10% Arkanresistenz |
+| Maiden-Truppen einschließlich Techtronic | Pyrite | Fernkampf erhält auf Angriff +5/+10/+15 Prozentpunkte Trefferchance bei Tier 1/2/3; zusätzlich +10 bei benachbartem geeignetem Pyrite-Squad-Anchor | +10% Feuer- und +10% Arkanresistenz |
 | Marine-Truppen | Kryonite | Nahkampfverteidigung senkt die gegnerische Trefferchance um 5, höchstens 10 Prozentpunkte | Firststrike in Nahkampfverteidigung; zusätzlich +10% Kälte- und +10% Arkanresistenz |
 | G9-Warforms | Arcanite | Nahkampfangriff erhält +1 Schaden je Tier | +20% Feuer- und +20% Kälteresistenz |
 | Command-Einheiten | keine Resonanz-Alloy | Conductance; Command-Einheiten selbst werden nicht als Uranite-Resonanz-Pod geführt | kein Uranite-Resonanzbonus |
 | Phoinix | keine | keine Resonanz | keine |
 
-**Interlock** gilt für Kryonite-Einheiten mit mindestens Tier 1, wenn ein
-geeigneter Kryonite-Verbündeter angrenzend ist. Bei normalen Treffern wird bis
-zu 30% des erlittenen Schadens auf angrenzende, nicht vergiftete Kryonite-
-Einheiten verteilt, die über 1 HP liegen; diese können durch die Verteilung
-nicht unter 1 HP fallen. Rundung und HP-Grenzen können den tatsächlich
-verteilten Anteil senken. Im Berserk-Sonderpfad gelten eigene Obergrenzen.
-Quelle ist `handle_damage_redistribution` in `lua/resonance.lua`.
+**Squad Anchors sind implementiert.** Die Marker stehen in
+`macros/abilities.cfg`, die Effekte in `lua/resonance.lua`.
+Bei aktiver Pyrite-Resonanz addiert ein benachbarter lebender, nicht vergifteter
+Pyrite-Anchor derselben Seite einmalig 10 Prozentpunkte Fernkampf-Trefferchance
+auf Angriff; mehrere Anchors stapeln diesen Zusatz nicht.
+
+**Interlock** gilt für Kryonite-Ziele mit mindestens Tier 1 und geeigneten
+angrenzenden Kryonite-Einheiten derselben Seite (nicht vergiftet, über 1 HP).
+Bei normalen Treffern ist der angeforderte Verteilungsbetrag
+`min(Schaden, floor(Schaden × 0.30) + Anchorbonus)`.
+Der Anchorbonus beträgt einmalig 2, wenn ein geeigneter Nachbar einen
+Kryonite-Anchor trägt, sonst 0. Ohne Anchor werden Treffer unter 3 Schaden
+nicht verteilt. Der Zusatz erhöht die Verteilung auf Nachbarn, er vernichtet
+keinen Schaden; Nachbarn bleiben mindestens bei 1 HP. Deren verfügbare HP
+können den tatsächlich absorbierten Betrag weiter senken.
+Im Berserk-Pfad wird vor dem Anchorbonus auf 50% begrenzt, danach auf
+mindestens 1 und höchstens den Trefferschaden; die HP-Grenzen bleiben bestehen.
+Quelle: `handle_damage_redistribution` in `lua/resonance.lua`.
 
 ### Formation-Zone-of-Control
 
@@ -125,15 +194,28 @@ Spielverhalten.
    Nacht, nicht den in manchen älteren Texten behaupteten Tageswert −5%.
    Die Laufzeitfunktion `update_unit_alignment` in `lua/resonance.lua` setzt ein Status-Overlay und Variable, ändert aber
    die Einheitenausrichtung nicht auf `LIUN_liminal_conducted`.
-   Ein separater Phoinix-Pfad kann Conductance an benachbarte liminale Einheiten
-   weitergeben, wenn der Phoinix höchstens drei Hexe von einem Conductor
-   entfernt ist; das ist vom nicht belegten Kinetic Relay zu unterscheiden.
+   **Phoinix-Relay: Statusanzeige ist belegt, Schadensweitergabe nicht.**
+   `is_adjacent_to_relaying_phoinix` kann in dieser Funktion ebenfalls
+   `lu_conducted` und das Overlay aktivieren. Sie fügt aber keinen
+   Leadership-Effekt hinzu; die WML-Conductance filtert direkte Nachbarschaft
+   und liest `lu_conducted` nicht. Die Relay-Beschreibung ist daher kein
+   Nachweis für +10 Prozentpunkte Schaden über den Phoinix.
+   Die Reichweitenprüfung nutzt die eigene `hex_distance`-Funktion in
+   `lua/phoinix_courier.lua` mit Grenzwert 3. Ob deren Koordinatenformel
+   tatsächliche Engine-Hexdistanz abbildet, bleibt ungeprüft (siehe
+   `LUA_GUIDELINES.md`, Abschnitt 2).
 4. **Pyrite-Tier-3-Resistenz ist im Lua-Code +10%/+10%.** Der aktive Tooltip
    wurde an diesen Codewert angepasst. Die früheren Uranite-Zuweisungs- und
    Tooltip-Makros wurden entfernt, weil keine Einheit sie verwendet und
    Command-Einheiten keine Resonanz-Alloy tragen.
 
-Die Tooltip-Abweichungen wurden an den aktuellen Code angepasst. Offen bleiben
+**Weitere direkt belegte Abweichung:** `lua/maiden_wingsuit.lua` setzt
+`increase = 1`; Beschreibung und Anzeige nennen ebenfalls +1 MP.
+Die Angabe +2 MP im Lua-README wurde auf +1 MP korrigiert. Die Prüfung
+gilt bei Seitenzugbeginn für Pyrite-Einheiten auf Hills/Mountains ohne Gift
+oder Slow. Die Mechanik wurde dabei nicht verändert.
+
+Die hier genannten Tooltip-Werte wurden mit dem Code abgeglichen. Offen bleiben
 Designentscheidungen, falls künftig eine andere Alignment-Zuweisung oder ein
 echter Kinetic-Relay-Mechanismus gewünscht ist; bis zur Implementierung sind
 beide keine Spielregeln und keine Grundlage für Balanceannahmen.
@@ -178,9 +260,9 @@ garantierten Counter:
 
 Die alten Faction-Doctrine-Texte enthielten nützliche taktische Fragen, aber
 auch zu selbstsichere Behauptungen und veraltete Mechanics. Die folgenden
-Punkte bleiben deshalb Hypothesen für den nächsten passenden Testlauf; die
-aktuellen vollen Partien gegen die vier noch nicht getesteten Fraktionen dieser Tabelle sind durch den
-Bestätigungslauf unten nicht abgedeckt.
+Punkte bleiben deshalb Hypothesen für den nächsten passenden Testlauf.
+Volle Partien gegen Loyalists, Rebels, Northerners und Knalgan Alliance
+sind durch den historischen Bestätigungslauf unten nicht abgedeckt.
 
 | Fraktion | Im LU-Matchup prüfen | Nicht vorab als bewiesen behandeln |
 |---|---|---|
@@ -191,21 +273,41 @@ Bestätigungslauf unten nicht abgedeckt.
 | Knalgan Alliance | Wie Gelände, hohe Widerstände und Fernkampfdruck gegen mobile LU-Einheiten und Resonanz-Alloys abschneiden | Dass alte Knockback-, Armor-Piercing- oder Regenannahmen bereits im aktuellen Code gelten |
 | Drakes | Wie Flugbewegung, Feuerdruck und schnelle Kartenkontrolle gegen LU-Aufstellung und Rückzugswege wirken | Dass ein bestimmtes vorhergesagtes Matchup- oder Mapurteil aus alten Papieren allgemeingültig ist |
 
-## 6. Vorhandene Run-Belege
+## 6. Historische Run-Belege und Herkunft
 
-Run-Artefakte bleiben unter `tools/balance/out/` erhalten. Sie werden nicht mit
-den alten Entwurfsdokumenten gleichgesetzt.
+Die alten Werkzeugpfade existieren nicht im aktuellen Produkt. Das
+[Erhaltungspaket vom 31. Oktober](../../../../umc-development/projects/liminal-union/runs/20261031T200137Z-legacy-preservation/report.md)
+enthält `payload.tar.gz`, `manifest.json` und `verification.json`.
+Die Originalpfade sind Archivherkunft, keine ausführbaren Produktanleitungen:
+
+- `worktree/tools/balance/out/`: erhaltene alte Run-Kontexte, einschließlich
+  Fehlern, Teilläufen und separater Mainline-Dunefolk-Kalibrierung.
+- `worktree/docs/genai/GenAI_GUIDE.md` und
+  `worktree/docs/genai/STAGE_2_FINETUNING_PROMPT.md`: unveränderte historische
+  Anweisungen; sie gelten nicht als heutiger Arbeitsauftrag.
+- Die beiden nachfolgenden Runs liegen als Git-Historie vor:
+  `history/index.json` → Commit
+  `47dff0e625e079cd55419cf1b30e74e455f67259` → dessen `tree` → Originalpfad
+  `tools/balance/out/runs/<Run-ID>/...` → `blob` → `history/blobs/<Blob-ID>`.
+  Dieser Weg erschließt auch Rohdaten und Berichte ohne das alte Repository.
+
+Die beiden Manifest-Blobs sind `b5de82e7a00ca82dfb7dc830922b61a6c1cb5bb8`
+(Screening A) und `26ef7e4db64f9c946fca97b047daed4a16955b19` (A–D).
+Die archivierten Manifeste und die beiden Prompt-Dateien wurden bei dieser
+Überarbeitung gegen ihre Paket-SHA-256 geprüft. Alle Angaben zu C/D unten
+behalten ihre **ursprüngliche Bedeutung: C Telemetrie, D KI-Partien**.
 
 ### Screening A: 29. Oktober 2026
 
-[`20261029T095545Z-3c07c6`](../../tools/balance/out/runs/20261029T095545Z-3c07c6/manifest.json)
+`20261029T095545Z-3c07c6` (Manifest über den Archivindex oben)
 lief System A im Profil `screening`, Era `LIUN_era_courageous`, gegen sieben
 Mainline-Fraktionen; die Konfiguration nennt außerdem vier Karten und zwei
 Spiele je Karte. Tatsächlich wurde nur System A ausgeführt, es gab also keine
 KI-Partien in diesem Lauf. Der Lauf endete mit Status `completed`.
 Das Manifest nennt die 1.19.22-Binärdatei, meldet die Engine-Version aber als
 `version unavailable`. Seine Quellhashes für die vier geänderten Unit-Dateien
-auf `faction-balance-finetuning` stimmen mit dem hier geprüften Stand überein.
+auf `faction-balance-finetuning` stimmten mit dem damals geprüften
+`06a5374` überein; sie stimmen nicht sämtlich mit dem heutigen Produkt überein.
 
 Der Audit kennzeichnet Maiden Private, Marine Private und G9 AI in seinen
 vereinfachten EHP-pro-Gold-Metriken nicht als Outlier; die Phoinix wird wegen
@@ -214,7 +316,7 @@ keine Aussage über volle Partien.
 
 ### Standgebundener A–D-Lauf: 29. Oktober 2026
 
-[`20261029T095711Z-2b4ded`](../../tools/balance/out/runs/20261029T095711Z-2b4ded/manifest.json)
+`20261029T095711Z-2b4ded` (Manifest über den Archivindex oben)
 meldet A, B, C und D abgeschlossen, Era `LIUN_era_courageous`, vier Karten,
 vier Spiele je Karte und die Gegner Undead, Drakes und Dunefolk. Der Lauf
 nennt wie der Screening-A-Lauf den Branch `faction-balance-finetuning` und
@@ -226,23 +328,31 @@ vier Hashes stimmen mit dem am 29. Oktober geprüften HEAD
 Übereinstimmung des gesamten Spielstands. Die Engine-Version bleibt im Manifest `version
 unavailable`, auch wenn der konfigurierte Binary-Pfad auf 1.19.22 zeigt.
 
-**Hashabgleich beider Runs gegen `06a5374`:** Abweichend sind
+**Historischer Hashabgleich beider Runs gegen `06a5374` (29. Oktober):** Abweichend sind
 `lua/resonance.lua`, `macros/abilities.cfg`, beide Dateien unter `factions/`
 sowie diese sieben Unit-Dateien unter `units/halfelven/`:
 `maiden/a1-jaeger.cfg`, `maiden/a2-hunterkiller.cfg`,
 `maiden/b2-techtronic.cfg`, `marines/a1-sergeant.cfg`,
 `marines/a2-masterchief.cfg`, `marines/b2-weaponguard.cfg` und
 `marines/c2-shieldguard.cfg`. Das manifestierte `lua/conductor.lua` ist
-inzwischen entfernt. Insbesondere die neue Squad-Anchor-/L1–L2-Umsetzung
-ist durch diese Runs nicht bestätigt. Auch die Mechanikbeschreibung dieser
-Referenz benötigt dafür einen erneuten Codeabgleich; sie ist kein
-vollständiger Audit des neuen HEAD.
+inzwischen entfernt. Die Squad-Anchor-/L1–L2-Umsetzung ist durch diese Runs
+nicht bestätigt. Ihr Produktcode wurde für Abschnitte 2/3 erneut gelesen;
+dies ersetzt keine Messung des aktuellen Stands.
+
+**Neuer Hashabgleich am 31. Oktober gegen das Produkt:** In jedem der beiden
+Manifeste stimmen 66 erfasste Dateien überein, 24 unterscheiden sich und
+11 Pfade fehlen im Produkt (zehn frühere Tool-/Prompt-Pfade und
+`lua/conductor.lua`). Von den vier Pacing-Dateien stimmt nur Marine Private
+noch überein; Maiden Private und beide Cornets unterscheiden sich. Die
+historische Vier-Dateien-Übereinstimmung ist kein heutiger Befund.
 
 Die folgenden Ergebnisse gelten für den manifestierten Arbeitsbaum des Runs.
 Sie belegen weder die aktuelle Gesamtbalance noch unverändertes Verhalten
-von System B–D auf dem heutigen Mechanik- und Fraktionsstand. Die passenden
-vier Unit-Hashes reichen dafür nicht aus. System A liest generierte
-`pp/`-Eingaben; deren Aktualität ist zusätzlich zu prüfen.
+von System B–D auf dem heutigen Mechanik- und Fraktionsstand. Selbst passende
+einzelne Unit-Hashes reichen dafür nicht aus. Das alte
+System A las generierte `pp/`-Eingaben. Der erhaltene LU-Eingang
+`worktree/tools/balance/pp/lu/_main.cfg` hat weiterhin die Herkunft
+`historical-generation-unverified`; er belegt keine frische Vorverarbeitung.
 
 - **System B:** Der Bericht führt 31.752 simulierte Duelle auf. Das ist
   Kampfverteilungs-Evidenz für die getesteten Unit-/Szenario-Kombinationen,
@@ -276,11 +386,14 @@ manifestierter Lauf ist nötig, um den aktuellen Gesamtstand zu bestätigen.
 1. Vor weiteren Balanceänderungen erneut Code und Run-Hashes des aktuellen
    Branches prüfen. Die alte Alignment-Konstante `lua/conductor.lua` war
    unbenutzt und wurde entfernt; maßgeblich ist der aktive WML-/Lua-Pfad.
-2. Für LU gegen Dunefolk System-D-Läufe mit ausgeglichener Seitenrotation und
+2. Für LU gegen Dunefolk KI-Partien (historisch D, im neuen Schema C) mit
+   ausgeglichener Seitenrotation und
    deutlich größerer Stichprobe pro Karte durchführen. Daneben die
    Matchup-Rohdaten, Rekrutierung, frühe Verluste und beobachtete Mechaniken
    untersuchen; Telemetrie allein erklärt keine Ursache.
-3. Menschliche 1v1-Partien und Replays als abschließende Prüfung verwenden.
+3. Die offene Fähigkeiten-/Specials- und Zwischenaufstiegsfrage aus Abschnitt 2
+   fachlich prüfen; implementierte Kürzungen und Anchors nicht erneut beauftragen.
+4. Menschliche 1v1-Partien und Replays als abschließende Prüfung verwenden.
    KI-Screenings sind dafür ein Filter, kein Ersatz.
 
 ## 8. Ersetzte Textquellen
@@ -299,11 +412,11 @@ entfernt:
 - `docs/design/PHASE8_IMPLEMENTATION_SCOPING.md`
 - `docs/lore/STRATEGY.md`
 
-Quellcode, der aktuelle Suite-Prompt, Changelog, `docs/design/LUA_GUIDELINES.md`
-und manifestierte Run-Belege sind keine dieser zehn Textquellen und bleiben
-erhalten. Die aktiven Resonanz- und Conductance-Tooltips wurden inzwischen an
-den geprüften Code angepasst; historische Changelog-Einträge bleiben als
-Änderungshistorie bestehen.
+Quellcode, Changelog und `docs/design/LUA_GUIDELINES.md` sind keine dieser
+zehn Textquellen. Die früheren Suite-Prompts und Run-Belege sind jetzt über
+das Erhaltungspaket in Abschnitt 6 nachweisbar; sie liegen nicht im Produkt.
+Die Grenzen des aktuellen Tooltip-/Codeabgleichs stehen in Abschnitt 4;
+historische Changelog-Einträge bleiben als Änderungshistorie bestehen.
 
 Zusätzlich entfernt wurden der doppelte ältere Benchmark-Master-Prompt
 `docs/genai/MASTER_PROMPT_BALANCE_BENCHMARK.md` und die englische
@@ -312,5 +425,5 @@ Arbeitsregeln und Aussagen stehen in den aktuellen Referenzdateien. Ebenfalls
 entfernt wurden nicht manifestierte Root-Ausgaben, der doppelte Ordner
 `tools/balance/out/run-20261028-codex/` und unvollständige ältere Dunefolk-
 Vorläufe ohne eigenes Run-Manifest. Die vollständigen manifestierten
-Runs, darunter die aktuellen Branch-Läufe und die Dunefolk-Kalibrierung,
-bleiben erhalten.
+Runs, darunter die historischen Branch-Läufe und die Dunefolk-Kalibrierung,
+sind im Erhaltungspaket nachweisbar (Abschnitt 6).

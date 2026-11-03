@@ -1,3 +1,8 @@
+---
+type: Reference
+title: "LORE.md"
+description: "Product setting and faction identity subordinate to canon and language style."
+---
 # LORE.md
 
 Subordinate file. `docs/canon/CANON_LOCK.md` and `docs/canon/STYLE_GUIDE.md` govern this file.
