@@ -17,6 +17,7 @@ Read the relevant sources in this order for canon and lore:
 2. [STYLE_GUIDE.md](canon/STYLE_GUIDE.md) — binding tone, diction and terminology.
 3. [HISTORY.md](lore/HISTORY.md) — chronology, subordinate to canon and style.
 4. [LORE.md](lore/LORE.md) — setting and faction identity, subordinate to the above.
+5. [SUMMARY.md](lore/SUMMARY.md) — concise setting overview, subordinate to the above.
 
 Derived summaries cannot override these sources. AGENTS.md governs the working method; it does not create canon.
 
