@@ -31,6 +31,11 @@ for equipment and attack continuity. These designs are not implemented yet.
   Verify `profile`/`small_profile` integration and dialogue orientation against
   the installed engine before replacing the legacy portrait references.
 
+Artwork masters and concept sheets are kept outside the product, in
+`umc-development/projects/liminal-union/artwork/maiden/` (`portrait-masters/`,
+`sprite-concepts/`), with their prompts and manifests. Portrait review and
+integration continue on the `sprites` branch.
+
 ## Proposed animation scope
 
 Design proposal, not implementation approval or an engine acceptance result.
