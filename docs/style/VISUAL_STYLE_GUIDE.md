@@ -31,16 +31,20 @@ for equipment and attack continuity. These designs are not implemented yet.
   Verify `profile`/`small_profile` integration and dialogue orientation against
   the installed engine before replacing the legacy portrait references.
 
-Saved portrait masters: [Maiden dialogue v1](../../images/portraits/halfelven/versions/maiden-pyrite-v1/maiden-jaeger-dialogue.png)
-and [Maiden help v1](../../images/portraits/halfelven/versions/maiden-pyrite-v1/maiden-jaeger-help.png).
-The [version manifest](../../images/portraits/halfelven/versions/maiden-pyrite-v1/manifest.json)
+Artwork masters and concept sheets named below are kept outside the product, in
+`umc-development/projects/liminal-union/artwork/maiden/` (`portrait-masters/`,
+`sprite-concepts/`), with their prompts and manifests.
+
+Saved portrait masters: Maiden dialogue v1
+and Maiden help v1.
+The version manifest
 records original dimensions and SHA-256 hashes. These approved L1 artwork masters
 are preserved originals, not final engine-sized exports; runtime paths are unchanged.
 
-Current portrait pair for review: [Maiden dialogue v5](../../images/portraits/halfelven/versions/maiden-pyrite-v5/maiden-jaeger-dialogue.png)
-and [Maiden help v5](../../images/portraits/halfelven/versions/maiden-pyrite-v5/maiden-jaeger-help.png).
+Current portrait pair for review: Maiden dialogue v5
+and Maiden help v5.
 The raised-visor direction is user-approved; v5 refines surface rendering and
-the trained athletic build. The [v5 manifest](../../images/portraits/halfelven/versions/maiden-pyrite-v5/manifest.json)
+the trained athletic build. The v5 manifest
 records dimensions, hashes and limits: pixel dimensions remain unchanged and
 fine skin texture remains. Earlier versions are preserved; v2/v3 nasal-guard
 designs are superseded. Runtime references are unchanged.
@@ -49,9 +53,9 @@ Current additional portrait pairs for review:
 
 | Unit | Dialogue | Help | Manifest |
 |---|---|---|---|
-| Private L0 v2 | [Portrait](../../images/portraits/halfelven/versions/maiden-private-l0-v2/maiden-private-dialogue.png) | [Portrait](../../images/portraits/halfelven/versions/maiden-private-l0-v2/maiden-private-help.png) | [Metadata](../../images/portraits/halfelven/versions/maiden-private-l0-v2/manifest.json) |
-| Hunterkiller L2 v1 | [Portrait](../../images/portraits/halfelven/versions/maiden-hunterkiller-l2-v1/maiden-hunterkiller-dialogue.png) | [Portrait](../../images/portraits/halfelven/versions/maiden-hunterkiller-l2-v1/maiden-hunterkiller-help.png) | [Metadata](../../images/portraits/halfelven/versions/maiden-hunterkiller-l2-v1/manifest.json) |
-| Techtronic L2 v1 | [Portrait](../../images/portraits/halfelven/versions/maiden-techtronic-l2-v1/maiden-techtronic-dialogue.png) | [Portrait](../../images/portraits/halfelven/versions/maiden-techtronic-l2-v1/maiden-techtronic-help.png) | [Metadata](../../images/portraits/halfelven/versions/maiden-techtronic-l2-v1/manifest.json) |
+| Private L0 v2 | Portrait | Portrait | Metadata |
+| Hunterkiller L2 v1 | Portrait | Portrait | Metadata |
+| Techtronic L2 v1 | Portrait | Portrait | Metadata |
 
 All three pairs show folded gliding membranes between the upper arms and torso;
 dialogue views also show folded hip panels. Private L0 is bareheaded with small
@@ -66,11 +70,11 @@ needs review before it is used as a complete equipment reference.
 Each folder includes generation prompts and a manifest with dimensions, hashes
 and limitations. These are artwork masters; runtime references are unchanged.
 
-Saved sprite design references: [bareheaded Maiden Private L0](../../images/units/halfelven/maiden/versions/maiden-pyrite-concepts-v1/maiden-private-l0-reference.png)
-and [Pyrite Maiden line overview](../../images/units/halfelven/maiden/versions/maiden-pyrite-concepts-v1/maiden-line-pyrite-reference.png).
+Saved sprite design references: bareheaded Maiden Private L0
+and Pyrite Maiden line overview.
 These preserved originals are large concept previews, not validated 72×72 assets
 or animation frames. The overview predates the approved L1 raised visor; use
-the current equipment guidance below. The [concept manifest](../../images/units/halfelven/maiden/versions/maiden-pyrite-concepts-v1/manifest.json)
+the current equipment guidance below. The concept manifest
 records dimensions, hashes and remaining limitations.
 
 ## Proposed animation scope
