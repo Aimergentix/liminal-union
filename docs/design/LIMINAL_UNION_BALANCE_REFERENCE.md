@@ -59,6 +59,88 @@ Spieldaten und menschlichen Partien geprüft werden.
 
 ### Implementierte Aufstiege und verbleibende Designfrage
 
+**Approved direction (3 November 2026); see the status below:** Start Maiden
+Privates with a bow and kick, and Marine Privates with a khopesh and sling,
+as weaker versions of their L1 successors. Match the replacement sprites and
+animations to these weapons. Approved attack types, intermediate unlocks and
+initial test values are specified below; balance remains unverified.
+The approved officer package below also covers Ensign-to-Colonel weapons.
+Status (4 November 2026): the Maiden troop line is implemented as test values
+(Private changed, Jaeger already matched, L2 unchanged). A bounded engine probe
+covered resolved attacks and advancement. Private attack animations remain static
+stand-ins on the old sprite. Save/load, replay, multiplayer and balance are
+unverified. Marine and officer lines remain unimplemented.
+Work proceeds through weapon/progression design, sprites and visual indicators,
+then implementation and verification. Additional units are deferred.
+
+Approved attack progression:
+
+| Line | L0 entry (0·0) | Intermediate advancement (0·1) | L1 successor |
+|---|---|---|---|
+| Maiden | Impact kick and impact bow | Add arcane bow ammunition; retain Concealment | Jaeger retains both ammunition types and kick |
+| Marine | Pierce khopesh and impact sling | Add impact khopesh strike; retain Ambush | Sergeant retains these options and adds pierce sling ammunition |
+
+Keep learned attack options across these L0-to-L1 transitions. The proposed
+Sergeant impact sling is an additional L1 option, not an existing attack.
+The approved L2 specialization exceptions are listed below.
+
+Approved initial test values; not balance-validated. Only the Maiden rows are
+implemented.
+Notation: damage per hit × number of strikes, before modifiers.
+
+| Unit | Melee | Ranged |
+|---|---|---|
+| Maiden Private 0·0 | Impact kick 2×2 | Impact bow 2×3 |
+| Maiden Private 0·1 | Impact kick 2×2 | Impact bow 2×3; arcane bow 2×3 |
+| Jaeger 1·0 | Impact kick 2×3 | Impact bow 3×5; arcane bow 2×5 |
+| Marine Private 0·0 | Pierce khopesh 4×2 | Impact sling 3×3 |
+| Marine Private 0·1 | Pierce khopesh 4×2; impact khopesh 3×2 | Impact sling 3×3 |
+| Sergeant 1·0 | Pierce khopesh 4×2; impact khopesh 3×2 | Impact sling 3×3; pierce sling 4×4 |
+
+Retain existing costs, HP, movement and XP for this first test package.
+Jaeger 1·1 and Sergeant 1·1 inherit their respective 1·0 test attacks.
+Retain their existing HP/XP progression and ability additions (Skirmisher for
+Jaeger, Diversion for Sergeant). The Sergeant impact sling must therefore be
+available in both L1 stages.
+Attack names, animation filters and existing modifiers must be checked together
+when replacing the weapons. No gameplay or balance checks have run for this
+design; documentation approval is not evidence of runtime correctness.
+
+Approved officer test package; not implemented or balance-validated:
+
+| Stage | Maiden lance: pierce | Maiden lance: fire | Marine short sword: pierce | Marine short sword: cold |
+|---|---|---|---|---|
+| Ensign 0·0 | 5×3 | 2×5 | 6×2 | 2×4 |
+| Ensign 0·1 | 5×3 | 2×5 | 6×2 | 2×4 |
+| Cornet 1·0 | 6×3 | 2×5 | 6×3 | 3×4 |
+| Cornet 1·1 | 6×3 | 3×5 | 6×3 | 4×4 |
+| Captain 2·0 | 10×3 | 3×7 | 15×2 | 5×5 |
+| Colonel 3·0 | 13×3 | 4×7 | 20×2 | 6×5 |
+
+Both officer lines retain their elemental attack from L0 onward. Marine
+officers consistently use pierce for their physical attack; Cornet changes
+from blade to pierce. Marine Ensign changes from pierce 9×2/cold 3×4 to the
+weaker test values above. Ensign 0·1 retains its existing HP improvement;
+Cornet 1·1 improves the elemental attack. Keep Conductance, First Aid, costs,
+HP, movement and XP unchanged. Captain/Colonel intermediate stages retain
+their inherited attacks and existing non-attack progression.
+Sprites use lance and shield for Maiden officers, short sword and shield for
+Marine officers. Elemental applications use the same weapon.
+
+Approved L2 specialization boundary:
+
+- Keep all current L2 troop attack types, values and intermediate attack
+  progression unchanged in this package.
+- Hunterkiller retains the Jaeger's attack types and adds pierce ammunition.
+  Masterchief continues the Sergeant's khopesh and sling attack types.
+- Techtronic deliberately trades impact/arcane bow ammunition for its current
+  pierce bow and repair role. Weaponguard trades the sling and previous melee
+  profile for its current elemental/blade melee weapons. Shieldguard trades
+  the sling for its current impact/pierce shield attacks.
+- Preserve learned attacks during ordinary L0-to-L1 progression; a selected
+  L2 specialization may deliberately exchange weapons. Explain these trades
+  in advancement-facing information when implementing the package.
+
 Produktbefund vom 31. Oktober, anhand der Unit-Dateien unter
 `units/halfelven/` (Basis-XP vor Szenario-/MP-Modifikatoren):
 
@@ -66,10 +148,11 @@ Produktbefund vom 31. Oktober, anhand der Unit-Dateien unter
   0·0 hat **13 XP**, Nahkampf Stich 4×2 und Fernkampf Stich 3×2.
   0·1 hat 18 XP, schaltet Wucht-Nahkampf 4×2 und Concealment frei und
   führt zu Jaeger. Die historischen 15 Ziel-XP sind kein aktueller Sollwert.
+  Die Angriffe dieses Befunds sind überholt; aktuell gilt die Tabelle oben.
 - [Marine Private](../../units/halfelven/marines/a0-marine-private.cfg):
   0·0 hat 15 XP, Nahkampf Stich 4×2 und Fernkampf Wucht 3×3.
-  0·1 hat 18 XP und Ambush; ein neuer Wucht-Nahkampf ist dort nicht
-  definiert. Der alte Stage-2-Vorschlag beschreibt diesen Pfad nicht exakt.
+  0·1 hat 18 XP und Ambush. Korrektur nach Quellenprüfung am 3. November:
+  Der Typ definiert zusätzlich Wucht-Nahkampf 3×2 (`Sickle [slam]`).
 - [Maiden Cornet](../../units/halfelven/command/a1-maiden-cornet.cfg) und
   [Marine Cornet](../../units/halfelven/command/b1-marine-cornet.cfg):
   1·0 → 1·1 → Captain ist implementiert (14/16 XP).
