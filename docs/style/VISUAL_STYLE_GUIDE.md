@@ -7,13 +7,95 @@ description: "Product visual guidance subordinate to canon and language style."
 
 This document provides visual anchors for the four primary unit categories of the Liminal Union, intended for sprite artists and AI-assisted generation.
 
+## Approved sprite redesign direction
+
+Use the [approved weapon progression](../design/LIMINAL_UNION_BALANCE_REFERENCE.md)
+for equipment and attack continuity. These designs are not implemented yet.
+
+- Maiden Private starts with the Jaeger's bow and kick; Marine Private starts
+  with khopesh and sling. L0 soldiers should visibly belong to their later corps.
+- Maiden officers carry lance and shield from Ensign onward; Marine officers
+  carry short sword and shield. Elemental applications use the same weapon.
+- Show full-level progression through small, readable equipment and silhouette
+  changes, keeping proportions, perspective and lighting consistent per line.
+  Keep L2 specialists recognizable by their distinct equipment and role.
+- Remove the existing troop/leadership rank markers. A small intermediate-stage
+  badge is a separate proposed indicator; its artwork and placement remain open.
+- Develop and review base sprites before animation frames. Generated concept
+  sheets are previews, not validated 72×72 game assets or animation sets.
+- Include a matching portrait pair with each distinct character/equipment
+  design: a large transparent dialogue portrait and a smaller help portrait
+  using the same identity and equipment. Keep the sprite's hair, small
+  halfelven ears, armor, helmet stage and weapon role consistent. Portraits
+  use painted Wesnoth-style illustration rather than enlarged sprite pixels.
+  Verify `profile`/`small_profile` integration and dialogue orientation against
+  the installed engine before replacing the legacy portrait references.
+
+Artwork masters and concept sheets are kept outside the product, in
+`umc-development/projects/liminal-union/artwork/maiden/` (`portrait-masters/`,
+`sprite-concepts/`), with their prompts and manifests. Portrait review and
+integration continue on the `sprites` branch.
+
+## Proposed animation scope
+
+Design proposal, not implementation approval or an engine acceptance result.
+Use the documented [animation events](https://wiki.wesnoth.org/AnimationWML),
+[timing guidance](https://wiki.wesnoth.org/Advanced_Animation_Tutorial) and
+[custom animation actions](https://wiki.wesnoth.org/InterfaceActionsWML#%5Banimate_unit%5D).
+Verify exact behavior against the installed engine before runtime integration.
+
+| Set | Proposed coverage |
+|---|---|
+| Life and attention | Quiet standing loop; 2–3 occasional role-specific idles; brief selection response |
+| Travel | Movement cycle, departure and arrival; terrain and actual-state variants where useful |
+| Combat | Draw/ready and recover/stow; each distinct physical attack; ammunition effects; hit/miss feedback; directional coverage |
+| Defense | Separate dodge and hit reactions; shield/parry poses only as visual reactions to resolved combat |
+| Lifecycle | Recruit/recall arrival, level-out/in, restrained post-kill victory, death |
+| Support | Healing/repair, being healed, poison damage; leadership/resistance support where the actual ability triggers them |
+| Custom mechanics | Short transition cues for real resonance changes, active glide, Overclock and Grounding; additional explicit visual triggers required |
+
+Maiden troop signature: unfolding, tension and folding of the jump-suit;
+purposeful bow draw/release and kick; repair-tool gestures for Techtronic.
+Marine signature: planted footwork, sling rotation/release, distinct khopesh
+thrust and smash; shield bracing for Shieldguard. Officer signature: concise
+command gesture, first aid and elemental weapon preparation. G9 signature:
+weighty steps, articulated strikes, controlled core/Overclock response and
+shutdown. Phoinix signature: varied wing cycles, banking, measured embers and
+detox/relay cues only where the associated gameplay effect is confirmed.
+
+Prefer breadth and clear motion to long compulsory sequences. Standing stays
+quiet; rare idles may be longer. Do not play a complete multi-strike combo for
+every single engine strike. Share body motion across ammunition variants and
+inherit animations within a level when equipment is unchanged. Custom effect
+animations consume existing state; they do not calculate bonuses or alter combat.
+Keep HP bars, team colors and tactical overlays legible throughout.
+
+The approved pilot is Maiden Private L0, not Jaeger L1. Start with her bareheaded
+base sprite at game scale, then movement/glide, bow/kick, hit/dodge and lifecycle.
+Use the approved 0·0 impact bow and kick; add the arcane projectile variant only
+for 0·1, together with its intermediate-stage indicator. Do not give this pilot
+the Jaeger's repair role, officer gestures or an L1 helmet. Support animations
+initially cover receiving healing and poison damage, not providing treatment.
+Review timing, all six directions, team colors, hit/miss/kill, return to standing
+and overlaps.
+Custom cues also need positive and negative state-transition checks, and relevant
+save/load, replay and multiplayer verification. Expand to other lines only after
+the pilot establishes the reusable frame and WML conventions.
+
+Maiden Private runtime frames, referenced by its unit file under
+`images/units/halfelven/maiden/` (72×72 WebP): existing names `maiden-private`,
+`-idle-1`, `-idle-2`, `-defend` (hit reaction); new `-dodge`, `-bow-1`…`-bow-4`
+(ready, draw, release, recover), `-kick-1`…`-kick-3`, `-jump-1`…`-jump-4`,
+`-death-1`…`-death-3`. Jaeger, Hunterkiller and Techtronic keep their existing
+frame names.
+
 ## Core Aesthetic: The Ancient Commonwealth – Liminal Union
 - **Forbidden:** Science-fiction, mechatronics, steampunk, digital UI, sleek robotics.
 - **Required:** Ancient craftsmanship, civic severity, archaic Wesnothian high fantasy, arcane matter (alloys).
 
 ## 1. Maiden Corps (The Precision Arm)
 - **Role:** Mobile female anti-sorcerous precision.
-- **Visuals:** High-status, lightweight Arcanite armor. Exacting, sharp weapons.
+- **Visuals:** Revered fighters and mothers equipped with the finest, most costly ultralight Pyrite-alloy armor: pale yellow to amber, with a subtle honeycomb construction motif. Compact folded jump-suits; light helmets from L1 onward.
 - **Vibe:** "Female, Civic ferocity." Intelligent, severe, family oriented and mobile.
 
 ## 2. Marine Corps (The Shield and Water Units)
@@ -35,7 +117,7 @@ This document provides visual anchors for the four primary unit categories of th
 Background is transparent!
 | Material | Visual Description |
 | :--- | :--- |
-| **Pyrite** | Brass-like, warm, industrial sheen. |
+| **Pyrite** | Warm pale-yellow to amber alloy; fine, lightweight crafted surfaces on Maiden armor. |
 | **Kryonite** | Blue-silver, cold, crystalline metal. |
 | **Arcanite** | Dark, deep metal with a soft "moonlit" purple/green glow. |
 | **Uranite** | Dense, muted golden-amber conductance metal housed in officer rods and beacons. |
@@ -56,11 +138,25 @@ Aesthetic: "Ancient Southern Commonwealth." Avoid steampunk or sci-fi. Think "Se
 
 *1. Maiden Corps: The Precision Arm*
 The (female) Maidens are high-status (mothers, daughters), mobile, and anti-sorcerous. Their look should be "trained civic ferocity."
-Silhouette: Slim, athletic, and agile, equipped with feather jump-suits. Avoid bulky plates that hinder movement.
-Armor/Clothing: Lightweight but high-quality Arcanite-weave or thin-plated alloy armor. Functional rather than ornamental.
-Equipment: Precision weapons—sharp rapiers, specialized polearms, or throwing blades. The gear should look "exact" and well-maintained.
+Silhouette: Slim, athletic, and agile. Show the jump-suit as compact folded gliding membranes between the upper arms and torso, with restrained featherlike folds at the back and hips. Avoid bulky plates or large avian wings.
+Armor/Clothing: The finest, most costly ultralight Pyrite-alloy protection, pale yellow to amber over deep civic cloth. A subtle honeycomb motif can suggest precision construction without digital effects or a science-fiction suit. Their high civic standing as revered fighters and mothers is expressed through excellent protection, care and dignified bearing. Light, open-faced helmets are required from L1 onward; L0 may remain bareheaded.
+Appearance for this sprite series: Straight blonde hair, neatly arranged in compact braids or coiled braided side buns that fit the helmets. Halfelven ears are small and only subtly pointed, close to human proportions. These are art-direction choices for the series, not new universal biological canon.
+Eyes are green-turquoise, with a warm, friendly, keen and maternal expression.
+From L1 onward, use a lightweight helmet with a compact curved face visor on
+small temple pivots, narrow cheek plates and a secured leather chin strap.
+The visor is raised above the brow in portraits and quiet poses, leaving the
+eyes, nose, cheeks and mouth visible; the intended close-combat state lowers
+it over the face, with a narrow sight slit and a few breath openings. Remove
+the separate nasal guard. This is a Maiden adaptation of historical pivoting
+visors, not a reconstruction or a verified protective design. L0 remains
+bareheaded. Keep the Maidens athletic, elegant and trained, with warm, keen
+maternal confidence. Preserve refined painted portrait rendering; avoid coarse
+pixelation or geometric surface artifacts. Bowstrings run continuously between
+the nocks at both limb tips. Carry equipment into sprites wherever the game-scale
+pixel budget allows; portraits remain painted illustrations.
+Equipment: Bows and practical boots for the troop line; lances and shields for officers, following the approved weapon progression. The gear should look exact and well-maintained.
 Motifs: Dawn light, sharp edges, and "disciplined mobility."
-Prompting Keywords: Disciplined, high-status soldiery, agile, precision weaponry, anti-sorcerous kit, severe beauty, Arcanite sheen, mobile armor.
+Prompting Keywords: Disciplined, revered civic fighters and mothers, agile, amber Pyrite-alloy armor, subtle honeycomb pattern, folded gliding suit, light helmet from L1, neat blonde braids, small halfelven ears.
 
 *2. Marine Corps: The Shield of the Threshold*
 The (male) Marines are line-holders and guardians of the coast, waterways and all-terain. They embody "disciplined endurance."

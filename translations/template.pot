@@ -249,7 +249,7 @@ msgstr ""
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:237
-msgid "To master the Liminal Union, keep three simple rules in mind:\\n\\n1. <b>March in Pairs:</b> Keep same-alloy troops adjacent to build Resonance. Its tier is based on the current formation and updates after movement. Poison disables Resonance; slow can reduce its tier.\\n\\n2. <b>Keep an Officer Close:</b> Conductors add 10 percentage points of damage for themselves and adjacent allied liminal units during Day or Night. This softens, but does not erase, their alignment penalties.\\n\\n3. <b>Strike at Twilight:</b> Liminal units deal 25% more damage at Dawn and Dusk.\\n\\n<b>Visual Feedback:</b>\\n• <i>Pulsing Halos:</i> Amber (Pyrite), Cyan (Kryonite), and Purple (Arcanite) halos and tier pips show Resonance status.\\n• <i>Battle Badges:</i> Floating notifications announce ZOC locks, Conductance, and Tier elevations without checking menus."
+msgid "To master the Liminal Union, keep three simple rules in mind:\n\n1. <b>March in Pairs:</b> Keep same-alloy troops adjacent to build Resonance. Its tier is based on the current formation and updates after movement. Poison disables Resonance; slow can reduce its tier.\n\n2. <b>Keep an Officer Close:</b> Conductors add 10 percentage points of damage for themselves and adjacent allied liminal units during Day or Night. This softens, but does not erase, their alignment penalties.\n\n3. <b>Strike at Twilight:</b> Liminal units deal 25% more damage at Dawn and Dusk.\n\n<b>Visual Feedback:</b>\n• <i>Pulsing Halos:</i> Amber (Pyrite), Cyan (Kryonite), and Purple (Arcanite) halos and tier pips show Resonance status.\n• <i>Battle Badges:</i> Floating notifications announce ZOC locks, Conductance, and Tier elevations without checking menus."
 msgstr ""
 
 #. [option]
@@ -264,7 +264,7 @@ msgstr ""
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:248
-msgid "Resonance activates immediately when standing adjacent to allies with matching armor alloys:\\n\\n• <b>Pyrite (Maidens):</b> Precision marksmanship & warding. Pod of 4+ units gains <b>Focus</b> (min 60% CTH at range) and +15% Fire/Arcane resistance.\\n• <b>Kryonite (Marines):</b> Cohesion & <b>Interlock</b>. 30% of incoming damage is absorbed across adjacent Kryonite allies (> 1 HP), preventing single-unit focus-fire assassinations.\\n• <b>Arcanite (G9 Warforms):</b> Heavy plating. Pod of 4+ units gains <b>Arcanite Warding</b> (+20% Fire/Cold resistance).\\n\\n<i>Note: Resonance activates immediately upon moving or recruiting adjacent to allies, providing instant defensive line bonuses!</i>"
+msgid "Resonance activates immediately when standing adjacent to allies with matching armor alloys:\n\n• <b>Pyrite (Maidens):</b> Precision marksmanship & warding. Pod of 4+ units gains <b>Focus</b> (min 60% CTH at range) and +15% Fire/Arcane resistance.\n• <b>Kryonite (Marines):</b> Cohesion & <b>Interlock</b>. 30% of incoming damage is absorbed across adjacent Kryonite allies (> 1 HP), preventing single-unit focus-fire assassinations.\n• <b>Arcanite (G9 Warforms):</b> Heavy plating. Pod of 4+ units gains <b>Arcanite Warding</b> (+20% Fire/Cold resistance).\n\n<i>Note: Resonance activates immediately upon moving or recruiting adjacent to allies, providing instant defensive line bonuses!</i>"
 msgstr ""
 
 #. [option]
@@ -279,7 +279,7 @@ msgstr ""
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:259
-msgid "Standard level 0 troops in Wesnoth exert no Zone of Control (ZOC).\\n\\nHowever, Liminal Union level 0 troops (Marine/Maiden Privates, G9 AI, Ensigns) <b>exert full Zone of Control</b> whenever standing in a pod of 2 or more allied troops.\\n\\nUse tight formations to anchor chokepoints, protect wounded comrades, and deny enemy cavalry breakthroughs."
+msgid "Standard level 0 troops in Wesnoth exert no Zone of Control (ZOC).\n\nHowever, Liminal Union level 0 troops (Marine/Maiden Privates, G9 AI, Ensigns) <b>exert full Zone of Control</b> whenever standing in a pod of 2 or more allied troops.\n\nUse tight formations to anchor chokepoints, protect wounded comrades, and deny enemy cavalry breakthroughs."
 msgstr ""
 
 #. [option]
@@ -294,7 +294,7 @@ msgstr ""
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:270
-msgid "Liminal Union units fight at peak strength during <b>Dawn and Dusk (+25% damage)</b>.\\n\\nAll Command units (Ensigns, Cornets, Captains, Colonels) radiate a <b>Conductance Aura</b> (pulsing ground halo). Adjacent liminal allies receive a +15% alignment offset:\\n• <b>Day:</b> Penalty softened from -25% to -10% net.\\n• <b>Night:</b> Penalty softened from -25% to -10% net.\\n• <b>Dawn/Dusk:</b> Full +25% net power maintained.\\n\\n<i>Officers do not give flat offensive leadership; their purpose is stabilizing the frontline through unfavorable daylight cycles.</i>"
+msgid "Liminal Union units fight at peak strength during <b>Dawn and Dusk (+25% damage)</b>.\n\nAll Command units (Ensigns, Cornets, Captains, Colonels) radiate a <b>Conductance Aura</b> (pulsing ground halo). Adjacent liminal allies receive a +15% alignment offset:\n• <b>Day:</b> Penalty softened from -25% to -10% net.\n• <b>Night:</b> Penalty softened from -25% to -10% net.\n• <b>Dawn/Dusk:</b> Full +25% net power maintained.\n\n<i>Officers do not give flat offensive leadership; their purpose is stabilizing the frontline through unfavorable daylight cycles.</i>"
 msgstr ""
 
 #. [option]
@@ -309,7 +309,7 @@ msgstr ""
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:281
-msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability for that turn.\\n• <b>G9 Overclock (Right-Click):</b> Right-click any undamaged G9 Warform to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers 4 HP core thermal stress.\\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!\\n• <b>Phoinix Signal Relay:</b> Phoinixes within 3 hexes of a Conductor extend the Conductance aura to adjacent troops, acting as aerial signal beacons."
+msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability for that turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click any undamaged G9 Warform to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers 4 HP core thermal stress.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!\n• <b>Phoinix Signal Relay:</b> Phoinixes within 3 hexes of a Conductor extend the Conductance aura to adjacent troops, acting as aerial signal beacons."
 msgstr ""
 
 #. [option]
@@ -1819,7 +1819,7 @@ msgstr ""
 
 #. [unit_type]: id=LIUN_Maiden_Private_0_1
 #: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:167
-msgid "CQC commando badge | Qualification for Close Quarters Combat. Unlocks impact melee strike. You can act unseen and unrecognized in urban combat zones."
+msgid "Arcanite bow ammunition | Unlocks the arcane bow. You can act unseen and unrecognized in urban combat zones."
 msgstr ""
 
 #. [unit_type]: id=LIUN_Jaeger_Base
@@ -1930,7 +1930,7 @@ msgstr ""
 
 #. [unit_type]: id=LIUN_Techtronic_Base
 #: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:52
-msgid "Techtronics are trained senior war-artificers of the Maiden Corps. Skilled in Arcanite craft and the binding arts, they construct, maintain, and recalibrate the G9 Warforms under corps command. When called to service, they are most effective in squads alongside G9 golems, a maiden officer, and maiden infantry."
+msgid "Techtronics are trained senior war-artificers of the Maiden Corps. Skilled in Arcanite craft and the binding arts, they construct, maintain, and recalibrate the G9 Warforms under corps command. When called to service, they are most effective in squads alongside G9 golems, a maiden officer, and maiden infantry. A Jaeger who takes this post gives up her blunt and Arcanite arrows for a piercing bow and the repair of warforms."
 msgstr ""
 
 #. [unit_type]: id=LIUN_Techtronic
