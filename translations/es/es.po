@@ -1821,8 +1821,8 @@ msgstr "Horca [golpe]"
 
 #. [unit_type]: id=LIUN_Maiden_Private_0_1
 #: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:167
-msgid "CQC commando badge | Qualification for Close Quarters Combat. Unlocks impact melee strike. You can act unseen and unrecognized in urban combat zones."
-msgstr "Insignia de comando CQC | Cualificación para el combate cuerpo a cuerpo cerrado. Desbloquea el golpe de impacto en melé. Puede actuar sin ser vista en zonas urbanas."
+msgid "Arcanite bow ammunition | Unlocks the arcane bow. You can act unseen and unrecognized in urban combat zones."
+msgstr "Munición de arcanita para arco | Desbloquea el arco arcano. Puede actuar sin ser vista en zonas urbanas."
 
 #. [unit_type]: id=LIUN_Jaeger_Base
 #: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:6
@@ -1932,8 +1932,8 @@ msgstr "Arco"
 
 #. [unit_type]: id=LIUN_Techtronic_Base
 #: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:52
-msgid "Techtronics are trained senior war-artificers of the Maiden Corps. Skilled in Arcanite craft and the binding arts, they construct, maintain, and recalibrate the G9 Warforms under corps command. When called to service, they are most effective in squads alongside G9 golems, a maiden officer, and maiden infantry."
-msgstr "Las Tectrónicas son artífices de guerra veteranas del Cuerpo de Doncellas. Diestras en el oficio de la Arcanita y las artes de vinculación, construyen, mantienen y recalibran las Formas de guerra G9 bajo el mando del cuerpo."
+msgid "Techtronics are trained senior war-artificers of the Maiden Corps. Skilled in Arcanite craft and the binding arts, they construct, maintain, and recalibrate the G9 Warforms under corps command. When called to service, they are most effective in squads alongside G9 golems, a maiden officer, and maiden infantry. A Jaeger who takes this post gives up her blunt and Arcanite arrows for a piercing bow and the repair of warforms."
+msgstr "Las Tectrónicas son artífices de guerra veteranas del Cuerpo de Doncellas. Diestras en el oficio de la Arcanita y las artes de vinculación, construyen, mantienen y recalibran las Formas de guerra G9 bajo el mando del cuerpo. La cazadora que asume este puesto renuncia a sus flechas romas y de arcanita a cambio de un arco perforante y la reparación de las formas de guerra."
 
 #. [unit_type]: id=LIUN_Techtronic
 #: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:180

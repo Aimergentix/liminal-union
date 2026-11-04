@@ -59,12 +59,17 @@ Spieldaten und menschlichen Partien geprüft werden.
 
 ### Implementierte Aufstiege und verbleibende Designfrage
 
-**Approved direction (3 November 2026):** Start Maiden
+**Approved direction (3 November 2026); see the status below:** Start Maiden
 Privates with a bow and kick, and Marine Privates with a khopesh and sling,
 as weaker versions of their L1 successors. Match the replacement sprites and
 animations to these weapons. Approved attack types, intermediate unlocks and
 initial test values are specified below; balance remains unverified.
 The approved officer package below also covers Ensign-to-Colonel weapons.
+Status (4 November 2026): the Maiden troop line is implemented as test values
+(Private changed, Jaeger already matched, L2 unchanged). A bounded engine probe
+covered resolved attacks and advancement. Private attack animations remain static
+stand-ins on the old sprite. Save/load, replay, multiplayer and balance are
+unverified. Marine and officer lines remain unimplemented.
 Work proceeds through weapon/progression design, sprites and visual indicators,
 then implementation and verification. Additional units are deferred.
 
@@ -79,7 +84,8 @@ Keep learned attack options across these L0-to-L1 transitions. The proposed
 Sergeant impact sling is an additional L1 option, not an existing attack.
 The approved L2 specialization exceptions are listed below.
 
-Approved initial test values; not implemented or balance-validated.
+Approved initial test values; not balance-validated. Only the Maiden rows are
+implemented.
 Notation: damage per hit × number of strikes, before modifiers.
 
 | Unit | Melee | Ranged |
@@ -142,6 +148,7 @@ Produktbefund vom 31. Oktober, anhand der Unit-Dateien unter
   0·0 hat **13 XP**, Nahkampf Stich 4×2 und Fernkampf Stich 3×2.
   0·1 hat 18 XP, schaltet Wucht-Nahkampf 4×2 und Concealment frei und
   führt zu Jaeger. Die historischen 15 Ziel-XP sind kein aktueller Sollwert.
+  Die Angriffe dieses Befunds sind überholt; aktuell gilt die Tabelle oben.
 - [Marine Private](../../units/halfelven/marines/a0-marine-private.cfg):
   0·0 hat 15 XP, Nahkampf Stich 4×2 und Fernkampf Wucht 3×3.
   0·1 hat 18 XP und Ambush. Korrektur nach Quellenprüfung am 3. November:

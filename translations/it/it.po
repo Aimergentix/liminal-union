@@ -1821,8 +1821,8 @@ msgstr "Forcone [schianto]"
 
 #. [unit_type]: id=LIUN_Maiden_Private_0_1
 #: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:167
-msgid "CQC commando badge | Qualification for Close Quarters Combat. Unlocks impact melee strike. You can act unseen and unrecognized in urban combat zones."
-msgstr "Distintivo commando CQC | Qualifica per il Combattimento Ravvicinato. Sblocca l'attacco d'impatto in mischia. Puoi agire non vista e non riconosciuta nelle zone di combattimento urbano."
+msgid "Arcanite bow ammunition | Unlocks the arcane bow. You can act unseen and unrecognized in urban combat zones."
+msgstr "Munizioni di arcanite per arco | Sblocca l'arco arcano. Puoi agire non vista e non riconosciuta nelle zone di combattimento urbano."
 
 #. [unit_type]: id=LIUN_Jaeger_Base
 #: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:6
@@ -1932,8 +1932,8 @@ msgstr "Arco"
 
 #. [unit_type]: id=LIUN_Techtronic_Base
 #: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:52
-msgid "Techtronics are trained senior war-artificers of the Maiden Corps. Skilled in Arcanite craft and the binding arts, they construct, maintain, and recalibrate the G9 Warforms under corps command. When called to service, they are most effective in squads alongside G9 golems, a maiden officer, and maiden infantry."
-msgstr "Le Techtronic sono artefici da guerra anziane addestrate del Corpo delle Fanciulle. Esperte nella lavorazione dell'Arcanite e nelle arti del vincolo, costruiscono, mantengono e ricalibrano le Forme Belliche G9 sotto il comando del corpo. Quando chiamate in servizio, sono più efficaci in squadra al fianco di golem G9, un'ufficiale delle fanciulle e fanteria delle fanciulle."
+msgid "Techtronics are trained senior war-artificers of the Maiden Corps. Skilled in Arcanite craft and the binding arts, they construct, maintain, and recalibrate the G9 Warforms under corps command. When called to service, they are most effective in squads alongside G9 golems, a maiden officer, and maiden infantry. A Jaeger who takes this post gives up her blunt and Arcanite arrows for a piercing bow and the repair of warforms."
+msgstr "Le Techtronic sono artefici da guerra anziane addestrate del Corpo delle Fanciulle. Esperte nella lavorazione dell'Arcanite e nelle arti del vincolo, costruiscono, mantengono e ricalibrano le Forme Belliche G9 sotto il comando del corpo. Quando chiamate in servizio, sono più efficaci in squadra al fianco di golem G9, un'ufficiale delle fanciulle e fanteria delle fanciulle. La cacciatrice che assume questo incarico rinuncia alle punte smussate e di arcanite per un arco perforante e la riparazione delle forme belliche."
 
 #. [unit_type]: id=LIUN_Techtronic
 #: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:180

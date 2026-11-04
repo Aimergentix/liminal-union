@@ -1821,8 +1821,8 @@ msgstr "Heugabel [Wuchtschlag]"
 
 #. [unit_type]: id=LIUN_Maiden_Private_0_1
 #: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:167
-msgid "CQC commando badge | Qualification for Close Quarters Combat. Unlocks impact melee strike. You can act unseen and unrecognized in urban combat zones."
-msgstr "Nahkampf-Kommandoabzeichen | Befähigung für den Nahkampf auf engstem Raum. Schaltet den Wucht-Nahkampfangriff frei. Ihr könnt in bebauten Kampfgebieten ungesehen und unerkannt agieren."
+msgid "Arcanite bow ammunition | Unlocks the arcane bow. You can act unseen and unrecognized in urban combat zones."
+msgstr "Arkanit-Bogenmunition | Schaltet den Arkanbogen frei. Ihr könnt in bebauten Kampfgebieten ungesehen und unerkannt agieren."
 
 #. [unit_type]: id=LIUN_Jaeger_Base
 #: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:6
@@ -1932,8 +1932,8 @@ msgstr "Bogen"
 
 #. [unit_type]: id=LIUN_Techtronic_Base
 #: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:52
-msgid "Techtronics are trained senior war-artificers of the Maiden Corps. Skilled in Arcanite craft and the binding arts, they construct, maintain, and recalibrate the G9 Warforms under corps command. When called to service, they are most effective in squads alongside G9 golems, a maiden officer, and maiden infantry."
-msgstr "Techtronikerinnen sind ausgebildete leitende Kriegs-Kunsthandwerkerinnen des Mäiden-Korps. Bewandert in der Arkanit-Schmiedekunst und den Bindungskünsten, fertigen, warten und kalibrieren sie die G9-Kriegsformen unter dem Befehl des Korps. Im Feldeinsatz wirken sie am besten im Verbund mit G9-Golems, einer Mäiden-Offizierin und Mäiden-Infanterie."
+msgid "Techtronics are trained senior war-artificers of the Maiden Corps. Skilled in Arcanite craft and the binding arts, they construct, maintain, and recalibrate the G9 Warforms under corps command. When called to service, they are most effective in squads alongside G9 golems, a maiden officer, and maiden infantry. A Jaeger who takes this post gives up her blunt and Arcanite arrows for a piercing bow and the repair of warforms."
+msgstr "Techtronikerinnen sind ausgebildete leitende Kriegs-Kunsthandwerkerinnen des Mäiden-Korps. Bewandert in der Arkanit-Schmiedekunst und den Bindungskünsten, fertigen, warten und kalibrieren sie die G9-Kriegsformen unter dem Befehl des Korps. Im Feldeinsatz wirken sie am besten im Verbund mit G9-Golems, einer Mäiden-Offizierin und Mäiden-Infanterie. Eine Jägerin, die diesen Posten übernimmt, gibt ihre Stumpf- und Arkanitpfeile für einen Stichbogen und die Instandsetzung der Kriegsformen auf."
 
 #. [unit_type]: id=LIUN_Techtronic
 #: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:180
