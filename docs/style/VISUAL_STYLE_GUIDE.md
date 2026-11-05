@@ -90,7 +90,7 @@ Maiden Private runtime frames, referenced by its unit file under
 frame names.
 
 ## Core Aesthetic: The Ancient Commonwealth – Liminal Union
-- **Forbidden:** Science-fiction, mechatronics, steampunk, digital UI, sleek robotics.
+- **Forbidden:** Mechatronics, steampunk, digital UI, sleek robotics.
 - **Required:** Ancient craftsmanship, civic severity, archaic Wesnothian high fantasy, arcane matter (alloys).
 
 ## 1. Maiden Corps (The Precision Arm)
@@ -134,7 +134,7 @@ Background is transparent!
 *Visual Foundations (Shared Across All Units)*
 Era/Setting: "High Fantasy / Battle for Wesnoth style."
 Palette: Polished metals (Pyrite/Kryonite/Arcanite sheens), deep civic colors (navy, slate, crimson), and radiant core-light (soft blues or sunset oranges).
-Aesthetic: "Ancient Southern Commonwealth." Avoid steampunk or sci-fi. Think "Severe Civic Law."
+Aesthetic: "Ancient Southern Commonwealth." Avoid steampunk. Think "Severe Civic Law."
 
 *1. Maiden Corps: The Precision Arm*
 The (female) Maidens are high-status (mothers, daughters), mobile, and anti-sorcerous. Their look should be "trained civic ferocity."
