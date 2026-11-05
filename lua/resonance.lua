@@ -246,15 +246,6 @@ function resonance.update_unit_alignment(u)
         end
     end
 
-    -- Prototype Step 5: Phoinix Airborne Signal Relay
-    -- Relays Conductance if adjacent to a Phoinix within 3 hexes of a Conductor
-    if not has_conductor then
-        local ok, phoinix_courier = pcall(wesnoth.require, "~add-ons/liminal-union/lua/phoinix_courier.lua")
-        if ok and phoinix_courier and phoinix_courier.is_adjacent_to_relaying_phoinix(u) then
-            has_conductor = true
-        end
-    end
-
     local was_conducted = u.variables.lu_conducted
     u.variables.lu_conducted = has_conductor
 
@@ -690,12 +681,11 @@ function resonance.refresh_side(side_num)
     side_num = side_num or wesnoth.current.side
     local units = wesnoth.units.find_on_map({ side = side_num })
 
-    -- 1. Reset stillness flag, record turn-start coordinates, and clear relay status
+    -- 1. Reset stillness flag and record turn-start coordinates
     for idx, u in ipairs(units) do
         u.variables.lu_moved = false
         u.variables.lu_start_x = u.x
         u.variables.lu_start_y = u.y
-        u.variables.lu_relay_active = false
     end
 
     -- 2. Record starting tier for diagnostics and turn-state bookkeeping.
@@ -759,7 +749,6 @@ function resonance.on_unit_placed(ctx)
     u.variables.lu_start_tier = 0
     u.variables.lu_start_x = u.x
     u.variables.lu_start_y = u.y
-    u.variables.lu_relay_active = false
 
     resonance.update_unit_state(u)
 

@@ -280,16 +280,9 @@ Spielverhalten.
    Nacht, nicht den in manchen älteren Texten behaupteten Tageswert −5%.
    Die Laufzeitfunktion `update_unit_alignment` in `lua/resonance.lua` setzt ein Status-Overlay und Variable, ändert aber
    die Einheitenausrichtung nicht auf `LIUN_liminal_conducted`.
-   **Phoinix-Relay: Statusanzeige ist belegt, Schadensweitergabe nicht.**
-   `is_adjacent_to_relaying_phoinix` kann in dieser Funktion ebenfalls
-   `lu_conducted` und das Overlay aktivieren. Sie fügt aber keinen
-   Leadership-Effekt hinzu; die WML-Conductance filtert direkte Nachbarschaft
-   und liest `lu_conducted` nicht. Die Relay-Beschreibung ist daher kein
-   Nachweis für +10 Prozentpunkte Schaden über den Phoinix.
-   Die Reichweitenprüfung nutzt die eigene `hex_distance`-Funktion in
-   `lua/phoinix_courier.lua` mit Grenzwert 3. Ob deren Koordinatenformel
-   tatsächliche Engine-Hexdistanz abbildet, bleibt ungeprüft (siehe
-   `LUA_GUIDELINES.md`, Abschnitt 2).
+   **Das Phoinix-Relay wurde am 5. November 2026 entfernt (Nutzerentscheidung).**
+   Es hatte nur Status und Overlay gesetzt und keinen Schaden weitergegeben.
+   Die Rolle der Phoinix wird überarbeitet.
 4. **Pyrite-Tier-3-Resistenz ist im Lua-Code +10%/+10%.** Der aktive Tooltip
    wurde an diesen Codewert angepasst. Die früheren Uranite-Zuweisungs- und
    Tooltip-Makros wurden entfernt, weil keine Einheit sie verwendet und
