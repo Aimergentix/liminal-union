@@ -8,7 +8,8 @@ This directory contains the runtime logic, formation dynamics, and prototype mec
 - `g9_overclock.lua` — Prototype 2: Emergency Overclock right-click context menu and thermal stress handler.
 - `promotion-handler.lua` — Prototype 3: Medal citation logging, civic floating banter, and intermediate HP replenishment.
 - `maiden_wingsuit.lua` — Prototype 4: High ground (Hills/Mountains) Wingsuit Glide detection (+1 MP, Skirmisher; requires no poison or slow at side-turn start).
-- `phoinix_courier.lua` — Prototype 5: Airborne Conductor relaying and post-mortem Civic Memorial Archives (+3 XP on recovery).
+- `portal_warden.lua` — Shieldguard portal state, one-way village tunnels for Marines, and arrival limits.
+- `phoinix_courier.lua` — Prototype 5: Post-mortem Civic Memorial Archives (+3 XP on recovery).
 - `marine_grounding.lua` — Prototype 6: Salt-Grounding Pylum context menu, aetheric dispersal, and anti-sorcery ward handler.
 
 ## Crucial Implementation Rule

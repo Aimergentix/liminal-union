@@ -296,7 +296,7 @@ msgstr "Conductance & Alignement"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:270
-msgid "Liminal Union units fight at peak strength during <b>Dawn and Dusk (+25% damage)</b>.\n\nAll Command units (Ensigns, Cornets, Captains, Colonels) radiate a <b>Conductance Aura</b> (pulsing ground halo). Adjacent liminal allies receive a +15% alignment offset:\n• <b>Day:</b> Penalty softened from -25% to -10% net.\n• <b>Night:</b> Penalty softened from -25% to -10% net.\n• <b>Dawn/Dusk:</b> Full +25% net power maintained.\n\n<i>Officers do not give flat offensive leadership; their purpose is stabilizing the frontline through unfavorable daylight cycles.</i>"
+msgid "Liminal Union units fight at peak strength during <b>Dawn and Dusk (+25% damage)</b>.\n\nAll Command units (Ensigns, Cornets, Captains, Colonels) radiate a <b>Conductance Aura</b> (pulsing ground halo). These officers and adjacent allied liminal units gain +10 percentage points of damage:\n• <b>Day:</b> Penalty softened from -25% to -15% net.\n• <b>Night:</b> Penalty softened from -25% to -15% net.\n• <b>Dawn/Dusk:</b> Full +25% net power maintained.\n\n<i>Officers do not give flat offensive leadership; their purpose is stabilizing the frontline through unfavorable daylight cycles.</i>"
 msgstr "Les unités de l'Union Liminale combattent à pleine puissance à <b>l'Aube et au Crépuscule (+25% de dégâts)</b>.\n\nToutes les unités de Commandement (Enseignes, Cornettes, Capitaines, Colonels) rayonnent une <b>Aura de Conductance</b>. Les alliés liminaux adjacents reçoivent une compensation d'alignement :\n• <b>Jour :</b> Pénalité atténuée.\n• <b>Nuit :</b> Pénalité atténuée.\n• <b>Aube/Crépuscule :</b> Pleine puissance (+25%) maintenue.\n\n<i>Les officiers ne donnent pas un bonus offensif fixe ; leur rôle est de stabiliser la ligne de front durant les heures défavorables.</i>"
 
 #. [option]
@@ -311,13 +311,28 @@ msgstr "Manœuvres tactiques"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:281
-msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability for that turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click any undamaged G9 Warform to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers 4 HP core thermal stress.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!\n• <b>Phoinix Signal Relay:</b> Phoinixes within 3 hexes of a Conductor extend the Conductance aura to adjacent troops, acting as aerial signal beacons."
-msgstr "• <b>Pylum de mise à la terre des Marines (Clic droit) :</b> Clic droit sur un Marine non ancré pour planter son pieu conducteur. Confère aux alliés adjacents +20% de protection élémentaire, met à la terre la précision magique ennemie (max 50% de toucher) et réduit les dégâts élémentaires ennemis de 20%. Coût : 0 PM et +20% de vulnérabilité Tranchant/Impact en mêlée pour ce tour.\n• <b>Surcharge G9 (Clic droit) :</b> Clic droit sur une Forme de guerre G9 intacte pour déclencher le contournement d'urgence (+1 attaque en mêlée, +2 dégâts et <b>Étourdissement</b> pour le tour). En fin de tour, le golem subit 4 PV de contrainte thermique.\n• <b>Vol plané Maïden (Passif) :</b> Toute unité Maïden commençant son tour sur terrain élevé (Collines ou Montagnes) déploie sa combinaison ailée et gagne <b>+1 PM et Tirailleur</b> pour ce tour !\n• <b>Relais de signal Phoinix :</b> Les Phoinix à 3 hexagones ou moins d'un Conducteur relaient l'aura de Conductance aux troupes adjacentes."
+msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!\n• <b>Portal Warden (Passive):</b> A Shieldguard that stood still for a full turn with a Phoinix beside it opens its portable Arcanite portal, charged by mana crystals. Marines other than leaders may travel one way from your villages to free hexes beside it, arriving with no moves and no attack that turn. The portal closes when the Shieldguard moves."
+msgstr "• <b>Pylum de mise à la terre des Marines (Clic droit) :</b> Clic droit sur un Marine non ancré pour planter son pieu conducteur. Confère aux alliés adjacents +20% de protection élémentaire, met à la terre la précision magique ennemie (max 50% de toucher) et réduit les dégâts élémentaires ennemis de 20%. Coût : 0 PM et +20% de vulnérabilité Tranchant/Impact en mêlée. Dure jusqu'à la fin du tour ennemi suivant ; à redéployer à votre prochain tour.\n• <b>Surcharge G9 (Clic droit) :</b> Clic droit sur une Forme de guerre G9 ayant plus de 4 PV et une attaque restante pour déclencher le contournement d'urgence (+1 attaque en mêlée, +2 dégâts et <b>Étourdissement</b> pour le tour). En fin de tour, le golem subit jusqu'à 3 PV de contrainte thermique, sans en mourir.\n• <b>Vol plané Maïden (Passif) :</b> Toute unité Maïden commençant son tour sur terrain élevé (Collines ou Montagnes) déploie sa combinaison ailée et gagne <b>+1 PM et Tirailleur</b> pour ce tour !\n• <b>Gardien de portail (Passif) :</b> Un Garde-bouclier resté immobile un tour complet avec un Phoinix à ses côtés ouvre son portail d'Arcanite portatif, chargé par des cristaux de mana. Les Marines autres que les chefs voyagent à sens unique depuis vos villages vers les cases libres à côté de lui, et arrivent sans mouvement ni attaque ce tour-là. Le portail se ferme lorsque le Garde-bouclier se déplace."
 
 #. [option]
 #: liminal-union/faction.cfg:286
 msgid "Close Codex"
 msgstr "Fermer le Codex"
+
+#. [option]
+#: liminal-union/faction.cfg
+msgid "← Previous Doctrine"
+msgstr "← Doctrine précédente"
+
+#. [option]
+#: liminal-union/faction.cfg
+msgid "→ Next Doctrine"
+msgstr "→ Doctrine suivante"
+
+#. [option]
+#: liminal-union/faction.cfg
+msgid "↑ Return to the Codex Index"
+msgstr "↑ Retour au sommaire du Codex"
 
 #. [multiplayer_side]: id=LIUN_braves, type=LIUN_Maiden_Captain
 #: liminal-union/factions/liminal-union-braves.cfg:21
@@ -1568,8 +1583,8 @@ msgstr "🪽🟇 Cornette (1·1)"
 
 #. [unit_type]: id=LIUN_Maiden_Cornet_1_1
 #: liminal-union/units/halfelven/command/a1-maiden-cornet.cfg:423
-msgid "First Aid Badge | Unlocks pyronite flame lance strike. You have passed the field training course on first responder techniques and paramedics."
-msgstr "Insigne de Premiers Soins | Débloque l'attaque de lance enflammée à la pyronite. Vous avez réussi le cours de secourisme de campagne."
+msgid "First Aid Badge | Strengthens the pyronite flame lance strike. You have passed the field training course on first responder techniques and paramedics."
+msgstr "Insigne de Premiers Soins | Renforce l'attaque de lance enflammée à la pyronite. Vous avez réussi le cours de secourisme de campagne."
 
 #. [unit_type]: id=LIUN_Maiden_Captain_Base
 #: liminal-union/units/halfelven/command/a2-maiden-captain.cfg:6
@@ -1724,8 +1739,8 @@ msgstr "🔱 🟇 Cornette (1·1)"
 
 #. [unit_type]: id=LIUN_Marine_Cornet_1_1
 #: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:166
-msgid "First Aid Badge | Unlocks kryonite cold blade strike. You have passed the field training course on first responder techniques and paramedics."
-msgstr "Insigne de Premiers Soins | Débloque la frappe glaciale à la kryonite. Vous avez réussi le cours de secourisme de campagne."
+msgid "First Aid Badge | Strengthens the kryonite cold blade strike. You have passed the field training course on first responder techniques and paramedics."
+msgstr "Insigne de Premiers Soins | Renforce la frappe glaciale à la kryonite. Vous avez réussi le cours de secourisme de campagne."
 
 #. [unit_type]: id=LIUN_Marine_Captain_Base
 #: liminal-union/units/halfelven/command/b2-marine-captain.cfg:6
@@ -2173,8 +2188,8 @@ msgstr "Bouclier [estoc]"
 
 #. [unit_type]: id=LIUN_Shieldguard_Base
 #: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:52
-msgid "Shieldguards are masters of line warfare. Trained to fight in concert with Weaponguards, they cover every gap and hold every breach. Armed with a tower shield, a Shieldguard turns the tide of battle not through swiftness but through the disciplined art of denial."
-msgstr "Les Gardes-boucliers sont les maîtres de la guerre de ligne. Entraînés à combattre de concert avec les Gardes-armes, ils couvrent chaque brèche et tiennent chaque passage. Armé d'un pavois, un Garde-bouclier renverse le cours de la bataille non par la hâte, mais par l'art discipliné du refus."
+msgid "Shieldguards are masters of line warfare. They cover every gap and hold every breach. Armed with a tower shield, a Shieldguard turns the tide of battle not through swiftness but through the disciplined art of denial."
+msgstr "Les Gardes-boucliers sont les maîtres de la guerre de ligne. Ils couvrent chaque brèche et tiennent chaque passage. Armé d'un pavois, un Garde-bouclier renverse le cours de la bataille non par la hâte, mais par l'art discipliné du refus."
 
 #. [unit_type]: id=LIUN_Shieldguard
 #: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:130
@@ -2732,8 +2747,8 @@ msgstr "🧿🟕 Phoinix (0·1)"
 
 #. [unit_type]: id=LIUN_Phoinix_0_1
 #: liminal-union/units/phoinixes/a0-phoinix.cfg:185
-msgid "Ability: skirmisher | The phoinix enters a new developmental stage which creates a <i>critical reality</i>: it is able to move past enemies quickly."
-msgstr "Capacité : tirailleur | Le phoinix entre dans un nouveau stade de développement qui crée une <i>réalité critique</i> : il peut désormais contourner rapidement les ennemis."
+msgid "Abilities: skirmisher, unpoison | The phoinix enters a new developmental stage which creates a <i>critical reality</i>: it is able to move past enemies quickly, and its touch draws poison from the wounded."
+msgstr "Capacité : tirailleur | Le phoinix entre dans un nouveau stade de développement qui crée une <i>réalité critique</i> : il peut désormais contourner rapidement les ennemis. Son toucher retire aussi le poison des blessés."
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_Base
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:6
@@ -2752,8 +2767,8 @@ msgstr "🧿 🟗 Phoinix Ancien (1·1)"
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_1_1
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:188
-msgid "Ability: unpoison | In its final developmental stage, the tears of a phoinix bird can detox units from poison."
-msgstr "Capacité : guérison du poison | Dans son ultime stade de développement, les larmes d'un oiseau phoinix peuvent purifier les unités du poison."
+msgid "The tears of an elder phoinix bird draw poison from the wounded."
+msgstr "Les larmes d'un vieil oiseau phoinix retirent le poison des blessés."
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_1_2
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:197
@@ -2764,3 +2779,36 @@ msgstr "🧿 🟗 Phoinix Ancien (1·2)"
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:208
 msgid "Ability: teleport | Friendly villages maintain portals. This Phoinix unit can now teleport between them."
 msgstr "Capacité : téléportation | Les villages alliés entretiennent des portails. Cette unité Phoinix peut désormais se téléporter de l'un à l'autre."
+
+msgid "Sword [thrust]"
+msgstr "Épée [estoc]"
+
+msgid "Khopesh [thrust]"
+msgstr "Khopesh [estoc]"
+
+msgid "Shield [smash]"
+msgstr "Bouclier [fracas]"
+
+msgid "Shield [thrust]"
+msgstr "Bouclier [estoc]"
+
+msgid "shield"
+msgstr "bouclier"
+
+msgid "female^shield"
+msgstr "bouclier"
+
+msgid "When attacked from range, this unit raises its shield and gains 10% resistance to blade, pierce and impact."
+msgstr "Attaquée à distance, cette unité lève son bouclier et gagne 10 % de résistance aux coups tranchants, perforants et contondants."
+
+msgid "<span color='#c79bff'>Portal Open</span>"
+msgstr "<span color='#c79bff'>Portail ouvert</span>"
+
+msgid "portal warden"
+msgstr "gardien de portail"
+
+msgid "female^portal warden"
+msgstr "gardienne de portail"
+
+msgid "This Shieldguard carries a portable Arcanite portal, charged by mana crystals. After standing still for a full turn with a Phoinix beside it, the portal opens at once. Marines other than leaders may then travel one way from their side's villages to any free hex beside it, arriving with no moves and no attack that turn. The portal closes when this unit moves."
+msgstr "Ce Garde-bouclier porte un portail d'Arcanite portatif, chargé par des cristaux de mana. Après un tour complet immobile avec un Phoinix à ses côtés, le portail s'ouvre aussitôt. Les Marines autres que les chefs peuvent alors voyager à sens unique depuis les villages de leur camp vers toute case libre à côté de lui, et arrivent sans mouvement ni attaque ce tour-là. Le portail se ferme lorsque cette unité se déplace."

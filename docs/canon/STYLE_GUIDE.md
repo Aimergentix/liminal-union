@@ -14,9 +14,9 @@ Write the Union as:
 - measured rather than florid;
 - archaic in cadence without parody;
 - rational without sounding clinical;
-- Wesnothian rather than science-fictional.
+- Wesnothian in voice, with forge-craft and an early form of science and technology (high tech) as a true part of the Union.
 
-The Union should not read like modern ideology in costume, modern bureaucracy, or futuristic interface text.
+The Union should not read like modern ideology in costume or modern bureaucracy.
 
 ## Doctrinal phrasing
 
@@ -37,11 +37,12 @@ Use these as the default public vocabulary:
 | Concept | Preferred |
 |---|---|
 | doctrine | anti-sorcerous; Ban on Living Spellcraft |
-| craft | lawful artifice; disciplined craft; lawful inquiry |
+| craft | lawful artifice; disciplined craft; lawful inquiry; forge-craft; early science; high tech |
 | materials | arcane matter; Arcanite; Pyrite; Kryonite; Uranite; Zoelite; Akosite; bound core; sealed core; radiant core |
 | rites and compacts | Eighth-Day Severance; Catharite bath; smelting-milk; Treaty of the Living and the Bound; Dark Forest Charter |
 | polity | commonwealth; public corps; civic law; charter; compact |
 | warforms | warform; Quickbound Golem; Corebound Warform |
+| portals | portable (backpack) Arcanite portal, assembled in the field and charged with mana crystals |
 | records | annals; sealed annals |
 | Ruby of Fire in Sayyoni voice | Scarlet Faerie Stone |
 
@@ -51,7 +52,6 @@ These may remain where technical clarity or established labels require them:
 - `G9`
 - `NCM`
 - `AI`, but only in raw labels or technical notes
-- `engineering` or `technology`, but only in README-level or developer-facing prose
 
 ## Avoid in lore-facing prose
 
@@ -60,13 +60,10 @@ Do not use these as default lore diction:
 - robot
 - android
 - artificial intelligence
-- mechatronics
 - software / hardware / interface / protocol / algorithm
 - revolutionary
-- intersectionalist
 - fascist-like
-- socialist
-- free-market social-state
+- socialist-like
 - leader-principle
 - politburo
 
@@ -99,6 +96,6 @@ Before keeping a sentence, ask:
 1. Does it agree with `CANON_LOCK.md`?
 2. Does it sound older, civic, and severe?
 3. Does it preserve the distinction between arcane matter and living spellcraft?
-4. Does it avoid modern ideological or science-fiction framing?
+4. Does it avoid modern ideological framing?
 
 If not, rewrite it.

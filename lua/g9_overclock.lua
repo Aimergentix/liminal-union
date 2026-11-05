@@ -58,7 +58,7 @@ function g9_overclock.activate(ctx)
     })
 
     -- Play sound and display terminal notices
-    wesnoth.audio.play_sound("lightning.ogg")
+    wesnoth.audio.play("lightning.ogg")
     if wesnoth.interface and wesnoth.interface.float_label then
         wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ff3333'>[PROTOCOL BYPASS: OVERCLOCK + STUN ACTIVE]</span>")
     end
@@ -77,7 +77,7 @@ function g9_overclock.on_side_turn_end(side_num)
             u:remove_modifications({ id = "LIUN_g9_overclock_mod" })
             u.variables.lu_overclocked = false
 
-            -- Core thermal stress damage (-4 HP, cannot kill, min 1 HP)
+            -- Core thermal stress damage (-3 HP, cannot kill, min 1 HP)
             local dmg = math.min(3, math.max(0, u.hitpoints - 1))
             if dmg > 0 then
                 u.hitpoints = u.hitpoints - dmg

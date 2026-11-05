@@ -13,6 +13,9 @@ description: "Separates current source findings, design intent and historical me
 
 ## 1. Aussagekraft und Arbeitsregeln
 
+- **Messziel (Nutzerentscheidung, 5. November 2026):** Engine Wesnoth 1.19.29;
+  zuerst Braves in `LIUN_era_courageous`; fair ist ein Matchup bei 40–60 %.
+  Ältere Run-Angaben behalten ihre damalige Engine-Version.
 - **WML-/Lua-Code bestimmt das aktuelle Verhalten.** Unit-Tooltips und ältere
   Entwurfsdokumente können davon abweichen. Solche Abweichungen sind unten
   ausdrücklich aufgeführt.
@@ -69,7 +72,7 @@ Status (4 November 2026): the Maiden troop line is implemented as test values
 (Private changed, Jaeger already matched, L2 unchanged). A bounded engine probe
 covered resolved attacks and advancement. Private attack animations remain static
 stand-ins on the old sprite. Save/load, replay, multiplayer and balance are
-unverified. Marine and officer lines remain unimplemented.
+unverified. Marine and officer lines followed on 5 November; see below.
 Work proceeds through weapon/progression design, sprites and visual indicators,
 then implementation and verification. Additional units are deferred.
 
@@ -84,8 +87,7 @@ Keep learned attack options across these L0-to-L1 transitions. The proposed
 Sergeant impact sling is an additional L1 option, not an existing attack.
 The approved L2 specialization exceptions are listed below.
 
-Approved initial test values; not balance-validated. Only the Maiden rows are
-implemented.
+Approved initial test values; not balance-validated.
 Notation: damage per hit × number of strikes, before modifiers.
 
 | Unit | Melee | Ranged |
@@ -106,7 +108,7 @@ Attack names, animation filters and existing modifiers must be checked together
 when replacing the weapons. No gameplay or balance checks have run for this
 design; documentation approval is not evidence of runtime correctness.
 
-Approved officer test package; not implemented or balance-validated:
+Approved officer test package; not balance-validated:
 
 | Stage | Maiden lance: pierce | Maiden lance: fire | Marine short sword: pierce | Marine short sword: cold |
 |---|---|---|---|---|
@@ -126,6 +128,27 @@ HP, movement and XP unchanged. Captain/Colonel intermediate stages retain
 their inherited attacks and existing non-attack progression.
 Sprites use lance and shield for Maiden officers, short sword and shield for
 Marine officers. Elemental applications use the same weapon.
+
+Implemented on 5 November 2026 as test values; balance unverified. A bounded
+engine probe covered resolved attacks, advancement, parry, shield and healing.
+Shield sprites and save/load, replay, multiplayer and visual checks are open.
+
+- Officers stay melee-only and use `parry=5`. Ranged attacks gain no parry; the
+  `shield` ability adds 10 points of physical resistance against them on defense.
+- First Aid: Cornet +4, Captain +6. Shieldguard uses `parry=10`.
+- Marine troops use `usage=archer`; Braves and Heroes AI patterns no longer ask
+  for `mixed fighter`.
+- Phoinix has 8 MP and cures poison from stage 0·1 (`ABILITY_UNPOISON`).
+- Attack labels: `[thrust]`, `[smash]`; `[double tap]` stays on two-strike troop
+  and G9 attacks.
+- Sergeant advances to Masterchief or Shieldguard. Weaponguard is unreachable; its
+  file, sprites and team macros stay for campaigns.
+- Portal Warden (Shieldguard, `lua/portal_warden.lua`): passive and always on. A
+  Shieldguard that stood still for a full own turn with an adjacent Phoinix opens
+  its portal at once; it closes when the Shieldguard moves. Marines except leaders
+  travel one way from own villages to free adjacent hexes; arrival sets moves and
+  attacks to 0, as with recruitment. An AI side's Warden holds still while its
+  portal is open; opening it depends on the AI standing still by chance.
 
 Approved L2 specialization boundary:
 
@@ -277,16 +300,9 @@ Spielverhalten.
    Nacht, nicht den in manchen älteren Texten behaupteten Tageswert −5%.
    Die Laufzeitfunktion `update_unit_alignment` in `lua/resonance.lua` setzt ein Status-Overlay und Variable, ändert aber
    die Einheitenausrichtung nicht auf `LIUN_liminal_conducted`.
-   **Phoinix-Relay: Statusanzeige ist belegt, Schadensweitergabe nicht.**
-   `is_adjacent_to_relaying_phoinix` kann in dieser Funktion ebenfalls
-   `lu_conducted` und das Overlay aktivieren. Sie fügt aber keinen
-   Leadership-Effekt hinzu; die WML-Conductance filtert direkte Nachbarschaft
-   und liest `lu_conducted` nicht. Die Relay-Beschreibung ist daher kein
-   Nachweis für +10 Prozentpunkte Schaden über den Phoinix.
-   Die Reichweitenprüfung nutzt die eigene `hex_distance`-Funktion in
-   `lua/phoinix_courier.lua` mit Grenzwert 3. Ob deren Koordinatenformel
-   tatsächliche Engine-Hexdistanz abbildet, bleibt ungeprüft (siehe
-   `LUA_GUIDELINES.md`, Abschnitt 2).
+   **Das Phoinix-Relay wurde am 5. November 2026 entfernt (Nutzerentscheidung).**
+   Es hatte nur Status und Overlay gesetzt und keinen Schaden weitergegeben.
+   Die Rolle der Phoinix wird überarbeitet.
 4. **Pyrite-Tier-3-Resistenz ist im Lua-Code +10%/+10%.** Der aktive Tooltip
    wurde an diesen Codewert angepasst. Die früheren Uranite-Zuweisungs- und
    Tooltip-Makros wurden entfernt, weil keine Einheit sie verwendet und
@@ -305,13 +321,13 @@ beide keine Spielregeln und keine Grundlage für Balanceannahmen.
 
 ## 5. Dunefolk-Matchup: Arbeitsmodell
 
-Die lokale Spielinstallation für Wesnoth 1.19.22 definiert Dunefolk als
+Die lokale Spielinstallation für Wesnoth 1.19.29 definiert Dunefolk als
 Fraktion mit den Rekruten Dune Rover, Dune Soldier, Dune Skirmisher, Dune
 Rider, Dune Herbalist, Dune Burner und Naga Dirkfang. Ihre Fraktionsbeschreibung
 nennt Geländeausnutzung für Angriffe bei Dawn/Dusk, gesetzestreue und liminale
 Einheiten, Heiler, treffsichere Nahkämpfer und mobile berittene Bogenschützen.
 Sie beschreibt höhere Kosten als bei Loyalisten, ausgeglichen durch höhere
-Mobilität, besonders auf Hügeln. Quellen im installierten 1.19.22-Datenbestand:
+Mobilität, besonders auf Hügeln. Quellen im installierten 1.19.29-Datenbestand:
 `data/multiplayer/factions/dunefolk-default.cfg` und
 `data/core/units/dunefolk/`.
 
@@ -325,7 +341,7 @@ garantierten Counter:
   Strider und Harrier haben einen verlangsamenden Fernkampfangriff. Diese
   fortgeschrittenen Slow-Einheiten können Formation und Kartenkontrolle
   bedrohen. Der rekrutierbare Herbalist heilt und regeneriert, hat im lokalen
-  1.19.22-Unit-File aber keinen Slow-Angriff.
+  1.19.29-Unit-File aber keinen Slow-Angriff.
 - Dune Burner-Feuer und später verfügbares Slow sind plausible Werkzeuge gegen
   bestimmte LU-Aufstellungen. Slow ist im aktuellen LU-Code kein automatischer
   Totalausfall der ganzen Resonanzgruppe; Gift und Schaden können anders wirken.
