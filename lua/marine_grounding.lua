@@ -133,18 +133,21 @@ function marine_grounding.activate(ctx)
         }},
         { "effect", {
             apply_to = "overlay",
-            add = "icons/arcane.webp"
+            add = "overlays/salt-grounding.webp"
         }}
     })
 
     -- Sound effect and floating notification
-    wesnoth.audio.play_sound("lightning.ogg")
+    wesnoth.audio.play("lightning.ogg")
     if wesnoth.interface and wesnoth.interface.float_label then
         wesnoth.interface.float_label(u.x, u.y, _ "<span color='#55ffff'>⚡ Salt-Grounding Pylum [0 MP, Ward Active]</span>")
     end
 
     -- Update wards across adjacent hexes
     marine_grounding.update_wards()
+
+    -- Repaint now, as the engine's [object] tag does after a visible change.
+    wesnoth.wml_actions.redraw{}
 end
 
 -- Handles unit movement to update aura boundaries dynamically

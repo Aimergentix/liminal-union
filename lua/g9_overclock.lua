@@ -58,7 +58,7 @@ function g9_overclock.activate(ctx)
     })
 
     -- Play sound and display terminal notices
-    wesnoth.audio.play_sound("lightning.ogg")
+    wesnoth.audio.play("lightning.ogg")
     if wesnoth.interface and wesnoth.interface.float_label then
         wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ff3333'>[PROTOCOL BYPASS: OVERCLOCK + STUN ACTIVE]</span>")
     end
