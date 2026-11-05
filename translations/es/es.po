@@ -319,6 +319,21 @@ msgstr "• <b>Pylum de puesta a tierra de los Marines (Clic derecho):</b> Haga 
 msgid "Close Codex"
 msgstr "Cerrar Códice"
 
+#. [option]
+#: liminal-union/faction.cfg
+msgid "← Previous Doctrine"
+msgstr "← Doctrina anterior"
+
+#. [option]
+#: liminal-union/faction.cfg
+msgid "→ Next Doctrine"
+msgstr "→ Doctrina siguiente"
+
+#. [option]
+#: liminal-union/faction.cfg
+msgid "↑ Return to the Codex Index"
+msgstr "↑ Volver al índice del Códice"
+
 #. [multiplayer_side]: id=LIUN_braves, type=LIUN_Maiden_Captain
 #: liminal-union/factions/liminal-union-braves.cfg:21
 msgid ""

@@ -317,6 +317,21 @@ msgstr ""
 msgid "Close Codex"
 msgstr ""
 
+#. [option]
+#: liminal-union/faction.cfg
+msgid "← Previous Doctrine"
+msgstr ""
+
+#. [option]
+#: liminal-union/faction.cfg
+msgid "→ Next Doctrine"
+msgstr ""
+
+#. [option]
+#: liminal-union/faction.cfg
+msgid "↑ Return to the Codex Index"
+msgstr ""
+
 #. [multiplayer_side]: id=LIUN_braves, type=LIUN_Maiden_Captain
 #: liminal-union/factions/liminal-union-braves.cfg:21
 msgid ""

@@ -319,6 +319,21 @@ msgstr "• <b>Salz-Erdungspfeiler der Marines (Rechtsklick):</b> Rechtsklickt a
 msgid "Close Codex"
 msgstr "Kodex schließen"
 
+#. [option]
+#: liminal-union/faction.cfg
+msgid "← Previous Doctrine"
+msgstr "← Vorherige Doktrin"
+
+#. [option]
+#: liminal-union/faction.cfg
+msgid "→ Next Doctrine"
+msgstr "→ Nächste Doktrin"
+
+#. [option]
+#: liminal-union/faction.cfg
+msgid "↑ Return to the Codex Index"
+msgstr "↑ Zurück zur Kodex-Übersicht"
+
 #. [multiplayer_side]: id=LIUN_braves, type=LIUN_Maiden_Captain
 #: liminal-union/factions/liminal-union-braves.cfg:21
 msgid ""

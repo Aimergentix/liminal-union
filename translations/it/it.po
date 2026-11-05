@@ -319,6 +319,21 @@ msgstr "• <b>Pylum di Messa a Terra Salina della Marina (Clic destro):</b> Fai
 msgid "Close Codex"
 msgstr "Chiudi Codice"
 
+#. [option]
+#: liminal-union/faction.cfg
+msgid "← Previous Doctrine"
+msgstr "← Dottrina precedente"
+
+#. [option]
+#: liminal-union/faction.cfg
+msgid "→ Next Doctrine"
+msgstr "→ Dottrina successiva"
+
+#. [option]
+#: liminal-union/faction.cfg
+msgid "↑ Return to the Codex Index"
+msgstr "↑ Torna all'indice del Codice"
+
 #. [multiplayer_side]: id=LIUN_braves, type=LIUN_Maiden_Captain
 #: liminal-union/factions/liminal-union-braves.cfg:21
 msgid ""
