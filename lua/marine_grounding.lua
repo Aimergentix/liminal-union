@@ -119,7 +119,7 @@ function marine_grounding.activate(ctx)
     -- Mark grounded
     u.variables.lu_grounded = true
 
-    -- Vulnerability Cost: 0 MP for turn + +20% vulnerability to melee Blade/Impact
+    -- Vulnerability Cost: 0 MP for turn + +20% vulnerability to melee Blade/Impact until the next own turn
     u.moves = 0
     u:add_modification("object", {
         id = "LIUN_grounding_stance_mod",
@@ -160,15 +160,12 @@ function marine_grounding.on_unit_died(ctx)
     marine_grounding.update_wards()
 end
 
--- Handles turn end / side turn to reset grounded stance
-function marine_grounding.on_side_turn_end(side_num)
+-- Ends the stance when its owner's next turn begins, so it covers the enemy turn in between
+function marine_grounding.on_side_turn(side_num)
     side_num = side_num or wesnoth.current.side
-    local marines = wesnoth.units.find_on_map({
-        side = side_num,
-        race = "marinecommand"
-    })
+    local units = wesnoth.units.find_on_map({ side = side_num })
 
-    for idx, u in ipairs(marines) do
+    for idx, u in ipairs(units) do
         if u.variables.lu_grounded then
             u:remove_modifications({ id = "LIUN_grounding_stance_mod" })
             u.variables.lu_grounded = nil

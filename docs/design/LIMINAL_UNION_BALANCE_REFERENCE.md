@@ -13,6 +13,9 @@ description: "Separates current source findings, design intent and historical me
 
 ## 1. Aussagekraft und Arbeitsregeln
 
+- **Messziel (Nutzerentscheidung, 5. November 2026):** Engine Wesnoth 1.19.29;
+  zuerst Braves in `LIUN_era_courageous`; fair ist ein Matchup bei 40–60 %.
+  Ältere Run-Angaben behalten ihre damalige Engine-Version.
 - **WML-/Lua-Code bestimmt das aktuelle Verhalten.** Unit-Tooltips und ältere
   Entwurfsdokumente können davon abweichen. Solche Abweichungen sind unten
   ausdrücklich aufgeführt.
@@ -305,13 +308,13 @@ beide keine Spielregeln und keine Grundlage für Balanceannahmen.
 
 ## 5. Dunefolk-Matchup: Arbeitsmodell
 
-Die lokale Spielinstallation für Wesnoth 1.19.22 definiert Dunefolk als
+Die lokale Spielinstallation für Wesnoth 1.19.29 definiert Dunefolk als
 Fraktion mit den Rekruten Dune Rover, Dune Soldier, Dune Skirmisher, Dune
 Rider, Dune Herbalist, Dune Burner und Naga Dirkfang. Ihre Fraktionsbeschreibung
 nennt Geländeausnutzung für Angriffe bei Dawn/Dusk, gesetzestreue und liminale
 Einheiten, Heiler, treffsichere Nahkämpfer und mobile berittene Bogenschützen.
 Sie beschreibt höhere Kosten als bei Loyalisten, ausgeglichen durch höhere
-Mobilität, besonders auf Hügeln. Quellen im installierten 1.19.22-Datenbestand:
+Mobilität, besonders auf Hügeln. Quellen im installierten 1.19.29-Datenbestand:
 `data/multiplayer/factions/dunefolk-default.cfg` und
 `data/core/units/dunefolk/`.
 
@@ -325,7 +328,7 @@ garantierten Counter:
   Strider und Harrier haben einen verlangsamenden Fernkampfangriff. Diese
   fortgeschrittenen Slow-Einheiten können Formation und Kartenkontrolle
   bedrohen. Der rekrutierbare Herbalist heilt und regeneriert, hat im lokalen
-  1.19.22-Unit-File aber keinen Slow-Angriff.
+  1.19.29-Unit-File aber keinen Slow-Angriff.
 - Dune Burner-Feuer und später verfügbares Slow sind plausible Werkzeuge gegen
   bestimmte LU-Aufstellungen. Slow ist im aktuellen LU-Code kein automatischer
   Totalausfall der ganzen Resonanzgruppe; Gift und Schaden können anders wirken.
