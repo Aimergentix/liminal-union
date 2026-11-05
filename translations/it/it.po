@@ -311,8 +311,8 @@ msgstr "Manovre Tattiche"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:281
-msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click any undamaged G9 Warform to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers 4 HP core thermal stress.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!"
-msgstr "• <b>Pylum di Messa a Terra Salina della Marina (Clic destro):</b> Fai clic destro su un Fante di Marina non ancorato per dispiegare il suo palo conduttivo. Conferisce agli alleati adiacenti +20% di protezione elementale, scarica a terra gli attacchi magici nemici adiacenti (max 50% di probabilità di colpire) e riduce i danni elementali nemici del 20%. Costo: 0 PM e +20% di vulnerabilità a Lama/Impatto in mischia. Dura fino alla fine del successivo turno nemico; va ridispiegato al tuo prossimo turno.\n• <b>Sovraccarico G9 (Clic destro):</b> Fai clic destro su qualsiasi Forma Bellica G9 intatta per attivare l'esclusione del protocollo d'emergenza (+1 attacco in mischia, +2 danni e <b>Stordimento</b> per il turno). Alla fine del turno, il golem subisce 4 PV di stress termico al nucleo.\n• <b>Planata con Tuta Alare delle Fanciulle (Passiva):</b> Qualsiasi unità delle Fanciulle che inizi il turno su terreno elevato (Colline o Montagne) dispiega tute alari termiche, ottenendo <b>+1 PM e Schermagliatore</b> per quel turno!"
+msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!"
+msgstr "• <b>Pylum di Messa a Terra Salina della Marina (Clic destro):</b> Fai clic destro su un Fante di Marina non ancorato per dispiegare il suo palo conduttivo. Conferisce agli alleati adiacenti +20% di protezione elementale, scarica a terra gli attacchi magici nemici adiacenti (max 50% di probabilità di colpire) e riduce i danni elementali nemici del 20%. Costo: 0 PM e +20% di vulnerabilità a Lama/Impatto in mischia. Dura fino alla fine del successivo turno nemico; va ridispiegato al tuo prossimo turno.\n• <b>Sovraccarico G9 (Clic destro):</b> Fai clic destro su una Forma Bellica G9 con più di 4 PV e un attacco disponibile per attivare l'esclusione del protocollo d'emergenza (+1 attacco in mischia, +2 danni e <b>Stordimento</b> per il turno). Alla fine del turno, il golem subisce fino a 3 PV di stress termico al nucleo e non può morirne.\n• <b>Planata con Tuta Alare delle Fanciulle (Passiva):</b> Qualsiasi unità delle Fanciulle che inizi il turno su terreno elevato (Colline o Montagne) dispiega tute alari termiche, ottenendo <b>+1 PM e Schermagliatore</b> per quel turno!"
 
 #. [option]
 #: liminal-union/faction.cfg:286
@@ -1583,8 +1583,8 @@ msgstr "🪽🟇 Cornetta (1·1)"
 
 #. [unit_type]: id=LIUN_Maiden_Cornet_1_1
 #: liminal-union/units/halfelven/command/a1-maiden-cornet.cfg:423
-msgid "First Aid Badge | Unlocks pyronite flame lance strike. You have passed the field training course on first responder techniques and paramedics."
-msgstr "Distintivo di Primo Soccorso | Sblocca il colpo di lancia fiammeggiante in pironite. Hai superato il corso di addestramento da campo sulle tecniche di primo soccorso e paramediche."
+msgid "First Aid Badge | Strengthens the pyronite flame lance strike. You have passed the field training course on first responder techniques and paramedics."
+msgstr "Distintivo di Primo Soccorso | Rafforza il colpo di lancia fiammeggiante in pironite. Hai superato il corso di addestramento da campo sulle tecniche di primo soccorso e paramediche."
 
 #. [unit_type]: id=LIUN_Maiden_Captain_Base
 #: liminal-union/units/halfelven/command/a2-maiden-captain.cfg:6
@@ -1739,8 +1739,8 @@ msgstr "🔱 🟇 Cornetta (1·1)"
 
 #. [unit_type]: id=LIUN_Marine_Cornet_1_1
 #: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:166
-msgid "First Aid Badge | Unlocks kryonite cold blade strike. You have passed the field training course on first responder techniques and paramedics."
-msgstr "Distintivo di Primo Soccorso | Sblocca il colpo di lama gelida in crionite. Hai superato il corso di addestramento da campo sulle tecniche di primo soccorso e paramediche."
+msgid "First Aid Badge | Strengthens the kryonite cold blade strike. You have passed the field training course on first responder techniques and paramedics."
+msgstr "Distintivo di Primo Soccorso | Rafforza il colpo di lama gelida in crionite. Hai superato il corso di addestramento da campo sulle tecniche di primo soccorso e paramediche."
 
 #. [unit_type]: id=LIUN_Marine_Captain_Base
 #: liminal-union/units/halfelven/command/b2-marine-captain.cfg:6
@@ -2188,8 +2188,8 @@ msgstr "Scudo [stoccata]"
 
 #. [unit_type]: id=LIUN_Shieldguard_Base
 #: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:52
-msgid "Shieldguards are masters of line warfare. Trained to fight in concert with Weaponguards, they cover every gap and hold every breach. Armed with a tower shield, a Shieldguard turns the tide of battle not through swiftness but through the disciplined art of denial."
-msgstr "Le Guardie Scudate sono maestre della guerra di linea. Addestrate a combattere di concerto con le Guardie d'Armi, coprono ogni varco e tengono ogni breccia. Armata di uno scudo torre, una Guardia Scudata cambia le sorti della battaglia non con la rapidità, ma con la disciplinata arte dell'interdizione."
+msgid "Shieldguards are masters of line warfare. They cover every gap and hold every breach. Armed with a tower shield, a Shieldguard turns the tide of battle not through swiftness but through the disciplined art of denial."
+msgstr "Le Guardie Scudate sono maestre della guerra di linea. Coprono ogni varco e tengono ogni breccia. Armata di uno scudo torre, una Guardia Scudata cambia le sorti della battaglia non con la rapidità, ma con la disciplinata arte dell'interdizione."
 
 #. [unit_type]: id=LIUN_Shieldguard
 #: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:130
@@ -2767,8 +2767,8 @@ msgstr "🧿 🟗 Phoinix Anziana (1·1)"
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_1_1
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:188
-msgid "Ability: unpoison | In its final developmental stage, the tears of a phoinix bird can detox units from poison."
-msgstr "Abilità: cura veleno | Nel suo stadio evolutivo finale, le lacrime di una phoinix possono disintossicare le unità dal veleno."
+msgid "The tears of an elder phoinix bird draw poison from the wounded."
+msgstr "Le lacrime di una vecchia phoinix estraggono il veleno dai feriti."
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_1_2
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:197
@@ -2779,3 +2779,24 @@ msgstr "🧿 🟗 Phoinix Anziana (1·2)"
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:208
 msgid "Ability: teleport | Friendly villages maintain portals. This Phoinix unit can now teleport between them."
 msgstr "Abilità: teletrasporto | I villaggi alleati mantengono portali. Questa unità Phoinix può ora teletrasportarsi tra di essi."
+
+msgid "Sword [thrust]"
+msgstr "Spada [affondo]"
+
+msgid "Khopesh [thrust]"
+msgstr "Khopesh [affondo]"
+
+msgid "Shield [smash]"
+msgstr "Scudo [colpo poderoso]"
+
+msgid "Shield [thrust]"
+msgstr "Scudo [affondo]"
+
+msgid "shield"
+msgstr "scudo"
+
+msgid "female^shield"
+msgstr "scudo"
+
+msgid "When attacked from range, this unit raises its shield and gains 10% resistance to blade, pierce and impact."
+msgstr "Se attaccata a distanza, questa unità alza lo scudo e ottiene il 10% di resistenza a lama, perforazione e impatto."

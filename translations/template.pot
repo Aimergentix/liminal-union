@@ -309,7 +309,7 @@ msgstr ""
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:281
-msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click any undamaged G9 Warform to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers 4 HP core thermal stress.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!"
+msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!"
 msgstr ""
 
 #. [option]
@@ -1581,7 +1581,7 @@ msgstr ""
 
 #. [unit_type]: id=LIUN_Maiden_Cornet_1_1
 #: liminal-union/units/halfelven/command/a1-maiden-cornet.cfg:423
-msgid "First Aid Badge | Unlocks pyronite flame lance strike. You have passed the field training course on first responder techniques and paramedics."
+msgid "First Aid Badge | Strengthens the pyronite flame lance strike. You have passed the field training course on first responder techniques and paramedics."
 msgstr ""
 
 #. [unit_type]: id=LIUN_Maiden_Captain_Base
@@ -1737,7 +1737,7 @@ msgstr ""
 
 #. [unit_type]: id=LIUN_Marine_Cornet_1_1
 #: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:166
-msgid "First Aid Badge | Unlocks kryonite cold blade strike. You have passed the field training course on first responder techniques and paramedics."
+msgid "First Aid Badge | Strengthens the kryonite cold blade strike. You have passed the field training course on first responder techniques and paramedics."
 msgstr ""
 
 #. [unit_type]: id=LIUN_Marine_Captain_Base
@@ -2186,7 +2186,7 @@ msgstr ""
 
 #. [unit_type]: id=LIUN_Shieldguard_Base
 #: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:52
-msgid "Shieldguards are masters of line warfare. Trained to fight in concert with Weaponguards, they cover every gap and hold every breach. Armed with a tower shield, a Shieldguard turns the tide of battle not through swiftness but through the disciplined art of denial."
+msgid "Shieldguards are masters of line warfare. They cover every gap and hold every breach. Armed with a tower shield, a Shieldguard turns the tide of battle not through swiftness but through the disciplined art of denial."
 msgstr ""
 
 #. [unit_type]: id=LIUN_Shieldguard
@@ -2765,7 +2765,7 @@ msgstr ""
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_1_1
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:188
-msgid "Ability: unpoison | In its final developmental stage, the tears of a phoinix bird can detox units from poison."
+msgid "The tears of an elder phoinix bird draw poison from the wounded."
 msgstr ""
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_1_2
@@ -2778,3 +2778,23 @@ msgstr ""
 msgid "Ability: teleport | Friendly villages maintain portals. This Phoinix unit can now teleport between them."
 msgstr ""
 
+msgid "Sword [thrust]"
+msgstr ""
+
+msgid "Khopesh [thrust]"
+msgstr ""
+
+msgid "Shield [smash]"
+msgstr ""
+
+msgid "Shield [thrust]"
+msgstr ""
+
+msgid "shield"
+msgstr ""
+
+msgid "female^shield"
+msgstr ""
+
+msgid "When attacked from range, this unit raises its shield and gains 10% resistance to blade, pierce and impact."
+msgstr ""

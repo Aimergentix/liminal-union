@@ -311,8 +311,8 @@ msgstr "Maniobras tácticas"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:281
-msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click any undamaged G9 Warform to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers 4 HP core thermal stress.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!"
-msgstr "• <b>Pylum de puesta a tierra de los Marines (Clic derecho):</b> Haga clic derecho sobre un Marine no anclado para clavar su estaca conductora. Otorga a los aliados adyacentes +20% de protección elemental, descarga los ataques mágicos enemigos adyacentes (máx. 50% de acierto) y reduce el daño elemental enemigo en un 20%. Coste: 0 PM y +20% de vulnerabilidad a Corte/Impacto en melé. Dura hasta el final del siguiente turno enemigo; debe desplegarse de nuevo en su próximo turno.\n• <b>Sobrecarga G9 (Clic derecho):</b> Haga clic derecho sobre una Forma de guerra G9 intacta para activar la derivación de emergencia (+1 golpe en melé, +2 de daño y <b>Aturdir</b> por el turno). Al final del turno, el gólem sufre 4 PV de estrés térmico.\n• <b>Planeo con traje alado (Pasivo):</b> Cualquier Doncella que inicie su turno en terreno elevado (Colinas o Montañas) despliega su traje alado y gana <b>+1 PM y Hostigador</b> durante ese turno."
+msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!"
+msgstr "• <b>Pylum de puesta a tierra de los Marines (Clic derecho):</b> Haga clic derecho sobre un Marine no anclado para clavar su estaca conductora. Otorga a los aliados adyacentes +20% de protección elemental, descarga los ataques mágicos enemigos adyacentes (máx. 50% de acierto) y reduce el daño elemental enemigo en un 20%. Coste: 0 PM y +20% de vulnerabilidad a Corte/Impacto en melé. Dura hasta el final del siguiente turno enemigo; debe desplegarse de nuevo en su próximo turno.\n• <b>Sobrecarga G9 (Clic derecho):</b> Haga clic derecho sobre una Forma de guerra G9 con más de 4 PV y un ataque disponible para activar la derivación de emergencia (+1 golpe en melé, +2 de daño y <b>Aturdir</b> por el turno). Al final del turno, el gólem sufre hasta 3 PV de estrés térmico y no puede morir por ello.\n• <b>Planeo con traje alado (Pasivo):</b> Cualquier Doncella que inicie su turno en terreno elevado (Colinas o Montañas) despliega su traje alado y gana <b>+1 PM y Hostigador</b> durante ese turno."
 
 #. [option]
 #: liminal-union/faction.cfg:286
@@ -1583,8 +1583,8 @@ msgstr "🪽🟇 Corneta (1·1)"
 
 #. [unit_type]: id=LIUN_Maiden_Cornet_1_1
 #: liminal-union/units/halfelven/command/a1-maiden-cornet.cfg:423
-msgid "First Aid Badge | Unlocks pyronite flame lance strike. You have passed the field training course on first responder techniques and paramedics."
-msgstr "Insignia de Primeros Auxilios | Desbloquea el golpe de lanza ígnea de pironita. Ha superado el curso de campaña de primeros auxilios y paramédicos."
+msgid "First Aid Badge | Strengthens the pyronite flame lance strike. You have passed the field training course on first responder techniques and paramedics."
+msgstr "Insignia de Primeros Auxilios | Refuerza el golpe de lanza ígnea de pironita. Ha superado el curso de campaña de primeros auxilios y paramédicos."
 
 #. [unit_type]: id=LIUN_Maiden_Captain_Base
 #: liminal-union/units/halfelven/command/a2-maiden-captain.cfg:6
@@ -1739,8 +1739,8 @@ msgstr "🔱 🟇 Corneta (1·1)"
 
 #. [unit_type]: id=LIUN_Marine_Cornet_1_1
 #: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:166
-msgid "First Aid Badge | Unlocks kryonite cold blade strike. You have passed the field training course on first responder techniques and paramedics."
-msgstr "Insignia de Primeros Auxilios | Desbloquea el golpe de hoja gélida de crionita. Ha superado el curso de campaña de primeros auxilios y paramédicos."
+msgid "First Aid Badge | Strengthens the kryonite cold blade strike. You have passed the field training course on first responder techniques and paramedics."
+msgstr "Insignia de Primeros Auxilios | Refuerza el golpe de hoja gélida de crionita. Ha superado el curso de campaña de primeros auxilios y paramédicos."
 
 #. [unit_type]: id=LIUN_Marine_Captain_Base
 #: liminal-union/units/halfelven/command/b2-marine-captain.cfg:6
@@ -2188,8 +2188,8 @@ msgstr "Escudo [estocada]"
 
 #. [unit_type]: id=LIUN_Shieldguard_Base
 #: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:52
-msgid "Shieldguards are masters of line warfare. Trained to fight in concert with Weaponguards, they cover every gap and hold every breach. Armed with a tower shield, a Shieldguard turns the tide of battle not through swiftness but through the disciplined art of denial."
-msgstr "Los Guardias de escudo son maestros de la guerra de línea. Entrenados para combatir junto a los Guardias de armas, cubren cada hueco y sostienen cada brecha. Armado con un escudo pavés, cambia el rumbo de la batalla mediante el arte disciplinado de la negación."
+msgid "Shieldguards are masters of line warfare. They cover every gap and hold every breach. Armed with a tower shield, a Shieldguard turns the tide of battle not through swiftness but through the disciplined art of denial."
+msgstr "Los Guardias de escudo son maestros de la guerra de línea. Cubren cada hueco y sostienen cada brecha. Armado con un escudo pavés, cambia el rumbo de la batalla mediante el arte disciplinado de la negación."
 
 #. [unit_type]: id=LIUN_Shieldguard
 #: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:130
@@ -2767,8 +2767,8 @@ msgstr "🧿 🟗 Phoinix Anciano (1·1)"
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_1_1
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:188
-msgid "Ability: unpoison | In its final developmental stage, the tears of a phoinix bird can detox units from poison."
-msgstr "Habilidad: curar veneno | En su etapa final de desarrollo, las lágrimas de un ave phoinix pueden purificar del veneno a las unidades."
+msgid "The tears of an elder phoinix bird draw poison from the wounded."
+msgstr "Las lágrimas de un ave phoinix anciana extraen el veneno de los heridos."
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_1_2
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:197
@@ -2779,3 +2779,24 @@ msgstr "🧿 🟗 Phoinix Anciano (1·2)"
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:208
 msgid "Ability: teleport | Friendly villages maintain portals. This Phoinix unit can now teleport between them."
 msgstr "Habilidad: teletransporte | Las aldeas aliadas mantienen portales. Esta unidad Phoinix puede ahora teletransportarse entre ellas."
+
+msgid "Sword [thrust]"
+msgstr "Espada [estocada]"
+
+msgid "Khopesh [thrust]"
+msgstr "Khopesh [estocada]"
+
+msgid "Shield [smash]"
+msgstr "Escudo [mazo]"
+
+msgid "Shield [thrust]"
+msgstr "Escudo [estocada]"
+
+msgid "shield"
+msgstr "escudo"
+
+msgid "female^shield"
+msgstr "escudo"
+
+msgid "When attacked from range, this unit raises its shield and gains 10% resistance to blade, pierce and impact."
+msgstr "Al ser atacada a distancia, esta unidad alza su escudo y gana un 10 % de resistencia a filo, perforación e impacto."

@@ -72,7 +72,7 @@ Status (4 November 2026): the Maiden troop line is implemented as test values
 (Private changed, Jaeger already matched, L2 unchanged). A bounded engine probe
 covered resolved attacks and advancement. Private attack animations remain static
 stand-ins on the old sprite. Save/load, replay, multiplayer and balance are
-unverified. Marine and officer lines remain unimplemented.
+unverified. Marine and officer lines followed on 5 November; see below.
 Work proceeds through weapon/progression design, sprites and visual indicators,
 then implementation and verification. Additional units are deferred.
 
@@ -87,8 +87,7 @@ Keep learned attack options across these L0-to-L1 transitions. The proposed
 Sergeant impact sling is an additional L1 option, not an existing attack.
 The approved L2 specialization exceptions are listed below.
 
-Approved initial test values; not balance-validated. Only the Maiden rows are
-implemented.
+Approved initial test values; not balance-validated.
 Notation: damage per hit × number of strikes, before modifiers.
 
 | Unit | Melee | Ranged |
@@ -109,7 +108,7 @@ Attack names, animation filters and existing modifiers must be checked together
 when replacing the weapons. No gameplay or balance checks have run for this
 design; documentation approval is not evidence of runtime correctness.
 
-Approved officer test package; not implemented or balance-validated:
+Approved officer test package; not balance-validated:
 
 | Stage | Maiden lance: pierce | Maiden lance: fire | Marine short sword: pierce | Marine short sword: cold |
 |---|---|---|---|---|
@@ -129,6 +128,23 @@ HP, movement and XP unchanged. Captain/Colonel intermediate stages retain
 their inherited attacks and existing non-attack progression.
 Sprites use lance and shield for Maiden officers, short sword and shield for
 Marine officers. Elemental applications use the same weapon.
+
+Implemented on 5 November 2026 as test values; balance unverified. A bounded
+engine probe covered resolved attacks, advancement, parry, shield and healing.
+Shield sprites and save/load, replay, multiplayer and visual checks are open.
+
+- Officers stay melee-only and use `parry=5`. Ranged attacks gain no parry; the
+  `shield` ability adds 10 points of physical resistance against them on defense.
+- First Aid on Cornet is +4, equal to Captain for now.
+- Marine troops use `usage=archer`; Braves and Heroes AI patterns no longer ask
+  for `mixed fighter`.
+- Phoinix has 8 MP and cures poison from L0 (`ABILITY_UNPOISON`).
+- Attack labels: `[thrust]`, `[smash]`; `[double tap]` stays on two-strike troop
+  and G9 attacks.
+- Sergeant advances to Masterchief or Shieldguard. Weaponguard is unreachable; its
+  file and sprites remain until their deletion is authorized.
+
+Open: the Shieldguard's Portal Warden ability. Proposed limits are not decided.
 
 Approved L2 specialization boundary:
 
