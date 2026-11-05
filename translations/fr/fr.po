@@ -311,8 +311,8 @@ msgstr "Manœuvres tactiques"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:281
-msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!"
-msgstr "• <b>Pylum de mise à la terre des Marines (Clic droit) :</b> Clic droit sur un Marine non ancré pour planter son pieu conducteur. Confère aux alliés adjacents +20% de protection élémentaire, met à la terre la précision magique ennemie (max 50% de toucher) et réduit les dégâts élémentaires ennemis de 20%. Coût : 0 PM et +20% de vulnérabilité Tranchant/Impact en mêlée. Dure jusqu'à la fin du tour ennemi suivant ; à redéployer à votre prochain tour.\n• <b>Surcharge G9 (Clic droit) :</b> Clic droit sur une Forme de guerre G9 ayant plus de 4 PV et une attaque restante pour déclencher le contournement d'urgence (+1 attaque en mêlée, +2 dégâts et <b>Étourdissement</b> pour le tour). En fin de tour, le golem subit jusqu'à 3 PV de contrainte thermique, sans en mourir.\n• <b>Vol plané Maïden (Passif) :</b> Toute unité Maïden commençant son tour sur terrain élevé (Collines ou Montagnes) déploie sa combinaison ailée et gagne <b>+1 PM et Tirailleur</b> pour ce tour !"
+msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!\n• <b>Portal Warden (Passive):</b> A Shieldguard that stood still for a full turn with a Phoinix beside it opens its portable Arcanite portal, charged by mana crystals. Marines other than leaders may travel one way from your villages to free hexes beside it, arriving with no moves and no attack that turn. The portal closes when the Shieldguard moves."
+msgstr "• <b>Pylum de mise à la terre des Marines (Clic droit) :</b> Clic droit sur un Marine non ancré pour planter son pieu conducteur. Confère aux alliés adjacents +20% de protection élémentaire, met à la terre la précision magique ennemie (max 50% de toucher) et réduit les dégâts élémentaires ennemis de 20%. Coût : 0 PM et +20% de vulnérabilité Tranchant/Impact en mêlée. Dure jusqu'à la fin du tour ennemi suivant ; à redéployer à votre prochain tour.\n• <b>Surcharge G9 (Clic droit) :</b> Clic droit sur une Forme de guerre G9 ayant plus de 4 PV et une attaque restante pour déclencher le contournement d'urgence (+1 attaque en mêlée, +2 dégâts et <b>Étourdissement</b> pour le tour). En fin de tour, le golem subit jusqu'à 3 PV de contrainte thermique, sans en mourir.\n• <b>Vol plané Maïden (Passif) :</b> Toute unité Maïden commençant son tour sur terrain élevé (Collines ou Montagnes) déploie sa combinaison ailée et gagne <b>+1 PM et Tirailleur</b> pour ce tour !\n• <b>Gardien de portail (Passif) :</b> Un Garde-bouclier resté immobile un tour complet avec un Phoinix à ses côtés ouvre son portail d'Arcanite portatif, chargé par des cristaux de mana. Les Marines autres que les chefs voyagent à sens unique depuis vos villages vers les cases libres à côté de lui, et arrivent sans mouvement ni attaque ce tour-là. Le portail se ferme lorsque le Garde-bouclier se déplace."
 
 #. [option]
 #: liminal-union/faction.cfg:286
@@ -2747,8 +2747,8 @@ msgstr "🧿🟕 Phoinix (0·1)"
 
 #. [unit_type]: id=LIUN_Phoinix_0_1
 #: liminal-union/units/phoinixes/a0-phoinix.cfg:185
-msgid "Ability: skirmisher | The phoinix enters a new developmental stage which creates a <i>critical reality</i>: it is able to move past enemies quickly."
-msgstr "Capacité : tirailleur | Le phoinix entre dans un nouveau stade de développement qui crée une <i>réalité critique</i> : il peut désormais contourner rapidement les ennemis."
+msgid "Abilities: skirmisher, unpoison | The phoinix enters a new developmental stage which creates a <i>critical reality</i>: it is able to move past enemies quickly, and its touch draws poison from the wounded."
+msgstr "Capacité : tirailleur | Le phoinix entre dans un nouveau stade de développement qui crée une <i>réalité critique</i> : il peut désormais contourner rapidement les ennemis. Son toucher retire aussi le poison des blessés."
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_Base
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:6
@@ -2800,3 +2800,15 @@ msgstr "bouclier"
 
 msgid "When attacked from range, this unit raises its shield and gains 10% resistance to blade, pierce and impact."
 msgstr "Attaquée à distance, cette unité lève son bouclier et gagne 10 % de résistance aux coups tranchants, perforants et contondants."
+
+msgid "<span color='#c79bff'>Portal Open</span>"
+msgstr "<span color='#c79bff'>Portail ouvert</span>"
+
+msgid "portal warden"
+msgstr "gardien de portail"
+
+msgid "female^portal warden"
+msgstr "gardienne de portail"
+
+msgid "This Shieldguard carries a portable Arcanite portal, charged by mana crystals. After standing still for a full turn with a Phoinix beside it, the portal opens at once. Marines other than leaders may then travel one way from their side's villages to any free hex beside it, arriving with no moves and no attack that turn. The portal closes when this unit moves."
+msgstr "Ce Garde-bouclier porte un portail d'Arcanite portatif, chargé par des cristaux de mana. Après un tour complet immobile avec un Phoinix à ses côtés, le portail s'ouvre aussitôt. Les Marines autres que les chefs peuvent alors voyager à sens unique depuis les villages de leur camp vers toute case libre à côté de lui, et arrivent sans mouvement ni attaque ce tour-là. Le portail se ferme lorsque cette unité se déplace."

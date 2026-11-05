@@ -311,8 +311,8 @@ msgstr "Taktische Manöver"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:281
-msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!"
-msgstr "• <b>Salz-Erdungspfeiler der Marines (Rechtsklick):</b> Rechtsklickt auf einen noch nicht geerdeten Marine, um seinen leitfähigen Erdungspfeiler einzuschlagen. Gewährt angrenzenden Verbündeten +20% Elementarschutz, erdet angrenzende feindliche Magieangriffe (max. 50% Trefferchance) und senkt feindlichen Elementarschaden um 20%. Kosten: 0 BP und +20% Verwundbarkeit gegen Hieb/Wucht im Nahkampf. Hält bis zum Ende des folgenden gegnerischen Zuges; danach im eigenen Zug neu einschlagen.\n• <b>G9-Übertaktung (Rechtsklick):</b> Rechtsklickt auf eine G9-Kriegsform mit mehr als 4 LP und einem verbleibenden Angriff, um die Notfall-Protokollüberbrückung auszulösen (+1 Nahkampfschlag, +2 Schaden und <b>Betäuben</b> für diesen Zug). Am Zugende erleidet der Golem bis zu 3 LP thermische Kernbelastung und stirbt daran nicht.\n• <b>Mäiden-Gleitflug (Passiv):</b> Jede Mäiden-Einheit, die ihren Zug auf erhöhtem Gelände (Hügel oder Berge) beginnt, entfaltet ihren Schwingenanzug und erhält für diesen Zug <b>+1 BP und Plänkler</b>!"
+msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!\n• <b>Portal Warden (Passive):</b> A Shieldguard that stood still for a full turn with a Phoinix beside it opens its portable Arcanite portal, charged by mana crystals. Marines other than leaders may travel one way from your villages to free hexes beside it, arriving with no moves and no attack that turn. The portal closes when the Shieldguard moves."
+msgstr "• <b>Salz-Erdungspfeiler der Marines (Rechtsklick):</b> Rechtsklickt auf einen noch nicht geerdeten Marine, um seinen leitfähigen Erdungspfeiler einzuschlagen. Gewährt angrenzenden Verbündeten +20% Elementarschutz, erdet angrenzende feindliche Magieangriffe (max. 50% Trefferchance) und senkt feindlichen Elementarschaden um 20%. Kosten: 0 BP und +20% Verwundbarkeit gegen Hieb/Wucht im Nahkampf. Hält bis zum Ende des folgenden gegnerischen Zuges; danach im eigenen Zug neu einschlagen.\n• <b>G9-Übertaktung (Rechtsklick):</b> Rechtsklickt auf eine G9-Kriegsform mit mehr als 4 LP und einem verbleibenden Angriff, um die Notfall-Protokollüberbrückung auszulösen (+1 Nahkampfschlag, +2 Schaden und <b>Betäuben</b> für diesen Zug). Am Zugende erleidet der Golem bis zu 3 LP thermische Kernbelastung und stirbt daran nicht.\n• <b>Mäiden-Gleitflug (Passiv):</b> Jede Mäiden-Einheit, die ihren Zug auf erhöhtem Gelände (Hügel oder Berge) beginnt, entfaltet ihren Schwingenanzug und erhält für diesen Zug <b>+1 BP und Plänkler</b>!\n• <b>Portalwächter (Passiv):</b> Eine Schildwache, die einen vollen Zug still stand und neben der eine Phoinix steht, öffnet ihr tragbares Arkanit-Portal, das Manakristalle aufladen. Marines außer Anführern reisen in eine Richtung von euren Dörfern auf freie Felder daneben und kommen ohne Bewegung und ohne Angriff in diesem Zug an. Das Portal schließt sich, sobald die Schildwache sich bewegt."
 
 #. [option]
 #: liminal-union/faction.cfg:286
@@ -2747,8 +2747,8 @@ msgstr "🧿🟕 Phoinix (0·1)"
 
 #. [unit_type]: id=LIUN_Phoinix_0_1
 #: liminal-union/units/phoinixes/a0-phoinix.cfg:185
-msgid "Ability: skirmisher | The phoinix enters a new developmental stage which creates a <i>critical reality</i>: it is able to move past enemies quickly."
-msgstr "Fähigkeit: Plänkler | Der Phoinix tritt in ein neues Entwicklungsstadium ein, das eine <i>kritische Wirklichkeit</i> schafft: Er vermag rasch an Feinden vorbeizuziehen."
+msgid "Abilities: skirmisher, unpoison | The phoinix enters a new developmental stage which creates a <i>critical reality</i>: it is able to move past enemies quickly, and its touch draws poison from the wounded."
+msgstr "Fähigkeit: Plänkler | Der Phoinix tritt in ein neues Entwicklungsstadium ein, das eine <i>kritische Wirklichkeit</i> schafft: Er vermag rasch an Feinden vorbeizuziehen. Seine Berührung zieht den Verwundeten zudem das Gift aus dem Leib."
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_Base
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:6
@@ -2800,3 +2800,15 @@ msgstr "Schild"
 
 msgid "When attacked from range, this unit raises its shield and gains 10% resistance to blade, pierce and impact."
 msgstr "Wird diese Einheit aus der Ferne angegriffen, hebt sie ihren Schild und erhält 10 % Resistenz gegen Hieb, Stich und Wucht."
+
+msgid "<span color='#c79bff'>Portal Open</span>"
+msgstr "<span color='#c79bff'>Portal geöffnet</span>"
+
+msgid "portal warden"
+msgstr "Portalwächter"
+
+msgid "female^portal warden"
+msgstr "Portalwächterin"
+
+msgid "This Shieldguard carries a portable Arcanite portal, charged by mana crystals. After standing still for a full turn with a Phoinix beside it, the portal opens at once. Marines other than leaders may then travel one way from their side's villages to any free hex beside it, arriving with no moves and no attack that turn. The portal closes when this unit moves."
+msgstr "Diese Schildwache trägt ein tragbares Arkanit-Portal, das Manakristalle aufladen. Stand sie einen vollen Zug still und steht eine Phoinix neben ihr, öffnet sich das Portal sofort. Marines außer Anführern können dann in eine Richtung von den Dörfern ihrer Seite auf jedes freie Feld neben ihr reisen; sie kommen ohne Bewegung und ohne Angriff in diesem Zug an. Das Portal schließt sich, sobald diese Einheit sich bewegt."

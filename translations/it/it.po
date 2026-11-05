@@ -311,8 +311,8 @@ msgstr "Manovre Tattiche"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:281
-msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!"
-msgstr "• <b>Pylum di Messa a Terra Salina della Marina (Clic destro):</b> Fai clic destro su un Fante di Marina non ancorato per dispiegare il suo palo conduttivo. Conferisce agli alleati adiacenti +20% di protezione elementale, scarica a terra gli attacchi magici nemici adiacenti (max 50% di probabilità di colpire) e riduce i danni elementali nemici del 20%. Costo: 0 PM e +20% di vulnerabilità a Lama/Impatto in mischia. Dura fino alla fine del successivo turno nemico; va ridispiegato al tuo prossimo turno.\n• <b>Sovraccarico G9 (Clic destro):</b> Fai clic destro su una Forma Bellica G9 con più di 4 PV e un attacco disponibile per attivare l'esclusione del protocollo d'emergenza (+1 attacco in mischia, +2 danni e <b>Stordimento</b> per il turno). Alla fine del turno, il golem subisce fino a 3 PV di stress termico al nucleo e non può morirne.\n• <b>Planata con Tuta Alare delle Fanciulle (Passiva):</b> Qualsiasi unità delle Fanciulle che inizi il turno su terreno elevato (Colline o Montagne) dispiega tute alari termiche, ottenendo <b>+1 PM e Schermagliatore</b> per quel turno!"
+msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!\n• <b>Portal Warden (Passive):</b> A Shieldguard that stood still for a full turn with a Phoinix beside it opens its portable Arcanite portal, charged by mana crystals. Marines other than leaders may travel one way from your villages to free hexes beside it, arriving with no moves and no attack that turn. The portal closes when the Shieldguard moves."
+msgstr "• <b>Pylum di Messa a Terra Salina della Marina (Clic destro):</b> Fai clic destro su un Fante di Marina non ancorato per dispiegare il suo palo conduttivo. Conferisce agli alleati adiacenti +20% di protezione elementale, scarica a terra gli attacchi magici nemici adiacenti (max 50% di probabilità di colpire) e riduce i danni elementali nemici del 20%. Costo: 0 PM e +20% di vulnerabilità a Lama/Impatto in mischia. Dura fino alla fine del successivo turno nemico; va ridispiegato al tuo prossimo turno.\n• <b>Sovraccarico G9 (Clic destro):</b> Fai clic destro su una Forma Bellica G9 con più di 4 PV e un attacco disponibile per attivare l'esclusione del protocollo d'emergenza (+1 attacco in mischia, +2 danni e <b>Stordimento</b> per il turno). Alla fine del turno, il golem subisce fino a 3 PV di stress termico al nucleo e non può morirne.\n• <b>Planata con Tuta Alare delle Fanciulle (Passiva):</b> Qualsiasi unità delle Fanciulle che inizi il turno su terreno elevato (Colline o Montagne) dispiega tute alari termiche, ottenendo <b>+1 PM e Schermagliatore</b> per quel turno!\n• <b>Guardiano del portale (Passivo):</b> Una Guardia Scudata rimasta immobile per un turno intero con una Phoinix accanto apre il suo portale di Arcanite portatile, caricato da cristalli di mana. I Marine che non sono capi viaggiano a senso unico dai vostri villaggi verso gli esagoni liberi accanto a essa, arrivando senza movimento né attacco in quel turno. Il portale si chiude quando la Guardia Scudata si muove."
 
 #. [option]
 #: liminal-union/faction.cfg:286
@@ -2747,8 +2747,8 @@ msgstr "🧿🟕 Phoinix (0·1)"
 
 #. [unit_type]: id=LIUN_Phoinix_0_1
 #: liminal-union/units/phoinixes/a0-phoinix.cfg:185
-msgid "Ability: skirmisher | The phoinix enters a new developmental stage which creates a <i>critical reality</i>: it is able to move past enemies quickly."
-msgstr "Abilità: schermagliatore | La phoinix entra in un nuovo stadio evolutivo che crea una <i>realtà critica</i>: è in grado di muoversi rapidamente oltre i nemici."
+msgid "Abilities: skirmisher, unpoison | The phoinix enters a new developmental stage which creates a <i>critical reality</i>: it is able to move past enemies quickly, and its touch draws poison from the wounded."
+msgstr "Abilità: schermagliatore | La phoinix entra in un nuovo stadio evolutivo che crea una <i>realtà critica</i>: è in grado di muoversi rapidamente oltre i nemici. Il suo tocco estrae anche il veleno dai feriti."
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_Base
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:6
@@ -2800,3 +2800,15 @@ msgstr "scudo"
 
 msgid "When attacked from range, this unit raises its shield and gains 10% resistance to blade, pierce and impact."
 msgstr "Se attaccata a distanza, questa unità alza lo scudo e ottiene il 10% di resistenza a lama, perforazione e impatto."
+
+msgid "<span color='#c79bff'>Portal Open</span>"
+msgstr "<span color='#c79bff'>Portale aperto</span>"
+
+msgid "portal warden"
+msgstr "guardiano del portale"
+
+msgid "female^portal warden"
+msgstr "guardiana del portale"
+
+msgid "This Shieldguard carries a portable Arcanite portal, charged by mana crystals. After standing still for a full turn with a Phoinix beside it, the portal opens at once. Marines other than leaders may then travel one way from their side's villages to any free hex beside it, arriving with no moves and no attack that turn. The portal closes when this unit moves."
+msgstr "Questa Guardia Scudata porta un portale di Arcanite portatile, caricato da cristalli di mana. Dopo un turno intero immobile con una Phoinix accanto, il portale si apre subito. I Marine che non sono capi possono allora viaggiare a senso unico dai villaggi della propria fazione verso qualsiasi esagono libero accanto a essa, arrivando senza movimento né attacco in quel turno. Il portale si chiude quando questa unità si muove."

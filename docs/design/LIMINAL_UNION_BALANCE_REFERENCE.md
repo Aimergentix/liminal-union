@@ -135,16 +135,20 @@ Shield sprites and save/load, replay, multiplayer and visual checks are open.
 
 - Officers stay melee-only and use `parry=5`. Ranged attacks gain no parry; the
   `shield` ability adds 10 points of physical resistance against them on defense.
-- First Aid on Cornet is +4, equal to Captain for now.
+- First Aid: Cornet +4, Captain +6. Shieldguard uses `parry=10`.
 - Marine troops use `usage=archer`; Braves and Heroes AI patterns no longer ask
   for `mixed fighter`.
-- Phoinix has 8 MP and cures poison from L0 (`ABILITY_UNPOISON`).
+- Phoinix has 8 MP and cures poison from stage 0·1 (`ABILITY_UNPOISON`).
 - Attack labels: `[thrust]`, `[smash]`; `[double tap]` stays on two-strike troop
   and G9 attacks.
 - Sergeant advances to Masterchief or Shieldguard. Weaponguard is unreachable; its
-  file and sprites remain until their deletion is authorized.
-
-Open: the Shieldguard's Portal Warden ability. Proposed limits are not decided.
+  file, sprites and team macros stay for campaigns.
+- Portal Warden (Shieldguard, `lua/portal_warden.lua`): passive and always on. A
+  Shieldguard that stood still for a full own turn with an adjacent Phoinix opens
+  its portal at once; it closes when the Shieldguard moves. Marines except leaders
+  travel one way from own villages to free adjacent hexes; arrival sets moves and
+  attacks to 0, as with recruitment. An AI side's Warden holds still while its
+  portal is open; opening it depends on the AI standing still by chance.
 
 Approved L2 specialization boundary:
 
