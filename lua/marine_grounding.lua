@@ -17,12 +17,88 @@ local function hex_distance(x1, y1, x2, y2)
     return math.max(math.abs(q1 - q2), math.abs(r1 - r2), math.abs(s1 - s2))
 end
 
+-- Checks if a unit has a fire, cold, or arcane attack
+local function has_elemental_threat(u)
+    if not u or not u.__cfg then return false end
+    for atk in wml.child_range(u.__cfg, "attack") do
+        local atype = atk.type
+        if atype == "fire" or atype == "cold" or atype == "arcane" then
+            return true
+        end
+    end
+    return false
+end
+
+-- Checks if a unit has a melee blade or impact attack
+local function has_blade_or_impact_melee(u)
+    if not u or not u.__cfg then return false end
+    for atk in wml.child_range(u.__cfg, "attack") do
+        if atk.range == "melee" and (atk.type == "blade" or atk.type == "impact") then
+            return true
+        end
+    end
+    return false
+end
+
 -- Checks if a unit is eligible to deploy the Salt-Grounding Pylum
 function marine_grounding.can_ground(u)
     if not u or u.hitpoints <= 0 then return false end
     if u.side ~= wesnoth.current.side then return false end
     if u.race ~= "marinecommand" and u.variables.lu_alloy ~= "kryonite" then return false end
     if u.variables.lu_grounded then return false end
+    return true
+end
+
+-- Evaluates whether an AI-controlled Marine should deploy the Salt-Grounding Pylum
+function marine_grounding.should_ai_ground(u)
+    if not marine_grounding.can_ground(u) then return false end
+    if u.canrecruit or u.hitpoints < 14 then return false end
+
+    local side_info = wesnoth.sides[u.side]
+    if not side_info or side_info.controller ~= "ai" then return false end
+
+    local all_units = wesnoth.units.find_on_map({})
+    local adj_allies = 0
+    local adj_elemental_enemies = 0
+    local near_elemental_enemies = 0
+    local adj_physical_bruisers = 0
+
+    for idx, other in ipairs(all_units) do
+        if other.hitpoints > 0 and other.id ~= u.id then
+            local dist = hex_distance(u.x, u.y, other.x, other.y)
+            if dist <= 2 then
+                if other.side == u.side then
+                    if dist == 1 then
+                        adj_allies = adj_allies + 1
+                    end
+                elseif wesnoth.sides.is_enemy(u.side, other.side) then
+                    if has_elemental_threat(other) then
+                        near_elemental_enemies = near_elemental_enemies + 1
+                        if dist == 1 then
+                            adj_elemental_enemies = adj_elemental_enemies + 1
+                        end
+                    end
+                    if dist == 1 and has_blade_or_impact_melee(other) then
+                        adj_physical_bruisers = adj_physical_bruisers + 1
+                    end
+                end
+            end
+        end
+    end
+
+    -- Must either dampen an adjacent elemental enemy OR ward at least 1 adjacent ally against a nearby (<=2 hex) elemental threat
+    if adj_elemental_enemies == 0 and (adj_allies == 0 or near_elemental_enemies == 0) then
+        return false
+    end
+
+    -- Avoid +20% Blade/Impact vulnerability if exposed to multiple physical bruisers
+    if adj_physical_bruisers >= 2 then
+        return false
+    end
+    if adj_physical_bruisers == 1 and adj_elemental_enemies == 0 and u.hitpoints < 22 then
+        return false
+    end
+
     return true
 end
 
@@ -118,6 +194,7 @@ function marine_grounding.activate(ctx)
 
     -- Mark grounded
     u.variables.lu_grounded = true
+    u:remove_modifications({ id = "LIUN_grounding_stance_mod" })
 
     -- Vulnerability Cost: 0 MP for turn + +20% vulnerability to melee Blade/Impact until the next own turn
     u.moves = 0
@@ -150,6 +227,37 @@ function marine_grounding.activate(ctx)
     wesnoth.wml_actions.redraw{}
 end
 
+-- AI tactical reflex before combat: if an AI Marine engages an elemental enemy, deploy Pylum to dampen retaliation
+function marine_grounding.on_attack(ctx)
+    ctx = ctx or wesnoth.current.event_context
+    if not ctx or not ctx.x1 or not ctx.y1 or not ctx.x2 or not ctx.y2 then return end
+    local u = wesnoth.units.get(ctx.x1, ctx.y1)
+    local d = wesnoth.units.get(ctx.x2, ctx.y2)
+    if not u or not d or d.hitpoints <= 0 then return end
+    if not has_elemental_threat(d) then return end
+
+    if marine_grounding.should_ai_ground(u) then
+        marine_grounding.activate({ x1 = u.x, y1 = u.y })
+    end
+end
+
+-- AI tactical reflex at turn end: deploy Pylum on eligible Marines standing in formation near elemental threats
+function marine_grounding.on_side_turn_end(side_num)
+    side_num = side_num or wesnoth.current.side
+    local side_info = wesnoth.sides[side_num]
+    if not side_info or side_info.controller ~= "ai" then return end
+
+    local marines = wesnoth.units.find_on_map({
+        side = side_num,
+        race = "marinecommand"
+    })
+    for idx, u in ipairs(marines) do
+        if marine_grounding.should_ai_ground(u) then
+            marine_grounding.activate({ x1 = u.x, y1 = u.y })
+        end
+    end
+end
+
 -- Handles unit movement to update aura boundaries dynamically
 function marine_grounding.on_unit_moved(ctx)
     marine_grounding.update_wards()
@@ -176,4 +284,3 @@ function marine_grounding.on_side_turn(side_num)
 end
 
 return marine_grounding
-
