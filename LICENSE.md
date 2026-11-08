@@ -1,32 +1,24 @@
-The Battle for Wesnoth - User Made Content (UMC) License
+Liminal Union - Battle for Wesnoth User Made Content (UMC)
 
-This project utilizes a dual-licensing scheme split by content type:
+Copyright (C) 2026 the Liminal Union contributors listed in about.cfg.
 
-1. PROGRAM CODE (WML, Lua, Maps, Scripts)
-------------------------------------------------
-All source code, configuration files (.cfg), scripts (.lua), maps, and technical 
-logic in this repository are licensed under the terms of the GNU General Public 
-License as published by the Free Software Foundation, either version 3 of the 
-License, or (at your option) any later version.
+All content of this add-on - WML, Lua, images, sounds, translations and
+all other files - is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free
+Software Foundation, either version 2 of the License, or (at your option) any
+later version.
 
-A full copy of the GNU GPL v3 can be found at: 
-https://gnu.org
+This add-on is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License for more details:
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
+Artwork adapted from Battle for Wesnoth and from other add-ons keeps its
+original authors, who are credited in about.cfg.
 
-2. ASSETS AND MEDIA (Graphics, Images, Audio, Sounds, Music)
-------------------------------------------------
-All visual assets, user interface elements, textures, audio files, sound 
-effects, and musical tracks in this repository are licensed under the terms of 
-the Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).
+Some assets were created with AI assistance.
 
-These assets were created and generated utilizing AI-pairing / AI-assistance. 
-Under the terms of CC BY-SA 4.0, you are free to share and adapt these media 
-files for any purpose, even commercially, provided you give appropriate credit 
-and distribute your contributions under the same license.
-
-A full copy of the CC BY-SA 4.0 license can be found at:
-https://creativecommons.org
-
-
-------------------------------------------------
-Copyright (c) 2026 Wesnoth-User-Pseudonym
+No file in this add-on is currently released under a Creative Commons
+licence. Any such release must be listed explicitly in a top-level
+ART_LICENSE file or in a "<asset>.license" file next to the asset, as the
+add-on server terms require.

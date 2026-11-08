@@ -11,7 +11,7 @@ Scope: Preserve mechanics, IDs, values, advancement, events, persistent variable
 
 Separate requirements, observations, proposals, historical evidence and open checks. Inspect current sources before relying on earlier reports. Never read or copy credentials.
 
-Sources: Read [canon](docs/canon/CANON_LOCK.md), [language style](docs/canon/STYLE_GUIDE.md) and relevant product sources first. Derived summaries cannot override canon or language style. Do not invent unsupported lore, paths or engine guarantees; mark unverified claims explicitly. Code describes implementation, not domain correctness. See [workspace rules](../AGENTS.md) and [product knowledge](docs/index.md).
+Sources: Read [canon](../../umc-development/projects/liminal-union/docs/canon/CANON_LOCK.md), [language style](../../umc-development/projects/liminal-union/docs/canon/STYLE_GUIDE.md) and relevant product sources first. Derived summaries cannot override canon or language style. Do not invent unsupported lore, paths or engine guarantees; mark unverified claims explicitly. Code describes implementation, not domain correctness. See [workspace rules](../AGENTS.md) and [product knowledge](../../umc-development/projects/liminal-union/docs/index.md). Product documentation lives there, outside the add-on, and `_server.ign` keeps development files out of the upload.
 
 ## Working method
 
