@@ -148,7 +148,7 @@ function marine_grounding.update_wards()
                         }}
                     })
                 else
-                    -- Adjacent Enemy: Ground magical accuracy (max 50% CTH) & -20% elemental damage
+                    -- Adjacent Enemy: cap fire/cold/arcane accuracy (max 50% CTH) & -20% elemental damage
                     target:add_modification("object", {
                         id = "LIUN_grounding_dampen_enemy",
                         silent = true,
@@ -166,7 +166,7 @@ function marine_grounding.update_wards()
                                 { "chance_to_hit", {
                                     id = "LIUN_grounding_null_magic",
                                     name = _ "grounded",
-                                    description = _ "Magical accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit.",
+                                    description = _ "Fire, cold and arcane accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit.",
                                     -- max_value caps; value with cumulative=no would set 50 and raise lower odds.
                                     max_value = 50,
                                     priority = 100

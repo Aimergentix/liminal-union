@@ -432,8 +432,8 @@ msgstr "Le correnti magiche vengono scaricate a terra: -20% di danno sugli attac
 
 #. [lua]: marine_grounding.update_wards
 #: liminal-union/lua/marine_grounding.lua:89
-msgid "Magical accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit."
-msgstr "La precisione magica viene scaricata a terra dal Pylum di Messa a Terra Salina: massimo 50% di probabilità di colpire."
+msgid "Fire, cold and arcane accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit."
+msgstr "La precisione degli attacchi di fuoco, freddo e arcani viene scaricata a terra dal Pylum di Messa a Terra Salina: massimo 50% di probabilità di colpire."
 
 #. [lua]: marine_grounding.activate
 #: liminal-union/lua/marine_grounding.lua:111

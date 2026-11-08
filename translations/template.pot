@@ -430,7 +430,7 @@ msgstr ""
 
 #. [lua]: marine_grounding.update_wards
 #: liminal-union/lua/marine_grounding.lua:89
-msgid "Magical accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit."
+msgid "Fire, cold and arcane accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit."
 msgstr ""
 
 #. [lua]: marine_grounding.activate

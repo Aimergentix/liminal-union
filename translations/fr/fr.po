@@ -432,8 +432,8 @@ msgstr "Les courants magiques sont dissipés dans la terre : -20% de dégâts su
 
 #. [lua]: marine_grounding.update_wards
 #: liminal-union/lua/marine_grounding.lua:89
-msgid "Magical accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit."
-msgstr "La précision magique est dissipée par le Pylum de mise à la terre : 50% de chances de toucher au maximum."
+msgid "Fire, cold and arcane accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit."
+msgstr "La précision des attaques de feu, de froid et arcaniques est dissipée par le Pylum de mise à la terre : 50% de chances de toucher au maximum."
 
 #. [lua]: marine_grounding.activate
 #: liminal-union/lua/marine_grounding.lua:111

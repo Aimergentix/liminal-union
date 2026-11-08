@@ -432,8 +432,8 @@ msgstr "Magische Ströme werden in den Boden abgeleitet: -20% Schaden bei Elemen
 
 #. [lua]: marine_grounding.update_wards
 #: liminal-union/lua/marine_grounding.lua:89
-msgid "Magical accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit."
-msgstr "Magische Zielgenauigkeit wird durch den Salz-Erdungspfeiler abgeleitet: höchstens 50% Trefferchance."
+msgid "Fire, cold and arcane accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit."
+msgstr "Die Zielgenauigkeit von Feuer-, Kälte- und Arkanangriffen wird durch den Salz-Erdungspfeiler abgeleitet: höchstens 50% Trefferchance."
 
 #. [lua]: marine_grounding.activate
 #: liminal-union/lua/marine_grounding.lua:111
