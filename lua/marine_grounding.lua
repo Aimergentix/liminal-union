@@ -297,6 +297,11 @@ function marine_grounding.on_unit_moved(ctx)
     marine_grounding.update_wards()
 end
 
+-- Recruits and recalls appear without a moveto event, so give them the ward here
+function marine_grounding.on_unit_placed(ctx)
+    marine_grounding.update_wards()
+end
+
 -- Handles unit death to clean up wards if a grounded marine falls
 function marine_grounding.on_unit_died(ctx)
     marine_grounding.update_wards()
