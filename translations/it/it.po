@@ -420,33 +420,39 @@ msgid "<span color='#ffdd55'>🪽 Wingsuit Glide (+1 MP, Skirmish)</span>"
 msgstr "<span color='#ffdd55'>🪽 Planata alare (+1 PM, Schermaglia)</span>"
 
 #. [lua]: marine_grounding.update_wards
-#: liminal-union/lua/marine_grounding.lua:82
-#: liminal-union/lua/marine_grounding.lua:88
+#: liminal-union/lua/marine_grounding.lua:188
+#: liminal-union/lua/marine_grounding.lua:194
+#: liminal-union/lua/marine_grounding.lua:243
 msgid "grounded"
 msgstr "messo a terra"
 
+#. [lua]: marine_grounding.activate
+#: liminal-union/lua/marine_grounding.lua:244
+msgid "Salt-Grounding Pylum deployed: +20% vulnerability to melee blade and impact attacks until this unit's next turn. The resistance table also lists it for ranged attacks, where it does not apply; the attack preview shows the true damage."
+msgstr "Pylum di Messa a Terra Salina schierato: +20% di vulnerabilità a Lama e Impatto in mischia fino al prossimo turno di questa unità. La tabella delle resistenze lo mostra anche per gli attacchi a distanza, dove non si applica; l'anteprima dell'attacco mostra il danno reale."
+
 #. [lua]: marine_grounding.update_wards
-#: liminal-union/lua/marine_grounding.lua:83
+#: liminal-union/lua/marine_grounding.lua:189
 msgid "Magical currents are grounded into the earth: -20% damage on elemental attacks."
 msgstr "Le correnti magiche vengono scaricate a terra: -20% di danno sugli attacchi elementali."
 
 #. [lua]: marine_grounding.update_wards
-#: liminal-union/lua/marine_grounding.lua:89
+#: liminal-union/lua/marine_grounding.lua:195
 msgid "Fire, cold and arcane accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit."
 msgstr "La precisione degli attacchi di fuoco, freddo e arcani viene scaricata a terra dal Pylum di Messa a Terra Salina: massimo 50% di probabilità di colpire."
 
 #. [lua]: marine_grounding.activate
-#: liminal-union/lua/marine_grounding.lua:111
+#: liminal-union/lua/marine_grounding.lua:217
 msgid "<span color='#55ffff'>[PYLUM ALREADY DEPLOYED]</span>"
 msgstr "<span color='#55ffff'>[PYLUM GIÀ DISPIEGATO]</span>"
 
 #. [lua]: marine_grounding.activate
-#: liminal-union/lua/marine_grounding.lua:113
+#: liminal-union/lua/marine_grounding.lua:219
 msgid "<span color='#ffaa33'>[GROUNDING UNAVAILABLE]</span>"
 msgstr "<span color='#ffaa33'>[MESSA A TERRA NON DISPONIBILE]</span>"
 
 #. [lua]: marine_grounding.activate
-#: liminal-union/lua/marine_grounding.lua:143
+#: liminal-union/lua/marine_grounding.lua:262
 msgid "<span color='#55ffff'>⚡ Salt-Grounding Pylum [0 MP, Ward Active]</span>"
 msgstr "<span color='#55ffff'>⚡ Pylum di Messa a Terra Salina [0 PM, Protezione Attiva]</span>"
 

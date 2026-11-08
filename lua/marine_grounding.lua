@@ -226,16 +226,28 @@ function marine_grounding.activate(ctx)
     u.variables.lu_grounded = true
     u:remove_modifications({ id = "LIUN_grounding_stance_mod" })
 
-    -- Vulnerability Cost: 0 MP for turn + +20% vulnerability to melee Blade/Impact until the next own turn
+    -- Vulnerability Cost: 0 MP for turn + +20% vulnerability to melee Blade/Impact until the next own turn.
+    -- A plain resistance effect would also hit ranged Blade/Impact, so the cost is a resistance ability
+    -- filtered on the opponent's weapon; removing the stance object removes it. The sidebar resistance
+    -- table ignores weapon filters (engine reports.cpp, unit::resistance_against), so it shows the cost
+    -- for ranged attacks too; the named ability explains this to the player.
     u.moves = 0
     u:add_modification("object", {
         id = "LIUN_grounding_stance_mod",
         silent = true,
         { "effect", {
-            apply_to = "resistance",
-            { "resistance", {
-                blade = 20,
-                impact = 20
+            apply_to = "new_ability",
+            { "abilities", {
+                { "resistance", {
+                    id = "LIUN_grounding_melee_cost",
+                    name = _ "grounded",
+                    description = _ "Salt-Grounding Pylum deployed: +20% vulnerability to melee blade and impact attacks until this unit's next turn. The resistance table also lists it for ranged attacks, where it does not apply; the attack preview shows the true damage.",
+                    add = -20,
+                    max_value = 100,
+                    apply_to = "blade,impact",
+                    affect_self = true,
+                    { "filter_second_weapon", { range = "melee" } }
+                }}
             }}
         }},
         { "effect", {
