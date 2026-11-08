@@ -1526,13 +1526,6 @@ msgstr "🪽🟃 Fähnrich"
 msgid "Lance [pyronite]"
 msgstr "Lanze [Pyronit]"
 
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/command/a0-maiden-ensign.cfg:30
-#: liminal-union/units/halfelven/command/a2-maiden-captain.cfg:28
-#: liminal-union/units/halfelven/command/a3-maiden-colonel.cfg:28
-msgid "Lance [triple tap]"
-msgstr "Lanze [Dreifachstoß]"
-
 #. [unit_type]: id=LIUN_Maiden_Ensign_Base
 #: liminal-union/units/halfelven/command/a0-maiden-ensign.cfg:54
 msgid "A Maiden Ensign, or confidantë, is a young officer cadet schooled in civic law, battlefield triage, and the arts of alignment conduction. Projecting a steady bio-resonant field, she tempers the daytime and nighttime vulnerabilities of adjacent comrades. Trained as a first responder, she can render first aid to wounded comrades in the field."
@@ -1689,13 +1682,6 @@ msgstr "🔱 🟃 Fähnrich"
 msgid "Sword [kryonite]"
 msgstr "Schwert [Kryonit]"
 
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/command/b0-marine-ensign.cfg:30
-#: liminal-union/units/halfelven/command/b2-marine-captain.cfg:28
-#: liminal-union/units/halfelven/command/b3-marine-colonel.cfg:28
-msgid "Sword [double tap]"
-msgstr "Schwert [Doppelhieb]"
-
 #. [unit_type]: id=LIUN_Marine_Ensign_Base
 #: liminal-union/units/halfelven/command/b0-marine-ensign.cfg:54
 msgid "A Marine Ensign is a promising cadet chosen for steady judgment and civic discipline. Entering the officer path as novice Conductors, Ensigns project an initial alignment aura that steadies the fighting rhythm of nearby soldiers during off-peak hours. Though young, their presence on the field anchors the formation."
@@ -1715,12 +1701,6 @@ msgstr "🔱 🟃 Fähnrich (0·1)"
 #: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:6
 msgid "🔱 🟇 Cornet"
 msgstr "🔱 🟇 Kornett"
-
-#. [attack]: type=blade
-#: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:17
-#: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:145
-msgid "Short sword"
-msgstr "Kurzschwert"
 
 #. [unit_type]: id=LIUN_Marine_Cornet_Base
 #: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:42
@@ -1802,18 +1782,6 @@ msgstr "🔱 🟔 Oberst (3·3)"
 msgid "🪽⚬ Private"
 msgstr "🪽⚬ Gefreiter"
 
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:18
-#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:135
-msgid "Pitchfork [thrust]"
-msgstr "Heugabel [Stoß]"
-
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:29
-#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:146
-msgid "Pitchfork [throw]"
-msgstr "Heugabel [Wurf]"
-
 #. [unit_type]: id=LIUN_Maiden_Private_Base
 #: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:53
 msgid "Maiden are the backbone of the halfelven commonwealth. They are mothers, bearing and raising the generations to come. Though not warlike by nature, when the Union calls they have never failed to answer. In times of war there is never a shortage of maiden willing to take their place in the corps, alongside their mothers and grandmothers who proudly served before them. In battle they defend their homes and families with absolute devotion; in peace they strengthen the commonwealth through learning, teaching, care, and disciplined craft."
@@ -1828,11 +1796,6 @@ msgstr "🪽⚬ Gefreiter (0·0)"
 #: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:126
 msgid "🪽⚬ Private (0·1)"
 msgstr "🪽⚬ Gefreiter (0·1)"
-
-#. [attack]: type=impact
-#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:157
-msgid "Pitchfork [slam]"
-msgstr "Heugabel [Wuchtschlag]"
 
 #. [unit_type]: id=LIUN_Maiden_Private_0_1
 #: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:167
@@ -1980,12 +1943,6 @@ msgstr "Goldenes Herz / Truppanker 🏅 | Leitende Kriegs-Kunsthandwerkerin, die
 msgid "🔱 ⚬ Private"
 msgstr "🔱 ⚬ Gefreiter"
 
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:18
-#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:187
-msgid "Sickle [double tap]"
-msgstr "Sichel [Doppelhieb]"
-
 #. [attack]: type=impact
 #: liminal-union/units/halfelven/marines/a0-marine-private.cfg:29
 #: liminal-union/units/halfelven/marines/a0-marine-private.cfg:198
@@ -2009,11 +1966,6 @@ msgstr "🔱 ⚬ Gefreiter (0·0)"
 #: liminal-union/units/halfelven/marines/a0-marine-private.cfg:178
 msgid "🔱 ⚬ Private (0·1)"
 msgstr "🔱 ⚬ Gefreiter (0·1)"
-
-#. [attack]: type=impact
-#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:209
-msgid "Sickle [slam]"
-msgstr "Sichel [Wuchtschlag]"
 
 #. [unit_type]: id=LIUN_Marine_Private_0_1
 #: liminal-union/units/halfelven/marines/a0-marine-private.cfg:219
@@ -2067,20 +2019,6 @@ msgstr "Ablenkungsabzeichen | Ihr habt die Ablenkungstaktik im Gefecht gemeister
 #: liminal-union/units/halfelven/marines/a2-masterchief.cfg:6
 msgid "🔱 ⪨ Masterchief"
 msgstr "🔱 ⪨ Hauptfeldwebel"
-
-#. [attack]: type=impact
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:17
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:227
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:291
-msgid "Khopesh [slash]"
-msgstr "Chopper [Hieb]"
-
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:28
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:238
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:302
-msgid "Khopesh [stab]"
-msgstr "Chopper [Stich]"
 
 #. [unit_type]: id=LIUN_Masterchief_Base
 #: liminal-union/units/halfelven/marines/a2-masterchief.cfg:74
@@ -2171,20 +2109,6 @@ msgstr "🔱 ⪨ Waffenwache (2·2)"
 #: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:6
 msgid "🔱 ⪨ Shieldguard"
 msgstr "🔱 ⪨ Schildwache"
-
-#. [attack]: type=impact
-#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:17
-#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:156
-#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:198
-msgid "Shield [punch]"
-msgstr "Schild [Stoß]"
-
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:28
-#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:167
-#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:209
-msgid "Shield [stab]"
-msgstr "Schild [Stich]"
 
 #. [unit_type]: id=LIUN_Shieldguard_Base
 #: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:52
