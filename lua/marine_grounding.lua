@@ -25,15 +25,33 @@ local function has_elemental_threat(u)
     return false
 end
 
--- Checks if a unit has a melee blade or impact attack
-local function has_blade_or_impact_melee(u)
-    if not u or not u.__cfg then return false end
+-- Highest damage × strikes among a unit's attacks that match `pred`, 0 if none
+local function best_output(u, pred)
+    local best = 0
+    if not u or not u.__cfg then return best end
     for atk in wml.child_range(u.__cfg, "attack") do
-        if atk.range == "melee" and (atk.type == "blade" or atk.type == "impact") then
-            return true
+        if pred(atk) then
+            best = math.max(best, (atk.damage or 0) * (atk.number or 0))
         end
     end
-    return false
+    return best
+end
+
+local function is_blade_or_impact_melee(atk)
+    return atk.range == "melee" and (atk.type == "blade" or atk.type == "impact")
+end
+
+local function is_elemental_attack(atk)
+    return is_elemental(atk.type)
+end
+
+-- A real melee threat to the Pylum's +20% Blade/Impact cost. A caster's backup staff or an
+-- archer's short sword does not count: the blade/impact melee must reach BRUISER_MIN_OUTPUT
+-- and be at least as strong as the unit's best elemental attack (Mage 5×1 staff vs 7×3 fire).
+local BRUISER_MIN_OUTPUT = 12
+local function is_physical_bruiser(u)
+    local melee = best_output(u, is_blade_or_impact_melee)
+    return melee >= BRUISER_MIN_OUTPUT and melee >= best_output(u, is_elemental_attack)
 end
 
 -- Checks if a unit is eligible to deploy the Salt-Grounding Pylum
@@ -55,38 +73,46 @@ function marine_grounding.should_ai_ground(u)
     local side_info = wesnoth.sides[u.side]
     if not side_info or side_info.controller ~= "ai" then return false end
 
-    local all_units = wesnoth.units.find_on_map({})
-    local adj_allies = 0
+    local adj_allies = {}
+    local enemies = {}
     local adj_elemental_enemies = 0
-    local near_elemental_enemies = 0
+    local ally_threats = 0
     local adj_physical_bruisers = 0
 
-    for idx, other in ipairs(all_units) do
+    -- Engine distance: Wesnoth offsets columns, so a row-offset formula misreads adjacency.
+    -- Enemies up to 3 hexes away can be within 2 hexes of an adjacent ally.
+    for idx, other in ipairs(wesnoth.units.find_on_map({})) do
         if other.hitpoints > 0 and other.id ~= u.id then
-            -- Engine distance: Wesnoth offsets columns, so a row-offset formula misreads adjacency.
             local dist = wesnoth.map.distance_between(u.x, u.y, other.x, other.y)
-            if dist <= 2 then
-                if not wesnoth.sides.is_enemy(u.side, other.side) then
-                    if dist == 1 then
-                        adj_allies = adj_allies + 1
-                    end
-                else
-                    if has_elemental_threat(other) then
-                        near_elemental_enemies = near_elemental_enemies + 1
-                        if dist == 1 then
-                            adj_elemental_enemies = adj_elemental_enemies + 1
-                        end
-                    end
-                    if dist == 1 and has_blade_or_impact_melee(other) then
-                        adj_physical_bruisers = adj_physical_bruisers + 1
+            if not wesnoth.sides.is_enemy(u.side, other.side) then
+                if dist == 1 then table.insert(adj_allies, other) end
+            elseif dist <= 3 then
+                table.insert(enemies, { unit = other, dist = dist })
+            end
+        end
+    end
+
+    for idx, e in ipairs(enemies) do
+        if e.dist == 1 and is_physical_bruiser(e.unit) then
+            adj_physical_bruisers = adj_physical_bruisers + 1
+        end
+        if has_elemental_threat(e.unit) then
+            if e.dist == 1 then
+                adj_elemental_enemies = adj_elemental_enemies + 1
+            else
+                -- The ward covers adjacent allies, so measure the threat from them, not from the Marine.
+                for jdx, ally in ipairs(adj_allies) do
+                    if wesnoth.map.distance_between(ally.x, ally.y, e.unit.x, e.unit.y) <= 2 then
+                        ally_threats = ally_threats + 1
+                        break
                     end
                 end
             end
         end
     end
 
-    -- Must either dampen an adjacent elemental enemy OR ward at least 1 adjacent ally against a nearby (<=2 hex) elemental threat
-    if adj_elemental_enemies == 0 and (adj_allies == 0 or near_elemental_enemies == 0) then
+    -- Must either dampen an adjacent elemental enemy OR ward an adjacent ally that an elemental enemy within 2 hexes threatens
+    if adj_elemental_enemies == 0 and ally_threats == 0 then
         return false
     end
 
