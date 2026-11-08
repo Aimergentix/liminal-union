@@ -2766,9 +2766,9 @@ msgid "🧿 🟗 Phoinix Elder (1·1)"
 msgstr "🧿 🟗 Phoinix Ancien (1·1)"
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_1_1
-#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:188
-msgid "The tears of an elder phoinix bird draw poison from the wounded."
-msgstr "Les larmes d'un vieil oiseau phoinix retirent le poison des blessés."
+#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:220
+msgid "Veteran Courier Wing | High-altitude mastery unlocks a third arcane ranged strike (+3 HP, +1 Ranged Strike)."
+msgstr "Aile de messager vétéran | La maîtrise du vol en haute altitude débloque une troisième frappe arcanique à distance (+3 PV, +1 frappe à distance)."
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_1_2
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:197
@@ -2776,9 +2776,9 @@ msgid "🧿 🟗 Phoinix Elder (1·2)"
 msgstr "🧿 🟗 Phoinix Ancien (1·2)"
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_1_2
-#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:208
-msgid "Ability: teleport | Friendly villages maintain portals. This Phoinix unit can now teleport between them."
-msgstr "Capacité : téléportation | Les villages alliés entretiennent des portails. Cette unité Phoinix peut désormais se téléporter de l'un à l'autre."
+#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:269
+msgid "Ability: teleport | Friendly villages maintain portals. This Phoinix unit can now teleport between them (+3 HP, 3 Ranged Strikes, Teleport)."
+msgstr "Capacité : téléportation | Les villages alliés entretiennent des portails. Cette unité Phoinix peut désormais se téléporter de l'un à l'autre (+3 PV, 3 frappes à distance, téléportation)."
 
 msgid "Sword [thrust]"
 msgstr "Épée [estoc]"
