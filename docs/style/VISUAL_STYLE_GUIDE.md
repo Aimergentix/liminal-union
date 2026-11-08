@@ -31,10 +31,51 @@ for equipment and attack continuity. These designs are not implemented yet.
   Verify `profile`/`small_profile` integration and dialogue orientation against
   the installed engine before replacing the legacy portrait references.
 
-Artwork masters and concept sheets are kept outside the product, in
+Artwork masters and concept sheets named below are kept outside the product, in
 `umc-development/projects/liminal-union/artwork/maiden/` (`portrait-masters/`,
-`sprite-concepts/`), with their prompts and manifests. Portrait review and
-integration continue on the `sprites` branch.
+`sprite-concepts/`), with their prompts and manifests.
+
+Saved portrait masters: Maiden dialogue v1
+and Maiden help v1.
+The version manifest
+records original dimensions and SHA-256 hashes. These approved L1 artwork masters
+are preserved originals, not final engine-sized exports; runtime paths are unchanged.
+
+Current portrait pair for review: Maiden dialogue v5
+and Maiden help v5.
+The raised-visor direction is user-approved; v5 refines surface rendering and
+the trained athletic build. The v5 manifest
+records dimensions, hashes and limits: pixel dimensions remain unchanged and
+fine skin texture remains. Earlier versions are preserved; v2/v3 nasal-guard
+designs are superseded. Runtime references are unchanged.
+
+Current additional portrait pairs for review:
+
+| Unit | Dialogue | Help | Manifest |
+|---|---|---|---|
+| Private L0 v2 | Portrait | Portrait | Metadata |
+| Hunterkiller L2 v1 | Portrait | Portrait | Metadata |
+| Techtronic L2 v1 | Portrait | Portrait | Metadata |
+
+All three pairs show folded gliding membranes between the upper arms and torso;
+dialogue views also show folded hip panels. Private L0 is bareheaded with small
+Pyrite shoulder caps and light forearm guards over a cloth tunic, without a full
+breastplate. Hunterkiller has two small decorative service distinctions on the
+breastplate; their shapes propose artwork, not canon names or gameplay ranks.
+Techtronic carries hand tools, a parts satchel and a crafted fitting, with bow
+and quiver slung behind her. L2 portraits use the raised visor.
+Private v1 and the first Hunterkiller drafts lack clearly visible wingsuits and
+are superseded. They remain preserved. The Jaeger v5 wingsuit depiction still
+needs review before it is used as a complete equipment reference.
+Each folder includes generation prompts and a manifest with dimensions, hashes
+and limitations. These are artwork masters; runtime references are unchanged.
+
+Saved sprite design references: bareheaded Maiden Private L0
+and Pyrite Maiden line overview.
+These preserved originals are large concept previews, not validated 72×72 assets
+or animation frames. The overview predates the approved L1 raised visor; use
+the current equipment guidance below. The concept manifest
+records dimensions, hashes and remaining limitations.
 
 ## Proposed animation scope
 
@@ -87,7 +128,9 @@ Maiden Private runtime frames, referenced by its unit file under
 `-idle-1`, `-idle-2`, `-defend` (hit reaction); new `-dodge`, `-bow-1`…`-bow-4`
 (ready, draw, release, recover), `-kick-1`…`-kick-3`, `-jump-1`…`-jump-4`,
 `-death-1`…`-death-3`. Jaeger, Hunterkiller and Techtronic keep their existing
-frame names.
+frame names. Maiden troop units now reference review-stage 400×400 portrait
+exports (`portraits/halfelven/maiden-<unit>.webp` and `-small.webp`); their
+acceptance and in-game integration remain unverified.
 
 ## Core Aesthetic: The Ancient Commonwealth – Liminal Union
 - **Forbidden:** Mechatronics, steampunk, digital UI, sleek robotics.
