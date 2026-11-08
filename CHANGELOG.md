@@ -2,7 +2,7 @@
 
 Player-facing changes to Liminal Union. Values are test values, not settled balance.
 
-## Unreleased (after 0.2.4alpha)
+## 0.3.0alpha — 2026-11-08
 
 ### Units and weapons
 - Maiden Private: kick and impact bow; arcane bow from stage 0·1. New Maiden portraits.
