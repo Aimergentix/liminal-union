@@ -1,0 +1,36 @@
+# Upload ignore list for the Wesnoth add-on server.
+# This file replaces the engine defaults (src/filesystem.cpp, 1.19.29),
+# so the default patterns are repeated first. Patterns match bare names.
+
+# Engine defaults
+.+
+#*#
+*~
+*-bak
+*.swp
+*.pbl
+*.ign
+_info.cfg
+*.exe
+*.bat
+*.cmd
+*.com
+*.scr
+*.sh
+*.js
+*.vbs
+*.o
+*.ini
+Thumbs.db
+*.wesnoth
+*.project
+.+/
+__MACOSX/
+
+# Development files: instructions and translation sources.
+# The engine loads the compiled catalogs in translations/*/LC_MESSAGES/.
+AGENTS.md
+CLAUDE.md
+README.md
+*.po
+*.pot
