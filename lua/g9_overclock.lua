@@ -86,16 +86,30 @@ function g9_overclock.on_attack(ctx)
     local d = wesnoth.units.get(ctx.x2, ctx.y2)
     if not d or d.hitpoints <= 0 then return end
 
-    -- Tactical conditions:
-    -- 1. Safe core integrity (>= 12 HP so -3 HP thermal stress leaves healthy reserves)
-    --    OR lethal/high-value finisher window (defender <= 16 HP or enemy leader).
-    -- 2. Target warrants protocol bypass: exerts ZOC (Stun strips ZOC for allies),
-    --    is Level 1+, or is in burst-finisher range (<= 18 HP).
-    local safe_hp = (u.hitpoints >= 12) or (d.hitpoints <= 16) or d.canrecruit
-    local worthy_target = d.zoc or (d.level >= 1) or (d.hitpoints <= 18) or d.canrecruit
-    if safe_hp and worthy_target then
+    -- Tactical conditions (the earlier "ZOC or Level 1+" test passed for almost every
+    -- enemy, so the reflex fired in 41 of 42 AI G9 engagements):
+    -- 1. Safe core integrity: >= 12 HP, so -3 HP thermal stress leaves reserves,
+    --    unless the target is the enemy leader.
+    -- 2. Payoff: the boost opens a kill window (see likely_damage), or the target is the
+    --    enemy leader or Level 2+, where Stun stripping its ZOC matters most.
+    local safe_hp = (u.hitpoints >= 12) or d.canrecruit
+    if not safe_hp then return end
+
+    local damage, strikes = weapon.damage or 0, weapon.number or 0
+    local mult = (100 - wesnoth.units.resistance_against(d, weapon.type or "", false)) / 100
+    local kill_window = d.hitpoints > g9_overclock.likely_damage(damage, strikes, mult)
+        and d.hitpoints <= g9_overclock.likely_damage(damage + 2, strikes + 1, mult)
+    local high_value = d.canrecruit or d.level >= 2
+    if kill_window or high_value then
         g9_overclock.activate({ x1 = u.x, y1 = u.y }, true)
     end
+end
+
+-- Damage if about half the strikes land (rounded up), after the defender's resistance.
+-- Ignores time of day and leadership; a deterministic estimate, safe in synced code.
+function g9_overclock.likely_damage(damage, strikes, mult)
+    local per_hit = math.max(1, math.floor(damage * mult + 0.5))
+    return per_hit * math.ceil(strikes / 2)
 end
 
 -- Handles turn end / side turn to apply thermal stress and clean up overclock
