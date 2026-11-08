@@ -5,24 +5,20 @@ local _ = wesnoth.textdomain 'wesnoth-liminal-union'
 
 local marine_grounding = {}
 
--- Canonical odd-r hex distance helper
-local function hex_distance(x1, y1, x2, y2)
-    if not x1 or not y1 or not x2 or not y2 then return 999 end
-    local q1 = x1 - math.floor((y1 - (y1 % 2)) / 2)
-    local r1 = y1
-    local s1 = -q1 - r1
-    local q2 = x2 - math.floor((y2 - (y2 % 2)) / 2)
-    local r2 = y2
-    local s2 = -q2 - r2
-    return math.max(math.abs(q1 - q2), math.abs(r1 - r2), math.abs(s1 - s2))
+-- Only Kryonite troops carry the Pylum; Officers share race=marinecommand but not the alloy.
+-- The resonance dummy ability is static per unit type, unlike [unit_type][variables],
+-- which the engine does not copy to unit instances.
+local KRYONITE_ABILITY = "LIUN_resonance_kryonite"
+
+local function is_elemental(damage_type)
+    return damage_type == "fire" or damage_type == "cold" or damage_type == "arcane"
 end
 
 -- Checks if a unit has a fire, cold, or arcane attack
 local function has_elemental_threat(u)
     if not u or not u.__cfg then return false end
     for atk in wml.child_range(u.__cfg, "attack") do
-        local atype = atk.type
-        if atype == "fire" or atype == "cold" or atype == "arcane" then
+        if is_elemental(atk.type) then
             return true
         end
     end
@@ -44,7 +40,7 @@ end
 function marine_grounding.can_ground(u)
     if not u or u.hitpoints <= 0 then return false end
     if u.side ~= wesnoth.current.side then return false end
-    if u.race ~= "marinecommand" and u.variables.lu_alloy ~= "kryonite" then return false end
+    if not u:matches({ ability = KRYONITE_ABILITY }) then return false end
     if u.variables.lu_grounded then return false end
     return true
 end
@@ -54,6 +50,8 @@ function marine_grounding.should_ai_ground(u)
     if not marine_grounding.can_ground(u) then return false end
     if u.canrecruit or u.hitpoints < 14 then return false end
 
+    -- side.controller is synced in live games, but replays keep the starting controller.
+    -- See LUA_GUIDELINES.md §5 before relying on it further.
     local side_info = wesnoth.sides[u.side]
     if not side_info or side_info.controller ~= "ai" then return false end
 
@@ -65,13 +63,14 @@ function marine_grounding.should_ai_ground(u)
 
     for idx, other in ipairs(all_units) do
         if other.hitpoints > 0 and other.id ~= u.id then
-            local dist = hex_distance(u.x, u.y, other.x, other.y)
+            -- Engine distance: Wesnoth offsets columns, so a row-offset formula misreads adjacency.
+            local dist = wesnoth.map.distance_between(u.x, u.y, other.x, other.y)
             if dist <= 2 then
-                if other.side == u.side then
+                if not wesnoth.sides.is_enemy(u.side, other.side) then
                     if dist == 1 then
                         adj_allies = adj_allies + 1
                     end
-                elseif wesnoth.sides.is_enemy(u.side, other.side) then
+                else
                     if has_elemental_threat(other) then
                         near_elemental_enemies = near_elemental_enemies + 1
                         if dist == 1 then
@@ -121,15 +120,20 @@ function marine_grounding.update_wards()
 
     if #grounded_marines == 0 then return end
 
-    -- 3. Apply auras to adjacent units
+    -- 3. Apply auras to adjacent units, each effect at most once per unit: resistance objects
+    --    add up, so a unit touching several grounded Marines must not gain +40% or more.
+    local warded, dampened = {}, {}
     for idx, gm in ipairs(grounded_marines) do
         local adjacents = wesnoth.units.find_on_map({
             { "filter_adjacent", { id = gm.id } }
         })
 
         for jdx, target in ipairs(adjacents) do
-            if target.hitpoints > 0 then
-                if target.side == gm.side then
+            local hostile = wesnoth.sides.is_enemy(gm.side, target.side)
+            local done = hostile and dampened or warded
+            if target.hitpoints > 0 and not done[target.id] then
+                done[target.id] = true
+                if not hostile then
                     -- Adjacent Ally: +20% Elemental Warding (Fire, Cold, Arcane)
                     target:add_modification("object", {
                         id = "LIUN_grounding_ward_ally",
@@ -163,9 +167,9 @@ function marine_grounding.update_wards()
                                     id = "LIUN_grounding_null_magic",
                                     name = _ "grounded",
                                     description = _ "Magical accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit.",
-                                    value = 50,
-                                    priority = 100,
-                                    cumulative = false
+                                    -- max_value caps; value with cumulative=no would set 50 and raise lower odds.
+                                    max_value = 50,
+                                    priority = 100
                                 }}
                             }}
                         }}
@@ -227,14 +231,18 @@ function marine_grounding.activate(ctx)
     wesnoth.wml_actions.redraw{}
 end
 
--- AI tactical reflex before combat: if an AI Marine engages an elemental enemy, deploy Pylum to dampen retaliation
+-- AI tactical reflex before combat: if the defender retaliates with an elemental weapon, deploy Pylum to dampen it.
+-- The attack event fires before the strikes and the engine rebuilds the battle context afterwards,
+-- so the dampen applies to this exchange. The defender's weapon is already chosen at this point.
 function marine_grounding.on_attack(ctx)
     ctx = ctx or wesnoth.current.event_context
     if not ctx or not ctx.x1 or not ctx.y1 or not ctx.x2 or not ctx.y2 then return end
     local u = wesnoth.units.get(ctx.x1, ctx.y1)
     local d = wesnoth.units.get(ctx.x2, ctx.y2)
     if not u or not d or d.hitpoints <= 0 then return end
-    if not has_elemental_threat(d) then return end
+    -- A physical counter would only meet the +20% Blade/Impact cost; leave that to the turn-end check.
+    local retaliation = wml.get_child(ctx, "second_weapon")
+    if not retaliation or not is_elemental(retaliation.type) then return end
 
     if marine_grounding.should_ai_ground(u) then
         marine_grounding.activate({ x1 = u.x, y1 = u.y })
@@ -249,7 +257,7 @@ function marine_grounding.on_side_turn_end(side_num)
 
     local marines = wesnoth.units.find_on_map({
         side = side_num,
-        race = "marinecommand"
+        ability = KRYONITE_ABILITY
     })
     for idx, u in ipairs(marines) do
         if marine_grounding.should_ai_ground(u) then
