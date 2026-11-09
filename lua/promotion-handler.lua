@@ -40,14 +40,26 @@ local G9_PROMOTIONS = {
     _ "🤖 [FRAME RE-INDEXED: MAINSERIES STATUS]"
 }
 
-wesnoth.game_events.add_repeating("advance", function(context)
-    local ec = context or wesnoth.current.event_context
+-- add_repeating passes its own dummy arguments ({__quick_lua_event = true}), never
+-- nil, so handlers must read the event from wesnoth.current.event_context.
+
+-- A doctrine stage (sub-level) replaces the unit type but keeps its level. The
+-- engine heals fully on every type change; Union stages grant only +2 HP and keep
+-- poison and slow. Full level-ups, AMLAs and non-Union units keep engine healing.
+local function is_doctrine_stage(u, old_type, old_lvl)
+    return old_type ~= nil and u.type ~= old_type and u.level == old_lvl
+        and tostring(u.type):sub(1, 5) == "LIUN_"
+end
+
+wesnoth.game_events.add_repeating("advance", function()
+    local ec = wesnoth.current.event_context
     if not ec or not ec.x1 or not ec.y1 then return end
     local u = wesnoth.units.get(ec.x1, ec.y1)
     if not u then return end
     -- Store temporary data in unit variables
     u.variables["promotion_hp"] = u.hitpoints
     u.variables["promotion_lvl"] = u.level
+    u.variables["promotion_type"] = u.type
     u.variables["promotion_poisoned"] = u.status.poisoned
     u.variables["promotion_slowed"] = u.status.slowed
 end)
@@ -59,18 +71,19 @@ local function pick_synced(tbl, u)
     return tbl[idx]
 end
 
-wesnoth.game_events.add_repeating("post_advance", function(context)
-    local ec = context or wesnoth.current.event_context
+wesnoth.game_events.add_repeating("post_advance", function()
+    local ec = wesnoth.current.event_context
     if not ec or not ec.x1 or not ec.y1 then return end
     local u = wesnoth.units.get(ec.x1, ec.y1)
     if not u then return end
     local old_hp = u.variables["promotion_hp"]
     local old_lvl = u.variables["promotion_lvl"]
+    local old_type = u.variables["promotion_type"]
+    local is_union = tostring(u.type):sub(1, 5) == "LIUN_"
 
     local is_golem = (u.race == "maidengolem")
 
-    -- If level is unchanged, it was an intermediate medal
-    if old_hp and u.level == old_lvl then
+    if old_hp and is_doctrine_stage(u, old_type, old_lvl) then
         u.hitpoints = math.min(u.max_hitpoints, old_hp + 2)
         u.status.poisoned = u.variables["promotion_poisoned"]
         u.status.slowed = u.variables["promotion_slowed"]
@@ -88,7 +101,7 @@ wesnoth.game_events.add_repeating("post_advance", function(context)
                 wesnoth.interface.float_label(u.x, u.y, string.format("<span color='#ffd700'>%s</span>", tostring(citation)))
             end
         end
-    elseif old_lvl and u.level > old_lvl then
+    elseif is_union and old_lvl and u.level > old_lvl then
         -- Full Level Advancement
         if wesnoth.interface and wesnoth.interface.float_label then
             if is_golem then
@@ -104,13 +117,14 @@ wesnoth.game_events.add_repeating("post_advance", function(context)
     -- Cleanup variables
     u.variables["promotion_hp"] = nil
     u.variables["promotion_lvl"] = nil
+    u.variables["promotion_type"] = nil
     u.variables["promotion_poisoned"] = nil
     u.variables["promotion_slowed"] = nil
 end)
 
 -- Combat kill banter: deadpan civic rationalist response to victory
-wesnoth.game_events.add_repeating("die", function(context)
-    local ec = context or wesnoth.current.event_context
+wesnoth.game_events.add_repeating("die", function()
+    local ec = wesnoth.current.event_context
     if not ec or not ec.x2 or not ec.y2 then return end
     local killer = wesnoth.units.get(ec.x2, ec.y2)
     local victim = wesnoth.units.get(ec.x1, ec.y1)
