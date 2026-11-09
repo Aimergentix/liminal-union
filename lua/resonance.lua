@@ -6,18 +6,6 @@ local _ = wesnoth.textdomain 'wesnoth-liminal-union'
 
 local resonance = {}
 
--- Calculates hex distance between two coordinates in Wesnoth odd-r layout
-local function hex_distance(x1, y1, x2, y2)
-    if not x1 or not y1 or not x2 or not y2 then return 999 end
-    local q1 = x1 - math.floor((y1 - (y1 % 2)) / 2)
-    local r1 = y1
-    local s1 = -q1 - r1
-    local q2 = x2 - math.floor((y2 - (y2 % 2)) / 2)
-    local r2 = y2
-    local s2 = -q2 - r2
-    return math.max(math.abs(q1 - q2), math.abs(r1 - r2), math.abs(s1 - s2))
-end
-
 -- Resolves the armor alloy for a unit (robust to [base_unit] variable dropping)
 function resonance.get_unit_alloy(u)
     if not u or u.hitpoints <= 0 then return nil end
