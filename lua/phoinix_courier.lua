@@ -14,6 +14,34 @@ local function find_archive(list, x, y)
     return nil
 end
 
+local ASH_IMAGE = "projectiles/misfire-spark-2.png"
+
+function phoinix_courier.has_archive(x, y, side)
+    local list = wml.array_access.get(ARCHIVES)
+    local i = find_archive(list, x, y)
+    return i ~= nil and list[i].side == side
+end
+
+-- Archives (ash) of one side, in stored order: { {x=, y=, side=}, ... }
+function phoinix_courier.archives_of(side)
+    local out = {}
+    for _, a in ipairs(wml.array_access.get(ARCHIVES)) do
+        if a.side == side then out[#out + 1] = { x = a.x, y = a.y, side = a.side } end
+    end
+    return out
+end
+
+-- Removes an archive and its marker; used when a Shieldguard rekindles the ash.
+function phoinix_courier.take_archive(x, y, side)
+    local list = wml.array_access.get(ARCHIVES)
+    local i = find_archive(list, x, y)
+    if not i or list[i].side ~= side then return false end
+    table.remove(list, i)
+    wml.array_access.set(ARCHIVES, list)
+    wesnoth.wml_actions.remove_item({ x = x, y = y, image = ASH_IMAGE })
+    return true
+end
+
 -- Handles Phoinix death: leaves an ashen Civic Memorial Archive on the hex
 function phoinix_courier.on_phoinix_died(ctx)
     ctx = ctx or wesnoth.current.event_context

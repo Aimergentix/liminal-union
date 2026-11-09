@@ -4,6 +4,25 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
 
 ## Unreleased
 
+### Field works
+- New Mechatronic (level 1): Maiden Privates advance to Jaeger or Mechatronic; Mechatronics
+  advance to Techtronic, Jaegers to Hunterkiller. Sprites borrowed from the Techtronic.
+- Mechatronics and Techtronics carry 3 aimergent-cores. Standing on a village, castle or keep,
+  they right-click a free hex beside them to build a G8 Simulacrum (10 gold, Mechatronic) or
+  a G9 AI (20 gold, Techtronic), once per turn, spending their attack. Built warforms arrive
+  without moves or attack, cost no upkeep and never advance a level.
+- Shieldguards carry 3 ember capsules. Opening one calls a Phoinix (10 gold) onto a free hex
+  beside the Shieldguard if it has not moved this turn; it spends the Shieldguard's turn, and
+  neither hex may be a village, castle or keep. A Shieldguard beside the ash of a fallen
+  Phoinix of its side kindles it for free, spending its attack.
+- Charges refill for every new unit of these lines and at the start of every scenario; the
+  sidebar shows the count. The AI uses all three actions at the end of its turn.
+
+### Recruits and advancement
+- Braves recruit the G9 NCM and the Phoinix Elder (level 1); G9 AI and Phoinix (level 0)
+  come only from field works. The G9 AI no longer advances to NCM. The G8 Simulacrum is
+  level 0. A Phoinix Elder's final AMLA renews it as a fresh Elder instead of a level 0 Phoinix.
+
 ### Rules
 - Formation Zone of Control: level 0 Union units exert ZOC only while an allied officer
   (Ensign, Cornet, Captain, Colonel) that is not poisoned stands next to them.
