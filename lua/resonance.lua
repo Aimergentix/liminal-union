@@ -174,40 +174,25 @@ function resonance.get_tier(u)
     return resonance.calculate_pod_tier(u)
 end
 
--- Checks if a level 0 troop is eligible for Formation ZOC (pod of >= 2 allied troops)
--- Active immediately upon grouping with allied troops.
--- Slowed units retain Formation ZOC if adjacent to at least one non-slowed ally.
+-- Checks if a level 0 Union unit exerts Formation ZOC: only while an allied
+-- officer (Conductor) that is not poisoned stands adjacent. Mainline level 0
+-- units never exert ZOC; the officer is what holds the conscripts' line.
 function resonance.get_formation_zoc(u)
     if not u or u.hitpoints <= 0 then return false end
     if u.level ~= 0 then return false end
-    local alloy = resonance.get_unit_alloy(u)
-    if not alloy and not resonance.is_conductor(u) then return false end
+    if not resonance.get_unit_alloy(u) and not resonance.is_conductor(u) then return false end
     if u.status.poisoned then return false end
 
-    -- Count adjacent allies from same side who are not poisoned and have alloy or conductor
-    local raw_allies = wesnoth.units.find_on_map({
+    local adjacent = wesnoth.units.find_on_map({
         side = u.side,
         { "filter_adjacent", { id = u.id } }
     })
-
-    local non_slowed_allies = 0
-    local total_valid_allies = 0
-    for idx, a in ipairs(raw_allies) do
-        if a.hitpoints > 0 and (resonance.get_unit_alloy(a) or resonance.is_conductor(a)) and not a.status.poisoned then
-            total_valid_allies = total_valid_allies + 1
-            if not a.status.slowed then
-                non_slowed_allies = non_slowed_allies + 1
-            end
+    for idx, a in ipairs(adjacent) do
+        if a.hitpoints > 0 and not a.status.poisoned and resonance.is_conductor(a) then
+            return true
         end
     end
-
-    if u.status.slowed then
-        -- Slowed unit retains Formation ZOC if adjacent to at least one non-slowed ally
-        return non_slowed_allies >= 1
-    else
-        -- Non-slowed unit gains Formation ZOC in a pod of >= 2 (self + at least 1 valid ally)
-        return total_valid_allies >= 1
-    end
+    return false
 end
 
 -- Updates a single unit based on Conductor proximity.
@@ -280,7 +265,7 @@ function resonance.update_unit_state(u)
     -- Remove deprecated conductor beacon overlay if present
     u:remove_modifications({ id = "LIUN_conductor_beacon" })
 
-    -- 2. Formation ZOC for Level 0 troops in pods of >= 2 (Phase 5.1)
+    -- 2. Formation ZOC for level 0 units beside an allied officer
     u:remove_modifications({ id = "LIUN_formation_zoc" })
     local has_zoc = resonance.get_formation_zoc(u)
     if has_zoc then
@@ -297,7 +282,7 @@ function resonance.update_unit_state(u)
                     { "dummy", {
                         id = "LIUN_formation_zoc_active",
                         name = _ "formation zoc",
-                        description = _ "Standing in formation with allied troops. Exerting Zone of Control."
+                        description = _ "Standing beside an allied officer. Exerting Zone of Control."
                     }}
                 }}
             }}

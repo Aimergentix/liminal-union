@@ -4,7 +4,17 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
 
 ## Unreleased
 
+### Rules
+- Formation Zone of Control: level 0 Union units exert ZOC only while an allied officer
+  (Ensign, Cornet, Captain, Colonel) that is not poisoned stands next to them.
+- Salt-Grounding Pylum: Sergeants and higher only; Privates no longer carry it.
+- Default era: veterans no longer become extra recruiting leaders through their AMLA.
+  Age of Heroes keeps this.
+
 ### Fixes
+- The Conductor aura (+10% damage for adjacent liminal allies by day and by night) works
+  again on every officer; a second abilities block had silently dropped it.
+- Phoinix memorial archives survive saving and loading.
 - Doctrine stages (for example 0·0 → 0·1) heal only 2 HP and keep poison and slow, as
   intended. They previously healed fully. Full level-ups and AMLAs still heal fully;
   other factions are unaffected.

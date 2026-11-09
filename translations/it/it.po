@@ -282,7 +282,8 @@ msgstr "Zona di Controllo di Formazione"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:259
-msgid "Standard level 0 troops in Wesnoth exert no Zone of Control (ZOC).\n\nHowever, Liminal Union level 0 troops (Marine/Maiden Privates, G9 AI, Ensigns) <b>exert full Zone of Control</b> whenever standing in a pod of 2 or more allied troops.\n\nUse tight formations to anchor chokepoints, protect wounded comrades, and deny enemy cavalry breakthroughs."
+#, fuzzy
+msgid "Standard level 0 troops in Wesnoth exert no Zone of Control (ZOC).\n\nLiminal Union level 0 units (Marine/Maiden Privates, G9 AI, Ensigns) <b>exert full Zone of Control</b> while an allied officer (Ensign, Cornet, Captain or Colonel) stands adjacent and is not poisoned. Poison on the unit itself also removes it.\n\nKeep officers beside your conscripts to hold chokepoints, protect wounded comrades and deny cavalry breakthroughs; an officer who falls or moves away leaves the line open."
 msgstr "Le normali truppe di livello 0 in Wesnoth non esercitano alcuna Zona di Controllo (ZdC).\n\nTuttavia, le truppe di livello 0 dell'Unione Liminale (Soldati semplici della Marina e delle Fanciulle, IA G9, Alfieri) <b>esercitano una piena Zona di Controllo</b> ogni volta che si trovano in un gruppo di 2 o più truppe alleate.\n\nUsa formazioni serrate per presidiare le strettoie, proteggere i compagni feriti e impedire gli sfondamenti della cavalleria nemica."
 
 #. [option]
@@ -312,7 +313,8 @@ msgstr "Manovre Tattiche"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:281
-msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Kryonite Marine (troops, not Officers) to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemies' fire, cold and arcane attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!\n• <b>Portal Warden (Passive):</b> A Shieldguard that stood still for a full turn with a Phoinix beside it opens its portable Arcanite portal, charged by mana crystals. Marines other than leaders may travel one way from your villages to free hexes beside it, arriving with no moves and no attack that turn. The portal closes when the Shieldguard moves."
+#, fuzzy
+msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Kryonite Marine (Sergeant or higher; not Privates or Officers) to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemies' fire, cold and arcane attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!\n• <b>Portal Warden (Passive):</b> A Shieldguard that stood still for a full turn with a Phoinix beside it opens its portable Arcanite portal, charged by mana crystals. Marines other than leaders may travel one way from your villages to free hexes beside it, arriving with no moves and no attack that turn. The portal closes when the Shieldguard moves."
 msgstr "• <b>Pylum di Messa a Terra Salina della Marina (Clic destro):</b> Fai clic destro su un Fante di Marina di Kryonite non ancorato (truppe, non ufficiali) per dispiegare il suo palo conduttivo. Conferisce agli alleati adiacenti +20% di protezione elementale, scarica a terra gli attacchi di fuoco, freddo e arcani dei nemici adiacenti (max 50% di probabilità di colpire) e riduce i danni elementali nemici del 20%. Costo: 0 PM e +20% di vulnerabilità a Lama/Impatto in mischia. Dura fino alla fine del successivo turno nemico; va ridispiegato al tuo prossimo turno.\n• <b>Sovraccarico G9 (Clic destro):</b> Fai clic destro su una Forma Bellica G9 con più di 4 PV e un attacco disponibile per attivare l'esclusione del protocollo d'emergenza (+1 attacco in mischia, +2 danni e <b>Stordimento</b> per il turno). Alla fine del turno, il golem subisce fino a 3 PV di stress termico al nucleo e non può morirne.\n• <b>Planata con Tuta Alare delle Fanciulle (Passiva):</b> Qualsiasi unità delle Fanciulle che inizi il turno su terreno elevato (Colline o Montagne) dispiega tute alari termiche, ottenendo <b>+1 PM e Schermagliatore</b> per quel turno!\n• <b>Guardiano del portale (Passivo):</b> Una Guardia Scudata rimasta immobile per un turno intero con una Phoinix accanto apre il suo portale di Arcanite portatile, caricato da cristalli di mana. I Marine che non sono capi viaggiano a senso unico dai vostri villaggi verso gli esagoni liberi accanto a essa, arrivando senza movimento né attacco in quel turno. Il portale si chiude quando la Guardia Scudata si muove."
 
 #. [option]
@@ -571,7 +573,8 @@ msgstr "zdc di formazione"
 
 #. [lua]: resonance.update_unit_state
 #: liminal-union/lua/resonance.lua:321
-msgid "Standing in formation with allied troops. Exerting Zone of Control."
+#, fuzzy
+msgid "Standing beside an allied officer. Exerting Zone of Control."
 msgstr "In formazione con truppe alleate. Esercita Zona di Controllo."
 
 #. [lua]: resonance.update_unit_state
@@ -710,7 +713,8 @@ msgstr "zdc di formazione"
 
 #. [dummy]: id=LIUN_formation_zoc_dummy
 #: liminal-union/macros/abilities.cfg:105
-msgid "This level 0 unit exerts Zone of Control while adjacent to an eligible Liminal Union ally. The effect is recalculated when formation changes. Poison disables it; slow can disrupt it unless an unslowed eligible ally remains adjacent."
+#, fuzzy
+msgid "This level 0 unit exerts Zone of Control while an allied officer that is not poisoned stands adjacent. Poison on this unit disables it."
 msgstr "Questa unità di livello 0 esercita una Zona di Controllo mentre si trova adiacente a un alleato idoneo dell'Unione Liminale. L'effetto viene ricalcolato quando la formazione cambia. Il veleno lo disattiva; il rallentamento può interromperlo a meno che non rimanga adiacente un alleato idoneo non rallentato."
 
 #. [dummy]: id=LIUN_conductor

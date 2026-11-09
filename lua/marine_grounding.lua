@@ -59,6 +59,8 @@ function marine_grounding.can_ground(u)
     if not u or u.hitpoints <= 0 then return false end
     if u.side ~= wesnoth.current.side then return false end
     if not u:matches({ ability = KRYONITE_ABILITY }) then return false end
+    -- Sergeants and above carry the Pylum; level 0 Privates do not.
+    if u.level < 1 then return false end
     if u.variables.lu_grounded then return false end
     return true
 end
