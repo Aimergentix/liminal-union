@@ -46,8 +46,10 @@ local G9_PROMOTIONS = {
 -- A doctrine stage (sub-level) replaces the unit type but keeps its level. The
 -- engine heals fully on every type change; Union stages grant only +2 HP and keep
 -- poison and slow. Full level-ups, AMLAs and non-Union units keep engine healing.
-local function is_doctrine_stage(u, old_type, old_lvl)
-    return old_type ~= nil and u.type ~= old_type and u.level == old_lvl
+-- An AMLA may also change the type at the same level (the Phoinix Elder's renewal),
+-- so a unit that had nothing left to advance to is never a doctrine stage.
+local function is_doctrine_stage(u, old_type, old_lvl, was_amla)
+    return not was_amla and old_type ~= nil and u.type ~= old_type and u.level == old_lvl
         and tostring(u.type):sub(1, 5) == "LIUN_"
 end
 
@@ -60,6 +62,7 @@ wesnoth.game_events.add_repeating("advance", function()
     u.variables["promotion_hp"] = u.hitpoints
     u.variables["promotion_lvl"] = u.level
     u.variables["promotion_type"] = u.type
+    u.variables["promotion_amla"] = #u.advances_to == 0
     u.variables["promotion_poisoned"] = u.status.poisoned
     u.variables["promotion_slowed"] = u.status.slowed
 end)
@@ -79,11 +82,12 @@ wesnoth.game_events.add_repeating("post_advance", function()
     local old_hp = u.variables["promotion_hp"]
     local old_lvl = u.variables["promotion_lvl"]
     local old_type = u.variables["promotion_type"]
+    local was_amla = u.variables["promotion_amla"]
     local is_union = tostring(u.type):sub(1, 5) == "LIUN_"
 
     local is_golem = (u.race == "maidengolem")
 
-    if old_hp and is_doctrine_stage(u, old_type, old_lvl) then
+    if old_hp and is_doctrine_stage(u, old_type, old_lvl, was_amla) then
         u.hitpoints = math.min(u.max_hitpoints, old_hp + 2)
         u.status.poisoned = u.variables["promotion_poisoned"]
         u.status.slowed = u.variables["promotion_slowed"]
@@ -118,6 +122,7 @@ wesnoth.game_events.add_repeating("post_advance", function()
     u.variables["promotion_hp"] = nil
     u.variables["promotion_lvl"] = nil
     u.variables["promotion_type"] = nil
+    u.variables["promotion_amla"] = nil
     u.variables["promotion_poisoned"] = nil
     u.variables["promotion_slowed"] = nil
 end)
