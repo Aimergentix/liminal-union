@@ -2,6 +2,19 @@
 
 Player-facing changes to Liminal Union. Values are test values, not settled balance.
 
+## Unreleased
+
+### Fixes
+- Doctrine stages (for example 0·0 → 0·1) heal only 2 HP and keep poison and slow, as
+  intended. They previously healed fully. Full level-ups and AMLAs still heal fully;
+  other factions are unaffected.
+- Hunterkiller and Techtronic (2·2) keep their Pyrite resonance.
+- Colonels keep First Aid +6 instead of dropping to +4 after promotion.
+- Cornets list their elemental attack first at every stage; Sergeants list the impact
+  sling first.
+- Mobile repair names its real amounts (4/8/12 HP). The Field Codex describes resonance
+  as it works. G9 NCM: "Fist [berserk mode]". German: Khopesh is "Chepesch".
+
 ## 0.3.0alpha — 2026-11-08
 
 ### Units and weapons

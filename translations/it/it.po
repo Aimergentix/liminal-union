@@ -266,7 +266,8 @@ msgstr "Gruppi di Risonanza e Leghe per Armature"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:248
-msgid "Resonance activates immediately when standing adjacent to allies with matching armor alloys:\n\n• <b>Pyrite (Maidens):</b> Precision marksmanship & warding. Pod of 4+ units gains <b>Focus</b> (min 60% CTH at range) and +15% Fire/Arcane resistance.\n• <b>Kryonite (Marines):</b> Cohesion & <b>Interlock</b>. 30% of incoming damage is absorbed across adjacent Kryonite allies (> 1 HP), preventing single-unit focus-fire assassinations.\n• <b>Arcanite (G9 Warforms):</b> Heavy plating. Pod of 4+ units gains <b>Arcanite Warding</b> (+20% Fire/Cold resistance).\n\n<i>Note: Resonance activates immediately upon moving or recruiting adjacent to allies, providing instant defensive line bonuses!</i>"
+#, fuzzy
+msgid "Resonance activates immediately when standing adjacent to allies with matching armor alloys. A pod of 2, 3 or 4+ units reaches Tier 1, 2 or 3; each tier grants +5% blade, pierce and impact resistance.\n\n• <b>Pyrite (Maidens):</b> <b>Focus</b>: +5% chance to hit per tier with ranged attacks on offense, +10% more beside a Squad Anchor. Tier 3 adds +10% Fire and Arcane resistance.\n• <b>Kryonite (Marines):</b> <b>Bulwark</b>: enemies lose 5% (Tier 1) or 10% (Tier 2+) chance to hit this unit in melee. Tier 3 adds first strike on defense and +10% Cold and Arcane resistance. <b>Interlock</b> passes up to 30% of a normal hit to adjacent Kryonite allies; none falls below 1 HP.\n• <b>Arcanite (G9 Warforms):</b> <b>Sunder</b>: +1 melee damage per tier on offense. Tier 3 adds +20% Fire and Cold resistance.\n\n<i>Poison disables resonance; slow can lower its tier.</i>"
 msgstr "La Risonanza si attiva immediatamente quando si trova adiacente ad alleati con leghe per armature corrispondenti:\n\n• <b>Pirite (Fanciulle):</b> Tiro di precisione e protezione. Un gruppo di 4+ unità ottiene <b>Concentrazione</b> (min 60% di probabilità di colpire a distanza) e +15% di resistenza a Fuoco/Arcano.\n• <b>Crionite (Fanti di Marina):</b> Coesione e <b>Interblocco</b>. Il 30% dei danni subiti viene assorbito dagli alleati di Crionite adiacenti (> 1 PV), impedendo l'eliminazione mirata di singole unità.\n• <b>Arcanite (Forme Belliche G9):</b> Corazzatura pesante. Un gruppo di 4+ unità ottiene <b>Protezione di Arcanite</b> (+20% di resistenza a Fuoco/Freddo).\n\n<i>Nota: La Risonanza si attiva immediatamente muovendosi o reclutando accanto agli alleati, fornendo bonus difensivi istantanei alla linea!</i>"
 
 #. [option]
@@ -797,7 +798,8 @@ msgstr "riparazione mobile"
 
 #. [heals]: id=LIUN_mobile_repair
 #: liminal-union/macros/abilities.cfg:277
-msgid "Quickbound golems and other warforms, such as war chariots, can be restored in repair shops in towns and cities or by mobile artificers, up to 6 HP per turn."
+#, fuzzy
+msgid "Quickbound golems and other warforms, such as war chariots, are restored in repair shops in towns and cities or by mobile artificers. Adjacent warforms regain 4 HP per turn from a Jaeger, 8 HP from a Techtronic and 12 HP from a veteran Techtronic (2·2)."
 msgstr "I golem a legame rapido e le altre forme belliche, come i carri da guerra, possono essere rimessi in sesto nelle officine di riparazione di città e paesi o da artefici mobili, fino a 6 PV per turno."
 
 #. [heals]: id=LIUN_mobile_repair
@@ -1471,8 +1473,8 @@ msgstr "🤖 🟗 G9 NCM (1·2)"
 
 #. [attack]: type=arcane
 #: liminal-union/units/golems/b1-g9-ncm.cfg:212
-msgid "[berserk mode]"
-msgstr "[modalità furia]"
+msgid "Fist [berserk mode]"
+msgstr "Pugno [modalità furia]"
 
 #. [unit_type]: id=LIUN_G9_NCM_1_2
 #: liminal-union/units/golems/b1-g9-ncm.cfg:225

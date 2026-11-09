@@ -266,8 +266,8 @@ msgstr "Resonanzgruppen & Rüstungslegierungen"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:248
-msgid "Resonance activates immediately when standing adjacent to allies with matching armor alloys:\n\n• <b>Pyrite (Maidens):</b> Precision marksmanship & warding. Pod of 4+ units gains <b>Focus</b> (min 60% CTH at range) and +15% Fire/Arcane resistance.\n• <b>Kryonite (Marines):</b> Cohesion & <b>Interlock</b>. 30% of incoming damage is absorbed across adjacent Kryonite allies (> 1 HP), preventing single-unit focus-fire assassinations.\n• <b>Arcanite (G9 Warforms):</b> Heavy plating. Pod of 4+ units gains <b>Arcanite Warding</b> (+20% Fire/Cold resistance).\n\n<i>Note: Resonance activates immediately upon moving or recruiting adjacent to allies, providing instant defensive line bonuses!</i>"
-msgstr "Resonanz wird sofort aktiv, sobald Einheiten neben Verbündeten mit gleicher Rüstungslegierung stehen:\n\n• <b>Pyrit (Mäiden):</b> Präzisionsbeschuss & Abschirmung. Eine Gruppe ab 4 Einheiten erhält <b>Fokus</b> (mind. 60% Trefferchance im Fernkampf) sowie +15% Feuer-/Arkanresistenz.\n• <b>Kryonit (Marines):</b> Zusammenhalt & <b>Verbundschutz (Interlock)</b>. 30% des erlittenen Schadens werden auf angrenzende Kryonit-Verbündete (> 1 LP) verteilt, was gezielte Einzelabschüsse verhindert.\n• <b>Arkanit (G9-Kriegsformen):</b> Schwere Panzerung. Eine Gruppe ab 4 Einheiten erhält <b>Arkanit-Abschirmung</b> (+20% Feuer-/Kälteresistenz).\n\n<i>Hinweis: Resonanz wirkt sofort nach dem Ziehen oder Rekrutieren neben Verbündeten und stärkt unmittelbar die Verteidigungslinie!</i>"
+msgid "Resonance activates immediately when standing adjacent to allies with matching armor alloys. A pod of 2, 3 or 4+ units reaches Tier 1, 2 or 3; each tier grants +5% blade, pierce and impact resistance.\n\n• <b>Pyrite (Maidens):</b> <b>Focus</b>: +5% chance to hit per tier with ranged attacks on offense, +10% more beside a Squad Anchor. Tier 3 adds +10% Fire and Arcane resistance.\n• <b>Kryonite (Marines):</b> <b>Bulwark</b>: enemies lose 5% (Tier 1) or 10% (Tier 2+) chance to hit this unit in melee. Tier 3 adds first strike on defense and +10% Cold and Arcane resistance. <b>Interlock</b> passes up to 30% of a normal hit to adjacent Kryonite allies; none falls below 1 HP.\n• <b>Arcanite (G9 Warforms):</b> <b>Sunder</b>: +1 melee damage per tier on offense. Tier 3 adds +20% Fire and Cold resistance.\n\n<i>Poison disables resonance; slow can lower its tier.</i>"
+msgstr "Resonanz wird sofort aktiv, sobald Einheiten neben Verbündeten mit gleicher Rüstungslegierung stehen. Eine Gruppe aus 2, 3 oder ab 4 Einheiten erreicht Stufe 1, 2 oder 3; jede Stufe gewährt +5% Resistenz gegen Hieb, Stich und Wucht.\n\n• <b>Pyrit (Mäiden):</b> <b>Fokus</b>: +5% Trefferchance je Stufe für Fernangriffe im Angriff, weitere +10% neben einem Truppanker. Stufe 3 gewährt zusätzlich +10% Feuer- und Arkanresistenz.\n• <b>Kryonit (Marines):</b> <b>Bollwerk</b>: Gegner verlieren im Nahkampf gegen diese Einheit 5% (Stufe 1) oder 10% (ab Stufe 2) Trefferchance. Stufe 3 gewährt Erstschlag in der Verteidigung sowie +10% Kälte- und Arkanresistenz. <b>Verbundschutz (Interlock)</b> leitet bis zu 30% eines normalen Treffers auf angrenzende Kryonit-Verbündete um; keiner fällt dabei unter 1 LP.\n• <b>Arkanit (G9-Kriegsformen):</b> <b>Spalten</b>: +1 Nahkampfschaden je Stufe im Angriff. Stufe 3 gewährt zusätzlich +20% Feuer- und Kälteresistenz.\n\n<i>Gift hebt die Resonanz auf; Verlangsamung kann ihre Stufe senken.</i>"
 
 #. [option]
 #: liminal-union/faction.cfg:253
@@ -797,8 +797,8 @@ msgstr "Mobile Instandsetzung"
 
 #. [heals]: id=LIUN_mobile_repair
 #: liminal-union/macros/abilities.cfg:277
-msgid "Quickbound golems and other warforms, such as war chariots, can be restored in repair shops in towns and cities or by mobile artificers, up to 6 HP per turn."
-msgstr "Schnellgebundene Golems und andere Kriegsformen wie Streitwagen können in Werkstätten in Städten oder durch mobile Kunsthandwerker um bis zu 6 LP pro Zug instand gesetzt werden."
+msgid "Quickbound golems and other warforms, such as war chariots, are restored in repair shops in towns and cities or by mobile artificers. Adjacent warforms regain 4 HP per turn from a Jaeger, 8 HP from a Techtronic and 12 HP from a veteran Techtronic (2·2)."
+msgstr "Schnellgebundene Golems und andere Kriegsformen wie Streitwagen werden in Werkstätten in Städten oder durch mobile Kunsthandwerker instand gesetzt. Benachbarte Kriegsformen erhalten pro Zug 4 LP von einer Jägerin, 8 LP von einer Techtronikerin und 12 LP von einer erfahrenen Techtronikerin (2·2) zurück."
 
 #. [heals]: id=LIUN_mobile_repair
 #: liminal-union/macros/abilities.cfg:278
@@ -1471,8 +1471,8 @@ msgstr "🤖 🟗 G9 NCM (1·2)"
 
 #. [attack]: type=arcane
 #: liminal-union/units/golems/b1-g9-ncm.cfg:212
-msgid "[berserk mode]"
-msgstr "[Berserkermodus]"
+msgid "Fist [berserk mode]"
+msgstr "Faust [Berserkermodus]"
 
 #. [unit_type]: id=LIUN_G9_NCM_1_2
 #: liminal-union/units/golems/b1-g9-ncm.cfg:225
@@ -1986,12 +1986,12 @@ msgstr "🔱 ⪦ Sergeant"
 #. [attack]: type=impact
 #: liminal-union/units/halfelven/marines/a1-sergeant.cfg:17
 msgid "Khopesh [smash]"
-msgstr "Chopper [Schmetterschlag]"
+msgstr "Chepesch [Schmetterschlag]"
 
 #. [attack]: type=pierce
 #: liminal-union/units/halfelven/marines/a1-sergeant.cfg:28
 msgid "Khopesh [double tap]"
-msgstr "Chopper [Doppelhieb]"
+msgstr "Chepesch [Doppelhieb]"
 
 #. [attack]: type=pierce
 #: liminal-union/units/halfelven/marines/a1-sergeant.cfg:39
@@ -2714,7 +2714,7 @@ msgid "Sword [thrust]"
 msgstr "Schwert [Stoß]"
 
 msgid "Khopesh [thrust]"
-msgstr "Chopper [Stoß]"
+msgstr "Chepesch [Stoß]"
 
 msgid "Shield [smash]"
 msgstr "Schild [Schmetterschlag]"
