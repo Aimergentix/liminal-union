@@ -31,6 +31,7 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
   Age of Heroes keeps this.
 
 ### Fixes
+- Techtronics wear Arcanite and resonate with G9 Warforms instead of Maidens.
 - The Conductor aura (+10% damage for adjacent liminal allies by day and by night) works
   again on every officer; a second abilities block had silently dropped it.
 - Phoinix memorial archives survive saving and loading.

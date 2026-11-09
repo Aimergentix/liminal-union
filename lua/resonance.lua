@@ -6,11 +6,19 @@ local _ = wesnoth.textdomain 'wesnoth-liminal-union'
 
 local resonance = {}
 
--- Resolves the armor alloy for a unit (robust to [base_unit] variable dropping)
+-- Resolves the armor alloy for a unit (robust to [base_unit] variable dropping).
+-- The cache lu_alloy is valid only for the type it was read from (lu_alloy_type):
+-- a Pyrite Mechatronic promoted to Arcanite Techtronic must not keep "pyrite".
+local function remember(u, alloy)
+    u.variables.lu_alloy = alloy
+    u.variables.lu_alloy_type = u.type
+    return alloy
+end
+
 function resonance.get_unit_alloy(u)
     if not u or u.hitpoints <= 0 then return nil end
     local var_alloy = u.variables.lu_alloy
-    if var_alloy and var_alloy ~= "" then return var_alloy end
+    if var_alloy and var_alloy ~= "" and u.variables.lu_alloy_type == u.type then return var_alloy end
 
     local cfg = u.__cfg
     if cfg then
@@ -18,14 +26,11 @@ function resonance.get_unit_alloy(u)
         if abilities then
             for ab in wml.child_range(abilities, "dummy") do
                 if ab.id == "LIUN_resonance_pyrite" then
-                    u.variables.lu_alloy = "pyrite"
-                    return "pyrite"
+                    return remember(u, "pyrite")
                 elseif ab.id == "LIUN_resonance_kryonite" then
-                    u.variables.lu_alloy = "kryonite"
-                    return "kryonite"
+                    return remember(u, "kryonite")
                 elseif ab.id == "LIUN_resonance_arcanite" then
-                    u.variables.lu_alloy = "arcanite"
-                    return "arcanite"
+                    return remember(u, "arcanite")
                 end
             end
         end
@@ -34,21 +39,20 @@ function resonance.get_unit_alloy(u)
     local utype = tostring(u.type or "")
     if utype:sub(1, 5) == "LIUN_" then
         if u.race == "maidengolem" then
-            u.variables.lu_alloy = "arcanite"
-            return "arcanite"
+            return remember(u, "arcanite")
         elseif u.race == "maidencommand" then
             if not utype:find("Ensign") and not utype:find("Cornet") and not utype:find("Captain") and not utype:find("Colonel") then
-                u.variables.lu_alloy = "pyrite"
-                return "pyrite"
+                return remember(u, "pyrite")
             end
         elseif u.race == "marinecommand" then
             if not utype:find("Ensign") and not utype:find("Cornet") and not utype:find("Captain") and not utype:find("Colonel") then
-                u.variables.lu_alloy = "kryonite"
-                return "kryonite"
+                return remember(u, "kryonite")
             end
         end
     end
 
+    u.variables.lu_alloy = nil
+    u.variables.lu_alloy_type = nil
     return nil
 end
 
