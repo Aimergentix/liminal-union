@@ -311,8 +311,8 @@ msgstr "Maniobras tácticas"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:281
-msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Marine to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemy magical attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!\n• <b>Portal Warden (Passive):</b> A Shieldguard that stood still for a full turn with a Phoinix beside it opens its portable Arcanite portal, charged by mana crystals. Marines other than leaders may travel one way from your villages to free hexes beside it, arriving with no moves and no attack that turn. The portal closes when the Shieldguard moves."
-msgstr "• <b>Pylum de puesta a tierra de los Marines (Clic derecho):</b> Haga clic derecho sobre un Marine no anclado para clavar su estaca conductora. Otorga a los aliados adyacentes +20% de protección elemental, descarga los ataques mágicos enemigos adyacentes (máx. 50% de acierto) y reduce el daño elemental enemigo en un 20%. Coste: 0 PM y +20% de vulnerabilidad a Corte/Impacto en melé. Dura hasta el final del siguiente turno enemigo; debe desplegarse de nuevo en su próximo turno.\n• <b>Sobrecarga G9 (Clic derecho):</b> Haga clic derecho sobre una Forma de guerra G9 con más de 4 PV y un ataque disponible para activar la derivación de emergencia (+1 golpe en melé, +2 de daño y <b>Aturdir</b> por el turno). Al final del turno, el gólem sufre hasta 3 PV de estrés térmico y no puede morir por ello.\n• <b>Planeo con traje alado (Pasivo):</b> Cualquier Doncella que inicie su turno en terreno elevado (Colinas o Montañas) despliega su traje alado y gana <b>+1 PM y Hostigador</b> durante ese turno.\n• <b>Guardián de portal (Pasivo):</b> Un Guardia de escudo que permanece inmóvil un turno completo con un Phoinix a su lado abre su portal de Arcanita portátil, cargado con cristales de maná. Los Marines que no sean líderes viajan en un solo sentido desde vuestras aldeas a hexágonos libres junto a él, y llegan sin movimiento ni ataque ese turno. El portal se cierra cuando el Guardia de escudo se mueve."
+msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Kryonite Marine (troops, not Officers) to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemies' fire, cold and arcane attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!\n• <b>Portal Warden (Passive):</b> A Shieldguard that stood still for a full turn with a Phoinix beside it opens its portable Arcanite portal, charged by mana crystals. Marines other than leaders may travel one way from your villages to free hexes beside it, arriving with no moves and no attack that turn. The portal closes when the Shieldguard moves."
+msgstr "• <b>Pylum de puesta a tierra de los Marines (Clic derecho):</b> Haga clic derecho sobre un Marine de Kryonite no anclado (tropas, no oficiales) para clavar su estaca conductora. Otorga a los aliados adyacentes +20% de protección elemental, descarga los ataques de fuego, frío y arcanos de los enemigos adyacentes (máx. 50% de acierto) y reduce el daño elemental enemigo en un 20%. Coste: 0 PM y +20% de vulnerabilidad a Corte/Impacto en melé. Dura hasta el final del siguiente turno enemigo; debe desplegarse de nuevo en su próximo turno.\n• <b>Sobrecarga G9 (Clic derecho):</b> Haga clic derecho sobre una Forma de guerra G9 con más de 4 PV y un ataque disponible para activar la derivación de emergencia (+1 golpe en melé, +2 de daño y <b>Aturdir</b> por el turno). Al final del turno, el gólem sufre hasta 3 PV de estrés térmico y no puede morir por ello.\n• <b>Planeo con traje alado (Pasivo):</b> Cualquier Doncella que inicie su turno en terreno elevado (Colinas o Montañas) despliega su traje alado y gana <b>+1 PM y Hostigador</b> durante ese turno.\n• <b>Guardián de portal (Pasivo):</b> Un Guardia de escudo que permanece inmóvil un turno completo con un Phoinix a su lado abre su portal de Arcanita portátil, cargado con cristales de maná. Los Marines que no sean líderes viajan en un solo sentido desde vuestras aldeas a hexágonos libres junto a él, y llegan sin movimiento ni ataque ese turno. El portal se cierra cuando el Guardia de escudo se mueve."
 
 #. [option]
 #: liminal-union/faction.cfg:286
@@ -420,33 +420,39 @@ msgid "<span color='#ffdd55'>🪽 Wingsuit Glide (+1 MP, Skirmish)</span>"
 msgstr "<span color='#ffdd55'>🪽 Planeo alado (+1 PM, Hostigador)</span>"
 
 #. [lua]: marine_grounding.update_wards
-#: liminal-union/lua/marine_grounding.lua:82
-#: liminal-union/lua/marine_grounding.lua:88
+#: liminal-union/lua/marine_grounding.lua:188
+#: liminal-union/lua/marine_grounding.lua:194
+#: liminal-union/lua/marine_grounding.lua:243
 msgid "grounded"
 msgstr "conectado a tierra"
 
+#. [lua]: marine_grounding.activate
+#: liminal-union/lua/marine_grounding.lua:244
+msgid "Salt-Grounding Pylum deployed: +20% vulnerability to melee blade and impact attacks until this unit's next turn. The resistance table also lists it for ranged attacks, where it does not apply; the attack preview shows the true damage."
+msgstr "Pylum de puesta a tierra desplegado: +20% de vulnerabilidad a Corte e Impacto en melé hasta el siguiente turno de esta unidad. La tabla de resistencias también lo muestra para los ataques a distancia, donde no se aplica; la vista previa del ataque muestra el daño real."
+
 #. [lua]: marine_grounding.update_wards
-#: liminal-union/lua/marine_grounding.lua:83
+#: liminal-union/lua/marine_grounding.lua:189
 msgid "Magical currents are grounded into the earth: -20% damage on elemental attacks."
 msgstr "Las corrientes mágicas se descargan en la tierra: -20% de daño en ataques elementales."
 
 #. [lua]: marine_grounding.update_wards
-#: liminal-union/lua/marine_grounding.lua:89
-msgid "Magical accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit."
-msgstr "La precisión mágica es descargada por el Pylum de puesta a tierra: máximo 50% de probabilidad de impacto."
+#: liminal-union/lua/marine_grounding.lua:195
+msgid "Fire, cold and arcane accuracy is grounded by the Salt-Grounding Pylum: maximum 50% chance to hit."
+msgstr "La precisión de los ataques de fuego, frío y arcanos es descargada por el Pylum de puesta a tierra: máximo 50% de probabilidad de impacto."
 
 #. [lua]: marine_grounding.activate
-#: liminal-union/lua/marine_grounding.lua:111
+#: liminal-union/lua/marine_grounding.lua:217
 msgid "<span color='#55ffff'>[PYLUM ALREADY DEPLOYED]</span>"
 msgstr "<span color='#55ffff'>[PYLUM YA DESPLEGADO]</span>"
 
 #. [lua]: marine_grounding.activate
-#: liminal-union/lua/marine_grounding.lua:113
+#: liminal-union/lua/marine_grounding.lua:219
 msgid "<span color='#ffaa33'>[GROUNDING UNAVAILABLE]</span>"
 msgstr "<span color='#ffaa33'>[PUESTA A TIERRA NO DISPONIBLE]</span>"
 
 #. [lua]: marine_grounding.activate
-#: liminal-union/lua/marine_grounding.lua:143
+#: liminal-union/lua/marine_grounding.lua:262
 msgid "<span color='#55ffff'>⚡ Salt-Grounding Pylum [0 MP, Ward Active]</span>"
 msgstr "<span color='#55ffff'>⚡ Pylum de puesta a tierra [0 PM, Resguardo activo]</span>"
 
@@ -1526,13 +1532,6 @@ msgstr "🪽🟃 Alférez"
 msgid "Lance [pyronite]"
 msgstr "Lanza [pironita]"
 
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/command/a0-maiden-ensign.cfg:30
-#: liminal-union/units/halfelven/command/a2-maiden-captain.cfg:28
-#: liminal-union/units/halfelven/command/a3-maiden-colonel.cfg:28
-msgid "Lance [triple tap]"
-msgstr "Lanza [triple golpe]"
-
 #. [unit_type]: id=LIUN_Maiden_Ensign_Base
 #: liminal-union/units/halfelven/command/a0-maiden-ensign.cfg:54
 msgid "A Maiden Ensign, or confidantë, is a young officer cadet schooled in civic law, battlefield triage, and the arts of alignment conduction. Projecting a steady bio-resonant field, she tempers the daytime and nighttime vulnerabilities of adjacent comrades. Trained as a first responder, she can render first aid to wounded comrades in the field."
@@ -1689,13 +1688,6 @@ msgstr "🔱 🟃 Alférez"
 msgid "Sword [kryonite]"
 msgstr "Espada [crionita]"
 
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/command/b0-marine-ensign.cfg:30
-#: liminal-union/units/halfelven/command/b2-marine-captain.cfg:28
-#: liminal-union/units/halfelven/command/b3-marine-colonel.cfg:28
-msgid "Sword [double tap]"
-msgstr "Espada [doble golpe]"
-
 #. [unit_type]: id=LIUN_Marine_Ensign_Base
 #: liminal-union/units/halfelven/command/b0-marine-ensign.cfg:54
 msgid "A Marine Ensign is a promising cadet chosen for steady judgment and civic discipline. Entering the officer path as novice Conductors, Ensigns project an initial alignment aura that steadies the fighting rhythm of nearby soldiers during off-peak hours. Though young, their presence on the field anchors the formation."
@@ -1715,12 +1707,6 @@ msgstr "🔱 🟃 Alférez (0·1)"
 #: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:6
 msgid "🔱 🟇 Cornet"
 msgstr "🔱 🟇 Corneta"
-
-#. [attack]: type=blade
-#: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:17
-#: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:145
-msgid "Short sword"
-msgstr "Espada corta"
 
 #. [unit_type]: id=LIUN_Marine_Cornet_Base
 #: liminal-union/units/halfelven/command/b1-marine-cornet.cfg:42
@@ -1802,18 +1788,6 @@ msgstr "🔱 🟔 Coronel (3·3)"
 msgid "🪽⚬ Private"
 msgstr "🪽⚬ Soldado"
 
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:18
-#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:135
-msgid "Pitchfork [thrust]"
-msgstr "Horca [estocada]"
-
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:29
-#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:146
-msgid "Pitchfork [throw]"
-msgstr "Horca [lanzamiento]"
-
 #. [unit_type]: id=LIUN_Maiden_Private_Base
 #: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:53
 msgid "Maiden are the backbone of the halfelven commonwealth. They are mothers, bearing and raising the generations to come. Though not warlike by nature, when the Union calls they have never failed to answer. In times of war there is never a shortage of maiden willing to take their place in the corps, alongside their mothers and grandmothers who proudly served before them. In battle they defend their homes and families with absolute devotion; in peace they strengthen the commonwealth through learning, teaching, care, and disciplined craft."
@@ -1828,11 +1802,6 @@ msgstr "🪽⚬ Soldado (0·0)"
 #: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:126
 msgid "🪽⚬ Private (0·1)"
 msgstr "🪽⚬ Soldado (0·1)"
-
-#. [attack]: type=impact
-#: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:157
-msgid "Pitchfork [slam]"
-msgstr "Horca [golpe]"
 
 #. [unit_type]: id=LIUN_Maiden_Private_0_1
 #: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:167
@@ -1980,12 +1949,6 @@ msgstr "Corazón de Oro / Ancla de escuadra 🏅 | Artífice de guerra veterana 
 msgid "🔱 ⚬ Private"
 msgstr "🔱 ⚬ Soldado"
 
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:18
-#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:187
-msgid "Sickle [double tap]"
-msgstr "Hoz [doble golpe]"
-
 #. [attack]: type=impact
 #: liminal-union/units/halfelven/marines/a0-marine-private.cfg:29
 #: liminal-union/units/halfelven/marines/a0-marine-private.cfg:198
@@ -2009,11 +1972,6 @@ msgstr "🔱 ⚬ Soldado (0·0)"
 #: liminal-union/units/halfelven/marines/a0-marine-private.cfg:178
 msgid "🔱 ⚬ Private (0·1)"
 msgstr "🔱 ⚬ Soldado (0·1)"
-
-#. [attack]: type=impact
-#: liminal-union/units/halfelven/marines/a0-marine-private.cfg:209
-msgid "Sickle [slam]"
-msgstr "Hoz [golpe]"
 
 #. [unit_type]: id=LIUN_Marine_Private_0_1
 #: liminal-union/units/halfelven/marines/a0-marine-private.cfg:219
@@ -2067,20 +2025,6 @@ msgstr "Insignia de distracción | Ha dominado la táctica de distracción en co
 #: liminal-union/units/halfelven/marines/a2-masterchief.cfg:6
 msgid "🔱 ⪨ Masterchief"
 msgstr "🔱 ⪨ Suboficial mayor"
-
-#. [attack]: type=impact
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:17
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:227
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:291
-msgid "Khopesh [slash]"
-msgstr "Khopesh [tajo]"
-
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:28
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:238
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:302
-msgid "Khopesh [stab]"
-msgstr "Khopesh [estocada]"
 
 #. [unit_type]: id=LIUN_Masterchief_Base
 #: liminal-union/units/halfelven/marines/a2-masterchief.cfg:74
@@ -2171,20 +2115,6 @@ msgstr "🔱 ⪨ Guardia de armas (2·2)"
 #: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:6
 msgid "🔱 ⪨ Shieldguard"
 msgstr "🔱 ⪨ Guardia de escudo"
-
-#. [attack]: type=impact
-#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:17
-#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:156
-#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:198
-msgid "Shield [punch]"
-msgstr "Escudo [golpe]"
-
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:28
-#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:167
-#: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:209
-msgid "Shield [stab]"
-msgstr "Escudo [estocada]"
 
 #. [unit_type]: id=LIUN_Shieldguard_Base
 #: liminal-union/units/halfelven/marines/c2-shieldguard.cfg:52
@@ -2766,9 +2696,9 @@ msgid "🧿 🟗 Phoinix Elder (1·1)"
 msgstr "🧿 🟗 Phoinix Anciano (1·1)"
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_1_1
-#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:188
-msgid "The tears of an elder phoinix bird draw poison from the wounded."
-msgstr "Las lágrimas de un ave phoinix anciana extraen el veneno de los heridos."
+#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:220
+msgid "Veteran Courier Wing | High-altitude mastery unlocks a third arcane ranged strike (+3 HP, +1 Ranged Strike)."
+msgstr "Ala de mensajero veterana | El dominio del vuelo a gran altitud desbloquea un tercer golpe arcano a distancia (+3 PV, +1 golpe a distancia)."
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_1_2
 #: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:197
@@ -2776,9 +2706,9 @@ msgid "🧿 🟗 Phoinix Elder (1·2)"
 msgstr "🧿 🟗 Phoinix Anciano (1·2)"
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_1_2
-#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:208
-msgid "Ability: teleport | Friendly villages maintain portals. This Phoinix unit can now teleport between them."
-msgstr "Habilidad: teletransporte | Las aldeas aliadas mantienen portales. Esta unidad Phoinix puede ahora teletransportarse entre ellas."
+#: liminal-union/units/phoinixes/a1-phoinix-elder.cfg:269
+msgid "Ability: teleport | Friendly villages maintain portals. This Phoinix unit can now teleport between them (+3 HP, 3 Ranged Strikes, Teleport)."
+msgstr "Habilidad: teletransporte | Las aldeas aliadas mantienen portales. Esta unidad Phoinix puede ahora teletransportarse entre ellas (+3 PV, 3 golpes a distancia, teletransporte)."
 
 msgid "Sword [thrust]"
 msgstr "Espada [estocada]"
