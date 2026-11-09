@@ -6,23 +6,19 @@ local _ = wesnoth.textdomain 'wesnoth-liminal-union'
 
 local resonance = {}
 
--- Calculates hex distance between two coordinates in Wesnoth odd-r layout
-local function hex_distance(x1, y1, x2, y2)
-    if not x1 or not y1 or not x2 or not y2 then return 999 end
-    local q1 = x1 - math.floor((y1 - (y1 % 2)) / 2)
-    local r1 = y1
-    local s1 = -q1 - r1
-    local q2 = x2 - math.floor((y2 - (y2 % 2)) / 2)
-    local r2 = y2
-    local s2 = -q2 - r2
-    return math.max(math.abs(q1 - q2), math.abs(r1 - r2), math.abs(s1 - s2))
+-- Resolves the armor alloy for a unit (robust to [base_unit] variable dropping).
+-- The cache lu_alloy is valid only for the type it was read from (lu_alloy_type):
+-- a Pyrite Mechatronic promoted to Arcanite Techtronic must not keep "pyrite".
+local function remember(u, alloy)
+    u.variables.lu_alloy = alloy
+    u.variables.lu_alloy_type = u.type
+    return alloy
 end
 
--- Resolves the armor alloy for a unit (robust to [base_unit] variable dropping)
 function resonance.get_unit_alloy(u)
     if not u or u.hitpoints <= 0 then return nil end
     local var_alloy = u.variables.lu_alloy
-    if var_alloy and var_alloy ~= "" then return var_alloy end
+    if var_alloy and var_alloy ~= "" and u.variables.lu_alloy_type == u.type then return var_alloy end
 
     local cfg = u.__cfg
     if cfg then
@@ -30,14 +26,11 @@ function resonance.get_unit_alloy(u)
         if abilities then
             for ab in wml.child_range(abilities, "dummy") do
                 if ab.id == "LIUN_resonance_pyrite" then
-                    u.variables.lu_alloy = "pyrite"
-                    return "pyrite"
+                    return remember(u, "pyrite")
                 elseif ab.id == "LIUN_resonance_kryonite" then
-                    u.variables.lu_alloy = "kryonite"
-                    return "kryonite"
+                    return remember(u, "kryonite")
                 elseif ab.id == "LIUN_resonance_arcanite" then
-                    u.variables.lu_alloy = "arcanite"
-                    return "arcanite"
+                    return remember(u, "arcanite")
                 end
             end
         end
@@ -46,21 +39,20 @@ function resonance.get_unit_alloy(u)
     local utype = tostring(u.type or "")
     if utype:sub(1, 5) == "LIUN_" then
         if u.race == "maidengolem" then
-            u.variables.lu_alloy = "arcanite"
-            return "arcanite"
+            return remember(u, "arcanite")
         elseif u.race == "maidencommand" then
             if not utype:find("Ensign") and not utype:find("Cornet") and not utype:find("Captain") and not utype:find("Colonel") then
-                u.variables.lu_alloy = "pyrite"
-                return "pyrite"
+                return remember(u, "pyrite")
             end
         elseif u.race == "marinecommand" then
             if not utype:find("Ensign") and not utype:find("Cornet") and not utype:find("Captain") and not utype:find("Colonel") then
-                u.variables.lu_alloy = "kryonite"
-                return "kryonite"
+                return remember(u, "kryonite")
             end
         end
     end
 
+    u.variables.lu_alloy = nil
+    u.variables.lu_alloy_type = nil
     return nil
 end
 
@@ -186,40 +178,25 @@ function resonance.get_tier(u)
     return resonance.calculate_pod_tier(u)
 end
 
--- Checks if a level 0 troop is eligible for Formation ZOC (pod of >= 2 allied troops)
--- Active immediately upon grouping with allied troops.
--- Slowed units retain Formation ZOC if adjacent to at least one non-slowed ally.
+-- Checks if a level 0 Union unit exerts Formation ZOC: only while an allied
+-- officer (Conductor) that is not poisoned stands adjacent. Mainline level 0
+-- units never exert ZOC; the officer is what holds the conscripts' line.
 function resonance.get_formation_zoc(u)
     if not u or u.hitpoints <= 0 then return false end
     if u.level ~= 0 then return false end
-    local alloy = resonance.get_unit_alloy(u)
-    if not alloy and not resonance.is_conductor(u) then return false end
+    if not resonance.get_unit_alloy(u) and not resonance.is_conductor(u) then return false end
     if u.status.poisoned then return false end
 
-    -- Count adjacent allies from same side who are not poisoned and have alloy or conductor
-    local raw_allies = wesnoth.units.find_on_map({
+    local adjacent = wesnoth.units.find_on_map({
         side = u.side,
         { "filter_adjacent", { id = u.id } }
     })
-
-    local non_slowed_allies = 0
-    local total_valid_allies = 0
-    for idx, a in ipairs(raw_allies) do
-        if a.hitpoints > 0 and (resonance.get_unit_alloy(a) or resonance.is_conductor(a)) and not a.status.poisoned then
-            total_valid_allies = total_valid_allies + 1
-            if not a.status.slowed then
-                non_slowed_allies = non_slowed_allies + 1
-            end
+    for idx, a in ipairs(adjacent) do
+        if a.hitpoints > 0 and not a.status.poisoned and resonance.is_conductor(a) then
+            return true
         end
     end
-
-    if u.status.slowed then
-        -- Slowed unit retains Formation ZOC if adjacent to at least one non-slowed ally
-        return non_slowed_allies >= 1
-    else
-        -- Non-slowed unit gains Formation ZOC in a pod of >= 2 (self + at least 1 valid ally)
-        return total_valid_allies >= 1
-    end
+    return false
 end
 
 -- Updates a single unit based on Conductor proximity.
@@ -292,7 +269,7 @@ function resonance.update_unit_state(u)
     -- Remove deprecated conductor beacon overlay if present
     u:remove_modifications({ id = "LIUN_conductor_beacon" })
 
-    -- 2. Formation ZOC for Level 0 troops in pods of >= 2 (Phase 5.1)
+    -- 2. Formation ZOC for level 0 units beside an allied officer
     u:remove_modifications({ id = "LIUN_formation_zoc" })
     local has_zoc = resonance.get_formation_zoc(u)
     if has_zoc then
@@ -309,7 +286,7 @@ function resonance.update_unit_state(u)
                     { "dummy", {
                         id = "LIUN_formation_zoc_active",
                         name = _ "formation zoc",
-                        description = _ "Standing in formation with allied troops. Exerting Zone of Control."
+                        description = _ "Standing beside an allied officer. Exerting Zone of Control."
                     }}
                 }}
             }}

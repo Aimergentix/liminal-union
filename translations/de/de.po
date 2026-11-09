@@ -266,8 +266,8 @@ msgstr "Resonanzgruppen & Rüstungslegierungen"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:248
-msgid "Resonance activates immediately when standing adjacent to allies with matching armor alloys:\n\n• <b>Pyrite (Maidens):</b> Precision marksmanship & warding. Pod of 4+ units gains <b>Focus</b> (min 60% CTH at range) and +15% Fire/Arcane resistance.\n• <b>Kryonite (Marines):</b> Cohesion & <b>Interlock</b>. 30% of incoming damage is absorbed across adjacent Kryonite allies (> 1 HP), preventing single-unit focus-fire assassinations.\n• <b>Arcanite (G9 Warforms):</b> Heavy plating. Pod of 4+ units gains <b>Arcanite Warding</b> (+20% Fire/Cold resistance).\n\n<i>Note: Resonance activates immediately upon moving or recruiting adjacent to allies, providing instant defensive line bonuses!</i>"
-msgstr "Resonanz wird sofort aktiv, sobald Einheiten neben Verbündeten mit gleicher Rüstungslegierung stehen:\n\n• <b>Pyrit (Mäiden):</b> Präzisionsbeschuss & Abschirmung. Eine Gruppe ab 4 Einheiten erhält <b>Fokus</b> (mind. 60% Trefferchance im Fernkampf) sowie +15% Feuer-/Arkanresistenz.\n• <b>Kryonit (Marines):</b> Zusammenhalt & <b>Verbundschutz (Interlock)</b>. 30% des erlittenen Schadens werden auf angrenzende Kryonit-Verbündete (> 1 LP) verteilt, was gezielte Einzelabschüsse verhindert.\n• <b>Arkanit (G9-Kriegsformen):</b> Schwere Panzerung. Eine Gruppe ab 4 Einheiten erhält <b>Arkanit-Abschirmung</b> (+20% Feuer-/Kälteresistenz).\n\n<i>Hinweis: Resonanz wirkt sofort nach dem Ziehen oder Rekrutieren neben Verbündeten und stärkt unmittelbar die Verteidigungslinie!</i>"
+msgid "Resonance activates immediately when standing adjacent to allies with matching armor alloys. A pod of 2, 3 or 4+ units reaches Tier 1, 2 or 3; each tier grants +5% blade, pierce and impact resistance.\n\n• <b>Pyrite (Maidens):</b> <b>Focus</b>: +5% chance to hit per tier with ranged attacks on offense, +10% more beside a Squad Anchor. Tier 3 adds +10% Fire and Arcane resistance.\n• <b>Kryonite (Marines):</b> <b>Bulwark</b>: enemies lose 5% (Tier 1) or 10% (Tier 2+) chance to hit this unit in melee. Tier 3 adds first strike on defense and +10% Cold and Arcane resistance. <b>Interlock</b> passes up to 30% of a normal hit to adjacent Kryonite allies; none falls below 1 HP.\n• <b>Arcanite (G9 Warforms, Techtronics):</b> <b>Sunder</b>: +1 melee damage per tier on offense. Tier 3 adds +20% Fire and Cold resistance.\n\n<i>Poison disables resonance; slow can lower its tier.</i>"
+msgstr "Resonanz wird sofort aktiv, sobald Einheiten neben Verbündeten mit gleicher Rüstungslegierung stehen. Eine Gruppe aus 2, 3 oder ab 4 Einheiten erreicht Stufe 1, 2 oder 3; jede Stufe gewährt +5% Resistenz gegen Hieb, Stich und Wucht.\n\n• <b>Pyrit (Mäiden):</b> <b>Fokus</b>: +5% Trefferchance je Stufe für Fernangriffe im Angriff, weitere +10% neben einem Truppanker. Stufe 3 gewährt zusätzlich +10% Feuer- und Arkanresistenz.\n• <b>Kryonit (Marines):</b> <b>Bollwerk</b>: Gegner verlieren im Nahkampf gegen diese Einheit 5% (Stufe 1) oder 10% (ab Stufe 2) Trefferchance. Stufe 3 gewährt Erstschlag in der Verteidigung sowie +10% Kälte- und Arkanresistenz. <b>Verbundschutz (Interlock)</b> leitet bis zu 30% eines normalen Treffers auf angrenzende Kryonit-Verbündete um; keiner fällt dabei unter 1 LP.\n• <b>Arkanit (G9-Kriegsformen, Techtronikerinnen):</b> <b>Spalten</b>: +1 Nahkampfschaden je Stufe im Angriff. Stufe 3 gewährt zusätzlich +20% Feuer- und Kälteresistenz.\n\n<i>Gift hebt die Resonanz auf; Verlangsamung kann ihre Stufe senken.</i>"
 
 #. [option]
 #: liminal-union/faction.cfg:253
@@ -281,8 +281,8 @@ msgstr "Formations-Kontrollzone"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:259
-msgid "Standard level 0 troops in Wesnoth exert no Zone of Control (ZOC).\n\nHowever, Liminal Union level 0 troops (Marine/Maiden Privates, G9 AI, Ensigns) <b>exert full Zone of Control</b> whenever standing in a pod of 2 or more allied troops.\n\nUse tight formations to anchor chokepoints, protect wounded comrades, and deny enemy cavalry breakthroughs."
-msgstr "Gewöhnliche Stufe-0-Einheiten in Wesnoth üben keine Kontrollzone (ZOC) aus.\n\nStufe-0-Truppen der Liminalen Union (Marine-/Mäiden-Gefreite, G9 AI, Fähnriche) <b>üben jedoch eine volle Kontrollzone aus</b>, sobald sie in einer Gruppe von mindestens 2 verbündeten Truppen stehen.\n\nNutzt geschlossene Formationen, um Engpässe zu sperren, Verwundete zu decken und feindliche Kavalleriedurchbrüche zu vereiteln."
+msgid "Standard level 0 troops in Wesnoth exert no Zone of Control (ZOC).\n\nLiminal Union level 0 units (Marine/Maiden Privates, G9 AI, Ensigns) <b>exert full Zone of Control</b> while an allied officer (Ensign, Cornet, Captain or Colonel) stands adjacent and is not poisoned. Poison on the unit itself also removes it.\n\nKeep officers beside your conscripts to hold chokepoints, protect wounded comrades and deny cavalry breakthroughs; an officer who falls or moves away leaves the line open."
+msgstr "Gewöhnliche Stufe-0-Einheiten in Wesnoth üben keine Kontrollzone (ZOC) aus.\n\nStufe-0-Einheiten der Liminalen Union (Marine-/Mäiden-Gefreite, G9 AI, Fähnriche) <b>üben eine volle Kontrollzone aus</b>, solange ein verbündeter Offizier (Fähnrich, Kornett, Hauptmann oder Oberst) angrenzt und nicht vergiftet ist. Gift auf der Einheit selbst hebt sie ebenfalls auf.\n\nHaltet Offiziere neben euren Wehrpflichtigen, um Engpässe zu sperren, Verwundete zu decken und Kavalleriedurchbrüche zu vereiteln; fällt ein Offizier oder rückt er ab, steht die Linie offen."
 
 #. [option]
 #: liminal-union/faction.cfg:264
@@ -311,8 +311,8 @@ msgstr "Taktische Manöver"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:281
-msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Kryonite Marine (troops, not Officers) to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemies' fire, cold and arcane attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!\n• <b>Portal Warden (Passive):</b> A Shieldguard that stood still for a full turn with a Phoinix beside it opens its portable Arcanite portal, charged by mana crystals. Marines other than leaders may travel one way from your villages to free hexes beside it, arriving with no moves and no attack that turn. The portal closes when the Shieldguard moves."
-msgstr "• <b>Salz-Erdungspfeiler der Marines (Rechtsklick):</b> Rechtsklickt auf einen noch nicht geerdeten Kryonit-Marine (Truppen, keine Offiziere), um seinen leitfähigen Erdungspfeiler einzuschlagen. Gewährt angrenzenden Verbündeten +20% Elementarschutz, erdet Feuer-, Kälte- und Arkanangriffe angrenzender Feinde (max. 50% Trefferchance) und senkt feindlichen Elementarschaden um 20%. Kosten: 0 BP und +20% Verwundbarkeit gegen Hieb/Wucht im Nahkampf. Hält bis zum Ende des folgenden gegnerischen Zuges; danach im eigenen Zug neu einschlagen.\n• <b>G9-Übertaktung (Rechtsklick):</b> Rechtsklickt auf eine G9-Kriegsform mit mehr als 4 LP und einem verbleibenden Angriff, um die Notfall-Protokollüberbrückung auszulösen (+1 Nahkampfschlag, +2 Schaden und <b>Betäuben</b> für diesen Zug). Am Zugende erleidet der Golem bis zu 3 LP thermische Kernbelastung und stirbt daran nicht.\n• <b>Mäiden-Gleitflug (Passiv):</b> Jede Mäiden-Einheit, die ihren Zug auf erhöhtem Gelände (Hügel oder Berge) beginnt, entfaltet ihren Schwingenanzug und erhält für diesen Zug <b>+1 BP und Plänkler</b>!\n• <b>Portalwächter (Passiv):</b> Eine Schildwache, die einen vollen Zug still stand und neben der eine Phoinix steht, öffnet ihr tragbares Arkanit-Portal, das Manakristalle aufladen. Marines außer Anführern reisen in eine Richtung von euren Dörfern auf freie Felder daneben und kommen ohne Bewegung und ohne Angriff in diesem Zug an. Das Portal schließt sich, sobald die Schildwache sich bewegt."
+msgid "• <b>Marine Salt-Grounding Pylum (Right-Click):</b> Right-click an ungrounded Kryonite Marine (Sergeant or higher; not Privates or Officers) to deploy their conductive pylon stake. Grants adjacent allies +20% elemental warding, grounds adjacent enemies' fire, cold and arcane attacks (max 50% CTH), and reduces enemy elemental damage by 20%. Costs: 0 MP and +20% melee Blade/Impact vulnerability. Lasts through the following enemy turn; redeploy it on your next turn.\n• <b>G9 Overclock (Right-Click):</b> Right-click a G9 Warform with more than 4 HP and an attack left to trigger emergency protocol bypass (+1 melee strike, +2 damage, and <b>Stun</b> for the turn). At turn end, the golem suffers up to 3 HP core thermal stress and cannot die from it.\n• <b>Maiden Wingsuit Glide (Passive):</b> Any Maiden unit beginning its turn on elevated terrain (Hills or Mountains) deploys thermal wingsuits, gaining <b>+1 MP and Skirmisher</b> for that turn!\n• <b>Portal Warden (Passive):</b> A Shieldguard that stood still for a full turn with a Phoinix beside it opens its portable Arcanite portal, charged by mana crystals. Marines other than leaders may travel one way from your villages to free hexes beside it, arriving with no moves and no attack that turn. The portal closes when the Shieldguard moves.\n• <b>Field Works (Right-Click):</b> Mechatronics and Techtronics standing on a village, castle or keep spend one aimergent-core and gold to build a G8 Simulacrum (10 gold) or a G9 AI (20 gold) on a free hex beside them. Shieldguards open an ember capsule (10 gold) to call a Phoinix, or kindle the ash of a fallen Phoinix for free. Each new unit of these lines carries 3 charges; the sidebar shows how many remain."
+msgstr "• <b>Salz-Erdungspfeiler der Marines (Rechtsklick):</b> Rechtsklickt auf einen noch nicht geerdeten Kryonit-Marine (ab Sergeant; keine Gefreiten oder Offiziere), um seinen leitfähigen Erdungspfeiler einzuschlagen. Gewährt angrenzenden Verbündeten +20% Elementarschutz, erdet Feuer-, Kälte- und Arkanangriffe angrenzender Feinde (max. 50% Trefferchance) und senkt feindlichen Elementarschaden um 20%. Kosten: 0 BP und +20% Verwundbarkeit gegen Hieb/Wucht im Nahkampf. Hält bis zum Ende des folgenden gegnerischen Zuges; danach im eigenen Zug neu einschlagen.\n• <b>G9-Übertaktung (Rechtsklick):</b> Rechtsklickt auf eine G9-Kriegsform mit mehr als 4 LP und einem verbleibenden Angriff, um die Notfall-Protokollüberbrückung auszulösen (+1 Nahkampfschlag, +2 Schaden und <b>Betäuben</b> für diesen Zug). Am Zugende erleidet der Golem bis zu 3 LP thermische Kernbelastung und stirbt daran nicht.\n• <b>Mäiden-Gleitflug (Passiv):</b> Jede Mäiden-Einheit, die ihren Zug auf erhöhtem Gelände (Hügel oder Berge) beginnt, entfaltet ihren Schwingenanzug und erhält für diesen Zug <b>+1 BP und Plänkler</b>!\n• <b>Portalwächter (Passiv):</b> Eine Schildwache, die einen vollen Zug still stand und neben der eine Phoinix steht, öffnet ihr tragbares Arkanit-Portal, das Manakristalle aufladen. Marines außer Anführern reisen in eine Richtung von euren Dörfern auf freie Felder daneben und kommen ohne Bewegung und ohne Angriff in diesem Zug an. Das Portal schließt sich, sobald die Schildwache sich bewegt.\n• <b>Feldwerke (Rechtsklick):</b> Mechatronikerinnen und Techtronikerinnen auf einem Dorf, einer Burg oder einem Bergfried verbrauchen einen Aimergent-Kern und Gold, um auf einem freien Nachbarfeld ein G8-Simulakrum (10 Gold) oder eine G9 AI (20 Gold) zu bauen. Schildwachen öffnen eine Glutkapsel (10 Gold), um eine Phoinix zu rufen, oder entfachen die Asche einer gefallenen Phoinix kostenlos neu. Jede neue Einheit dieser Linien trägt 3 Ladungen; die Seitenleiste zeigt, wie viele übrig sind."
 
 #. [option]
 #: liminal-union/faction.cfg:286
@@ -345,17 +345,8 @@ msgstr "Die Ära <bold>text='Liminale Union: Tapfere'</bold> umfasst ♙Stufe-1-
 #. [multiplayer_side]: id=LIUN_heroes, type=LIUN_Maiden_Colonel
 #: liminal-union/factions/liminal-union-braves.cfg:22
 #: liminal-union/factions/liminal-union-heroes.cfg:22
-msgid ""
-"<bold><ref>text='The Liminal Union' dst='..race_maidencommand'</ref></bold> is a disciplined commonwealth fighting under an interlocking military doctrine. Strike at peak power with <bold>text='Three Golden Maxims'</bold>:\n"
-"\n"
-"1. <bold>text='March in Pairs'</bold>: Keep units adjacent to activate armor alloy traits automatically (Pyrite ranged focus, Kryonite damage Interlock, Arcanite warding). Resonance activates immediately upon stepping into formation.\n"
-"2. <bold>text='Keep an Officer Close'</bold>: Officers and adjacent allied liminal units gain +10 percentage points of damage during Day or Night. Their alignment remains unchanged.\n"
-"3. <bold>text='Strike at Twilight'</bold>: Retreat or consolidate during deep day and pitch-black night; attack fiercely at Dawn and Dusk (+25% power).\n"
-"\n"
-"• <bold>text='Visual & Audio Feedback'</bold>: Color-coded breathing halos (Amber Pyrite, Cyan Kryonite, Purple Arcanite) and floating battle badges display tier status immediately without checking menus.\n"
-"• <bold>text='Tactical Maneuvers'</bold>: Level 0 troops exert Formation ZOC in pairs; Maidens glide from hills (+1 MP, Skirmisher); G9 Warforms overclock for emergency burst strikes and Stun.\n"
-"• <bold>text='Field Codex'</bold>: Right-click any allied unit anytime on the map to review the automated Doctrine Codex without pausing the match."
-msgstr "<bold><ref>text='Die Liminale Union' dst='..race_maidencommand'</ref></bold> ist ein diszipliniertes Gemeinwesen, das nach einer ineinandergreifenden Militärdoktrin kämpft. Schlagt mit den <bold>text='Drei Goldenen Maximen'</bold> bei voller Stärke zu:\n\n1. <bold>text='Marschiert zu zweit'</bold>: Haltet Einheiten nebeneinander, um Rüstungslegierungen automatisch zu aktivieren (Pyrit-Fernkampffokus, Kryonit-Schadensverbund, Arkanit-Abschirmung). Resonanz wirkt sofort beim Einrücken in die Formation.\n2. <bold>text='Haltet einen Offizier nah'</bold>: Offiziere und angrenzende verbündete liminale Einheiten erhalten bei Tag oder Nacht +10 Prozentpunkte Schaden. Ihre Gesinnung bleibt unverändert.\n3. <bold>text='Schlagt in der Dämmerung zu'</bold>: Zieht euch am helllichten Tag und in tiefster Nacht geordnet zurück; greift bei Morgen- und Abenddämmerung entschlossen an (+25% Kraft).\n\n• <bold>text='Visuelles & akustisches Feedback'</bold>: Farbige, atmende Halos (Bernstein-Pyrit, Cyan-Kryonit, Violett-Arkanit) und schwebende Gefechtsabzeichen zeigen die aktuelle Stufe sofort ohne Menüwechsel.\n• <bold>text='Taktische Manöver'</bold>: Stufe-0-Truppen üben paarweise Formations-ZOC aus; Mäiden gleiten von Hügeln (+1 BP, Plänkler); G9-Kriegsformen übertakten für Notfall-Schläge und Betäuben.\n• <bold>text='Feldkodex'</bold>: Rechtsklickt jederzeit auf eine beliebige verbündete Einheit, um den Doktrin-Kodex einzusehen, ohne die Partie zu unterbrechen."
+msgid "<bold><ref>text='The Liminal Union' dst='..race_maidencommand'</ref></bold> is a disciplined commonwealth fighting under an interlocking military doctrine. Strike at peak power with <bold>text='Three Golden Maxims'</bold>:\n\n1. <bold>text='March in Pairs'</bold>: Keep units adjacent to activate armor alloy traits automatically (Pyrite ranged focus, Kryonite damage Interlock, Arcanite warding). Resonance activates immediately upon stepping into formation.\n2. <bold>text='Keep an Officer Close'</bold>: Officers and adjacent allied liminal units gain +10 percentage points of damage during Day or Night. Their alignment remains unchanged.\n3. <bold>text='Strike at Twilight'</bold>: Retreat or consolidate during deep day and pitch-black night; attack fiercely at Dawn and Dusk (+25% power).\n\n• <bold>text='Visual & Audio Feedback'</bold>: Color-coded breathing halos (Amber Pyrite, Cyan Kryonite, Purple Arcanite) and floating battle badges display tier status immediately without checking menus.\n• <bold>text='Tactical Maneuvers'</bold>: Level 0 troops exert Zone of Control beside an officer; Maidens glide from hills (+1 MP, Skirmisher); G9 Warforms overclock for emergency burst strikes and Stun; Mechatronics and Techtronics build warforms, Shieldguards call and rekindle Phoinixes.\n• <bold>text='Field Codex'</bold>: Right-click any allied unit anytime on the map to review the automated Doctrine Codex without pausing the match."
+msgstr "<bold><ref>text='Die Liminale Union' dst='..race_maidencommand'</ref></bold> ist ein diszipliniertes Gemeinwesen, das nach einer ineinandergreifenden Militärdoktrin kämpft. Schlagt mit den <bold>text='Drei Goldenen Maximen'</bold> bei voller Stärke zu:\n\n1. <bold>text='Marschiert zu zweit'</bold>: Haltet Einheiten nebeneinander, um Rüstungslegierungen automatisch zu aktivieren (Pyrit-Fernkampffokus, Kryonit-Schadensverbund, Arkanit-Abschirmung). Resonanz wirkt sofort beim Einrücken in die Formation.\n2. <bold>text='Haltet einen Offizier nah'</bold>: Offiziere und angrenzende verbündete liminale Einheiten erhalten bei Tag oder Nacht +10 Prozentpunkte Schaden. Ihre Gesinnung bleibt unverändert.\n3. <bold>text='Schlagt in der Dämmerung zu'</bold>: Zieht euch am helllichten Tag und in tiefster Nacht geordnet zurück; greift bei Morgen- und Abenddämmerung entschlossen an (+25% Kraft).\n\n• <bold>text='Visuelles & akustisches Feedback'</bold>: Farbige, atmende Halos (Bernstein-Pyrit, Cyan-Kryonit, Violett-Arkanit) und schwebende Gefechtsabzeichen zeigen die aktuelle Stufe sofort ohne Menüwechsel.\n• <bold>text='Taktische Manöver'</bold>: Stufe-0-Truppen üben neben einem Offizier eine Kontrollzone aus; Mäiden gleiten von Hügeln (+1 BP, Plänkler); G9-Kriegsformen übertakten für Notfall-Schläge und Betäuben; Mechatronikerinnen und Techtronikerinnen bauen Kriegsformen, Schildwachen rufen Phoinixe und entfachen sie neu.\n• <bold>text='Feldkodex'</bold>: Rechtsklickt jederzeit auf eine beliebige verbündete Einheit, um den Doktrin-Kodex einzusehen, ohne die Partie zu unterbrechen."
 
 #. [multiplayer_side]: id=LIUN_heroes, type=LIUN_Maiden_Colonel
 #: liminal-union/factions/liminal-union-heroes.cfg:21
@@ -570,8 +561,8 @@ msgstr "Formations-ZOC"
 
 #. [lua]: resonance.update_unit_state
 #: liminal-union/lua/resonance.lua:321
-msgid "Standing in formation with allied troops. Exerting Zone of Control."
-msgstr "Steht in geschlossener Formation mit verbündeten Truppen. Übt eine Kontrollzone aus."
+msgid "Standing beside an allied officer. Exerting Zone of Control."
+msgstr "Steht neben einem verbündeten Offizier. Übt eine Kontrollzone aus."
 
 #. [lua]: resonance.update_unit_state
 #: liminal-union/lua/resonance.lua:327
@@ -709,8 +700,8 @@ msgstr "Formations-ZOC"
 
 #. [dummy]: id=LIUN_formation_zoc_dummy
 #: liminal-union/macros/abilities.cfg:105
-msgid "This level 0 unit exerts Zone of Control while adjacent to an eligible Liminal Union ally. The effect is recalculated when formation changes. Poison disables it; slow can disrupt it unless an unslowed eligible ally remains adjacent."
-msgstr "Diese Stufe-0-Einheit übt eine Kontrollzone aus, solange sie neben einem geeigneten Verbündeten der Liminalen Union steht. Der Effekt wird bei Formationsänderungen neu berechnet. Gift deaktiviert ihn; Verlangsamung kann ihn unterbrechen, sofern kein unverlangsamter geeigneter Verbündeter angrenzt."
+msgid "This level 0 unit exerts Zone of Control while an allied officer that is not poisoned stands adjacent. Poison on this unit disables it."
+msgstr "Diese Stufe-0-Einheit übt eine Kontrollzone aus, solange ein verbündeter, nicht vergifteter Offizier angrenzt. Gift auf dieser Einheit hebt sie auf."
 
 #. [dummy]: id=LIUN_conductor
 #: liminal-union/macros/abilities.cfg:121
@@ -797,8 +788,8 @@ msgstr "Mobile Instandsetzung"
 
 #. [heals]: id=LIUN_mobile_repair
 #: liminal-union/macros/abilities.cfg:277
-msgid "Quickbound golems and other warforms, such as war chariots, can be restored in repair shops in towns and cities or by mobile artificers, up to 6 HP per turn."
-msgstr "Schnellgebundene Golems und andere Kriegsformen wie Streitwagen können in Werkstätten in Städten oder durch mobile Kunsthandwerker um bis zu 6 LP pro Zug instand gesetzt werden."
+msgid "Quickbound golems and other warforms, such as war chariots, are restored in repair shops in towns and cities or by mobile artificers. Adjacent warforms regain 4 HP per turn from a Jaeger or Mechatronic, 8 HP from a Techtronic and 12 HP from a veteran Techtronic (2·2)."
+msgstr "Schnellgebundene Golems und andere Kriegsformen wie Streitwagen werden in Werkstätten in Städten oder durch mobile Kunsthandwerker instand gesetzt. Benachbarte Kriegsformen erhalten pro Zug 4 LP von einer Jägerin oder Mechatronikerin, 8 LP von einer Techtronikerin und 12 LP von einer erfahrenen Techtronikerin (2·2) zurück."
 
 #. [heals]: id=LIUN_mobile_repair
 #: liminal-union/macros/abilities.cfg:278
@@ -1401,8 +1392,8 @@ msgstr "G8-Simulacra sind Schnellgebundene Golems, die zu Übungs- und Prüfungs
 
 #. [unit_type]: id=LIUN_G8_Simulacrum_1_1
 #: liminal-union/units/golems/a0-g8-simulacrum.cfg:128
-msgid "🤖 🟕 G8 Simulacrum (1·1)"
-msgstr "🤖 🟕 G8-Simulacrum (1·1)"
+msgid "🤖 🟕 G8 Simulacrum (0·1)"
+msgstr "🤖 🟕 G8-Simulacrum (0·1)"
 
 #. [unit_type]: id=LIUN_G8_Simulacrum_1_1
 #: liminal-union/units/golems/a0-g8-simulacrum.cfg:133
@@ -1411,8 +1402,8 @@ msgstr "Ein G8-Simulacrum (1·1) – Kern-Neukalibrierung | Für Drill und Belas
 
 #. [unit_type]: id=LIUN_G8_Simulacrum_1_2
 #: liminal-union/units/golems/a0-g8-simulacrum.cfg:142
-msgid "🤖 🟕 G8 Simulacrum (1·2)"
-msgstr "🤖 🟕 G8-Simulacrum (1·2)"
+msgid "🤖 🟕 G8 Simulacrum (0·2)"
+msgstr "🤖 🟕 G8-Simulacrum (0·2)"
 
 #. [unit_type]: id=LIUN_G9_AI_Base
 #: liminal-union/units/golems/b0-g9-ai.cfg:6
@@ -1471,8 +1462,8 @@ msgstr "🤖 🟗 G9 NCM (1·2)"
 
 #. [attack]: type=arcane
 #: liminal-union/units/golems/b1-g9-ncm.cfg:212
-msgid "[berserk mode]"
-msgstr "[Berserkermodus]"
+msgid "Fist [berserk mode]"
+msgstr "Faust [Berserkermodus]"
 
 #. [unit_type]: id=LIUN_G9_NCM_1_2
 #: liminal-union/units/golems/b1-g9-ncm.cfg:225
@@ -1916,8 +1907,8 @@ msgstr "Bogen"
 
 #. [unit_type]: id=LIUN_Techtronic_Base
 #: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:52
-msgid "Techtronics are trained senior war-artificers of the Maiden Corps. Skilled in Arcanite craft and the binding arts, they construct, maintain, and recalibrate the G9 Warforms under corps command. When called to service, they are most effective in squads alongside G9 golems, a maiden officer, and maiden infantry. A Jaeger who takes this post gives up her blunt and Arcanite arrows for a piercing bow and the repair of warforms."
-msgstr "Techtronikerinnen sind ausgebildete leitende Kriegs-Kunsthandwerkerinnen des Mäiden-Korps. Bewandert in der Arkanit-Schmiedekunst und den Bindungskünsten, fertigen, warten und kalibrieren sie die G9-Kriegsformen unter dem Befehl des Korps. Im Feldeinsatz wirken sie am besten im Verbund mit G9-Golems, einer Mäiden-Offizierin und Mäiden-Infanterie. Eine Jägerin, die diesen Posten übernimmt, gibt ihre Stumpf- und Arkanitpfeile für einen Stichbogen und die Instandsetzung der Kriegsformen auf."
+msgid "Techtronics are trained senior war-artificers of the Maiden Corps. Skilled in Arcanite craft and the binding arts, they construct, maintain, and recalibrate the G9 Warforms under corps command. When called to service, they are most effective in squads alongside G9 golems, a maiden officer, and maiden infantry. A Mechatronic who rises to this post carries sealed Curie cores to quicken G9 AI warforms in a village, castle or keep."
+msgstr "Techtronikerinnen sind ausgebildete leitende Kriegs-Kunsthandwerkerinnen des Mäiden-Korps. Bewandert in der Arkanit-Schmiedekunst und den Bindungskünsten, fertigen, warten und kalibrieren sie die G9-Kriegsformen unter dem Befehl des Korps. Im Feldeinsatz wirken sie am besten im Verbund mit G9-Golems, einer Mäiden-Offizierin und Mäiden-Infanterie. Eine Mechatronikerin, die zu diesem Posten aufsteigt, trägt versiegelte Curie-Kerne, um in einem Dorf, einer Burg oder einem Bergfried G9-AI-Kriegsformen zu beleben."
 
 #. [unit_type]: id=LIUN_Techtronic
 #: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:180
@@ -1986,12 +1977,12 @@ msgstr "🔱 ⪦ Sergeant"
 #. [attack]: type=impact
 #: liminal-union/units/halfelven/marines/a1-sergeant.cfg:17
 msgid "Khopesh [smash]"
-msgstr "Chopper [Schmetterschlag]"
+msgstr "Chepesch [Schmetterschlag]"
 
 #. [attack]: type=pierce
 #: liminal-union/units/halfelven/marines/a1-sergeant.cfg:28
 msgid "Khopesh [double tap]"
-msgstr "Chopper [Doppelhieb]"
+msgstr "Chepesch [Doppelhieb]"
 
 #. [attack]: type=pierce
 #: liminal-union/units/halfelven/marines/a1-sergeant.cfg:39
@@ -2714,7 +2705,7 @@ msgid "Sword [thrust]"
 msgstr "Schwert [Stoß]"
 
 msgid "Khopesh [thrust]"
-msgstr "Chopper [Stoß]"
+msgstr "Chepesch [Stoß]"
 
 msgid "Shield [smash]"
 msgstr "Schild [Schmetterschlag]"
@@ -2742,3 +2733,75 @@ msgstr "Portalwächterin"
 
 msgid "This Shieldguard carries a portable Arcanite portal, charged by mana crystals. After standing still for a full turn with a Phoinix beside it, the portal opens at once. Marines other than leaders may then travel one way from their side's villages to any free hex beside it, arriving with no moves and no attack that turn. The portal closes when this unit moves."
 msgstr "Diese Schildwache trägt ein tragbares Arkanit-Portal, das Manakristalle aufladen. Stand sie einen vollen Zug still und steht eine Phoinix neben ihr, öffnet sich das Portal sofort. Marines außer Anführern können dann in eine Richtung von den Dörfern ihrer Seite auf jedes freie Feld neben ihr reisen; sie kommen ohne Bewegung und ohne Angriff in diesem Zug an. Das Portal schließt sich, sobald diese Einheit sich bewegt."
+
+#: liminal-union/units/halfelven/maiden/b1-mechatronic.cfg
+msgid "🪽⪦ Mechatronic"
+msgstr "🪽⪦ Mechatronikerin"
+
+#: liminal-union/units/halfelven/maiden/b1-mechatronic.cfg
+msgid "🪽⪦ Mechatronic (1·0)"
+msgstr "🪽⪦ Mechatronikerin (1·0)"
+
+#: liminal-union/units/halfelven/maiden/b1-mechatronic.cfg
+msgid "🪽⪦ Mechatronic (1·1)"
+msgstr "🪽⪦ Mechatronikerin (1·1)"
+
+#: liminal-union/units/halfelven/maiden/b1-mechatronic.cfg
+msgid "Mechatronics are the junior war-artificers of the Maiden Corps. They carry sealed Curie cores into the field; standing in a village, castle or keep, a Mechatronic quickens an immobile G8 Simulacrum to hold the ground, and she tends the warforms of her squad. A Private who takes this post trades the hunter's arrows for a piercing bow and an artificer's satchel. Proven Mechatronics rise to Techtronic."
+msgstr "Mechatronikerinnen sind die jungen Kriegsartifizierinnen des Mäiden-Korps. Sie tragen versiegelte Curie-Kerne ins Feld; auf einem Dorf, einer Burg oder einem Bergfried belebt eine Mechatronikerin ein unbewegliches G8-Simulakrum, das den Boden hält, und sie pflegt die Kriegsformen ihres Trupps. Eine Gefreite, die diesen Posten übernimmt, tauscht die Pfeile der Jägerin gegen einen Stichbogen und die Tasche der Artifizierin. Bewährte Mechatronikerinnen steigen zur Techtronikerin auf."
+
+#: liminal-union/units/halfelven/maiden/b1-mechatronic.cfg
+msgid "Field Certification | You have quickened warforms under fire and kept them running."
+msgstr "Feldzertifikat | Ihr habt unter Beschuss Kriegsformen belebt und am Laufen gehalten."
+
+#: liminal-union/lua/field_works.lua
+msgid "ember capsules (%d)"
+msgstr "Glutkapseln (%d)"
+
+#: liminal-union/lua/field_works.lua
+msgid "female^ember capsules (%d)"
+msgstr "Glutkapseln (%d)"
+
+#: liminal-union/lua/field_works.lua
+msgid "Sealed alloy capsules hold the preserved ash of Phoinix Messengers; a trace of Zoelite rekindles it. Right-click a free hex beside this Shieldguard to open a capsule and call a young Phoinix (10 gold): the Shieldguard must not have moved this turn, spends its whole turn, and neither its hex nor the target hex may be a village, castle or keep. Right-click the ash of a fallen Phoinix of your side beside it to kindle it without gold or capsule; this spends its attack. Each new Shieldguard, and every Shieldguard at the start of a scenario, carries 3 capsules."
+msgstr "Versiegelte Legierungskapseln bewahren die Asche von Phoinix-Botinnen; eine Spur Zoelit entfacht sie neu. Rechtsklickt auf ein freies Feld neben dieser Schildwache, um eine Kapsel zu öffnen und eine junge Phoinix zu rufen (10 Gold): Die Schildwache darf sich in diesem Zug nicht bewegt haben, verbraucht ihren ganzen Zug, und weder ihr Feld noch das Zielfeld darf ein Dorf, eine Burg oder ein Bergfried sein. Rechtsklickt auf die Asche einer gefallenen Phoinix eurer Seite neben ihr, um sie ohne Gold und Kapsel neu zu entfachen; das verbraucht ihren Angriff. Jede neue Schildwache und jede Schildwache zu Beginn eines Szenarios trägt 3 Kapseln."
+
+#: liminal-union/lua/field_works.lua
+msgid "aimergent-core (%d)"
+msgstr "Aimergent-Kerne (%d)"
+
+#: liminal-union/lua/field_works.lua
+msgid "female^aimergent-core (%d)"
+msgstr "Aimergent-Kerne (%d)"
+
+#: liminal-union/lua/field_works.lua
+msgid "Sealed Curie energy cores, each with a bound intellect, ready to quicken a warform. While standing on a village, castle or keep, right-click a free hex beside this artificer to build: a Mechatronic builds a G8 Simulacrum (10 gold), a Techtronic a G9 AI (20 gold). Building spends the artificer's attack, at most once per turn; the warform arrives without moves or attack, costs no upkeep and never advances a level. Each new artificer, and every artificer at the start of a scenario, carries 3 cores."
+msgstr "Versiegelte Curie-Energiekerne, jeder mit einem gebundenen Intellekt, bereit, eine Kriegsform zu beleben. Auf einem Dorf, einer Burg oder einem Bergfried rechtsklickt auf ein freies Feld neben dieser Artifizierin, um zu bauen: Eine Mechatronikerin baut ein G8-Simulakrum (10 Gold), eine Techtronikerin eine G9 AI (20 Gold). Bauen verbraucht den Angriff der Artifizierin, höchstens einmal pro Zug; die Kriegsform kommt ohne Bewegung und ohne Angriff an, kostet keinen Unterhalt und steigt nie eine Stufe auf. Jede neue Artifizierin und jede Artifizierin zu Beginn eines Szenarios trägt 3 Kerne."
+
+#: liminal-union/lua/field_works.lua
+msgid "<span color='#b388ff'>Warform quickened</span>"
+msgstr "<span color='#b388ff'>Kriegsform belebt</span>"
+
+#: liminal-union/lua/field_works.lua
+msgid "<span color='#ffaa33'>Ember capsule opened</span>"
+msgstr "<span color='#ffaa33'>Glutkapsel geöffnet</span>"
+
+#: liminal-union/lua/field_works.lua
+msgid "<span color='#ffaa33'>Ash rekindled</span>"
+msgstr "<span color='#ffaa33'>Asche neu entfacht</span>"
+
+#: liminal-union/faction.cfg
+msgid "Build G8 Simulacrum here (10 gold, 1 aimergent-core)"
+msgstr "G8-Simulakrum hier bauen (10 Gold, 1 Aimergent-Kern)"
+
+#: liminal-union/faction.cfg
+msgid "Build G9 AI here (20 gold, 1 aimergent-core)"
+msgstr "G9 AI hier bauen (20 Gold, 1 Aimergent-Kern)"
+
+#: liminal-union/faction.cfg
+msgid "Open ember capsule: call a Phoinix here (10 gold)"
+msgstr "Glutkapsel öffnen: hier eine Phoinix rufen (10 Gold)"
+
+#: liminal-union/faction.cfg
+msgid "Kindle Phoinix ash here"
+msgstr "Phoinix-Asche hier entfachen"
