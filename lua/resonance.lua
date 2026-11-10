@@ -243,6 +243,54 @@ function resonance.update_unit_alignment(u)
     end
 end
 
+-- Caps on totals including resonance (design: WEAPON_PROFILES.md, "Caps enforced in code").
+local ACCURACY_CAP = 20
+local PARRY_CAP = 15
+local SUNDER_CAP = 3
+
+-- True if an allied Squad Anchor with this dummy ability stands adjacent, alive and not poisoned.
+local function has_adjacent_anchor(u, anchor_id)
+    local adjacent = wesnoth.units.find_on_map({
+        side = u.side,
+        { "filter_adjacent", { id = u.id } }
+    })
+    for idx, a in ipairs(adjacent) do
+        if a.hitpoints > 0 and not a.status.poisoned and resonance.has_dummy_ability(a, anchor_id) then
+            return true
+        end
+    end
+    return false
+end
+
+-- Appends resonance specials to the unit's attacks of one range, clipped per attack:
+-- static stat ("accuracy" or "parry") plus bonus never exceeds cap, and clipping never
+-- raises the bonus. Attack names repeat within a unit (two "bow", two "sword"), so each
+-- [effect] selects its attacks by range and static stat value instead of by name.
+-- build_specials(clipped_bonus) returns the special tags; an empty list adds nothing.
+local function add_clipped_specials(u, range, stat, cap, bonus, build_specials)
+    local effects = { id = "LIUN_resonance_special", silent = true }
+    local seen = {}
+    for idx, atk in ipairs(u.attacks) do
+        local static = atk[stat]
+        if atk.range == range and not seen[static] then
+            seen[static] = true
+            local specials = build_specials(math.min(bonus, cap - static))
+            if #specials > 0 then
+                specials.mode = "append"
+                table.insert(effects, { "effect", {
+                    apply_to = "attack",
+                    range = range,
+                    [stat] = tostring(static),
+                    { "set_specials", specials }
+                }})
+            end
+        end
+    end
+    if #effects > 0 then
+        u:add_modification("object", effects)
+    end
+end
+
 -- Updates alignment, Formation ZOC, and physical & alloy resistance bonuses
 function resonance.update_unit_state(u)
     if not u or u.hitpoints <= 0 then return end
@@ -329,72 +377,58 @@ function resonance.update_unit_state(u)
         local alloy = resonance.get_unit_alloy(u)
         if alloy == "pyrite" then
             -- Pyrite Focus: +5% (T1) -> +10% (T2) -> +15% (T3) CTH on ranged offense
-            -- Plus +10% CTH if adjacent to an allied Pyrite Squad Anchor (2·2)
+            -- Plus +10% CTH if adjacent to an allied Pyrite Squad Anchor (2·2).
+            -- Clipped per attack so that static accuracy plus Focus stays at or below +20.
             local focus_add = tier * 5
-            local adj_allies = wesnoth.units.find_on_map({
-                side = u.side,
-                { "filter_adjacent", { id = u.id } }
-            })
-            for idx_a, a in ipairs(adj_allies) do
-                if a.hitpoints > 0 and not a.status.poisoned and resonance.has_dummy_ability(a, "LIUN_squad_anchor_pyrite") then
-                    focus_add = focus_add + 10
-                    break
-                end
+            if has_adjacent_anchor(u, "LIUN_squad_anchor_pyrite") then
+                focus_add = focus_add + 10
             end
-            u:add_modification("object", {
-                id = "LIUN_resonance_special",
-                silent = true,
-                { "effect", {
-                    apply_to = "attack",
-                    range = "ranged",
-                    { "set_specials", {
-                        mode = "append",
-                        { "chance_to_hit", {
-                            id = "LIUN_pyrite_focus",
-                            name = _ "focus",
-                            description = string.format(_ "Pyrite resonance sharpens aim: +%d%% chance to hit at range on offense.", focus_add),
-                            add = focus_add,
-                            cumulative = true,
-                            active_on = "offense"
-                        }}
+            add_clipped_specials(u, "ranged", "accuracy", ACCURACY_CAP, focus_add, function(focus)
+                if focus <= 0 then return {} end
+                return {
+                    { "chance_to_hit", {
+                        id = "LIUN_pyrite_focus",
+                        name = _ "focus",
+                        description = string.format(_ "Pyrite resonance sharpens aim: +%d%% chance to hit at range on offense.", focus),
+                        add = focus,
+                        cumulative = true,
+                        active_on = "offense"
                     }}
-                }}
-            })
+                }
+            end)
         elseif alloy == "kryonite" then
             -- Kryonite Bulwark: Parry -5% (T1) -> -10% (T2) -> -10% + Firststrike (T3) on melee defense
-            local parry_sub = math.min(10, tier * 5)
-            local specials_cfg = {
-                mode = "append",
-                { "chance_to_hit", {
-                    id = "LIUN_kryonite_bulwark",
-                    name = _ "bulwark",
-                    description = string.format(_ "Kryonite formation locks shields: enemies suffer -%d%% chance to hit in melee on offense.", parry_sub),
-                    sub = parry_sub,
-                    apply_to = "opponent",
-                    cumulative = true,
-                    active_on = "defense"
-                }}
-            }
-            if tier == 3 then
-                table.insert(specials_cfg, { "firststrike", {
-                    id = "LIUN_kryonite_firststrike",
-                    name = _ "first strike",
-                    description = _ "Kryonite phalanx braces: strikes first when defending in melee.",
-                    active_on = "defense"
-                }})
-            end
-            u:add_modification("object", {
-                id = "LIUN_resonance_special",
-                silent = true,
-                { "effect", {
-                    apply_to = "attack",
-                    range = "melee",
-                    { "set_specials", specials_cfg }
-                }}
-            })
+            -- Clipped per attack so that static parry plus Bulwark stays at or below 15.
+            add_clipped_specials(u, "melee", "parry", PARRY_CAP, math.min(10, tier * 5), function(parry_sub)
+                local specials = {}
+                if parry_sub > 0 then
+                    table.insert(specials, { "chance_to_hit", {
+                        id = "LIUN_kryonite_bulwark",
+                        name = _ "bulwark",
+                        description = string.format(_ "Kryonite formation locks shields: enemies suffer -%d%% chance to hit in melee on offense.", parry_sub),
+                        sub = parry_sub,
+                        apply_to = "opponent",
+                        cumulative = true,
+                        active_on = "defense"
+                    }})
+                end
+                if tier == 3 then
+                    table.insert(specials, { "firststrike", {
+                        id = "LIUN_kryonite_firststrike",
+                        name = _ "first strike",
+                        description = _ "Kryonite phalanx braces: strikes first when defending in melee.",
+                        active_on = "defense"
+                    }})
+                end
+                return specials
+            end)
         elseif alloy == "arcanite" then
             -- Arcanite Sunder: +1 (T1) -> +2 (T2) -> +3 (T3) melee damage on offense
+            -- Plus +1 if adjacent to an allied Arcanite Squad Anchor (2·2), at most +3 in total.
             local sunder_dmg = tier
+            if has_adjacent_anchor(u, "LIUN_squad_anchor_arcanite") then
+                sunder_dmg = math.min(SUNDER_CAP, sunder_dmg + 1)
+            end
             u:add_modification("object", {
                 id = "LIUN_resonance_special",
                 silent = true,
