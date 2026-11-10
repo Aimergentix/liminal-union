@@ -18,6 +18,27 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
 - Charges refill for every new unit of these lines and at the start of every scenario; the
   sidebar shows the count. The AI uses all three actions at the end of its turn.
 
+### Weapons
+- Every line now has a clear role and two damage types. All values are test values.
+- Maiden troops are archers: a pierce bodkin bow and, from 0·1, a fire Pyrite bow replace
+  the impact and arcane bows. Bow accuracy is -5% for Privates, +5% for Jaegers and +10%
+  for Hunterkillers. Privates shoot 4 times; Hunterkillers carry two bows instead of three.
+- Marine troops are line infantry: a pierce khopesh thrust and, from 0·1, a cold Kryonite
+  edge with more damage and strikes, and one weak impact sling instead of two slings.
+  Melee parry is -5% for Privates, +5% for Sergeants and +10% for Masterchiefs. The
+  Shieldguard's impact smash becomes the cold Kryonite rim.
+- G9 Warforms: the double tap deals +1 damage and becomes the arcane Arcanite fist on the
+  NCM. The NCM's brawl and berserk mode deal +1 damage. Accuracy and parry start 5% lower
+  and wear down to -5% at the last stage.
+- Officers parry better with rank: Cornets and Captains +10%, Colonels +15%.
+- Phoinix: the melee attack is now the fire ember talons, not magical, with +1 damage.
+  The magical arcane ranged attack is unchanged.
+- Resonance caps: a bow's own accuracy plus Pyrite Focus never exceeds +20%, and a
+  weapon's own parry plus Kryonite Bulwark never exceeds 15%.
+- The Techtronic (2·2) is now an Arcanite Squad Anchor: adjacent Arcanite allies in
+  resonance gain +1 Sunder, at most +3 in total. She no longer boosts Pyrite accuracy;
+  the Hunterkiller (2·2) remains the Pyrite Squad Anchor.
+
 ### Recruits and advancement
 - Braves recruit the G9 NCM and the Phoinix Elder (level 1); G9 AI and Phoinix (level 0)
   come only from field works. The G9 AI no longer advances to NCM. The G8 Simulacrum is

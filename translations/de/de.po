@@ -266,8 +266,8 @@ msgstr "Resonanzgruppen & Rüstungslegierungen"
 
 #. [message]: speaker=narrator
 #: liminal-union/faction.cfg:248
-msgid "Resonance activates immediately when standing adjacent to allies with matching armor alloys. A pod of 2, 3 or 4+ units reaches Tier 1, 2 or 3; each tier grants +5% blade, pierce and impact resistance.\n\n• <b>Pyrite (Maidens):</b> <b>Focus</b>: +5% chance to hit per tier with ranged attacks on offense, +10% more beside a Squad Anchor. Tier 3 adds +10% Fire and Arcane resistance.\n• <b>Kryonite (Marines):</b> <b>Bulwark</b>: enemies lose 5% (Tier 1) or 10% (Tier 2+) chance to hit this unit in melee. Tier 3 adds first strike on defense and +10% Cold and Arcane resistance. <b>Interlock</b> passes up to 30% of a normal hit to adjacent Kryonite allies; none falls below 1 HP.\n• <b>Arcanite (G9 Warforms, Techtronics):</b> <b>Sunder</b>: +1 melee damage per tier on offense. Tier 3 adds +20% Fire and Cold resistance.\n\n<i>Poison disables resonance; slow can lower its tier.</i>"
-msgstr "Resonanz wird sofort aktiv, sobald Einheiten neben Verbündeten mit gleicher Rüstungslegierung stehen. Eine Gruppe aus 2, 3 oder ab 4 Einheiten erreicht Stufe 1, 2 oder 3; jede Stufe gewährt +5% Resistenz gegen Hieb, Stich und Wucht.\n\n• <b>Pyrit (Mäiden):</b> <b>Fokus</b>: +5% Trefferchance je Stufe für Fernangriffe im Angriff, weitere +10% neben einem Truppanker. Stufe 3 gewährt zusätzlich +10% Feuer- und Arkanresistenz.\n• <b>Kryonit (Marines):</b> <b>Bollwerk</b>: Gegner verlieren im Nahkampf gegen diese Einheit 5% (Stufe 1) oder 10% (ab Stufe 2) Trefferchance. Stufe 3 gewährt Erstschlag in der Verteidigung sowie +10% Kälte- und Arkanresistenz. <b>Verbundschutz (Interlock)</b> leitet bis zu 30% eines normalen Treffers auf angrenzende Kryonit-Verbündete um; keiner fällt dabei unter 1 LP.\n• <b>Arkanit (G9-Kriegsformen, Techtronikerinnen):</b> <b>Spalten</b>: +1 Nahkampfschaden je Stufe im Angriff. Stufe 3 gewährt zusätzlich +20% Feuer- und Kälteresistenz.\n\n<i>Gift hebt die Resonanz auf; Verlangsamung kann ihre Stufe senken.</i>"
+msgid "Resonance activates immediately when standing adjacent to allies with matching armor alloys. A pod of 2, 3 or 4+ units reaches Tier 1, 2 or 3; each tier grants +5% blade, pierce and impact resistance.\n\n• <b>Pyrite (Maidens):</b> <b>Focus</b>: +5% chance to hit per tier with ranged attacks on offense, +10% more beside a Hunterkiller Squad Anchor; a bow's own accuracy and Focus together never exceed +20%. Tier 3 adds +10% Fire and Arcane resistance.\n• <b>Kryonite (Marines):</b> <b>Bulwark</b>: enemies lose 5% (Tier 1) or 10% (Tier 2+) chance to hit this unit in melee; a weapon's own parry and Bulwark together never exceed 15%. Tier 3 adds first strike on defense and +10% Cold and Arcane resistance. <b>Interlock</b> passes up to 30% of a normal hit to adjacent Kryonite allies; none falls below 1 HP.\n• <b>Arcanite (G9 Warforms, Techtronics):</b> <b>Sunder</b>: +1 melee damage per tier on offense, +1 more beside a Techtronic Squad Anchor, at most +3. Tier 3 adds +20% Fire and Cold resistance.\n\n<i>Poison disables resonance; slow can lower its tier.</i>"
+msgstr "Resonanz wird sofort aktiv, sobald Einheiten neben Verbündeten mit gleicher Rüstungslegierung stehen. Eine Gruppe aus 2, 3 oder ab 4 Einheiten erreicht Stufe 1, 2 oder 3; jede Stufe gewährt +5% Resistenz gegen Hieb, Stich und Wucht.\n\n• <b>Pyrit (Mäiden):</b> <b>Fokus</b>: +5% Trefferchance je Stufe für Fernangriffe im Angriff, weitere +10% neben einem Jagdschützin-Truppanker; Eigengenauigkeit des Bogens und Fokus übersteigen zusammen nie +20%. Stufe 3 gewährt zusätzlich +10% Feuer- und Arkanresistenz.\n• <b>Kryonit (Marines):</b> <b>Bollwerk</b>: Gegner verlieren im Nahkampf gegen diese Einheit 5% (Stufe 1) oder 10% (ab Stufe 2) Trefferchance; Eigenparade der Waffe und Bollwerk übersteigen zusammen nie 15%. Stufe 3 gewährt Erstschlag in der Verteidigung sowie +10% Kälte- und Arkanresistenz. <b>Verbundschutz (Interlock)</b> leitet bis zu 30% eines normalen Treffers auf angrenzende Kryonit-Verbündete um; keiner fällt dabei unter 1 LP.\n• <b>Arkanit (G9-Kriegsformen, Techtronikerinnen):</b> <b>Spalten</b>: +1 Nahkampfschaden je Stufe im Angriff, +1 weiterer neben einem Techtronikerin-Truppanker, höchstens +3. Stufe 3 gewährt zusätzlich +20% Feuer- und Kälteresistenz.\n\n<i>Gift hebt die Resonanz auf; Verlangsamung kann ihre Stufe senken.</i>"
 
 #. [option]
 #: liminal-union/faction.cfg:253
@@ -345,8 +345,8 @@ msgstr "Die Ära <bold>text='Liminale Union: Tapfere'</bold> umfasst ♙Stufe-1-
 #. [multiplayer_side]: id=LIUN_heroes, type=LIUN_Maiden_Colonel
 #: liminal-union/factions/liminal-union-braves.cfg:22
 #: liminal-union/factions/liminal-union-heroes.cfg:22
-msgid "<bold><ref>text='The Liminal Union' dst='..race_maidencommand'</ref></bold> is a disciplined commonwealth fighting under an interlocking military doctrine. Strike at peak power with <bold>text='Three Golden Maxims'</bold>:\n\n1. <bold>text='March in Pairs'</bold>: Keep units adjacent to activate armor alloy traits automatically (Pyrite ranged focus, Kryonite damage Interlock, Arcanite warding). Resonance activates immediately upon stepping into formation.\n2. <bold>text='Keep an Officer Close'</bold>: Officers and adjacent allied liminal units gain +10 percentage points of damage during Day or Night. Their alignment remains unchanged.\n3. <bold>text='Strike at Twilight'</bold>: Retreat or consolidate during deep day and pitch-black night; attack fiercely at Dawn and Dusk (+25% power).\n\n• <bold>text='Visual & Audio Feedback'</bold>: Color-coded breathing halos (Amber Pyrite, Cyan Kryonite, Purple Arcanite) and floating battle badges display tier status immediately without checking menus.\n• <bold>text='Tactical Maneuvers'</bold>: Level 0 troops exert Zone of Control beside an officer; Maidens glide from hills (+1 MP, Skirmisher); G9 Warforms overclock for emergency burst strikes and Stun; Mechatronics and Techtronics build warforms, Shieldguards call and rekindle Phoinixes.\n• <bold>text='Field Codex'</bold>: Right-click any allied unit anytime on the map to review the automated Doctrine Codex without pausing the match."
-msgstr "<bold><ref>text='Die Liminale Union' dst='..race_maidencommand'</ref></bold> ist ein diszipliniertes Gemeinwesen, das nach einer ineinandergreifenden Militärdoktrin kämpft. Schlagt mit den <bold>text='Drei Goldenen Maximen'</bold> bei voller Stärke zu:\n\n1. <bold>text='Marschiert zu zweit'</bold>: Haltet Einheiten nebeneinander, um Rüstungslegierungen automatisch zu aktivieren (Pyrit-Fernkampffokus, Kryonit-Schadensverbund, Arkanit-Abschirmung). Resonanz wirkt sofort beim Einrücken in die Formation.\n2. <bold>text='Haltet einen Offizier nah'</bold>: Offiziere und angrenzende verbündete liminale Einheiten erhalten bei Tag oder Nacht +10 Prozentpunkte Schaden. Ihre Gesinnung bleibt unverändert.\n3. <bold>text='Schlagt in der Dämmerung zu'</bold>: Zieht euch am helllichten Tag und in tiefster Nacht geordnet zurück; greift bei Morgen- und Abenddämmerung entschlossen an (+25% Kraft).\n\n• <bold>text='Visuelles & akustisches Feedback'</bold>: Farbige, atmende Halos (Bernstein-Pyrit, Cyan-Kryonit, Violett-Arkanit) und schwebende Gefechtsabzeichen zeigen die aktuelle Stufe sofort ohne Menüwechsel.\n• <bold>text='Taktische Manöver'</bold>: Stufe-0-Truppen üben neben einem Offizier eine Kontrollzone aus; Mäiden gleiten von Hügeln (+1 BP, Plänkler); G9-Kriegsformen übertakten für Notfall-Schläge und Betäuben; Mechatronikerinnen und Techtronikerinnen bauen Kriegsformen, Schildwachen rufen Phoinixe und entfachen sie neu.\n• <bold>text='Feldkodex'</bold>: Rechtsklickt jederzeit auf eine beliebige verbündete Einheit, um den Doktrin-Kodex einzusehen, ohne die Partie zu unterbrechen."
+msgid "<bold><ref>text='The Liminal Union' dst='..race_maidencommand'</ref></bold> is a disciplined commonwealth fighting under an interlocking military doctrine. Strike at peak power with <bold>text='Three Golden Maxims'</bold>:\n\n1. <bold>text='March in Pairs'</bold>: Keep units adjacent to activate armor alloy traits automatically (Pyrite ranged focus, Kryonite damage Interlock, Arcanite Sunder). Resonance activates immediately upon stepping into formation.\n2. <bold>text='Keep an Officer Close'</bold>: Officers and adjacent allied liminal units gain +10 percentage points of damage during Day or Night. Their alignment remains unchanged.\n3. <bold>text='Strike at Twilight'</bold>: Retreat or consolidate during deep day and pitch-black night; attack fiercely at Dawn and Dusk (+25% power).\n\n• <bold>text='Visual & Audio Feedback'</bold>: Color-coded breathing halos (Amber Pyrite, Cyan Kryonite, Purple Arcanite) and floating battle badges display tier status immediately without checking menus.\n• <bold>text='Tactical Maneuvers'</bold>: Level 0 troops exert Zone of Control beside an officer; Maidens glide from hills (+1 MP, Skirmisher); G9 Warforms overclock for emergency burst strikes and Stun; Mechatronics and Techtronics build warforms, Shieldguards call and rekindle Phoinixes.\n• <bold>text='Arms'</bold>: Maidens shoot bodkin points and Pyrite fire; Marines hold the line with khopesh thrust and Kryonite cold; G9 Warforms brawl to slow and strike with Arcanite; Phoinixes strike arcane from afar and close with ember talons.\n• <bold>text='Field Codex'</bold>: Right-click any allied unit anytime on the map to review the automated Doctrine Codex without pausing the match."
+msgstr "<bold><ref>text='Die Liminale Union' dst='..race_maidencommand'</ref></bold> ist ein diszipliniertes Gemeinwesen, das nach einer ineinandergreifenden Militärdoktrin kämpft. Schlagt mit den <bold>text='Drei Goldenen Maximen'</bold> bei voller Stärke zu:\n\n1. <bold>text='Marschiert zu zweit'</bold>: Haltet Einheiten nebeneinander, um Rüstungslegierungen automatisch zu aktivieren (Pyrit-Fernkampffokus, Kryonit-Schadensverbund, Arkanit-Spalten). Resonanz wirkt sofort beim Einrücken in die Formation.\n2. <bold>text='Haltet einen Offizier nah'</bold>: Offiziere und angrenzende verbündete liminale Einheiten erhalten bei Tag oder Nacht +10 Prozentpunkte Schaden. Ihre Gesinnung bleibt unverändert.\n3. <bold>text='Schlagt in der Dämmerung zu'</bold>: Zieht euch am helllichten Tag und in tiefster Nacht geordnet zurück; greift bei Morgen- und Abenddämmerung entschlossen an (+25% Kraft).\n\n• <bold>text='Visuelles & akustisches Feedback'</bold>: Farbige, atmende Halos (Bernstein-Pyrit, Cyan-Kryonit, Violett-Arkanit) und schwebende Gefechtsabzeichen zeigen die aktuelle Stufe sofort ohne Menüwechsel.\n• <bold>text='Taktische Manöver'</bold>: Stufe-0-Truppen üben neben einem Offizier eine Kontrollzone aus; Mäiden gleiten von Hügeln (+1 BP, Plänkler); G9-Kriegsformen übertakten für Notfall-Schläge und Betäuben; Mechatronikerinnen und Techtronikerinnen bauen Kriegsformen, Schildwachen rufen Phoinixe und entfachen sie neu.\n• <bold>text='Bewaffnung'</bold>: Mäiden schießen Panzerbrecher und Pyritfeuer; Marines halten die Linie mit Chepesch-Stoß und Kryonitkälte; G9-Kriegsformen verlangsamen im Faustkampf und schlagen mit Arkanit zu; Phoinixe treffen arkan aus der Ferne und greifen mit Glutkrallen an.\n• <bold>text='Feldkodex'</bold>: Rechtsklickt jederzeit auf eine beliebige verbündete Einheit, um den Doktrin-Kodex einzusehen, ohne die Partie zu unterbrechen."
 
 #. [multiplayer_side]: id=LIUN_heroes, type=LIUN_Maiden_Colonel
 #: liminal-union/factions/liminal-union-heroes.cfg:21
@@ -685,13 +685,18 @@ msgstr "Truppanker"
 
 #. [dummy]: id=LIUN_squad_anchor_pyrite
 #: liminal-union/macros/abilities.cfg:87
-msgid "Doctrinaire Squad Anchor: This veteran anchors the firing line, granting adjacent Pyrite-armored allies an additional +10% ranged accuracy on offense."
-msgstr "Doktrinärer Truppanker: Dieser Veteran verankert die Schützenlinie und gewährt angrenzenden Pyrit-gerüsteten Verbündeten im Angriff zusätzliche +10% Fernkampfgenauigkeit."
+msgid "Doctrinaire Squad Anchor: This veteran anchors the firing line, granting adjacent Pyrite-armored allies an additional +10% ranged accuracy on offense; a bow's own accuracy and Focus together never exceed +20%."
+msgstr "Doktrinärer Truppanker: Dieser Veteran verankert die Schützenlinie und gewährt angrenzenden Pyrit-gerüsteten Verbündeten im Angriff zusätzliche +10% Fernkampfgenauigkeit; Eigengenauigkeit des Bogens und Fokus übersteigen zusammen nie +20%."
 
 #. [dummy]: id=LIUN_squad_anchor_kryonite
 #: liminal-union/macros/abilities.cfg:96
 msgid "Doctrinaire Squad Anchor: This veteran anchors the shield wall. When adjacent Kryonite-armored allies take damage in formation, Interlock cushions an additional 2 points of damage."
 msgstr "Doktrinärer Truppanker: Dieser Veteran verankert den Schildwall. Wenn angrenzende Kryonit-gerüstete Verbündete in Formation Schaden erleiden, fängt der Verbundschutz 2 zusätzliche Schadenspunkte ab."
+
+#. [dummy]: id=LIUN_squad_anchor_arcanite
+#: liminal-union/macros/abilities.cfg:133
+msgid "Doctrinaire Squad Anchor: This veteran anchors the warform line, granting adjacent Arcanite-armored allies an additional +1 Sunder melee damage on offense, to at most +3 in all."
+msgstr "Doktrinärer Truppanker: Diese Veteranin verankert die Linie der Kriegsformen und gewährt angrenzenden Arkanit-gerüsteten Verbündeten im Angriff zusätzlich +1 Spalten-Nahkampfschaden, insgesamt höchstens +3."
 
 #. [dummy]: id=LIUN_formation_zoc_dummy
 #: liminal-union/macros/abilities.cfg:104
@@ -1385,6 +1390,11 @@ msgstr "Faust [Handgemenge]"
 msgid "Fist [double tap]"
 msgstr "Faust [Doppelschlag]"
 
+#. [attack]: type=arcane
+#: liminal-union/units/golems/b1-g9-ncm.cfg:35
+msgid "Fist [Arcanite]"
+msgstr "Faust [Arkanit]"
+
 #. [unit_type]: id=LIUN_G8_Simulacrum_Base
 #: liminal-union/units/golems/a0-g8-simulacrum.cfg:56
 msgid "G8 Simulacra are Quickbound Golems wrought for training and proving. Their frames are brought to life by golem-script inscribed on parchment set within the construct. Corps artificers test the bound intellects awakened in each frame: only those of sufficient quality are elevated to full G9 Warform service — the rest serve out their purpose as Simulacra. Though not swift, the Simulacrum is sturdy and endures sustained engagement well. They serve as training partners and trial opponents for the corps. They wear down with use and must be regularly inspected and maintained by artificers."
@@ -1796,8 +1806,8 @@ msgstr "🪽⚬ Gefreiter (0·1)"
 
 #. [unit_type]: id=LIUN_Maiden_Private_0_1
 #: liminal-union/units/halfelven/maiden/a0-maiden-private.cfg:167
-msgid "Arcanite bow ammunition | Unlocks the arcane bow. You can act unseen and unrecognized in urban combat zones."
-msgstr "Arkanit-Bogenmunition | Schaltet den Arkanbogen frei. Ihr könnt in bebauten Kampfgebieten ungesehen und unerkannt agieren."
+msgid "Pyrite bow ammunition | Unlocks the Pyrite fire bow. You can act unseen and unrecognized in urban combat zones."
+msgstr "Pyrit-Bogenmunition | Schaltet den Pyrit-Feuerbogen frei. Ihr könnt in bebauten Kampfgebieten ungesehen und unerkannt agieren."
 
 #. [unit_type]: id=LIUN_Jaeger_Base
 #: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:6
@@ -1815,26 +1825,18 @@ msgstr "🪽⪦ Jägerin"
 msgid "Kick"
 msgstr "Tritt"
 
-#. [attack]: type=impact
-#: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:29
-#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:28
-#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:226
-#: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:290
-msgid "Bow [blunts]"
-msgstr "Bogen [Stumpfpfeile]"
-
 #. [attack]: type=arcane
 #: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:40
 #: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:50
 #: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:248
 #: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:312
-msgid "Bow [arcanites]"
-msgstr "Bogen [Arkanitpfeile]"
+msgid "Bow [Pyrite]"
+msgstr "Bogen [Pyrit]"
 
 #. [unit_type]: id=LIUN_Jaeger_Base
 #: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:64
-msgid "A Maiden Corps Jaeger is part of the ranged infantry reserve of the Maiden Corps, trained to make skilled use of her wingsuit. Many of them are young mothers: raising and teaching the next generation, they naturally keep to archery practice at home rather than in a camp. In times of need they are called to service; otherwise they defend their own communities. They are equipped with the finest Arcanite-composite light armour the corps can provide, for no unit is held more beloved or revered. They operate in squads, harassing enemy infantry with a sustained hail of arrows from their short bows. They avoid individual close combat, preferring always to fight in concert. They have learned hard lessons against drake raids on their homeland, and their Arcanite-cold sling-rounds carry a chill that unsettles even draconic flesh."
-msgstr "Eine Jägerin des Mäiden-Korps gehört zur Fernkampfinfanterie-Reserve des Korps und beherrscht den gekonnten Einsatz ihres Schwingenanzugs. Viele von ihnen sind junge Mütter: Da sie die nächste Generation großziehen und unterrichten, üben sie den Bogenschuss naturgemäß zu Hause statt im Feldlager. In Zeiten der Not werden sie zum Dienst gerufen; ansonsten verteidigen sie ihre eigenen Gemeinden. Sie sind mit der besten leichten Arkanit-Verbundrüstung ausgestattet, die das Korps aufbieten kann, denn keine Einheit wird höher geschätzt. Sie kämpfen in Gruppen und setzen feindlicher Infanterie mit einem beständigen Pfeilhagel aus ihren Kurzbögen zu. Einzelkämpfe im Handgemenge meiden sie und fechten stets im Verbund. Aus Drachenüberfällen auf ihre Heimat haben sie harte Lehren gezogen, und ihre Arkanit-Kälteschleudergeschosse tragen einen Frost in sich, der selbst Drachenfleisch erschauern lässt."
+msgid "A Maiden Corps Jaeger is part of the ranged infantry reserve of the Maiden Corps, trained to make skilled use of her wingsuit. Many of them are young mothers: raising and teaching the next generation, they naturally keep to archery practice at home rather than in a camp. In times of need they are called to service; otherwise they defend their own communities. They are equipped with the finest Arcanite-composite light armour the corps can provide, for no unit is held more beloved or revered. They operate in squads, harassing enemy infantry with a sustained hail of arrows from their short bows. They avoid individual close combat, preferring always to fight in concert. They have learned hard lessons against drake raids on their homeland: where Pyrite fire finds little purchase on draconic scale, their bodkin points bite deep."
+msgstr "Eine Jägerin des Mäiden-Korps gehört zur Fernkampfinfanterie-Reserve des Korps und beherrscht den gekonnten Einsatz ihres Schwingenanzugs. Viele von ihnen sind junge Mütter: Da sie die nächste Generation großziehen und unterrichten, üben sie den Bogenschuss naturgemäß zu Hause statt im Feldlager. In Zeiten der Not werden sie zum Dienst gerufen; ansonsten verteidigen sie ihre eigenen Gemeinden. Sie sind mit der besten leichten Arkanit-Verbundrüstung ausgestattet, die das Korps aufbieten kann, denn keine Einheit wird höher geschätzt. Sie kämpfen in Gruppen und setzen feindlicher Infanterie mit einem beständigen Pfeilhagel aus ihren Kurzbögen zu. Einzelkämpfe im Handgemenge meiden sie und fechten stets im Verbund. Aus Drachenüberfällen auf ihre Heimat haben sie harte Lehren gezogen: Wo Pyritfeuer an Drachenschuppen wenig ausrichtet, dringen ihre Panzerbrecher-Spitzen tief ein."
 
 #. [unit_type]: id=LIUN_Jaeger
 #: liminal-union/units/halfelven/maiden/a1-jaeger.cfg:191
@@ -1880,8 +1882,8 @@ msgstr "🪽⪦ Jagdschützin (2·1)"
 
 #. [unit_type]: id=LIUN_Hunterkiller_2_1
 #: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:258
-msgid "Silver Heart Award 🎖️ | For bravery under enemy fire. (+4 HP, +2 Ranged Damage)"
-msgstr "Silbernes Herz 🎖️ | Für Tapferkeit unter feindlichem Beschuss. (+4 LP, +2 Fernkampfschaden)"
+msgid "Silver Heart Award 🎖️ | For bravery under enemy fire. (+4 HP, +1 Bodkin Damage, +2 Pyrite Damage)"
+msgstr "Silbernes Herz 🎖️ | Für Tapferkeit unter feindlichem Beschuss. (+4 LP, +1 Panzerbrecher-Schaden, +2 Pyrit-Schaden)"
 
 #. [unit_type]: id=LIUN_Hunterkiller_2_2
 #: liminal-union/units/halfelven/maiden/a2-hunterkiller.cfg:267
@@ -1932,8 +1934,8 @@ msgstr "🪽⪦ Techtronikerin (2·2)"
 
 #. [unit_type]: id=LIUN_Techtronic_2_2
 #: liminal-union/units/halfelven/maiden/b2-techtronic.cfg:270
-msgid "Gold Heart Award / Squad Anchor 🏅 | Senior war-artificer anchoring the squad (+4 HP, +12 HP Golem Repair, +4 HP Field Aid, +10% ranged CTH to adjacent Pyrite allies)."
-msgstr "Goldenes Herz / Truppanker 🏅 | Leitende Kriegs-Kunsthandwerkerin, die den Trupp verankert (+4 LP, +12 LP Golem-Reparatur, +4 LP Feldhilfe, +10% Fernkampf-Trefferchance für angrenzende Pyrit-Verbündete)."
+msgid "Gold Heart Award / Squad Anchor 🏅 | Senior war-artificer anchoring the squad (+4 HP, +12 HP Golem Repair, +4 HP Field Aid, +1 Sunder to adjacent Arcanite allies)."
+msgstr "Goldenes Herz / Truppanker 🏅 | Leitende Kriegs-Kunsthandwerkerin, die den Trupp verankert (+4 LP, +12 LP Golem-Reparatur, +4 LP Feldhilfe, +1 Spalten für angrenzende Arkanit-Verbündete)."
 
 #. [unit_type]: id=LIUN_Marine_Private_Base
 #: liminal-union/units/halfelven/marines/a0-marine-private.cfg:6
@@ -1966,8 +1968,8 @@ msgstr "🔱 ⚬ Gefreiter (0·1)"
 
 #. [unit_type]: id=LIUN_Marine_Private_0_1
 #: liminal-union/units/halfelven/marines/a0-marine-private.cfg:219
-msgid "Ability upgrade | Unlocks impact melee strike. You can hide in woods and forests, and remain undetected by enemies."
-msgstr "Fähigkeits-Ausbau | Schaltet den Wucht-Nahkampfangriff frei. Ihr könnt euch in Gehölzen und Wäldern verbergen und für Feinde unentdeckt bleiben."
+msgid "Ability upgrade | Unlocks the cold Kryonite edge. You can hide in woods and forests, and remain undetected by enemies."
+msgstr "Fähigkeits-Ausbau | Schaltet die kalte Kryonit-Schneide frei. Ihr könnt euch in Gehölzen und Wäldern verbergen und für Feinde unentdeckt bleiben."
 
 #. [unit_type]: id=LIUN_Sergeant_Base
 #: liminal-union/units/halfelven/marines/a1-sergeant.cfg:6
@@ -1976,26 +1978,13 @@ msgstr "🔱 ⪦ Sergeant"
 
 #. [attack]: type=impact
 #: liminal-union/units/halfelven/marines/a1-sergeant.cfg:17
-msgid "Khopesh [smash]"
-msgstr "Chepesch [Schmetterschlag]"
-
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/marines/a1-sergeant.cfg:28
-msgid "Khopesh [double tap]"
-msgstr "Chepesch [Doppelhieb]"
-
-#. [attack]: type=pierce
-#: liminal-union/units/halfelven/marines/a1-sergeant.cfg:39
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:50
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:260
-#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:324
-msgid "Sling [glandes]"
-msgstr "Schleuder [Eichelblei]"
+msgid "Khopesh [Kryonite edge]"
+msgstr "Chepesch [Kryonit-Schneide]"
 
 #. [unit_type]: id=LIUN_Sergeant_Base
 #: liminal-union/units/halfelven/marines/a1-sergeant.cfg:63
-msgid "A Marine Sergeant is part of the infantry reserve of the Marine Corps. Many of them are young fathers, raising and teaching the next generation; they naturally keep to combat training at home rather than in a standing camp. In times of need they may be drafted, or step forward on their own to defend their communities. The Sergeant is a swift all-round defender, armed with Arcanite-composite light armour, a hardened alu-bronze sword, and a precision sling. He is trained in both land and naval combat. Against forces unshielded by sorcerous protection — such as human or dunefolk levies — he holds a clear advantage. His Arcanite-fire sling-rounds, however, find less purchase against the scaled hides of draken."
-msgstr "Ein Marine-Sergeant gehört zur Infanteriereserve des Marine-Korps. Viele von ihnen sind junge Väter, die die nächste Generation großziehen und unterrichten; ihr Kampftraining halten sie daher zu Hause statt in einem stehenden Feldlager ab. In Zeiten der Not werden sie einberufen oder treten aus freien Stücken zur Verteidigung ihrer Gemeinden an. Der Sergeant ist ein schneller Allround-Verteidiger, ausgerüstet mit leichter Arkanit-Verbundrüstung, einem gehärteten Alubronze-Schwert und einer Präzisionsschleuder. Er ist sowohl im Land- als auch im Seegefecht geschult. Gegen Streitkräfte ohne magischen Schutz — wie Aufgebote der Menschen oder des Wüstenvolks — ist er klar im Vorteil. Seine Arkanit-Feuergeschosse richten gegen die geschuppten Häute der Drachen jedoch weniger aus."
+msgid "A Marine Sergeant is part of the infantry reserve of the Marine Corps. Many of them are young fathers, raising and teaching the next generation; they naturally keep to combat training at home rather than in a standing camp. In times of need they may be drafted, or step forward on their own to defend their communities. The Sergeant is a swift all-round defender, armed with Arcanite-composite light armour, a hardened alu-bronze sword, and a precision sling. He is trained in both land and naval combat. Against forces unshielded by sorcerous protection — such as human or dunefolk levies — he holds a clear advantage. His Kryonite edge drinks the warmth from what it strikes, and bites deepest into the fire-blooded hides of draken."
+msgstr "Ein Marine-Sergeant gehört zur Infanteriereserve des Marine-Korps. Viele von ihnen sind junge Väter, die die nächste Generation großziehen und unterrichten; ihr Kampftraining halten sie daher zu Hause statt in einem stehenden Feldlager ab. In Zeiten der Not werden sie einberufen oder treten aus freien Stücken zur Verteidigung ihrer Gemeinden an. Der Sergeant ist ein schneller Allround-Verteidiger, ausgerüstet mit leichter Arkanit-Verbundrüstung, einem gehärteten Alubronze-Schwert und einer Präzisionsschleuder. Er ist sowohl im Land- als auch im Seegefecht geschult. Gegen Streitkräfte ohne magischen Schutz — wie Aufgebote der Menschen oder des Wüstenvolks — ist er klar im Vorteil. Seine Kryonit-Schneide entzieht allem, was sie trifft, die Wärme und dringt am tiefsten in die feuerblütigen Häute der Drachen."
 
 #. [unit_type]: id=LIUN_Sergeant
 #: liminal-union/units/halfelven/marines/a1-sergeant.cfg:190
@@ -2034,8 +2023,8 @@ msgstr "🔱 ⪨ Hauptfeldwebel (2·1)"
 
 #. [unit_type]: id=LIUN_Masterchief_2_1
 #: liminal-union/units/halfelven/marines/a2-masterchief.cfg:270
-msgid "Silver Heart Award 🎖️ | For bravery under enemy fire. (+4 HP, +1 Strike)"
-msgstr "Silbernes Herz 🎖️ | Für Tapferkeit unter feindlichem Beschuss. (+4 LP, +1 Schlag)"
+msgid "Silver Heart Award 🎖️ | For bravery under enemy fire. (+4 HP, +1 Melee Damage, +1 Ranged Strike)"
+msgstr "Silbernes Herz 🎖️ | Für Tapferkeit unter feindlichem Beschuss. (+4 LP, +1 Nahkampfschaden, +1 Fernkampfschlag)"
 
 #. [unit_type]: id=LIUN_Masterchief_2_2
 #: liminal-union/units/halfelven/marines/a2-masterchief.cfg:279
@@ -2656,6 +2645,11 @@ msgstr "🧿🟕 Phoinix"
 msgid "Claws"
 msgstr "Krallen"
 
+#. [attack]: type=fire
+#: liminal-union/units/phoinixes/a0-phoinix.cfg:19
+msgid "Talons [ember]"
+msgstr "Krallen [Glut]"
+
 #. [unit_type]: id=LIUN_Phoinix_Base
 #: liminal-union/units/phoinixes/a0-phoinix.cfg:60
 msgid "The Phoinix is a living emblem of renewal and passage, said never to have bowed to corruption. Its presence is an affront to the forces of darkness and an uncomfortable reminder to those who would enthrone arcane will above the common law. A sealed core of vital radiance burns within, and a Phoinix's touch may draw poison from the wounded. The Liminal Union trains Phoinix Messengers as swift mobile scouts. A discerning Phoinix may be called forth by the old kabbalistic recitation of the corps; some choose to bind themselves to a particular singer-keeper. The Phoinix flies very high, beyond the reach of most enemy weapons, and holds no fixed ground — nor does its passage impose constraint upon enemy lines."
@@ -2707,8 +2701,8 @@ msgstr "Schwert [Stoß]"
 msgid "Khopesh [thrust]"
 msgstr "Chepesch [Stoß]"
 
-msgid "Shield [smash]"
-msgstr "Schild [Schmetterschlag]"
+msgid "Shield [Kryonite rim]"
+msgstr "Schild [Kryonit-Rand]"
 
 msgid "Shield [thrust]"
 msgstr "Schild [Stoß]"
