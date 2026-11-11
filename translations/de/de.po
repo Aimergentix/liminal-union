@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wesnoth-liminal-union 0.2.4alpha\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2026-11-11 13:37 UTC\n"
+"POT-Creation-Date: 2026-11-11 14:03 UTC\n"
 "PO-Revision-Date: 2026-10-30 08:36+0100\n"
 "Last-Translator: Liminal Union Team\n"
 "Language-Team: German <de@li.org>\n"
@@ -3416,6 +3416,13 @@ msgstr "🔱 ⪨ Hauptfeldwebel (2·0)"
 msgid "🔱 ⪨ Masterchief (2·1)"
 msgstr "🔱 ⪨ Hauptfeldwebel (2·1)"
 
+#. [unit_type]: id=LIUN_Masterchief_2_1
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:277
+msgid ""
+"Diversion Badge | You mastered the diversion tactic in battle encounters."
+msgstr ""
+"Ablenkungsabzeichen | Ihr habt die Ablenkungstaktik im Gefecht gemeistert."
+
 #. [unit_type]: id=LIUN_Masterchief_2_2
 #: liminal-union/units/halfelven/marines/a2-masterchief.cfg:286
 msgid "🔱 ⪨ Masterchief (2·2)"
@@ -4522,8 +4529,3 @@ msgstr ""
 #~ msgstr ""
 #~ "Silbernes Herz 🎖️ | Für Tapferkeit unter feindlichem Beschuss. (+4 LP, +1 "
 #~ "Nahkampfschlag, +2 Fernkampfschaden)"
-
-#~ msgid ""
-#~ "Diversion Badge | You mastered the diversion tactic in battle encounters."
-#~ msgstr ""
-#~ "Ablenkungsabzeichen | Ihr habt die Ablenkungstaktik im Gefecht gemeistert."

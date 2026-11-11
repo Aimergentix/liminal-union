@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.2.4alpha\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2026-11-11 13:37 UTC\n"
+"POT-Creation-Date: 2026-11-11 14:03 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2263,6 +2263,11 @@ msgstr ""
 #. [unit_type]: id=LIUN_Masterchief_2_1
 #: liminal-union/units/halfelven/marines/a2-masterchief.cfg:236
 msgid "🔱 ⪨ Masterchief (2·1)"
+msgstr ""
+
+#. [unit_type]: id=LIUN_Masterchief_2_1
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:277
+msgid "Diversion Badge | You mastered the diversion tactic in battle encounters."
 msgstr ""
 
 #. [unit_type]: id=LIUN_Masterchief_2_2

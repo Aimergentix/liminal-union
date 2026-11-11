@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wesnoth-liminal-union 0.2.4alpha\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2026-11-11 13:37 UTC\n"
+"POT-Creation-Date: 2026-11-11 14:03 UTC\n"
 "PO-Revision-Date: 2026-10-30 08:36+0100\n"
 "Last-Translator: Liminal Union Team\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -3322,6 +3322,14 @@ msgstr "🔱 ⪨ Capo Maestro (2·0)"
 msgid "🔱 ⪨ Masterchief (2·1)"
 msgstr "🔱 ⪨ Capo Maestro (2·1)"
 
+#. [unit_type]: id=LIUN_Masterchief_2_1
+#: liminal-union/units/halfelven/marines/a2-masterchief.cfg:277
+msgid ""
+"Diversion Badge | You mastered the diversion tactic in battle encounters."
+msgstr ""
+"Distintivo di Diversione | Hai padroneggiato la tattica di diversione negli "
+"scontri in battaglia."
+
 #. [unit_type]: id=LIUN_Masterchief_2_2
 #: liminal-union/units/halfelven/marines/a2-masterchief.cfg:286
 msgid "🔱 ⪨ Masterchief (2·2)"
@@ -4429,9 +4437,3 @@ msgstr ""
 #~ msgstr ""
 #~ "Medaglia Cuore d'Argento 🎖️ | Per il valore sotto il fuoco nemico. (+4 PV, "
 #~ "+1 Attacco in mischia, +2 Danni a distanza)"
-
-#~ msgid ""
-#~ "Diversion Badge | You mastered the diversion tactic in battle encounters."
-#~ msgstr ""
-#~ "Distintivo di Diversione | Hai padroneggiato la tattica di diversione "
-#~ "negli scontri in battaglia."
