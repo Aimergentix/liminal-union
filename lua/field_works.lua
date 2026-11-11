@@ -28,7 +28,7 @@ local PHOINIX_L0 = "LIUN_Phoinix"
 
 local function line_of(u)
     local t = tostring(u and u.type or "")
-    for _, l in ipairs(LINES) do
+    for idx, l in ipairs(LINES) do
         if t:sub(1, #l.prefix) == l.prefix then return l end
     end
     return nil
@@ -85,8 +85,8 @@ end
 
 -- Scenario start: every unit of a charge line, on the map or on a recall list, starts full.
 function field_works.on_prestart()
-    for _, u in ipairs(wesnoth.units.find_on_map({})) do field_works.refresh(u, true) end
-    for _, u in ipairs(wesnoth.units.find_on_recall({})) do field_works.refresh(u, true) end
+    for idx, u in ipairs(wesnoth.units.find_on_map({})) do field_works.refresh(u, true) end
+    for idx, u in ipairs(wesnoth.units.find_on_recall({})) do field_works.refresh(u, true) end
 end
 
 function field_works.on_unit_event(ctx)
@@ -119,7 +119,7 @@ local function adjacent_own(side, x, y, pred)
         { "filter_location", { { "filter_adjacent_location", { x = x, y = y } } } },
     })
     table.sort(found, function(a, b) return a.id < b.id end)
-    for _, u in ipairs(found) do
+    for idx, u in ipairs(found) do
         if u.hitpoints > 0 and pred(u) then return u end
     end
     return nil
@@ -130,7 +130,7 @@ local function gold(side) return wesnoth.sides[side].gold end
 -- Eligibility (shared by menus, commands and the AI) ------------------------------
 
 function field_works.builder_for(side, x, y)
-    for _, l in ipairs(LINES) do
+    for idx, l in ipairs(LINES) do
         if l.build and gold(side) >= l.price and free_hex_for(l.build, side, x, y) then
             local b = adjacent_own(side, x, y, function(u)
                 local ul = line_of(u)
@@ -229,7 +229,7 @@ local AI_GOLD_RESERVE = 5
 
 local function nearest_enemy_distance(side, x, y)
     local best = 999
-    for _, e in ipairs(wesnoth.units.find_on_map({ { "filter_side", { { "enemy_of", { side = side } } } } })) do
+    for idx, e in ipairs(wesnoth.units.find_on_map({ { "filter_side", { { "enemy_of", { side = side } } } } })) do
         local d = wesnoth.map.distance_between(x, y, e.x, e.y)
         if d < best then best = d end
     end
@@ -240,7 +240,7 @@ end
 local function candidate_hexes(side, ux, uy)
     local out = {}
     -- get_adjacent_hexes returns six locations as separate values.
-    for _, loc in ipairs({ wesnoth.map.get_adjacent_hexes(ux, uy) }) do
+    for idx, loc in ipairs({ wesnoth.map.get_adjacent_hexes(ux, uy) }) do
         local x, y = loc.x or loc[1], loc.y or loc[2]
         if wesnoth.current.map:on_board(x, y) and not wesnoth.units.get(x, y) and not is_settlement(x, y) then
             out[#out + 1] = { x = x, y = y, d = nearest_enemy_distance(side, x, y) }
@@ -260,24 +260,24 @@ function field_works.on_side_turn_end(side_num)
     local courier = wesnoth.require("~add-ons/liminal-union/lua/phoinix_courier.lua")
 
     -- 1. Kindle own ash (free).
-    for _, a in ipairs(courier.archives_of(side_num)) do
+    for idx, a in ipairs(courier.archives_of(side_num)) do
         field_works.kindle_ash(a.x, a.y)
     end
 
     local units = wesnoth.units.find_on_map({ side = side_num })
     table.sort(units, function(a, b) return a.id < b.id end)
-    for _, u in ipairs(units) do
+    for idx, u in ipairs(units) do
         local l = line_of(u)
         if l and l.build and gold(side_num) >= l.price + AI_GOLD_RESERVE then
             -- 2. Build one warform per artificer on a village, castle or keep.
-            for _, h in ipairs(candidate_hexes(side_num, u.x, u.y)) do
+            for idx, h in ipairs(candidate_hexes(side_num, u.x, u.y)) do
                 local b = field_works.builder_for(side_num, h.x, h.y)
                 if b and b.id == u.id then field_works.build(h.x, h.y); break end
             end
         elseif l and l.line == "shieldguard" and gold(side_num) >= CALL_PRICE + AI_GOLD_RESERVE then
             -- 3. Call a Phoinix when the side has fewer than two.
             if #wesnoth.units.find_on_map({ side = side_num, race = "marinephoinix" }) < 2 then
-                for _, h in ipairs(candidate_hexes(side_num, u.x, u.y)) do
+                for idx, h in ipairs(candidate_hexes(side_num, u.x, u.y)) do
                     local s = field_works.caller_for(side_num, h.x, h.y)
                     if s and s.id == u.id then field_works.call_phoinix(h.x, h.y); break end
                 end

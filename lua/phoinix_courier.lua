@@ -25,7 +25,7 @@ end
 -- Archives (ash) of one side, in stored order: { {x=, y=, side=}, ... }
 function phoinix_courier.archives_of(side)
     local out = {}
-    for _, a in ipairs(wml.array_access.get(ARCHIVES)) do
+    for idx, a in ipairs(wml.array_access.get(ARCHIVES)) do
         if a.side == side then out[#out + 1] = { x = a.x, y = a.y, side = a.side } end
     end
     return out
