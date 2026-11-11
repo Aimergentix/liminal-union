@@ -250,7 +250,7 @@ msgstr ""
 #. [multiplayer_side]: id=LIUN_braves, type=LIUN_Maiden_Captain
 #: liminal-union/factions/liminal-union-braves.cfg:21
 msgid ""
-"The <bold>text='Liminal Union: Braves'</bold> era features ♙lvl1 recruits and ♕lvl2 leaders.\n"
+"The <bold>text='Liminal Union: Braves'</bold> era features ♙lvl0 and ♙lvl1 recruits and ♕lvl2 leaders.\n"
 ""
 msgstr ""
 
@@ -2862,7 +2862,7 @@ msgstr ""
 
 #. [unit_type]: id=LIUN_Phoinix_0_1
 #: liminal-union/units/phoinixes/a0-phoinix.cfg:217
-msgid "Abilities: skirmisher, unpoison | At this stage, the phoinix becomes an embodiment of </i>endless resistance</i>: its presence detoxicates poison from the wounded."
+msgid "Abilities: skirmisher, unpoison | At this stage, the phoinix becomes an embodiment of <i>endless resistance</i>: its presence detoxicates poison from the wounded."
 msgstr ""
 
 #. [unit_type]: id=LIUN_Phoinix_Elder_Base
