@@ -7,6 +7,8 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
 ### Ladder review
 - G9 Overclock gives +1 melee strike and no longer +2 damage (NCM fist 13-2 → 13-3);
   the 3 HP thermal stress is unchanged.
+- Overclock Stun now works: each melee hit of an overclocked G9 strips a level 1+ target's
+  zone of control until its own side's next turn begins. Before, Stun was only a label.
 
 ### Field works
 - New Mechatronic (level 1): Maiden Privates advance to Jaeger or Mechatronic; Mechatronics

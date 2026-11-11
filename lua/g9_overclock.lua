@@ -49,7 +49,7 @@ function g9_overclock.activate(ctx, in_attack)
                 { "stun", {
                     id = "stun",
                     name = _ "stun",
-                    description = _ "This attack hits so hard that the opponent is dazed and can no longer enforce a zone of control. The effect wears off on the opponent’s next turn."
+                    description = _ "When this attack hits, an opponent of level 1 or higher is dazed and loses its zone of control until its own side’s next turn begins."
                 }}
             }}
         }},
@@ -109,6 +109,42 @@ end
 function g9_overclock.likely_damage(damage, strikes, mult)
     local per_hit = math.max(1, math.floor(damage * mult + 0.5))
     return per_hit * math.ceil(strikes / 2)
+end
+
+-- Stun: an overclocked G9 that hits with a melee attack strips the target's zone of
+-- control. Called from the attacker_hits event; the overclock only exists during the
+-- owner's own turn, so stun is offense only. Level 0 units have no zone of control.
+local STUN_MOD = "LIUN_stun_mod"
+
+function g9_overclock.on_attacker_hits(ctx)
+    ctx = ctx or wesnoth.current.event_context
+    if not ctx or not ctx.x1 or not ctx.y1 or not ctx.x2 or not ctx.y2 then return end
+    local u = wesnoth.units.get(ctx.x1, ctx.y1)
+    if not u or u.race ~= "maidengolem" or not u.variables.lu_overclocked then return end
+    local weapon = wml.get_child(ctx, "weapon")
+    if not weapon or weapon.range ~= "melee" then return end
+    local d = wesnoth.units.get(ctx.x2, ctx.y2)
+    if not d or d.hitpoints <= 0 or d.level < 1 or d.status.stunned then return end
+
+    d.status.stunned = true
+    d:add_modification("object", {
+        id = STUN_MOD,
+        silent = true,
+        { "effect", { apply_to = "zoc", value = false } },
+        { "effect", { apply_to = "image_mod", add = "CS(50,50,0)" } }
+    })
+    if wesnoth.interface and wesnoth.interface.float_label then
+        wesnoth.interface.float_label(d.x, d.y, _ "<span color='#ffcc33'>stunned</span>")
+    end
+end
+
+-- Stun wears off when the stunned unit's own side begins its turn.
+function g9_overclock.on_side_turn(side_num)
+    side_num = side_num or wesnoth.current.side
+    for idx, u in ipairs(wesnoth.units.find_on_map({ side = side_num, status = "stunned" })) do
+        u:remove_modifications({ id = STUN_MOD })
+        u.status.stunned = false
+    end
 end
 
 -- Handles turn end / side turn to apply thermal stress and clean up overclock
