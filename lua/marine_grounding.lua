@@ -70,10 +70,8 @@ function marine_grounding.should_ai_ground(u)
     if not marine_grounding.can_ground(u) then return false end
     if u.canrecruit or u.hitpoints < 14 then return false end
 
-    -- side.controller is synced in live games, but replays keep the starting controller.
-    -- See LUA_GUIDELINES.md §5 before relying on it further.
-    local side_info = wesnoth.sides[u.side]
-    if not side_info or side_info.controller ~= "ai" then return false end
+    -- AI sides only, as fixed at prestart (replay-safe; see side_control.lua).
+    if not wesnoth.require("~add-ons/liminal-union/lua/side_control.lua").is_ai_side(u.side) then return false end
 
     local adj_allies = {}
     local enemies = {}
@@ -292,8 +290,7 @@ end
 -- AI tactical reflex at turn end: deploy Pylum on eligible Marines standing in formation near elemental threats
 function marine_grounding.on_side_turn_end(side_num)
     side_num = side_num or wesnoth.current.side
-    local side_info = wesnoth.sides[side_num]
-    if not side_info or side_info.controller ~= "ai" then return end
+    if not wesnoth.require("~add-ons/liminal-union/lua/side_control.lua").is_ai_side(side_num) then return end
 
     local marines = wesnoth.units.find_on_map({
         side = side_num,

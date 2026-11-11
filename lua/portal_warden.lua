@@ -82,7 +82,7 @@ end
 -- The default AI would walk an open portal shut, so an AI side's Warden holds its ground. Runs after moves refresh.
 function portal_warden.on_turn_refresh(side_num)
     side_num = side_num or wesnoth.current.side
-    if wesnoth.sides[side_num].controller ~= "ai" then return end
+    if not wesnoth.require("~add-ons/liminal-union/lua/side_control.lua").is_ai_side(side_num) then return end
     for idx, u in ipairs(wesnoth.units.find_on_map({ side = side_num, ability = "LIUN_portal_warden" })) do
         if u.variables.lu_portal_open then u.moves = 0 end
     end

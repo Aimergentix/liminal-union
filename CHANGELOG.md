@@ -12,6 +12,9 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
 - Resonance pods recalculate after every fight, so killing, poisoning or slowing a pod member
   lowers its neighbours' bonuses at once instead of at the next move or turn.
 - Interlock no longer shares hits from magical or marksman attacks.
+- Multiplayer: the AI reflexes (Overclock, Pylum, field works, portal Warden) decide by
+  whether a side started the scenario as AI, so replays no longer go out of sync when a
+  side changes controller mid-game. A side that switches to AI later gets no reflexes.
 
 ### Field works
 - New Mechatronic (level 1): Maiden Privates advance to Jaeger or Mechatronic; Mechatronics

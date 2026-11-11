@@ -339,9 +339,12 @@ function resonance.update_unit_state(u)
                 }}
             }}
         })
-        if not u.variables.lu_zoc_active and wesnoth.interface and wesnoth.interface.float_label then
-            wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ffd700'>ZOC Lock</span>")
+        if not u.variables.lu_zoc_active then
+            -- Game state is set unconditionally; only the label depends on the interface.
             u.variables.lu_zoc_active = true
+            if wesnoth.interface and wesnoth.interface.float_label then
+                wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ffd700'>ZOC Lock</span>")
+            end
         end
     else
         u.variables.lu_zoc_active = nil

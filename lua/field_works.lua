@@ -222,8 +222,8 @@ function field_works.kindle_ash(x, y)
 end
 
 -- Minimal AI reflex ------------------------------------------------------------
--- Runs at side turn end for AI sides only (same accepted controller gate as the
--- G9 Overclock and Salt-Grounding reflexes; see LUA_GUIDELINES.md §5).
+-- Runs at side turn end for AI sides only, as fixed at prestart (replay-safe; see
+-- side_control.lua and LUA_GUIDELINES.md §5).
 
 local AI_GOLD_RESERVE = 5
 
@@ -256,8 +256,7 @@ end
 
 function field_works.on_side_turn_end(side_num)
     side_num = side_num or wesnoth.current.side
-    local side_info = wesnoth.sides[side_num]
-    if not side_info or side_info.controller ~= "ai" then return end
+    if not wesnoth.require("~add-ons/liminal-union/lua/side_control.lua").is_ai_side(side_num) then return end
     local courier = wesnoth.require("~add-ons/liminal-union/lua/phoinix_courier.lua")
 
     -- 1. Kindle own ash (free).

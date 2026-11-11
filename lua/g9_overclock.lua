@@ -77,10 +77,8 @@ function g9_overclock.on_attack(ctx)
     local weapon = wml.get_child(ctx, "weapon")
     if not weapon or weapon.range ~= "melee" then return end
 
-    -- side.controller is synced in live games, but replays keep the starting controller.
-    -- See LUA_GUIDELINES.md §5 before relying on it further.
-    local side_info = wesnoth.sides[u.side]
-    if not side_info or side_info.controller ~= "ai" then return end
+    -- AI sides only, as fixed at prestart (replay-safe; see side_control.lua).
+    if not wesnoth.require("~add-ons/liminal-union/lua/side_control.lua").is_ai_side(u.side) then return end
 
     local d = wesnoth.units.get(ctx.x2, ctx.y2)
     if not d or d.hitpoints <= 0 then return end
