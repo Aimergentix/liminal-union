@@ -20,6 +20,12 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
   or Expert and adds a page on unit stages. Day, night and wingsuit texts match the game.
 - Overclock and Pylum appear in the right-click menu only while the unit can use them.
 - Every unit description explains the (level·stage) notation of unit names.
+- Texts follow the engine: liminal troops deal +25% at dawn and dusk and fight at normal
+  strength by day and night; officers add +10% by day and night. Faction descriptions,
+  officer descriptions and the Corebound trait no longer describe a day or night penalty or
+  a lawful G9 frame. Phoinix Elder stage texts list the actual upgrades.
+- Translations: template regenerated; changed strings are fuzzy in de, es, fr and it and
+  show in English until a translator confirms them.
 
 ### Field works
 - New Mechatronic (level 1): Maiden Privates advance to Jaeger or Mechatronic; Mechatronics

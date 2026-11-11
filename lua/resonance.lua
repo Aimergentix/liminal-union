@@ -200,7 +200,8 @@ function resonance.get_formation_zoc(u)
 end
 
 -- Updates a single unit based on Conductor proximity.
--- Conductor provides Conducted Alignment to all adjacent liminal allies regardless of level.
+-- Marks adjacent liminal allies of a Conductor with a status overlay and variable only; the
+-- damage bonus comes from ABILITY_CONDUCTOR leadership, and the unit's alignment never changes.
 function resonance.update_unit_alignment(u)
     if not u or u.hitpoints <= 0 then return end
     if u.alignment ~= "liminal" and u.alignment ~= "LIUN_liminal" and u.alignment ~= "LIUN_liminal_conducted" then
