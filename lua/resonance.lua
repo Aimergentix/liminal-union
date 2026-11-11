@@ -671,10 +671,32 @@ function resonance.handle_damage_redistribution(target_x, target_y, damage_infli
     end
 end
 
+-- Precision strikes bypass Interlock: a magical or marksman special that is active for
+-- the hitting side. The engine passes the weapons as [weapon] / [second_weapon] children
+-- of the event context; marksman is active_on=offense in mainline.
+local PRECISION_SPECIALS = { magical = true, marksman = true }
+
+function resonance.is_precision_strike(weapon, on_offense)
+    if not weapon then return false end
+    local specials = wml.get_child(weapon, "specials")
+    if not specials then return false end
+    for idx, sp in ipairs(specials) do
+        local cfg = sp[2]
+        if PRECISION_SPECIALS[cfg.id or ""] then
+            local active_on = cfg.active_on or ""
+            if active_on == "" or (active_on == "offense") == on_offense then
+                return true
+            end
+        end
+    end
+    return false
+end
+
 -- Attacker hits event: defender (ctx.x2, ctx.y2) takes damage
 function resonance.on_attacker_hits(ctx)
     ctx = ctx or wesnoth.current.event_context
     if not ctx or not ctx.x2 or not ctx.y2 then return end
+    if resonance.is_precision_strike(wml.get_child(ctx, "weapon"), true) then return end
     local is_berserk = resonance.is_berserk_combat(ctx)
     resonance.handle_damage_redistribution(ctx.x2, ctx.y2, ctx.damage_inflicted, is_berserk)
 end
@@ -683,6 +705,7 @@ end
 function resonance.on_defender_hits(ctx)
     ctx = ctx or wesnoth.current.event_context
     if not ctx or not ctx.x1 or not ctx.y1 then return end
+    if resonance.is_precision_strike(wml.get_child(ctx, "second_weapon"), false) then return end
     local is_berserk = resonance.is_berserk_combat(ctx)
     resonance.handle_damage_redistribution(ctx.x1, ctx.y1, ctx.damage_inflicted, is_berserk)
 end
@@ -790,6 +813,30 @@ function resonance.on_unit_died(ctx)
             resonance.update_unit_state(n)
         end
     end
+end
+
+-- Attack end: kills, poison and slow inflicted in this fight change pods at once,
+-- so both combatants and their neighbours recalculate (same pattern as on_unit_died).
+function resonance.on_attack_end(ctx)
+    ctx = ctx or wesnoth.current.event_context
+    if not ctx then return end
+    local done = {}
+    local function refresh_around(x, y)
+        if not x or not y then return end
+        local u = wesnoth.units.get(x, y)
+        if u and u.hitpoints > 0 and not done[u.id] then
+            done[u.id] = true
+            resonance.update_unit_state(u)
+        end
+        for idx, n in ipairs(get_adjacent_units(x, y)) do
+            if n.hitpoints > 0 and not done[n.id] then
+                done[n.id] = true
+                resonance.update_unit_state(n)
+            end
+        end
+    end
+    refresh_around(ctx.x1, ctx.y1)
+    refresh_around(ctx.x2, ctx.y2)
 end
 
 return resonance

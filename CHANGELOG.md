@@ -9,6 +9,9 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
   the 3 HP thermal stress is unchanged.
 - Overclock Stun now works: each melee hit of an overclocked G9 strips a level 1+ target's
   zone of control until its own side's next turn begins. Before, Stun was only a label.
+- Resonance pods recalculate after every fight, so killing, poisoning or slowing a pod member
+  lowers its neighbours' bonuses at once instead of at the next move or turn.
+- Interlock no longer shares hits from magical or marksman attacks.
 
 ### Field works
 - New Mechatronic (level 1): Maiden Privates advance to Jaeger or Mechatronic; Mechatronics
