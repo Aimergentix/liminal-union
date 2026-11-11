@@ -9,6 +9,9 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
   the 3 HP thermal stress is unchanged.
 - Overclock Stun now works: each melee hit of an overclocked G9 strips a level 1+ target's
   zone of control until its own side's next turn begins. Before, Stun was only a label.
+- The Merman Brawler's tail now stuns the same way, attacking and defending; its stun had
+  never fired because the tail lacked the special. It also works with the worker
+  modifications outside the Liminal Union eras.
 - Resonance pods recalculate after every fight, so killing, poisoning or slowing a pod member
   lowers its neighbours' bonuses at once instead of at the next move or turn.
 - Interlock no longer shares hits from magical or marksman attacks.
