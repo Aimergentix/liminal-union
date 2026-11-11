@@ -15,6 +15,11 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
 - Multiplayer: the AI reflexes (Overclock, Pylum, field works, portal Warden) decide by
   whether a side started the scenario as AI, so replays no longer go out of sync when a
   side changes controller mid-game. A side that switches to AI later gets no reflexes.
+- Field Codex: opens on any unit at any time, also on the opponent's turn, and no longer
+  clears the undo history. It starts on the Quick Start page; the index marks pages as Basic
+  or Expert and adds a page on unit stages. Day, night and wingsuit texts match the game.
+- Overclock and Pylum appear in the right-click menu only while the unit can use them.
+- Every unit description explains the (level·stage) notation of unit names.
 
 ### Field works
 - New Mechatronic (level 1): Maiden Privates advance to Jaeger or Mechatronic; Mechatronics
