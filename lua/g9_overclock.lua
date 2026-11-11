@@ -36,7 +36,7 @@ function g9_overclock.activate(ctx, in_attack)
     u.variables.lu_overclocked = true
     u:remove_modifications({ id = "LIUN_g9_overclock_mod" })
 
-    -- Apply combat boost: +1 strike, +2 damage, and Stun weapon special
+    -- Apply combat boost: +1 melee strike and the Stun weapon special
     u:add_modification("object", {
         id = "LIUN_g9_overclock_mod",
         silent = true,
@@ -44,7 +44,6 @@ function g9_overclock.activate(ctx, in_attack)
             apply_to = "attack",
             range = "melee",
             increase_attacks = 1,
-            increase_damage = 2,
             { "set_specials", {
                 mode = "append",
                 { "stun", {
@@ -98,7 +97,7 @@ function g9_overclock.on_attack(ctx)
     local damage, strikes = weapon.damage or 0, weapon.number or 0
     local mult = (100 - wesnoth.units.resistance_against(d, weapon.type or "", false)) / 100
     local kill_window = d.hitpoints > g9_overclock.likely_damage(damage, strikes, mult)
-        and d.hitpoints <= g9_overclock.likely_damage(damage + 2, strikes + 1, mult)
+        and d.hitpoints <= g9_overclock.likely_damage(damage, strikes + 1, mult)
     local high_value = d.canrecruit or d.level >= 2
     if kill_window or high_value then
         g9_overclock.activate({ x1 = u.x, y1 = u.y }, true)

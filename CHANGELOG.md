@@ -4,6 +4,10 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
 
 ## Unreleased
 
+### Ladder review
+- G9 Overclock gives +1 melee strike and no longer +2 damage (NCM fist 13-2 → 13-3);
+  the 3 HP thermal stress is unchanged.
+
 ### Field works
 - New Mechatronic (level 1): Maiden Privates advance to Jaeger or Mechatronic; Mechatronics
   advance to Techtronic, Jaegers to Hunterkiller. Sprites borrowed from the Techtronic.
