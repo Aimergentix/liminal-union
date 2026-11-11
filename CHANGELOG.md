@@ -4,9 +4,32 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
 
 ## Unreleased
 
+### Hand tuning (values after the weapon rework)
+- Costs: officers +1 to +4 gold (Cornets 21, Captains 33/34, Colonels 56/58), Maiden
+  Private 11, Marine Private 12, Jaeger and Sergeant 17, Masterchief 31, Hunterkiller 31,
+  Shieldguard 33, Techtronic 28. Phoinix Elder 27 → 17.
+- Officers of both corps move 6 instead of 5; Phoinixes move 7 instead of 8.
+- Phoinix: neither attack is magical any more, at every stage. Accuracy and parry rise by
+  stage instead (Elder 0 / +5 / +10).
+- Weapons, HP and XP retuned per stage. Marines carry a stronger sling again (Sergeant 4-4,
+  Masterchief 5-5), melee 4-4 (Sergeant) and 5-5 (Masterchief). Maiden bows 3-4 (Private),
+  5-4 (Jaeger), 5-5 to 7-4 (Hunterkiller). G9 NCM fist 12-2; first NCM stage needs 33 XP.
+- Mechatronics wear Arcanite, like the Techtronics they become.
+
+### AI
+- The Braves and Heroes AI now really values its leader and villages more
+  (leader_value 4.0, village_value 1.4). The settings were written in a form the engine
+  ignores, so the AI had played with the defaults.
+
+### Cleanup
+- Removed settings the engine never read (unit-type portraits and variables, a hit-sound
+  key), an unused Lua module and five unused macros. No gameplay change.
+- Phoinix 0·1 description shows its italics correctly; the Braves description names level 0
+  and level 1 recruits.
+
 ### Ladder review
-- G9 Overclock gives +1 melee strike and no longer +2 damage (NCM fist 13-2 → 13-3);
-  the 3 HP thermal stress is unchanged.
+- G9 Overclock gives +1 melee strike and no longer +2 damage (NCM fist then 13-2 → 13-3;
+  now 12-2 → 12-3); the 3 HP thermal stress is unchanged.
 - Overclock Stun now works: each melee hit of an overclocked G9 strips a level 1+ target's
   zone of control until its own side's next turn begins. Before, Stun was only a label.
 - The Merman Brawler's tail now stuns the same way, attacking and defending; its stun had
@@ -60,7 +83,7 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
   and wear down to -5% at the last stage.
 - Officers parry better with rank: Cornets and Captains +10%, Colonels +15%.
 - Phoinix: the melee attack is now the fire ember talons, not magical, with +1 damage.
-  The magical arcane ranged attack is unchanged.
+  The ranged attack is unchanged.
 - Resonance caps: a bow's own accuracy plus Pyrite Focus never exceeds +20%, and a
   weapon's own parry plus Kryonite Bulwark never exceeds 15%.
 - The Techtronic (2·2) is now an Arcanite Squad Anchor: adjacent Arcanite allies in
