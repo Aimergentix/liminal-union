@@ -27,6 +27,8 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
   strength by day and night; officers add +10% by day and night. Faction descriptions,
   officer descriptions and the Corebound trait no longer describe a day or night penalty or
   a lawful G9 frame. Phoinix Elder stage texts list the actual upgrades.
+- Removed the unused custom alignment profile (`macros/alignment.cfg`, −15%/−25%); Union
+  units always used the engine's liminal alignment.
 - Translations: template regenerated; changed strings are fuzzy in de, es, fr and it and
   show in English until a translator confirms them.
 

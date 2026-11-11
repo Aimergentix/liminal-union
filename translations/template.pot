@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.2.4alpha\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2026-11-11 13:08 UTC\n"
+"POT-Creation-Date: 2026-11-11 13:37 UTC\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -213,37 +213,37 @@ msgid "An extended era with higher level units: level three leaders, with level 
 msgstr ""
 
 #. [set_menu_item]: id=LIUN_menu_g9_overclock
-#: liminal-union/faction.cfg:269
+#: liminal-union/faction.cfg:267
 msgid "Overclock Core (Emergency Protocol Bypass)"
 msgstr ""
 
 #. [set_menu_item]: id=LIUN_menu_marine_grounding
-#: liminal-union/faction.cfg:293
+#: liminal-union/faction.cfg:291
 msgid "⚡ Deploy Salt-Grounding Pylum (Root & Anti-Sorcery Ward)"
 msgstr ""
 
 #. [set_menu_item]: id=LIUN_menu_build_g8
-#: liminal-union/faction.cfg:317
+#: liminal-union/faction.cfg:315
 msgid "Build G8 Simulacrum here (10 gold, 1 aimergent-core)"
 msgstr ""
 
 #. [set_menu_item]: id=LIUN_menu_build_g9
-#: liminal-union/faction.cfg:340
+#: liminal-union/faction.cfg:338
 msgid "Build G9 AI here (20 gold, 1 aimergent-core)"
 msgstr ""
 
 #. [set_menu_item]: id=LIUN_menu_call_phoinix
-#: liminal-union/faction.cfg:363
+#: liminal-union/faction.cfg:361
 msgid "Open ember capsule: call a Phoinix here (10 gold)"
 msgstr ""
 
 #. [set_menu_item]: id=LIUN_menu_kindle_ash
-#: liminal-union/faction.cfg:385
+#: liminal-union/faction.cfg:383
 msgid "Kindle Phoinix ash here"
 msgstr ""
 
 #. [set_menu_item]: id=LIUN_menu_doctrine_codex
-#: liminal-union/faction.cfg:409
+#: liminal-union/faction.cfg:407
 msgid "📖 Liminal Union Doctrine Codex"
 msgstr ""
 
@@ -484,12 +484,16 @@ msgid "<span color='#ffaa33'>[NO ATTACKS REMAINING]</span>"
 msgstr ""
 
 #. [lua]: g9_overclock.activate
+#. [stun]: id=stun
 #: liminal-union/lua/g9_overclock.lua:51
+#: liminal-union/macros/weaponspecials.cfg:8
 msgid "stun"
 msgstr ""
 
 #. [lua]: g9_overclock.activate
+#. [stun]: id=stun
 #: liminal-union/lua/g9_overclock.lua:52
+#: liminal-union/macros/weaponspecials.cfg:9
 msgid "When this attack hits, an opponent of level 1 or higher is dazed and loses its zone of control until its own side’s next turn begins."
 msgstr ""
 
@@ -498,13 +502,8 @@ msgstr ""
 msgid "<span color='#ff3333'>[PROTOCOL BYPASS: OVERCLOCK + STUN ACTIVE]</span>"
 msgstr ""
 
-#. [lua]: g9_overclock.on_attacker_hits
-#: liminal-union/lua/g9_overclock.lua:135
-msgid "<span color='#ffcc33'>stunned</span>"
-msgstr ""
-
 #. [lua]: g9_overclock.on_side_turn_end
-#: liminal-union/lua/g9_overclock.lua:166
+#: liminal-union/lua/g9_overclock.lua:132
 msgid "<span color='#ff5555'>-%d HP [CORE THERMAL STRESS]</span>"
 msgstr ""
 
@@ -746,6 +745,11 @@ msgstr ""
 #. [lua]: resonance.handle_damage_redistribution
 #: liminal-union/lua/resonance.lua:672
 msgid "<span color='#81d4fa'>Interlock (+%d)</span>"
+msgstr ""
+
+#. [lua]: stun.apply
+#: liminal-union/lua/stun.lua:37
+msgid "<span color='#ffcc33'>stunned</span>"
 msgstr ""
 
 #. [resistance]: id=LIUN_officer_shield
@@ -1016,26 +1020,6 @@ msgstr ""
 msgid "Cycle of death and rebirth 🔥 | …when a phoinix nears the end of its life, its inner fire has consumed it. A mystically reborn phoinix instantly rises from the ashes…"
 msgstr ""
 
-#. [alignment]: id=LIUN_liminal
-#: liminal-union/macros/alignment.cfg:11
-msgid "liminal"
-msgstr ""
-
-#. [alignment]: id=LIUN_liminal
-#: liminal-union/macros/alignment.cfg:12
-msgid "Liminal units are at their most effective during the transition turns of Dawn and Dusk (+25%). The Liminal Union's unique engineering reduces the midday penalty to -15%."
-msgstr ""
-
-#. [alignment]: id=LIUN_liminal_conducted
-#: liminal-union/macros/alignment.cfg:52
-msgid "liminal (conducted)"
-msgstr ""
-
-#. [alignment]: id=LIUN_liminal_conducted
-#: liminal-union/macros/alignment.cfg:53
-msgid "This unit's alignment is being stabilized by a nearby Conductor. Peak power is maintained, and Day and Night penalties are softened by +10%."
-msgstr ""
-
 #: liminal-union/macros/names.cfg:4
 msgid "Ammon,Aryeh,Asher,Avigdor,Alon,Amir,Amos,Arie,Avraham,Avram,Abrabanel,Absalom,Akabiah,Ayelet,Azariah,Barak,Barukh,Beshar,Berakhiah,Binyamin,Chalev,Chabner,Chaim,Chatan,Chayim,Chayyah,Dan,David,Dayan,Dror,Dar,Ehud,Eliezer,Eli,Erez,Ethan,Ezekiel,Elbaz,Eleazar,Elhanan,Elias,Eliyah,Elimelekh,Elisha,Ephraim,Eshkol,Eldad,Eliad,Elon,Gabriel,Gedaliah,Gamliel,Gedaliah,Gershom,Hananiah,Harel,Halevy,Hananel,Hanoch,Ilan,Isaac,Itzhak,Izak,Imanuel,Liron,Lior,Lamech,Levy,Lev,Malachi,Matityahu,Medan,Michael,Malech,Menuhah,Menahem,Menasche,Meir,Moshe,Manasses,Medad,Nun,Nephuneh,Naor,Naphtali,Natan,Neri,Nir,Nehemiah,Nehamah,Naim,Nehorai,Noah,Nosson,Oren,Or,Ovadia,Perah,Peled,Pinhas,Rae,Rafael,Reuven,Resh,Reuben,Shalev,Shiloh,Sason,Savit,Shazar,Shelomo,Shimon,Shmuel,Simeon,Solomon,Sofer,Simon,Saadia,Samuel,Saul,Shabtai,Shahaf,Shaul,Tabor,Tehiya,Toviah,Tuviah,Tzarfat,Tzur,Tzvi,Tamir,Uziel,Uzziah,Uma,Uri,Vered,Yra,Yossi,Yaakov,Yakir,Yechiel,Yedidyah,Yehezkel,Yesse,Yehoshua,Yishtabach,Yitzhak,Yaron,Yoram,Yuval,Yeremiah,Yonathan,Yoseph,Yosiah,Yehoshaphat,Yephthah,Yochanan,Zvi,Zakkai,Zeev,Zehavah"
 msgstr ""
@@ -1144,12 +1128,12 @@ msgid "Healthy units regain 2 hit points when resting, and gain +1 maximum hit p
 msgstr ""
 
 #. [chance_to_hit]: id=LIUN_suicide_bomb_explosion
-#: liminal-union/macros/weaponspecials.cfg:6
+#: liminal-union/macros/weaponspecials.cfg:52
 msgid "bomb attack"
 msgstr ""
 
 #. [chance_to_hit]: id=LIUN_suicide_bomb_explosion
-#: liminal-union/macros/weaponspecials.cfg:7
+#: liminal-union/macros/weaponspecials.cfg:53
 msgid "Since suicide attacks are set up close to the enemy, this bomb attack always has a 100% chance to hit."
 msgstr ""
 
@@ -2655,18 +2639,6 @@ msgstr ""
 #. [attack]: type=impact
 #: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:31
 msgid "tail"
-msgstr ""
-
-#. [unstore_unit]
-#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:91
-#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:138
-msgid "stunned"
-msgstr ""
-
-#. [unstore_unit]
-#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:92
-#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:139
-msgid "female^stunned"
 msgstr ""
 
 #. [unit_type]: id=LIUN_Initiate, gender=male,female, race=human

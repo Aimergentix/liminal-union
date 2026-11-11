@@ -204,7 +204,7 @@ end
 -- damage bonus comes from ABILITY_CONDUCTOR leadership, and the unit's alignment never changes.
 function resonance.update_unit_alignment(u)
     if not u or u.hitpoints <= 0 then return end
-    if u.alignment ~= "liminal" and u.alignment ~= "LIUN_liminal" and u.alignment ~= "LIUN_liminal_conducted" then
+    if u.alignment ~= "liminal" then
         return
     end
 
@@ -299,7 +299,7 @@ function resonance.update_unit_state(u)
     -- Guard: If unit is not Liminal Union (no alloy, not conductor, not liminal), clean up and exit
     local alloy = resonance.get_unit_alloy(u)
     local is_cond = resonance.is_conductor(u)
-    local is_liminal = (u.alignment == "liminal" or u.alignment == "LIUN_liminal" or u.alignment == "LIUN_liminal_conducted")
+    local is_liminal = (u.alignment == "liminal")
     if not alloy and not is_cond and not is_liminal then
         u.halo = ""
         u:remove_modifications({ id = "LIUN_conductor_beacon" })

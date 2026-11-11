@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wesnoth-liminal-union 0.2.4alpha\n"
 "Report-Msgid-Bugs-To: https://bugs.wesnoth.org/\n"
-"POT-Creation-Date: 2026-11-11 13:08 UTC\n"
+"POT-Creation-Date: 2026-11-11 13:37 UTC\n"
 "PO-Revision-Date: 2026-10-30 08:36+0100\n"
 "Last-Translator: Liminal Union Team\n"
 "Language-Team: German <de@li.org>\n"
@@ -214,37 +214,37 @@ msgstr ""
 "Gilt nicht als ausbalanciert."
 
 #. [set_menu_item]: id=LIUN_menu_g9_overclock
-#: liminal-union/faction.cfg:269
+#: liminal-union/faction.cfg:267
 msgid "Overclock Core (Emergency Protocol Bypass)"
 msgstr "Kern übertakten (Notfall-Protokollüberbrückung)"
 
 #. [set_menu_item]: id=LIUN_menu_marine_grounding
-#: liminal-union/faction.cfg:293
+#: liminal-union/faction.cfg:291
 msgid "⚡ Deploy Salt-Grounding Pylum (Root & Anti-Sorcery Ward)"
 msgstr "⚡ Salz-Erdungspfeiler setzen (Verwurzelung & Antimagie-Schutz)"
 
 #. [set_menu_item]: id=LIUN_menu_build_g8
-#: liminal-union/faction.cfg:317
+#: liminal-union/faction.cfg:315
 msgid "Build G8 Simulacrum here (10 gold, 1 aimergent-core)"
 msgstr "G8-Simulakrum hier bauen (10 Gold, 1 Aimergent-Kern)"
 
 #. [set_menu_item]: id=LIUN_menu_build_g9
-#: liminal-union/faction.cfg:340
+#: liminal-union/faction.cfg:338
 msgid "Build G9 AI here (20 gold, 1 aimergent-core)"
 msgstr "G9 AI hier bauen (20 Gold, 1 Aimergent-Kern)"
 
 #. [set_menu_item]: id=LIUN_menu_call_phoinix
-#: liminal-union/faction.cfg:363
+#: liminal-union/faction.cfg:361
 msgid "Open ember capsule: call a Phoinix here (10 gold)"
 msgstr "Glutkapsel öffnen: hier eine Phoinix rufen (10 Gold)"
 
 #. [set_menu_item]: id=LIUN_menu_kindle_ash
-#: liminal-union/faction.cfg:385
+#: liminal-union/faction.cfg:383
 msgid "Kindle Phoinix ash here"
 msgstr "Phoinix-Asche hier entfachen"
 
 #. [set_menu_item]: id=LIUN_menu_doctrine_codex
-#: liminal-union/faction.cfg:409
+#: liminal-union/faction.cfg:407
 msgid "📖 Liminal Union Doctrine Codex"
 msgstr "📖 Doktrin-Kodex der Liminalen Union"
 
@@ -848,12 +848,16 @@ msgid "<span color='#ffaa33'>[NO ATTACKS REMAINING]</span>"
 msgstr "<span color='#ffaa33'>[KEINE ANGRIFFE VERBLEIBEND]</span>"
 
 #. [lua]: g9_overclock.activate
+#. [stun]: id=stun
 #: liminal-union/lua/g9_overclock.lua:51
+#: liminal-union/macros/weaponspecials.cfg:8
 msgid "stun"
 msgstr "betäuben"
 
 #. [lua]: g9_overclock.activate
+#. [stun]: id=stun
 #: liminal-union/lua/g9_overclock.lua:52
+#: liminal-union/macros/weaponspecials.cfg:9
 msgid ""
 "When this attack hits, an opponent of level 1 or higher is dazed and loses "
 "its zone of control until its own side’s next turn begins."
@@ -866,15 +870,8 @@ msgstr ""
 "<span color='#ff3333'>[PROTOKOLLÜBERBRÜCKUNG: ÜBERTAKTUNG + BETÄUBEN AKTIV]</"
 "span>"
 
-#. [lua]: g9_overclock.on_attacker_hits
-#: liminal-union/lua/g9_overclock.lua:135
-#, fuzzy
-#| msgid "<span color='#ffaa33'>Ash rekindled</span>"
-msgid "<span color='#ffcc33'>stunned</span>"
-msgstr "<span color='#ffaa33'>Asche neu entfacht</span>"
-
 #. [lua]: g9_overclock.on_side_turn_end
-#: liminal-union/lua/g9_overclock.lua:166
+#: liminal-union/lua/g9_overclock.lua:132
 msgid "<span color='#ff5555'>-%d HP [CORE THERMAL STRESS]</span>"
 msgstr "<span color='#ff5555'>-%d LP [THERMISCHE KERNBELASTUNG]</span>"
 
@@ -1147,6 +1144,13 @@ msgstr "<span color='#4fc3f7'>-%d Verbundschutz</span>"
 #: liminal-union/lua/resonance.lua:672
 msgid "<span color='#81d4fa'>Interlock (+%d)</span>"
 msgstr "<span color='#81d4fa'>Verbundschutz (+%d)</span>"
+
+#. [lua]: stun.apply
+#: liminal-union/lua/stun.lua:37
+#, fuzzy
+#| msgid "<span color='#ffaa33'>Ash rekindled</span>"
+msgid "<span color='#ffcc33'>stunned</span>"
+msgstr "<span color='#ffaa33'>Asche neu entfacht</span>"
 
 #. [resistance]: id=LIUN_officer_shield
 #: liminal-union/macros/abilities.cfg:51
@@ -1578,37 +1582,6 @@ msgstr ""
 "Ende neigt, verzehrt ihn sein inneres Feuer. Ein mystisch wiedergeborener "
 "Phoinix erhebt sich augenblicklich aus der Asche…"
 
-#. [alignment]: id=LIUN_liminal
-#: liminal-union/macros/alignment.cfg:11
-msgid "liminal"
-msgstr "liminal"
-
-#. [alignment]: id=LIUN_liminal
-#: liminal-union/macros/alignment.cfg:12
-msgid ""
-"Liminal units are at their most effective during the transition turns of "
-"Dawn and Dusk (+25%). The Liminal Union's unique engineering reduces the "
-"midday penalty to -15%."
-msgstr ""
-"Liminale Einheiten kämpfen in den Übergangsphasen von Morgen- und "
-"Abenddämmerung am wirkungsvollsten (+25%). Die besondere Handwerkskunst der "
-"Liminalen Union mildert den Mittagsabzug auf -15%."
-
-#. [alignment]: id=LIUN_liminal_conducted
-#: liminal-union/macros/alignment.cfg:52
-msgid "liminal (conducted)"
-msgstr "liminal (konduktiert)"
-
-#. [alignment]: id=LIUN_liminal_conducted
-#: liminal-union/macros/alignment.cfg:53
-msgid ""
-"This unit's alignment is being stabilized by a nearby Conductor. Peak power "
-"is maintained, and Day and Night penalties are softened by +10%."
-msgstr ""
-"Die Gesinnung dieser Einheit wird durch einen nahen Konduktor stabilisiert. "
-"Die volle Dämmerungsstärke bleibt erhalten und die Abzüge bei Tag und Nacht "
-"werden um +10% gemildert."
-
 #: liminal-union/macros/names.cfg:4
 msgid "Ammon,Aryeh,Asher,Avigdor,Alon,Amir,Amos,Arie,Avraham,Avram,Abrabanel,Absalom,Akabiah,Ayelet,Azariah,Barak,Barukh,Beshar,Berakhiah,Binyamin,Chalev,Chabner,Chaim,Chatan,Chayim,Chayyah,Dan,David,Dayan,Dror,Dar,Ehud,Eliezer,Eli,Erez,Ethan,Ezekiel,Elbaz,Eleazar,Elhanan,Elias,Eliyah,Elimelekh,Elisha,Ephraim,Eshkol,Eldad,Eliad,Elon,Gabriel,Gedaliah,Gamliel,Gedaliah,Gershom,Hananiah,Harel,Halevy,Hananel,Hanoch,Ilan,Isaac,Itzhak,Izak,Imanuel,Liron,Lior,Lamech,Levy,Lev,Malachi,Matityahu,Medan,Michael,Malech,Menuhah,Menahem,Menasche,Meir,Moshe,Manasses,Medad,Nun,Nephuneh,Naor,Naphtali,Natan,Neri,Nir,Nehemiah,Nehamah,Naim,Nehorai,Noah,Nosson,Oren,Or,Ovadia,Perah,Peled,Pinhas,Rae,Rafael,Reuven,Resh,Reuben,Shalev,Shiloh,Sason,Savit,Shazar,Shelomo,Shimon,Shmuel,Simeon,Solomon,Sofer,Simon,Saadia,Samuel,Saul,Shabtai,Shahaf,Shaul,Tabor,Tehiya,Toviah,Tuviah,Tzarfat,Tzur,Tzvi,Tamir,Uziel,Uzziah,Uma,Uri,Vered,Yra,Yossi,Yaakov,Yakir,Yechiel,Yedidyah,Yehezkel,Yesse,Yehoshua,Yishtabach,Yitzhak,Yaron,Yoram,Yuval,Yeremiah,Yonathan,Yoseph,Yosiah,Yehoshaphat,Yephthah,Yochanan,Zvi,Zakkai,Zeev,Zehavah"
 msgstr "Ammon,Aryeh,Asher,Avigdor,Alon,Amir,Amos,Arie,Avraham,Avram,Abrabanel,Absalom,Akabiah,Ayelet,Azariah,Barak,Barukh,Beshar,Berakhiah,Binyamin,Chalev,Chabner,Chaim,Chatan,Chayim,Chayyah,Dan,David,Dayan,Dror,Dar,Ehud,Eliezer,Eli,Erez,Ethan,Ezekiel,Elbaz,Eleazar,Elhanan,Elias,Eliyah,Elimelekh,Elisha,Ephraim,Eshkol,Eldad,Eliad,Elon,Gabriel,Gedaliah,Gamliel,Gedaliah,Gershom,Hananiah,Harel,Halevy,Hananel,Hanoch,Ilan,Isaac,Itzhak,Izak,Imanuel,Liron,Lior,Lamech,Levy,Lev,Malachi,Matityahu,Medan,Michael,Malech,Menuhah,Menahem,Menasche,Meir,Moshe,Manasses,Medad,Nun,Nephuneh,Naor,Naphtali,Natan,Neri,Nir,Nehemiah,Nehamah,Naim,Nehorai,Noah,Nosson,Oren,Or,Ovadia,Perah,Peled,Pinhas,Rae,Rafael,Reuven,Resh,Reuben,Shalev,Shiloh,Sason,Savit,Shazar,Shelomo,Shimon,Shmuel,Simeon,Solomon,Sofer,Simon,Saadia,Samuel,Saul,Shabtai,Shahaf,Shaul,Tabor,Tehiya,Toviah,Tuviah,Tzarfat,Tzur,Tzvi,Tamir,Uziel,Uzziah,Uma,Uri,Vered,Yra,Yossi,Yaakov,Yakir,Yechiel,Yedidyah,Yehezkel,Yesse,Yehoshua,Yishtabach,Yitzhak,Yaron,Yoram,Yuval,Yeremiah,Yonathan,Yoseph,Yosiah,Yehoshaphat,Yephthah,Yochanan,Zvi,Zakkai,Zeev,Zehavah"
@@ -1811,12 +1784,12 @@ msgstr ""
 "beim Stufenaufstieg +1 maximalen Lebenspunkt."
 
 #. [chance_to_hit]: id=LIUN_suicide_bomb_explosion
-#: liminal-union/macros/weaponspecials.cfg:6
+#: liminal-union/macros/weaponspecials.cfg:52
 msgid "bomb attack"
 msgstr "Sprengangriff"
 
 #. [chance_to_hit]: id=LIUN_suicide_bomb_explosion
-#: liminal-union/macros/weaponspecials.cfg:7
+#: liminal-union/macros/weaponspecials.cfg:53
 msgid ""
 "Since suicide attacks are set up close to the enemy, this bomb attack always "
 "has a 100% chance to hit."
@@ -3992,18 +3965,6 @@ msgstr "Faust"
 msgid "tail"
 msgstr "Schwanzflosse"
 
-#. [unstore_unit]
-#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:91
-#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:138
-msgid "stunned"
-msgstr "betäubt"
-
-#. [unstore_unit]
-#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:92
-#: liminal-union/units/nations/loyalist/f0-merman-brawler.cfg:139
-msgid "female^stunned"
-msgstr "betäubt"
-
 #. [unit_type]: id=LIUN_Initiate, gender=male,female, race=human
 #: liminal-union/units/nations/loyalist/mf0-initiate.cfg:4
 msgid "Initiate"
@@ -4506,6 +4467,35 @@ msgstr ""
 "Fähigkeit: Teleportation | Befreundete Dörfer unterhalten Schwellenportale. "
 "Diese Phoinix-Einheit kann sich nun zwischen ihnen teleportieren (+3 LP, 3 "
 "Fernkampfschläge, Teleportation)."
+
+#~ msgid "liminal"
+#~ msgstr "liminal"
+
+#~ msgid ""
+#~ "Liminal units are at their most effective during the transition turns of "
+#~ "Dawn and Dusk (+25%). The Liminal Union's unique engineering reduces the "
+#~ "midday penalty to -15%."
+#~ msgstr ""
+#~ "Liminale Einheiten kämpfen in den Übergangsphasen von Morgen- und "
+#~ "Abenddämmerung am wirkungsvollsten (+25%). Die besondere Handwerkskunst "
+#~ "der Liminalen Union mildert den Mittagsabzug auf -15%."
+
+#~ msgid "liminal (conducted)"
+#~ msgstr "liminal (konduktiert)"
+
+#~ msgid ""
+#~ "This unit's alignment is being stabilized by a nearby Conductor. Peak "
+#~ "power is maintained, and Day and Night penalties are softened by +10%."
+#~ msgstr ""
+#~ "Die Gesinnung dieser Einheit wird durch einen nahen Konduktor "
+#~ "stabilisiert. Die volle Dämmerungsstärke bleibt erhalten und die Abzüge "
+#~ "bei Tag und Nacht werden um +10% gemildert."
+
+#~ msgid "stunned"
+#~ msgstr "betäubt"
+
+#~ msgid "female^stunned"
+#~ msgstr "betäubt"
 
 #~ msgid "3. Conductance Auras & Liminal Timing"
 #~ msgstr "3. Konduktanz-Auren & Liminales Zeitfenster"
