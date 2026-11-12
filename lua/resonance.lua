@@ -174,14 +174,17 @@ function resonance.get_tier(u)
     return resonance.calculate_pod_tier(u)
 end
 
--- Checks if a level 0 Union unit exerts Formation ZOC: only while an allied
--- officer (Conductor) that is not poisoned stands adjacent. Mainline level 0
--- units never exert ZOC; the officer is what holds the conscripts' line.
+-- Checks if a level 0 Union unit exerts Formation ZOC: active whenever the unit is in
+-- a Resonance pod (Tier >= 1) or stands beside an allied unpoisoned officer (Conductor).
 function resonance.get_formation_zoc(u)
     if not u or u.hitpoints <= 0 then return false end
     if u.level ~= 0 then return false end
     if not resonance.get_unit_alloy(u) and not resonance.is_conductor(u) then return false end
     if u.status.poisoned then return false end
+
+    if resonance.get_tier(u) >= 1 then
+        return true
+    end
 
     local adjacent = wesnoth.units.find_on_map({
         side = u.side,
@@ -223,7 +226,7 @@ function resonance.update_unit_alignment(u)
     local was_conducted = u.variables.lu_conducted
     u.variables.lu_conducted = has_conductor
 
-    -- Visual Status Icon & Floating Label (Agenda 1 - Option 2)
+    -- Visual Status Icon (floating label consolidated into Resonance I/II/III display)
     u:remove_modifications({ id = "LIUN_conducted_overlay" })
     if has_conductor then
         u:add_modification("object", {
@@ -234,9 +237,6 @@ function resonance.update_unit_alignment(u)
                 add = "overlays/conducted.png"
             }}
         })
-        if not was_conducted and wesnoth.interface and wesnoth.interface.float_label then
-            wesnoth.interface.float_label(u.x, u.y, _ "<span color='#00e5ff'>Conducted</span>")
-        end
     end
 end
 
@@ -314,7 +314,7 @@ function resonance.update_unit_state(u)
     -- Remove deprecated conductor beacon overlay if present
     u:remove_modifications({ id = "LIUN_conductor_beacon" })
 
-    -- 2. Formation ZOC for level 0 units beside an allied officer
+    -- 2. Formation ZOC for level 0 units in a pod (Tier >= 1) or beside an allied officer
     u:remove_modifications({ id = "LIUN_formation_zoc" })
     local has_zoc = resonance.get_formation_zoc(u)
     if has_zoc then
@@ -331,18 +331,12 @@ function resonance.update_unit_state(u)
                     { "dummy", {
                         id = "LIUN_formation_zoc_active",
                         name = _ "formation zoc",
-                        description = _ "Standing beside an allied officer. Exerting Zone of Control."
+                        description = _ "In Resonance formation (Tier 1+) or beside an allied officer. Exerting Zone of Control."
                     }}
                 }}
             }}
         })
-        if not u.variables.lu_zoc_active then
-            -- Game state is set unconditionally; only the label depends on the interface.
-            u.variables.lu_zoc_active = true
-            if wesnoth.interface and wesnoth.interface.float_label then
-                wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ffd700'>ZOC Lock</span>")
-            end
-        end
+        u.variables.lu_zoc_active = true
     else
         u.variables.lu_zoc_active = nil
     end
@@ -470,9 +464,17 @@ function resonance.update_unit_state(u)
             u.halo = ""
         end
 
-        -- Tier 3 lock-in visual notification
-        if tier == 3 and prev_tier ~= 3 and wesnoth.interface and wesnoth.interface.float_label then
-            wesnoth.interface.float_label(u.x, u.y, _ "<span color='#ffd700'>✦ Tier 3 Lock ✦</span>")
+        -- Unified Resonance I / II / III floating label on tier change
+        if alloy and tier ~= prev_tier and wesnoth.interface and wesnoth.interface.float_label then
+            local roman = (tier == 1 and "I") or (tier == 2 and "II") or "III"
+            local alloy_label = (alloy == "pyrite" and _ "Pyrite") or (alloy == "kryonite" and _ "Kryonite") or _ "Arcanite"
+            local color = (tier == 3) and "#ffd700" or "#00e5ff"
+            local prefix = (tier == 3) and "✦ " or ""
+            local suffix = (tier == 3) and " ✦" or ""
+            wesnoth.interface.float_label(
+                u.x, u.y,
+                string.format("<span color='%s'>%s%s %s (%s)%s</span>", color, prefix, tostring(_ "Resonance"), roman, tostring(alloy_label), suffix)
+            )
         end
     else
         u.halo = ""

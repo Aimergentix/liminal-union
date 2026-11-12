@@ -11,13 +11,22 @@ Scope: Preserve mechanics, IDs, values, advancement, events, persistent variable
 
 Separate requirements, observations, proposals, historical evidence and open checks. Inspect current sources before relying on earlier reports. Never read or copy credentials.
 
-Sources: Read [canon](../../umc-development/projects/liminal-union/docs/canon/CANON_LOCK.md), [language style](../../umc-development/projects/liminal-union/docs/canon/STYLE_GUIDE.md) and relevant product sources first. Derived summaries cannot override canon or language style. Do not invent unsupported lore, paths or engine guarantees; mark unverified claims explicitly. Code describes implementation, not domain correctness. See [workspace rules](../AGENTS.md) and [product knowledge](../../umc-development/projects/liminal-union/docs/index.md). Product documentation lives there, outside the add-on, and `_server.ign` keeps development files out of the upload.
+Sources: Code is the authority; there are no canon or design documents. Read only the row for your task.
+
+| Task | Read |
+|---|---|
+| Unit stats, attacks, advancement | the unit file in `units/`; current values of all units: `./suite.sh profiles` in `../../umc-development/projects/liminal-union/` |
+| Rules: resonance, conductor, interlock, anchor, formation ZOC | skill `lu-mechanics` ([card](../../umc-development/.agents/skills/lu-mechanics/SKILL.md)), then `lua/resonance.lua` and `macros/abilities.cfg` |
+| Any Lua | [engine quirks](../../umc-hace/wesnoth/engine-quirks.md) and skill `lu-wml-lua-work` ([routing](../../umc-development/.agents/skills/lu-wml-lua-work/SKILL.md)) |
+| Balance runs and reports | [HOWTO](../../umc-development/projects/liminal-union/HOWTO.md) |
+
+Lore and tone live only in unit descriptions: keep the Union's voice (ancient, civic, severe) and the distinction between permitted arcane matter and forbidden living spellcraft. Do not invent unsupported paths or engine guarantees; mark unverified claims. `_server.ign` keeps development files out of the upload.
 
 ## Working method
 
 Use small, reviewable changes. Preserve unrelated work. Keep English documentation concise. Do not weaken checks to obtain a passing result. Git writes, publication and further deletion need their own authorization.
 
-Local workflow: Keep the game independent of development tools. Use the [shared method](../../umc-hace/generic/skills/development/SKILL.md). Keep generated work outside the product; add no test includes or tool dependencies. Do not read upload credentials. Extend the existing instruction or reference instead of duplicating guidance. Apply the [AI-pair standard](../../umc-hace/generic/knowledge/ai-pair.md) progressively. This adoption is documentation-only; runtime naming and size cleanup is deferred.
+Local workflow: Keep the game independent of development tools: no test includes or tool dependencies; generated work stays outside the product. Do not read upload credentials. Use the [shared method](../../umc-hace/generic/skills/development/SKILL.md). Comments say why and where, not what; update a comment with the code it explains. Extend an existing reference instead of adding a parallel one.
 
 ## Verification and completion
 
