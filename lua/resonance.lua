@@ -41,13 +41,9 @@ function resonance.get_unit_alloy(u)
         if u.race == "maidengolem" then
             return remember(u, "arcanite")
         elseif u.race == "maidencommand" then
-            if not utype:find("Ensign") and not utype:find("Cornet") and not utype:find("Captain") and not utype:find("Colonel") then
-                return remember(u, "pyrite")
-            end
+            return remember(u, "pyrite")
         elseif u.race == "marinecommand" then
-            if not utype:find("Ensign") and not utype:find("Cornet") and not utype:find("Captain") and not utype:find("Colonel") then
-                return remember(u, "kryonite")
-            end
+            return remember(u, "kryonite")
         end
     end
 
@@ -604,7 +600,7 @@ function resonance.handle_damage_redistribution(target_x, target_y, damage_infli
     local eligible_allies = {}
     local has_kryonite_anchor = false
     for idx, a in ipairs(raw_allies) do
-        if a.hitpoints > 1 and not a.status.poisoned and resonance.get_unit_alloy(a) == "kryonite" then
+        if a.hitpoints > 1 and not a.status.poisoned and not a.canrecruit and resonance.get_unit_alloy(a) == "kryonite" then
             table.insert(eligible_allies, a)
             if resonance.has_dummy_ability(a, "LIUN_squad_anchor_kryonite") then
                 has_kryonite_anchor = true
