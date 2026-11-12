@@ -242,8 +242,9 @@ end
 
 -- Caps on totals including resonance (design: WEAPON_PROFILES.md, "Caps enforced in code").
 local ACCURACY_CAP = 20
-local PARRY_CAP = 15
 local SUNDER_CAP = 3
+-- Interlock share of a hit, in percent, by Resonance tier.
+local INTERLOCK_SHARE = { 30, 40, 50 }
 
 -- True if an allied Squad Anchor with this dummy ability stands adjacent, alive and not poisoned.
 local function has_adjacent_anchor(u, anchor_id)
@@ -391,31 +392,8 @@ function resonance.update_unit_state(u)
                 }
             end)
         elseif alloy == "kryonite" then
-            -- Kryonite Bulwark: Parry -5% (T1) -> -10% (T2) -> -10% + Firststrike (T3) on melee defense
-            -- Clipped per attack so that static parry plus Bulwark stays at or below 15.
-            add_clipped_specials(u, "melee", "parry", PARRY_CAP, math.min(10, tier * 5), function(parry_sub)
-                local specials = {}
-                if parry_sub > 0 then
-                    table.insert(specials, { "chance_to_hit", {
-                        id = "LIUN_kryonite_bulwark",
-                        name = _ "bulwark",
-                        description = string.format(_ "Kryonite formation locks shields: enemies suffer -%d%% chance to hit in melee on offense.", parry_sub),
-                        sub = parry_sub,
-                        apply_to = "opponent",
-                        cumulative = true,
-                        active_on = "defense"
-                    }})
-                end
-                if tier == 3 then
-                    table.insert(specials, { "firststrike", {
-                        id = "LIUN_kryonite_firststrike",
-                        name = _ "first strike",
-                        description = _ "Kryonite phalanx braces: strikes first when defending in melee.",
-                        active_on = "defense"
-                    }})
-                end
-                return specials
-            end)
+            -- Kryonite has no attack special below Tier 3: its signature is Interlock,
+            -- which scales with the tier in handle_damage_redistribution.
         elseif alloy == "arcanite" then
             -- Arcanite Sunder: +1 (T1) -> +2 (T2) -> +3 (T3) melee damage on offense
             -- Plus +1 if adjacent to an allied Arcanite Squad Anchor (2·2), at most +3 in total.
@@ -480,50 +458,28 @@ function resonance.update_unit_state(u)
         u.halo = ""
     end
 
-    -- 4. Tier 3 alloy-specific defensive wards (calibrated to multiples of 10)
-    if tier == 3 then
-        local alloy = resonance.get_unit_alloy(u)
-        if alloy == "arcanite" then
-            -- Arcanite Warding: +20% fire/cold resistance
-            u:add_modification("object", {
-                id = "LIUN_resonance_t3",
-                silent = true,
-                { "effect", {
-                    apply_to = "resistance",
-                    { "resistance", {
-                        fire = -20,
-                        cold = -20
+    -- 4. Tier 3: first strike on defense with the alloy's fighting range. First strike only
+    -- matters on defense, because the attacker strikes first anyway.
+    local T3_RANGE = { pyrite = "ranged", kryonite = "melee", arcanite = "melee" }
+    local t3_range = tier == 3 and T3_RANGE[resonance.get_unit_alloy(u) or ""]
+    if t3_range then
+        u:add_modification("object", {
+            id = "LIUN_resonance_t3",
+            silent = true,
+            { "effect", {
+                apply_to = "attack",
+                range = t3_range,
+                { "set_specials", {
+                    mode = "append",
+                    { "firststrike", {
+                        id = "LIUN_resonance_firststrike",
+                        name = _ "first strike",
+                        description = _ "Tier 3 Resonance: this unit always strikes first with this attack when defending.",
+                        active_on = "defense"
                     }}
                 }}
-            })
-        elseif alloy == "pyrite" then
-            -- Pyrite Ward: +10% Fire / +10% Arcane resistance
-            u:add_modification("object", {
-                id = "LIUN_resonance_t3",
-                silent = true,
-                { "effect", {
-                    apply_to = "resistance",
-                    { "resistance", {
-                        fire = -10,
-                        arcane = -10
-                    }}
-                }}
-            })
-        elseif alloy == "kryonite" then
-            -- Kryonite Temper: +10% cold and arcane resistance
-            u:add_modification("object", {
-                id = "LIUN_resonance_t3",
-                silent = true,
-                { "effect", {
-                    apply_to = "resistance",
-                    { "resistance", {
-                        cold = -10,
-                        arcane = -10
-                    }}
-                }}
-            })
-        end
-        -- Uranite Command removed: Pure conductors without Resonance
+            }}
+        })
     end
 end
 
@@ -570,7 +526,9 @@ function resonance.is_berserk_combat(ctx)
 end
 
 -- Field Redistribution ("Interlock")
--- Absorbs 25%–33% (30%) of damage taken by a Kryonite unit across adjacent alloy allies.
+-- Passes INTERLOCK_SHARE[tier] percent of a hit on a Kryonite unit to adjacent Kryonite
+-- allies, rounded to the nearest point and at least 1. Interlock replaced Bulwark as the
+-- Kryonite tier signature, so it grows with the pod.
 -- Conserves total damage dealt; prevents focus-fire assassination without killing allies (cannot drop below 1 HP).
 -- During Berserk attacks, ensures damage redistribution triggers on each individual round of combat.
 function resonance.handle_damage_redistribution(target_x, target_y, damage_inflicted, is_berserk)
@@ -614,17 +572,11 @@ function resonance.handle_damage_redistribution(target_x, target_y, damage_infli
 
     -- Determine amount to redistribute
     local anchor_bonus = has_kryonite_anchor and 2 or 0
-    local redistribute_amount
-    if is_berserk then
-        -- During Berserk, distribute across allies on every round (minimum 1 per eligible ally, up to 50% total)
-        local per_ally_share = math.max(1, math.floor(dmg * 0.30))
-        redistribute_amount = math.min(math.floor(dmg * 0.50), per_ally_share * #eligible_allies) + anchor_bonus
-        redistribute_amount = math.min(dmg, math.max(1, redistribute_amount))
-    else
-        if dmg < 3 and anchor_bonus == 0 then return end
-        redistribute_amount = math.min(dmg, math.floor(dmg * 0.30) + anchor_bonus)
-        if redistribute_amount <= 0 then return end
-    end
+    -- Berserk shares on every round; otherwise hits below 3 damage are not worth sharing.
+    if not is_berserk and dmg < 3 and anchor_bonus == 0 then return end
+    local share = INTERLOCK_SHARE[math.min(tier, 3)]
+    local redistribute_amount = math.max(1, math.floor(dmg * share / 100 + 0.5)) + anchor_bonus
+    redistribute_amount = math.min(dmg, redistribute_amount)
 
     -- Distribute damage across allies without reducing any ally below 1 HP
     local total_absorbed = 0

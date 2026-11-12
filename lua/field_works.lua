@@ -4,7 +4,7 @@ local _ = wesnoth.textdomain 'wesnoth-liminal-union'
 -- Field works: finite charges carried by three unit lines, spent through synced
 -- right-click actions (and a minimal AI reflex at side turn end).
 --   Mechatronic: "aimergent-core" charges, builds a G8 Simulacrum (L0) for 10 gold.
---   Techtronic:  "aimergent-core" charges, builds a G9 AI (L0) for 20 gold.
+--   Techtronic:  "aimergent-core" charges, builds a G9 AI (L0) for 16 gold, its recall cost.
 --   Shieldguard: "ember capsules", opens one to call a Phoinix (L0) for 10 gold;
 --                kindles the ash of a fallen own Phoinix for free (no capsule).
 -- Charges live in unit variables (saved, replayed) and are shown as a sidebar
@@ -21,7 +21,7 @@ local DISPLAY_ID = "LIUN_charge_display"
 local LINES = {
     { prefix = "LIUN_Shieldguard", line = "shieldguard", var = "lu_ember" },
     { prefix = "LIUN_Mechatronic", line = "mechatronic", var = "lu_cores", build = "LIUN_G8_Simulacrum", price = 10 },
-    { prefix = "LIUN_Techtronic",  line = "techtronic",  var = "lu_cores", build = "LIUN_G9_AI",         price = 20 },
+    { prefix = "LIUN_Techtronic",  line = "techtronic",  var = "lu_cores", build = "LIUN_G9_AI",         price = 16 },
 }
 local CALL_PRICE = 10
 local PHOINIX_L0 = "LIUN_Phoinix"
@@ -55,7 +55,7 @@ local function render(u, l)
             id = "LIUN_aimergent_core",
             name = string.format(_ "aimergent-core (%d)", n),
             female_name = string.format(_ "female^aimergent-core (%d)", n),
-            description = _ "Sealed Curie energy cores, each with a bound intellect, ready to quicken a warform. While standing on a village, castle or keep, right-click a free hex beside this artificer to build: a Mechatronic builds a G8 Simulacrum (10 gold), a Techtronic a G9 AI (20 gold). Building spends the artificer's attack, at most once per turn; the warform arrives without moves or attack, costs no upkeep and never advances a level. Each new artificer, and every artificer at the start of a scenario, carries 3 cores.",
+            description = _ "Sealed Curie energy cores, each with a bound intellect, ready to quicken a warform. While standing on a village, castle or keep, right-click a free hex beside this artificer to build: a Mechatronic builds a G8 Simulacrum (10 gold), a Techtronic a G9 AI (16 gold). Building spends the artificer's attack, at most once per turn; the warform arrives without moves or attack, costs no upkeep and never advances a level. Each new artificer, and every artificer at the start of a scenario, carries 3 cores.",
         }
     end
     u:add_modification("object", {

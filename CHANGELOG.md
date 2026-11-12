@@ -2,7 +2,47 @@
 
 Player-facing changes to Liminal Union. Values are test values, not settled balance.
 
-## Unreleased
+## 0.4.0alpha — 2026-11-12
+
+A major step: a lighter rule set for multiplayer, reworked Resonance and Conductance, and
+amphibious Marines.
+
+### Resonance
+- Every tier still grants +5% blade, pierce and impact resistance per tier.
+- Tier 3 now grants first strike on defense with the alloy's fighting range instead of
+  elemental resistance: Pyrite with ranged weapons, Kryonite and Arcanite in melee. The
+  Tier 3 Fire, Cold and Arcane wards are gone.
+- Kryonite: Bulwark is gone. Interlock is the Kryonite signature and grows with the pod:
+  it passes 30% (Tier 1), 40% (Tier 2) or 50% (Tier 3) of a normal hit to adjacent
+  Kryonite allies, rounded to the nearest point and at least 1.
+- Formation Zone of Control: level 0 units also exert ZOC while they stand in a Resonance
+  pod (Tier 1 or higher), not only beside an officer.
+
+### Conductance: the twilight lantern
+- Officers no longer give +10% damage by leadership. They carry a twilight lantern: by day
+  and by night, the time of day on the officer's hex and the hexes around it moves 10
+  points toward twilight. Liminal units there deal +10%. Lawful and chaotic units there,
+  friend or foe, gain or lose 15% instead of 25%. Lanterns do not stack, and dawn and dusk
+  are unchanged.
+
+### Movement and resistances
+- Marines are amphibious holders: shallow water, reef and hills cost 1 MP. Defense is
+  50% in shallow water, reef, swamp, forest, hills and mountains, and 40% on flat, sand
+  and in deep water. Resistances: pierce -10%, fire -20%, arcane +10% (blade and cold now
+  neutral).
+- Maidens: fungus costs 2 MP; defense 30% in deep water and 50% in caves. Resistances:
+  impact -10%, cold -20%, arcane +10% (blade, pierce and fire now neutral).
+- G8 Simulacrum moves 4 (was immobile).
+
+### Multiplayer and campaign rules
+- Multiplayer keeps Resonance with Interlock, Conductance, Formation ZOC, Wingsuit Glide,
+  staged promotion with its banter, Strike at Twilight and the Codex.
+- Squad Anchors, G9 Overclock, the Salt-Grounding Pylum, the Portal Warden, Field Works
+  and Phoinix ash are campaign doctrine: a campaign enables them by defining
+  `LIUN_CAMPAIGN_DOCTRINE` before it includes `faction.cfg`, then loading the
+  `LIUN_era_events` resource. Unit and Codex texts follow the active rules.
+- Codex: Mechatronics are listed as Arcanite, Formation ZOC also holds inside a Resonance
+  pod, and the battle badges describe the single Resonance tier notification.
 
 ### Hand tuning (values after the weapon rework)
 - Costs: officers +1 to +4 gold (Cornets 21, Captains 33/34, Colonels 56/58), Maiden
@@ -60,7 +100,8 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
   advance to Techtronic, Jaegers to Hunterkiller. Sprites borrowed from the Techtronic.
 - Mechatronics and Techtronics carry 3 aimergent-cores. Standing on a village, castle or keep,
   they right-click a free hex beside them to build a G8 Simulacrum (10 gold, Mechatronic) or
-  a G9 AI (20 gold, Techtronic), once per turn, spending their attack. Built warforms arrive
+  a G9 AI (16 gold, its recall cost; Techtronic), once per turn, spending their attack. The
+  G8 Simulacrum now moves 4 instead of standing immobile. Built warforms arrive
   without moves or attack, cost no upkeep and never advance a level.
 - Shieldguards carry 3 ember capsules. Opening one calls a Phoinix (10 gold) onto a free hex
   beside the Shieldguard if it has not moved this turn; it spends the Shieldguard's turn, and
@@ -84,28 +125,28 @@ Player-facing changes to Liminal Union. Values are test values, not settled bala
 - Officers parry better with rank: Cornets and Captains +10%, Colonels +15%.
 - Phoinix: the melee attack is now the fire ember talons, not magical, with +1 damage.
   The ranged attack is unchanged.
-- Resonance caps: a bow's own accuracy plus Pyrite Focus never exceeds +20%, and a
-  weapon's own parry plus Kryonite Bulwark never exceeds 15%.
+- Resonance cap: a bow's own accuracy plus Pyrite Focus never exceeds +20%.
 - The Techtronic (2·2) is now an Arcanite Squad Anchor: adjacent Arcanite allies in
   resonance gain +1 Sunder, at most +3 in total. She no longer boosts Pyrite accuracy;
   the Hunterkiller (2·2) remains the Pyrite Squad Anchor.
 
 ### Recruits and advancement
 - Braves recruit the G9 NCM and the Phoinix Elder (level 1); G9 AI and Phoinix (level 0)
-  come only from field works. The G9 AI no longer advances to NCM. The G8 Simulacrum is
+  come only from field works, so only campaigns have them. The G9 AI no longer advances to NCM. The G8 Simulacrum is
   level 0. A Phoinix Elder's final AMLA renews it as a fresh Elder instead of a level 0 Phoinix.
 
 ### Rules
-- Formation Zone of Control: level 0 Union units exert ZOC only while an allied officer
-  (Ensign, Cornet, Captain, Colonel) that is not poisoned stands next to them.
+- Formation Zone of Control: level 0 Union units exert ZOC while an allied officer
+  (Ensign, Cornet, Captain, Colonel) that is not poisoned stands next to them, or while
+  they stand in a Resonance pod (see Resonance above).
 - Salt-Grounding Pylum: Sergeants and higher only; Privates no longer carry it.
 - Default era: veterans no longer become extra recruiting leaders through their AMLA.
   Age of Heroes keeps this.
 
 ### Fixes
 - Techtronics wear Arcanite and resonate with G9 Warforms instead of Maidens.
-- The Conductor aura (+10% damage for adjacent liminal allies by day and by night) works
-  again on every officer; a second abilities block had silently dropped it.
+- Every officer carries its Conductor ability again; a second abilities block had
+  silently dropped it.
 - Phoinix memorial archives survive saving and loading.
 - Doctrine stages (for example 0·0 → 0·1) heal only 2 HP and keep poison and slow, as
   intended. They previously healed fully. Full level-ups and AMLAs still heal fully;
